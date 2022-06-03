@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		424303E3284A4DFF0000A160 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424303E2284A4DFF0000A160 /* SwiftUIView.swift */; };
 		426BDB53284398FB008E9C5A /* porgct_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426BDB52284398FB008E9C5A /* porgct_1App.swift */; };
 		426BDB55284398FB008E9C5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426BDB54284398FB008E9C5A /* ContentView.swift */; };
 		426BDB57284398FD008E9C5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426BDB56284398FD008E9C5A /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		424303E2284A4DFF0000A160 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		426BDB4F284398FB008E9C5A /* porgct 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "porgct 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		426BDB52284398FB008E9C5A /* porgct_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = porgct_1App.swift; sourceTree = "<group>"; };
 		426BDB54284398FB008E9C5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				426BDB52284398FB008E9C5A /* porgct_1App.swift */,
 				426BDB54284398FB008E9C5A /* ContentView.swift */,
 				AEBD7846284794EA00202C25 /* New Registration.swift */,
+				424303E2284A4DFF0000A160 /* SwiftUIView.swift */,
 				426BDB56284398FD008E9C5A /* Assets.xcassets */,
 				426BDB58284398FD008E9C5A /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				426BDB55284398FB008E9C5A /* ContentView.swift in Sources */,
 				AEBD7847284794EA00202C25 /* New Registration.swift in Sources */,
+				424303E3284A4DFF0000A160 /* SwiftUIView.swift in Sources */,
 				426BDB53284398FB008E9C5A /* porgct_1App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
