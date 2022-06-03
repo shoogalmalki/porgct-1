@@ -9,13 +9,13 @@
 import SwiftUI
 import Foundation
 extension View {
-    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape( RoundedCorner(radius: radius, corners: corners) )
+    func cornerRadius1(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner1(radius: radius, corners: corners) )
             .padding(0.0)
             .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.272, green: 0.683, blue: 0.674)/*@END_MENU_TOKEN@*/)
     }
 }
-struct RoundedCorner: Shape {
+struct RoundedCorner1: Shape {
 
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
@@ -26,7 +26,7 @@ struct RoundedCorner: Shape {
     }
 }
 
-struct ContentView: View {
+struct ContentView1: View {
     
     
 
@@ -125,7 +125,7 @@ struct ContentView: View {
     }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView1()
     }
 }
 }
