@@ -54,7 +54,7 @@ struct ContentView: View {
                 
                     .foregroundColor(backgroundcolor)
                     .frame(width: 360, height: 850)
-                    .offset(x: 0, y: 130)
+                    .offset(x: 0, y: 120)
                 VStack {
                     Text("Login")
                         .bold()

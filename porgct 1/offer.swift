@@ -53,7 +53,7 @@ struct offer: View {
             
                 .foregroundColor(backgroundcolor)
                 .frame(width: 360, height: 850)
-                .offset(x: 0, y: 130)
+                .offset(x: 0, y: 120)
     VStack{
 
                 VStack(spacing:20){
@@ -62,6 +62,7 @@ struct offer: View {
                     .frame(width: 325, height:170)
                     .foregroundColor(.white)
                     .cornerRadius(15)
+                    .offset( y:-140)
                     VStack{
                   
                     HStack(spacing:190){
@@ -71,8 +72,8 @@ for your shipment?
 """)
                             .font(.callout)
                             .fontWeight(.semibold)
-                            .offset(y:-25)
-                            .offset(x:-70)
+                            .offset(y:-170)
+                            .offset(x:-50)
                         
                     }
                         
@@ -81,12 +82,12 @@ for your shipment?
                             Image(systemName: "calendar.badge.clock")
                                 .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
                                 .offset(x:-70)
-                                .offset(y:10)
+                                .offset(y:-130)
                             Text("Fri, June 3(8 -11AM)")
                                 .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
                                 .font(.caption)
                                 .offset(x:-70)
-                                .offset(y:10)
+                                .offset(y:-130)
                             
                         }
                         HStack{
@@ -100,7 +101,7 @@ for your shipment?
                             .frame(width: 150, height:25)
                             .background(.green)
                                 .cornerRadius(5)
-                                .offset(y:30)
+                                .offset(y:-110)
                             
                 Button(action: {}, label: {
                                 Text("Decline")
@@ -112,7 +113,7 @@ for your shipment?
                                 .frame(width: 150, height:25)
                                 .background(.red)
                                     .cornerRadius(5)
-                                    .offset(y:30)
+                                    .offset(y:-110)
                         }
         }
                     ZStack{
@@ -120,29 +121,29 @@ for your shipment?
                         .resizable()
                         .frame(width: 60, height:100)
                         .offset(x:118)
-                        .offset(y:-20)
+                        .offset(y:-170)
                         Rectangle()
                             .frame(width: 33, height:15)
                             .cornerRadius(5)
-                            .offset(x:120)
-                            .offset(y:17)
+                            .offset(x:10)
+                            .offset(y:-100)
                             .foregroundColor(Color("Color1"))
                         HStack{
                         Text("4.9")
                             .font(.caption)
                             .fontWeight(.medium)
                             .offset(x:135)
-                            .offset(y:20)
+                            .offset(y:-130)
                             Image(systemName: "star.fill")
                                 .foregroundColor(Color.orange)
                                 .frame(width:10.0 , height: 22)
                                 .offset(x:95)
-                                .offset(y:20)
+                                .offset(y:-130)
                     }
                         Text("OMER SALEH")
                             .font(.footnote)
-                            .offset(y:38)
-                            .offset(x:110)
+                            .offset(y:-110)
+                            .offset(x:120)
 
 
                     }
