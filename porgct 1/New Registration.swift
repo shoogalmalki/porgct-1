@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Foundation
+import Firebase
+import FirebaseAuth
 
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
@@ -84,7 +86,13 @@ struct New_Registration: View {
                     
                     
                     Button("Registration") {
-                        
+//                        register()
+
+//                    register(email: Email, password: password)
+//            createUser(email: Email, password: password)
+        
+                        register(email: Email, password: password)
+
                         }
                     .foregroundColor(.white)
                     .frame(width: 300, height: 50)
@@ -92,7 +100,7 @@ struct New_Registration: View {
                     .cornerRadius(10)
                     .offset(y:-60 )
                     
-                   
+//                   fub
                     }
                 }
                 
@@ -102,8 +110,25 @@ struct New_Registration: View {
             .navigationBarHidden(true)
         
 }
+//   func register(){
+//        Auth.auth().createUser(withEmail: Email, password: password) { result, error in
+//           if error ! = nill  {
+//              print(error!.localizedDescription)
+//    }
+//   }
+//    }
+    func register(email: String,password: String) {
+        Auth.auth().createUser(withEmail: email, password: password) { res, error in
+            if error == nil {
+                print("Succeeded")
+                
+            } else {
+                
+                print(error?.localizedDescription)
+            }
+        }
     }
-  
+}
     
 
     

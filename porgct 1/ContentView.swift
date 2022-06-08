@@ -7,6 +7,9 @@
 
 import SwiftUI
 import Foundation
+import Firebase
+import FirebaseAuth
+
 extension View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape( RoundedCorner(radius: radius, corners: corners) )
@@ -80,6 +83,7 @@ struct ContentView: View {
                     
                     Button("Login") {
 //                        authenticateUser(username: username, Email: Email, password: password)
+            login(email: Email, password: password)
                                         }
                     .foregroundColor(.white)
                     .frame(width: 300, height: 50)
@@ -98,19 +102,32 @@ struct ContentView: View {
         }
     }
     
-    func authenticateUser(username: String, password: String, Email: String) {
-        if Email.lowercased() == "@" {
-            wrongEmail = 0
-            if password.lowercased() == "abc123" {
-                wrongPassword = 0
-                showingLoginScreen = true
+//    func authenticateUser(username: String, password: String, Email: String) {
+//        if Email.lowercased() == "@" {
+//            wrongEmail = 0
+//            if password.lowercased() == "abc123" {
+//                wrongPassword = 0
+//                showingLoginScreen = true
+//            } else {
+//                wrongPassword = 2
+//            }
+//        } else {
+//            wrongEmail = 2
+//        }
+//}
+    
+    
+    func login(email: String,password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { res, error in
+            if error == nil {
+                print("Succeeded")
+                
             } else {
-                wrongPassword = 2
+                
+                print(error?.localizedDescription)
             }
-        } else {
-            wrongEmail = 2
         }
-}
+    }
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
