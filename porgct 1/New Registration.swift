@@ -49,7 +49,8 @@ struct New_Registration: View {
                 
                 VStack {
                     Text("New Registration")
-                        .bold()
+                     .bold()
+                    
                         .offset(x: -1, y:-70 )
                     
         TextField("Full Name", text: $FullName)
@@ -94,7 +95,10 @@ struct New_Registration: View {
                         register(email: Email, password: password)
 
                         }
+                    
                     .foregroundColor(.white)
+                    font(.footnote)
+                      
                     .frame(width: 300, height: 50)
                     .background(Color(UIColor.systemMint))
                     .cornerRadius(10)
