@@ -79,6 +79,18 @@ struct ContentView: View {
                         .cornerRadius(10)
                         .border(.red, width: CGFloat(wrongPassword))
                         .offset( y:-70 )
+//
+//                    HStack{
+//                        Button{} label: {
+//                            Text("Forgot password?")
+//                                .underline()
+//                                .font(.footnote)
+//                                .bold()
+//                                .foregroundColor(.black)
+////                                .padding(.top)
+//                            offset(x: -100, y: -100)
+//                    }
+//                    }
                     
                     
                     Button("Login") {
@@ -90,6 +102,19 @@ struct ContentView: View {
                     .background(Color(UIColor.systemMint))
                     .cornerRadius(10)
                     .offset(y:-60 )
+                    
+                    
+                    
+                        Button{} label: {
+                            Text("Forgot password?")
+                                .underline()
+                                .font(.footnote)
+                                .bold()
+                                .foregroundColor(.black)
+//                                .padding(.top)
+                            offset(x: -40, y: -30)
+                    }
+                    
                     
                     NavigationLink(destination: Text("You are logged in @\(Email)"), isActive: $showingLoginScreen) {
                         EmptyView()

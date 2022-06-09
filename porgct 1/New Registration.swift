@@ -100,7 +100,16 @@ struct New_Registration: View {
                     .cornerRadius(10)
                     .offset(y:-60 )
                     
-//                   fub
+                    HStack{
+                        Button{} label: {
+                            Text("Already have an account? Login")
+                                .underline()
+                                .font(.footnote)
+//                                .bold()
+                                .foregroundColor(.black)
+                                .padding(.top)
+                    }
+                    }
                     }
                 }
                 
