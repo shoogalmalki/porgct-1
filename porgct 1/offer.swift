@@ -9,15 +9,15 @@ import SwiftUI
 import Foundation
 //green and gray
 extension View {
-    func cornerRadius2(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape( RoundedCorner(radius: radius, corners: corners) )
+    func cornerRadius22(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner22(radius: radius, corners: corners) )
             .padding(0.0)
             .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.272, green: 0.683, blue: 0.674)/*@END_MENU_TOKEN@*/)
         
     }
 }
 
-struct RoundedCorner2: Shape {
+struct RoundedCorner22: Shape {
 
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
@@ -45,11 +45,11 @@ struct offer: View {
         NavigationView {
             ZStack {
             Rectangle ()
-                .cornerRadius (topLeft, corners: .topLeft)
-        .cornerRadius (topRight, corners: .topRight)
-        .cornerRadius (bottomLeft, corners:
+                .cornerRadius22 (topLeft, corners: .topLeft)
+        .cornerRadius22 (topRight, corners: .topRight)
+        .cornerRadius22 (bottomLeft, corners:
                 .bottomLeft)
-        .cornerRadius (bottomRight, corners: .bottomRight)
+        .cornerRadius22 (bottomRight, corners: .bottomRight)
             
                 .foregroundColor(backgroundcolor)
                 .frame(width: 360, height: 850)

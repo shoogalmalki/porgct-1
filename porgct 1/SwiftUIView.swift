@@ -42,11 +42,11 @@ struct ContentView1: View {
         ZStack{
 
             Rectangle ()
-                .cornerRadius (topLeft, corners: .topLeft)
-        .cornerRadius (topRight, corners: .topRight)
-        .cornerRadius (bottomLeft, corners:
+                .cornerRadius1(topLeft, corners: .topLeft)
+        .cornerRadius1 (topRight, corners: .topRight)
+        .cornerRadius1 (bottomLeft, corners:
                 .bottomLeft)
-        .cornerRadius (bottomRight, corners: .bottomRight)
+        .cornerRadius1 (bottomRight, corners: .bottomRight)
                 .foregroundColor(backgroundcolor)
                 .frame(width: 360, height: 850)
                 .offset(x: 0, y: 130)
