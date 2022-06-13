@@ -152,7 +152,7 @@ struct NewRegistration: View {
         Auth.auth().createUser(withEmail: email, password: password) { res, error in
             if error == nil {
                 print("Succeeded")
-                
+                showingLoginScreen.toggle()
             } else {
                 
                 print(error?.localizedDescription)
