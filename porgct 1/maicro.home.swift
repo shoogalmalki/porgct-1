@@ -410,6 +410,6 @@ struct home: View {
 
 struct home_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        home()
     }
 }
