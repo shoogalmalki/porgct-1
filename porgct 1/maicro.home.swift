@@ -1,5 +1,5 @@
 //
-//  home...swift
+//  maicro.home.swift
 //  porgct 1
 //
 //  Created by sarah hemood  on 15/11/1443 AH.
@@ -408,9 +408,8 @@ struct home: View {
 }
 }
 
-struct home_Previews1: PreviewProvider {
+struct home_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
-
