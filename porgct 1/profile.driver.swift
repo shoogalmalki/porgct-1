@@ -5,9 +5,10 @@
 //  Created by sarah hemood  on 19/11/1443 AH.
 //
 
+
 import SwiftUI
 
-struct profile1: View {
+struct profile: View {
     @State var toggleIsOn: Bool = false
     var body: some View {
         ZStack{
@@ -60,7 +61,7 @@ struct profile1: View {
        
                 ZStack{
                 Rectangle()
-                    .frame(width: 300, height:150)
+                    .frame(width: 300, height:180)
                     .foregroundColor(.white)
                     .cornerRadius(15)
                     VStack(alignment:.leading, spacing: 19){
@@ -81,6 +82,16 @@ struct profile1: View {
                     Image(systemName: "equal.square")
                         .foregroundColor(Color("Color3"))
                         Text("Feedback")
+                            .font(.system(size: 14, weight: .regular, design: .default))
+                        }
+                        Image(systemName: "chevron.right")
+                      
+                        }
+                        HStack(spacing:170){
+                        HStack{
+                    Image("Image1-2")
+                        .foregroundColor(Color("Color3"))
+                        Text("Coupons")
                             .font(.system(size: 14, weight: .regular, design: .default))
                         }
                         Image(systemName: "chevron.right")
@@ -119,8 +130,8 @@ struct profile1: View {
                         }
                         HStack(spacing:170){
                         HStack{
-                    Image("Image4-2")
-                        .foregroundColor(Color("Color3"))
+                    Image( "Image4-2")
+                        .foregroundColor(Color("Color2"))
                         Text("Language")
                             .font(.system(size: 14, weight: .regular, design: .default))
                         }
@@ -145,7 +156,7 @@ struct profile1: View {
                                     Text("Driver Mood")
                                         .font(.system(size: 16, weight: .bold, design: .default))
                                 })
-                                .toggleStyle(SwitchToggleStyle(tint: Color("Color2")))
+                                .toggleStyle(SwitchToggleStyle(tint: Color("Color3")))
                                     
                                 .padding(50)
                                 
@@ -160,8 +171,8 @@ struct profile1: View {
 }
 }
 }
-struct profile1_Previews: PreviewProvider {
+struct profile_Previews: PreviewProvider {
     static var previews: some View {
-        profile1()
+        profile()
     }
 }
