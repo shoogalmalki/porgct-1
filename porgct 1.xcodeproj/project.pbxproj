@@ -12,7 +12,7 @@
 		426BDB55284398FB008E9C5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426BDB54284398FB008E9C5A /* ContentView.swift */; };
 		426BDB57284398FD008E9C5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426BDB56284398FD008E9C5A /* Assets.xcassets */; };
 		426BDB5A284398FD008E9C5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426BDB59284398FD008E9C5A /* Preview Assets.xcassets */; };
-		42BFF2F0285DF86500C88845 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BFF2EF285DF86500C88845 /* Profile.swift */; };
+		8A831867285E4ADE00B8C702 /* profile.user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A831866285E4ADE00B8C702 /* profile.user.swift */; };
 		8AFA2B8F2858B30A000CECB6 /* maicro.home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA2B8E2858B30A000CECB6 /* maicro.home.swift */; };
 		AEB4214D284D137600A942B0 /* offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB4214C284D137600A942B0 /* offer.swift */; };
 		AEB4214F284D2E1400A942B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */; };
@@ -29,7 +29,7 @@
 		426BDB54284398FB008E9C5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		426BDB56284398FD008E9C5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		426BDB59284398FD008E9C5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		42BFF2EF285DF86500C88845 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		8A831866285E4ADE00B8C702 /* profile.user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.user.swift; sourceTree = "<group>"; };
 		8AFA2B8E2858B30A000CECB6 /* maicro.home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maicro.home.swift; sourceTree = "<group>"; };
 		AEB4214C284D137600A942B0 /* offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offer.swift; sourceTree = "<group>"; };
 		AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 				AEB4214C284D137600A942B0 /* offer.swift */,
 				424303E2284A4DFF0000A160 /* SwiftUIView.swift */,
 				8AFA2B8E2858B30A000CECB6 /* maicro.home.swift */,
-				42BFF2EF285DF86500C88845 /* Profile.swift */,
+				8A831866285E4ADE00B8C702 /* profile.user.swift */,
 				426BDB56284398FD008E9C5A /* Assets.xcassets */,
 				426BDB58284398FD008E9C5A /* Preview Content */,
 			);
@@ -173,7 +173,7 @@
 				8AFA2B8F2858B30A000CECB6 /* maicro.home.swift in Sources */,
 				426BDB55284398FB008E9C5A /* ContentView.swift in Sources */,
 				AEBD7847284794EA00202C25 /* NewRegistration.swift in Sources */,
-				42BFF2F0285DF86500C88845 /* Profile.swift in Sources */,
+				8A831867285E4ADE00B8C702 /* profile.user.swift in Sources */,
 				424303E3284A4DFF0000A160 /* SwiftUIView.swift in Sources */,
 				AEB4214D284D137600A942B0 /* offer.swift in Sources */,
 				426BDB53284398FB008E9C5A /* porgct_1App.swift in Sources */,
