@@ -25,7 +25,7 @@ struct RoundedCorner: Shape {
     }
 }
 
-struct SwiftUIView : View {
+struct Profile : View {
     
     
 
@@ -52,11 +52,7 @@ struct SwiftUIView : View {
             
          .background(RoundedRectangle(cornerRadius: 8, style:   .circular).fill(Color(UIColor.systemMint)))
             VStack{
-        HStack{
-      
-     
-            
-        }
+       
                 HStack{
                     Image(systemName: "Image2")
                         .resizable()
