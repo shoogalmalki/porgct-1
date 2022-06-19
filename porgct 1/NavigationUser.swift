@@ -61,7 +61,7 @@ struct NavigationUser: View {
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(Color("Color3"))
                         }
-                    ZStack{
+                        ZStack{
         Rectangle()
             .frame(width: 325, height:140)
             .foregroundColor(.white)
