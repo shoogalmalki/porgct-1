@@ -16,6 +16,7 @@
 		8A831869285E4D2200B8C702 /* profile.user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A831868285E4D2200B8C702 /* profile.user.swift */; };
 		8A9B1C64285EAA4800024954 /* homeuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C63285EAA4800024954 /* homeuser.swift */; };
 		8A9B1C66285EAD0400024954 /* navigationdriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C65285EAD0400024954 /* navigationdriver.swift */; };
+		8A9B1C68285EB18F00024954 /* NavigationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C67285EB18F00024954 /* NavigationUser.swift */; };
 		8AFA2B8F2858B30A000CECB6 /* maicro.home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA2B8E2858B30A000CECB6 /* maicro.home.swift */; };
 		AEB4214D284D137600A942B0 /* offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB4214C284D137600A942B0 /* offer.swift */; };
 		AEB4214F284D2E1400A942B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */; };
@@ -36,6 +37,7 @@
 		8A831868285E4D2200B8C702 /* profile.user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.user.swift; sourceTree = "<group>"; };
 		8A9B1C63285EAA4800024954 /* homeuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeuser.swift; sourceTree = "<group>"; };
 		8A9B1C65285EAD0400024954 /* navigationdriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationdriver.swift; sourceTree = "<group>"; };
+		8A9B1C67285EB18F00024954 /* NavigationUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUser.swift; sourceTree = "<group>"; };
 		8AFA2B8E2858B30A000CECB6 /* maicro.home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maicro.home.swift; sourceTree = "<group>"; };
 		AEB4214C284D137600A942B0 /* offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offer.swift; sourceTree = "<group>"; };
 		AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				8A831868285E4D2200B8C702 /* profile.user.swift */,
 				8A9B1C63285EAA4800024954 /* homeuser.swift */,
 				8A9B1C65285EAD0400024954 /* navigationdriver.swift */,
+				8A9B1C67285EB18F00024954 /* NavigationUser.swift */,
 				426BDB56284398FD008E9C5A /* Assets.xcassets */,
 				426BDB58284398FD008E9C5A /* Preview Content */,
 			);
@@ -187,6 +190,7 @@
 				8A831867285E4ADE00B8C702 /* profile.driver.swift in Sources */,
 				424303E3284A4DFF0000A160 /* SwiftUIView.swift in Sources */,
 				8A9B1C66285EAD0400024954 /* navigationdriver.swift in Sources */,
+				8A9B1C68285EB18F00024954 /* NavigationUser.swift in Sources */,
 				AEB4214D284D137600A942B0 /* offer.swift in Sources */,
 				426BDB53284398FB008E9C5A /* porgct_1App.swift in Sources */,
 			);
