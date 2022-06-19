@@ -76,7 +76,7 @@ struct profile1: View {
                         Image(systemName: "chevron.right")
                       
                         }
-                        HStack(spacing:170){
+                        HStack(spacing:175){
                         HStack{
                     Image(systemName: "equal.square")
                         .foregroundColor(Color("Color3"))
@@ -107,14 +107,15 @@ struct profile1: View {
                     VStack(alignment:.leading, spacing: 19){
                         Text("Other")
                             .font(.system(size: 15, weight:.bold, design: .default))
-                        HStack(spacing:170){
+                        HStack(spacing:140){
                         HStack{
-                    Image(systemName: "moon")
+                    Image(systemName: "power")
                         .foregroundColor(Color("Color3"))
-                        Text("Dark mode")
+                        Text("Driver Account")
                             .font(.system(size: 14, weight: .regular, design: .default))
                         }
                         Image(systemName: "chevron.right")
+                                
                       
                         }
                         HStack(spacing:170){

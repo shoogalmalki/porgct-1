@@ -38,7 +38,7 @@ struct profile: View {
             .clipShape(Circle())
             VStack{
         HStack{
-         Text("sarui madlin")
+         Text("Omar saleh")
                 .font(.system(size: 15, weight:.bold, design: .default))
                 .foregroundColor(Color("Color3"))
             Image(systemName: "star.fill")
@@ -68,7 +68,7 @@ struct profile: View {
                     VStack(alignment:.leading, spacing: 19){
                         Text("Account")
                             .font(.system(size: 15, weight:.bold, design: .default))
-                        HStack(spacing:170){
+                        HStack(spacing:168){
                         HStack{
                     Image(systemName: "person")
                         .foregroundColor(Color("Color3"))
@@ -78,7 +78,7 @@ struct profile: View {
                         Image(systemName: "chevron.right")
                       
                         }
-                        HStack(spacing:170){
+                        HStack(spacing:172){
                         HStack{
                     Image(systemName: "equal.square")
                         .foregroundColor(Color("Color3"))
@@ -88,7 +88,7 @@ struct profile: View {
                         Image(systemName: "chevron.right")
                       
                         }
-                        HStack(spacing:170){
+                        HStack(spacing:176){
                         HStack{
                     Image("Image1-2")
                         .foregroundColor(Color("Color3"))
@@ -98,7 +98,7 @@ struct profile: View {
                         Image(systemName: "chevron.right")
                       
                         }
-                        HStack(spacing:170){
+                        HStack(spacing:169){
                         HStack{
                     Image("Image2-2")
                         .foregroundColor(Color("Color2"))
@@ -119,11 +119,11 @@ struct profile: View {
                     VStack(alignment:.leading, spacing: 19){
                         Text("Other")
                             .font(.system(size: 15, weight:.bold, design: .default))
-                        HStack(spacing:170){
+                        HStack(spacing:140){
                         HStack{
-                    Image(systemName: "moon")
+                    Image(systemName: "power")
                         .foregroundColor(Color("Color3"))
-                        Text("Dark mode")
+                        Text("Driver Account")
                             .font(.system(size: 14, weight: .regular, design: .default))
                         }
                         Image(systemName: "chevron.right")
