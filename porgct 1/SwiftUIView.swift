@@ -111,10 +111,6 @@ struct ContentView1: View {
                     .lineLimit(nil)
                 }
                 .offset(x: 0, y: -40)
-
-
-      
-                
     }
             .offset(x: 0, y: -230)
            

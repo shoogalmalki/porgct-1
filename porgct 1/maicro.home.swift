@@ -54,6 +54,7 @@ struct home: View {
                 .frame(width: 360, height: 850)
                 .offset(x: 0, y: 130)
                 VStack{
+                    VStack(spacing:40){
                     ZStack{
                       
 //            Capsule()
@@ -76,6 +77,7 @@ struct home: View {
                             .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.701))
                             .offset(x:-35,y:-11)
                         Divider()
+                            .frame(width: 200)
                         Text("Drop Of Location")
                             .font(.caption)
                             .fontWeight(.light)
@@ -183,7 +185,7 @@ struct home: View {
                                 .offset(x:95)
                                 .offset(y:17)
                     }
-                        Text("OMER SALEH")
+                        Text("Adam khalied")
                             .font(.footnote)
                             .offset(y:38)
                             .offset(x:110)
@@ -198,7 +200,7 @@ struct home: View {
                         .foregroundColor(.white)
                         .cornerRadius(15)
                         VStack{
-                      Image("Image1")
+                      Image("Image1-1")
                             .resizable()
                             .frame(width: 250, height:25)
                         HStack(spacing:190){
@@ -214,7 +216,7 @@ struct home: View {
                             
                             Text("Starting:")
                                 .font(.footnote)
-                                .fontWeight(.bold)
+                                .fontWeight(.regular)
                                 .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
                                 .offset(x:-120)
                             HStack{
@@ -231,7 +233,7 @@ struct home: View {
                             }
                             Text("Arrival:")
                                 .font(.footnote)
-                                .fontWeight(.bold)
+                                .fontWeight(.regular)
                                 .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
                                 .offset(x:-125)
                                 .offset(y:7)
@@ -284,7 +286,7 @@ struct home: View {
                                     .offset(x:95)
                                     .offset(y:19)
                         }
-                            Text("OMER SALEH")
+                            Text("Nasser Ali")
                                 .font(.footnote)
                                 .offset(y:38)
                                 .offset(x:110)
@@ -292,113 +294,13 @@ struct home: View {
 
                         }
                     }
-                    ZStack{
-                Rectangle()
-                    .frame(width: 325, height:170)
-                    .foregroundColor(.white)
-                    .cornerRadius(15)
-                    VStack{
-                  Image("Image1")
-                        .resizable()
-                        .frame(width: 250, height:25)
-                    HStack(spacing:190){
-                        Text("Taif")
-                            .font(.callout)
-                            .fontWeight(.semibold)
-                            .offset(y:-5)
-                        Text("Riyadh")
-                            .font(.footnote)
-                            .fontWeight(.semibold)
-                            .offset(y:-5)
-                    }
                         
-                        Text("Starting:")
-                            .font(.footnote)
-                            .fontWeight(.regular)
-                            .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
-                            .offset(x:-120)
-                        HStack{
-                            Image(systemName: "calendar.badge.clock")
-                                .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
-                                .offset(x:-70)
-                                .offset(y:3)
-                        Text("Sun, June 5(8 -11AM)")
-                                .font(.caption)
-                                .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
-                                .offset(x:-70)
-                                .offset(y:3)
-                            
-                        }
-                        Text("Arrival:")
-                            .font(.footnote)
-                            .fontWeight(.regular)
-                            .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
-                            .offset(x:-125)
-                            .offset(y:7)
-                        HStack{
-                            Image(systemName: "calendar.badge.clock")
-                                .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
-                                .offset(x:-70)
-                                .offset(y:10)
-                            Text("Fri, June 3(8 -11AM)")
-                                .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
-                                .font(.caption)
-                                .offset(x:-70)
-                                .offset(y:10)
-                            
-                        }
-                       
-                        Button(action: {}, label: {
-                            Text("Request")
-                                .font(.callout)
-                                .fontWeight(.semibold)
-                                .foregroundColor(Color.white)
-
-                        })
-                            .frame(width: 190, height:25)
-                            .background(.orange)
-                                .cornerRadius(5)
-                                .offset(y:5)
-        }
-                    ZStack{
-                    Image("Image2")
-                        .resizable()
-                        .frame(width: 57, height:55)
-                        .offset(x:118)
-                        .offset(y:-2)
-                        Rectangle()
-                            .frame(width: 33, height:15)
-                            .cornerRadius(5)
-                            .offset(x:120)
-                            .offset(y:17)
-                            .foregroundColor(Color("Color1"))
-                        HStack{
-                        Text("4.9")
-                            .font(.caption)
-                            .fontWeight(.medium)
-                            .offset(x:135)
-                            .offset(y:17)
-                            Image(systemName: "star.fill")
-                                .foregroundColor(Color.orange)
-                                .frame(width:10.0 , height: 22)
-                                .offset(x:95)
-                                .offset(y:17)
-                    }
-                        Text("OMER SALEH")
-                            .font(.footnote)
-                            .offset(y:38)
-                            .offset(x:110)
-
-
-                    }
-        }
-                
             }
 //            })
                                }
             }
             //green and gray
-            
+            }
             .background(RoundedRectangle(cornerRadius: 8, style:   .circular).fill(Color(UIColor.systemMint)))
                 .ignoresSafeArea()
                 .navigationBarHidden(true)
