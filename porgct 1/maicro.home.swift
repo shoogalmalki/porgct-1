@@ -95,7 +95,7 @@ struct home: View {
                 VStack(spacing:20){
                     ZStack{
                 Rectangle()
-                    .frame(width: 325, height:170)
+                    .frame(width: 325, height:200)
                     .foregroundColor(.white)
                     .cornerRadius(15)
                     VStack{
@@ -156,8 +156,8 @@ struct home: View {
                                 .foregroundColor(Color.white)
 
                         })
-                            .frame(width: 190, height:25)
-                            .background(.orange)
+                            .frame(width: 300, height:25)
+                            .background(.orange.opacity(0.9))
                                 .cornerRadius(5)
                                 .offset(y:5)
         }
@@ -204,10 +204,10 @@ struct home: View {
                             .resizable()
                             .frame(width: 250, height:25)
                         HStack(spacing:190){
-                            Text("Taif")
+                            Text("Jedah")
                                 .font(.callout)
                                 .fontWeight(.semibold)
-                                .offset(y:-5)
+                                .offset(y:-4)
                             Text("Riyadh")
                                 .font(.footnote)
                                 .fontWeight(.semibold)

@@ -121,7 +121,7 @@ for your order ?
                             }
                                 Text("Omar Saleh ")
                                     .font(.system(size: 11, weight:.bold, design: .default))
-                                    .offset(x:-11)
+                                    .offset(x:-10)
                                    
                                 }
                             }
