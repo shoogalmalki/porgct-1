@@ -38,7 +38,7 @@ struct profile: View {
             .clipShape(Circle())
             VStack{
         HStack{
-         Text("Omer Saleh")
+         Text("sarui madlin")
                 .font(.system(size: 15, weight:.bold, design: .default))
                 .foregroundColor(Color("Color3"))
             Image(systemName: "star.fill")

@@ -36,7 +36,7 @@ struct profile1: View {
             .frame(width: 50, height: 50)
             VStack{
         HStack{
-         Text("sarui madlin")
+         Text("Nasser Ali")
                 .font(.system(size: 15, weight:.bold, design: .default))
                 .foregroundColor(Color("Color3"))
             Image(systemName: "star.fill")
@@ -145,7 +145,7 @@ struct profile1: View {
                                     Text("Driver Mood")
                                         .font(.system(size: 16, weight: .bold, design: .default))
                                 })
-                                .toggleStyle(SwitchToggleStyle(tint: Color("Color2")))
+                                .toggleStyle(SwitchToggleStyle(tint: Color("Color3")))
                                     
                                 .padding(50)
                                 
