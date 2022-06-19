@@ -198,7 +198,7 @@ struct home: View {
                         .foregroundColor(.white)
                         .cornerRadius(15)
                         VStack{
-                      Image("Image1")
+                      Image("Image1-1")
                             .resizable()
                             .frame(width: 250, height:25)
                         HStack(spacing:190){
@@ -298,7 +298,7 @@ struct home: View {
                     .foregroundColor(.white)
                     .cornerRadius(15)
                     VStack{
-                  Image("Image1")
+                  Image("Image1-1")
                         .resizable()
                         .frame(width: 250, height:25)
                     HStack(spacing:190){
@@ -361,9 +361,10 @@ struct home: View {
                                 .offset(y:5)
         }
                     ZStack{
-                    Image("Image2")
+                    Image("Driver")
                         .resizable()
-                        .frame(width: 57, height:55)
+                        .frame(width: 70, height:60)
+                        .clipShape(Circle())
                         .offset(x:118)
                         .offset(y:-2)
                         Rectangle()
@@ -384,7 +385,7 @@ struct home: View {
                                 .offset(x:95)
                                 .offset(y:17)
                     }
-                        Text("OMER SALEH")
+                        Text("Omer Saleh")
                             .font(.footnote)
                             .offset(y:38)
                             .offset(x:110)

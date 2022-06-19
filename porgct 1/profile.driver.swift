@@ -32,12 +32,13 @@ struct profile: View {
 
         HStack(spacing:100){
         HStack{
-        Image("Image3-1")
+        Image("Driver")
             .resizable()
             .frame(width: 50, height: 50)
+            .clipShape(Circle())
             VStack{
         HStack{
-         Text("sarui madlin")
+         Text("Omer Saleh")
                 .font(.system(size: 15, weight:.bold, design: .default))
                 .foregroundColor(Color("Color3"))
             Image(systemName: "star.fill")
