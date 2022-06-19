@@ -33,6 +33,7 @@ struct NavigationUser: View {
     @State var bottomRight: CGFloat = 0
     let upcolor: Color = Color(red: Double(69)/255, green: Double(174)/255, blue: Double(172)/255)
     let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
+   
     var body: some View {
         NavigationView {
             ZStack {
