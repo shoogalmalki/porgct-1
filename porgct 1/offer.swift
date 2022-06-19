@@ -55,9 +55,11 @@ struct offer: View {
                 .frame(width: 360, height: 850)
                 .offset(x: 0, y: 120)
     VStack{
-
+      
                 VStack(spacing:20){
+                    
                     ZStack{
+                       
                 Rectangle()
                     .frame(width: 325, height:170)
                     .foregroundColor(.white)
@@ -147,12 +149,12 @@ for your shipment?
 
 
                     }
+                        
         }
 
                 
-                
             }
-
+        
                              }
           }
             //green and gray
