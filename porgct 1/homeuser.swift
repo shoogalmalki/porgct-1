@@ -50,7 +50,44 @@ struct homeuser: View {
                 .foregroundColor(backgroundcolor)
                 .frame(width: 360, height: 850)
                 .offset(x: 0, y: 130)
-                VStack{
+                VStack(spacing:33){
+                    
+                    ZStack{
+                        
+                        //            Capsule()
+                        //                            .stroke(Color.gray,lineWidth: 1)
+                        //                            .padding()
+                        //                            .frame(width: 300, height: 60)
+                        //
+                        //                            .foregroundColor(Color("Color1"))
+                        //                            .border(Color("Color2"),width:1.5)
+                        //                            .cornerRadius(3)
+                        
+                        Image("Image4-1")
+                            .resizable()
+                            .foregroundColor(Color("Color2"))
+                            .frame(width:35, height:42)
+                            .offset(x:-110)
+                        Text("Pick Up Location")
+                            .font(.caption)
+                            .fontWeight(.light)
+                            .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.701))
+                            .offset(x:-35,y:-11)
+                        Divider()
+                            .frame(width: 200)
+                        Text("Drop Of Location")
+                            .font(.caption)
+                            .fontWeight(.light)
+                            .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.701))
+                            .offset(x:-33,y:15)
+                            .overlay{
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color("Color2"),lineWidth: 1)
+                                    .frame(width: 300, height: 60)
+                                    .offset(y:-3)
+                                
+                            }
+                    }
                     ZStack{
                 Rectangle()
                     .frame(width: 325, height:190)
