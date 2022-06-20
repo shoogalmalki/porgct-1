@@ -51,6 +51,34 @@ struct homeuser: View {
                 .frame(width: 360, height: 850)
                 .offset(x: 0, y: 130)
                 VStack(spacing:33){
+                    Spacer()
+               Spacer()
+                    HStack{
+                        HStack(alignment: .bottom ,spacing:250){
+                        Button(action: {}
+                             , label:{
+                            Image(systemName: "person.circle.fill")
+                                .foregroundColor(.white)
+                                .font(.system(size: 23))
+                    })
+                        Button(action: {}
+                             , label:{
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.white)
+                                .font(.system(size: 23))
+                    })
+                    }
+                       
+                        Button(action: {}
+                             , label:{
+                            Image(systemName: "bell.fill")
+                                .foregroundColor(.white)
+                                .font(.system(size: 23))
+                    })
+                    }
+//                        (alignment: .leading)
+                    
+Spacer()
                     
                     ZStack{
                         
@@ -88,6 +116,7 @@ struct homeuser: View {
                                 
                             }
                     }
+                    ScrollView(.vertical,showsIndicators: false) {
                     ZStack{
                 Rectangle()
                     .frame(width: 325, height:190)
@@ -279,6 +308,7 @@ struct homeuser: View {
                                     .cornerRadius(5)
                                     .offset(y:80)
                 }
+            }
             }
             }
                 .background(RoundedRectangle(cornerRadius: 8, style:   .circular).fill(Color(UIColor.systemMint)))
