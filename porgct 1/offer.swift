@@ -57,7 +57,10 @@ struct offer: View {
                     VStack(spacing:20){
                         HStack{
                             ZStack{
+                            }
+                            ZStack{
                             Image(systemName:"shippingbox")
+                                
                         RoundedRectangle (cornerRadius: 10)
                             .frame(width: 40, height: 40)
                             .foregroundColor(Color.gray.opacity(0.2))
@@ -66,10 +69,11 @@ struct offer: View {
                             
                             Image("Image12")
                             ZStack{
-                        Image(systemName:"person.text.rectangle")
+                            
                             RoundedRectangle (cornerRadius: 10)
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(Color.mint)
+                                Image(systemName:"person.text.rectangle")
                             }
                             Image("Image12")
                             ZStack{
@@ -78,7 +82,7 @@ struct offer: View {
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(Color.gray.opacity(0.2))
                             }
-                                
+                          
                         }
                         .offset(y:-170)
                         ZStack{
