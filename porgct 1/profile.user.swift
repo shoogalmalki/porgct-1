@@ -9,12 +9,12 @@ import SwiftUI
 
 struct profile1: View {
     @State var toggleIsOn: Bool = false
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
+        NavigationView{
         ZStack{
-            Rectangle()
-                .frame(width: 370, height:800)
-                .foregroundColor(Color("Color1"))
-                .cornerRadius(15)
+           Color("Color2")
+//                .ignoresSafeArea()
             VStack(spacing:40){
 //                HStack(alignment: .center,spacing: -66){
                 ZStack{
@@ -158,6 +158,15 @@ struct profile1: View {
                 
                 
     }
+}
+            navigationTitle("profile")
+                .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(trailing: Button{
+            presentationMode.wrappedValue.dismiss()
+        }label: {
+            Image(systemName: "x.circle.fill")
+     
+        })
 }
 }
 }

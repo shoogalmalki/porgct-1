@@ -362,6 +362,8 @@ Spacer()
             .ignoresSafeArea()
             .navigationBarHidden(true)
           
+           
+            
             
         }
         

@@ -48,20 +48,10 @@ struct NavigationUser: View {
                 .frame(width: 360, height: 850)
                 .offset(x: 0, y: 130)
                 ZStack{
+                   
                     VStack(spacing:20){
-                        HStack{
-                        RoundedRectangle (cornerRadius: 10)
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(Color("Color3"))
-                            Image("Image12")
-                            RoundedRectangle (cornerRadius: 10)
-                                .frame(width: 40, height: 40)
-                                .foregroundColor(Color("Color3"))
-                            Image("Image12")
-                            RoundedRectangle (cornerRadius: 10)
-                                .frame(width: 40, height: 40)
-                                .foregroundColor(Color("Color3"))
-                        }
+                       
+                        
                         ZStack{
         Rectangle()
             .frame(width: 325, height:140)
