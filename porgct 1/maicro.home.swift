@@ -38,7 +38,8 @@ struct home: View {
     @State var bottomRight: CGFloat = 0
     let upcolor: Color = Color(red: Double(69)/255, green: Double(174)/255, blue: Double(172)/255)
     let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
-    var frameworks = ["LOCATION", "RIYADH", "Core Data", "CloudKit", "SwiftUI"]
+    var frameworks = ["Pick Up Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
+    var frameworks2 = ["Drop Of Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     @State private var selectedFrameworkIndex = ""
     @State var shouldGoToWhatEverPage: Bool = false
     var body: some View {
@@ -110,23 +111,30 @@ Spacer()
                                 .foregroundColor(Color("Color2"))
                                 .frame(width:35, height:42)
                                 .offset(x:-110)
-                            Text("Pick Up Location")
-                                .font(.caption)
-                                .fontWeight(.light)
-                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.701))
+     
                               
                             Picker(selection: $selectedFrameworkIndex, label: Text("")) {
                                 ForEach(0 ..< frameworks.count) {
                                    Text(self.frameworks[$0])
                                 }
+                                
                             }
+                            
+                            
+                            .font(.title)
+                                                    
+
+                           
                             .offset(x:-35,y:-11)
                             Divider()
                                 .frame(width: 200)
-                            Text("Drop Of Location")
-                                .font(.caption)
-                                .fontWeight(.light)
-                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.701))
+                            Picker(selection: $selectedFrameworkIndex, label: Text("")) {
+                                ForEach(0 ..< frameworks2.count) {
+                                   Text(self.frameworks2[$0])
+                                }
+                                
+                            }
+                           
                                 .offset(x:-33,y:15)
                                 .overlay{
                                     RoundedRectangle(cornerRadius: 8)
