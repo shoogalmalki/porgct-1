@@ -38,7 +38,9 @@ struct home: View {
     @State var bottomRight: CGFloat = 0
     let upcolor: Color = Color(red: Double(69)/255, green: Double(174)/255, blue: Double(172)/255)
     let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
-    
+    var frameworks = ["LOCATION", "RIYADH", "Core Data", "CloudKit", "SwiftUI"]
+    @State private var selectedFrameworkIndex = ""
+    @State var shouldGoToWhatEverPage: Bool = false
     var body: some View {
         //green and gray
         NavigationView{
@@ -74,8 +76,14 @@ struct home: View {
                                     .font(.system(size: 23))
                         })
                         }
-                           
-                            Button(action: {}
+                            NavigationLink(isActive: $shouldGoToWhatEverPage, destination: {
+                                navigationdriver()
+                            }, label: {
+                                
+                            })
+                            Button(action: {
+                                shouldGoToWhatEverPage.toggle()
+                            }
                                  , label:{
                                 Image(systemName: "bell.fill")
                                     .foregroundColor(.white)
@@ -106,7 +114,13 @@ Spacer()
                                 .font(.caption)
                                 .fontWeight(.light)
                                 .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.701))
-                                .offset(x:-35,y:-11)
+                              
+                            Picker(selection: $selectedFrameworkIndex, label: Text("")) {
+                                ForEach(0 ..< frameworks.count) {
+                                   Text(self.frameworks[$0])
+                                }
+                            }
+                            .offset(x:-35,y:-11)
                             Divider()
                                 .frame(width: 200)
                             Text("Drop Of Location")
