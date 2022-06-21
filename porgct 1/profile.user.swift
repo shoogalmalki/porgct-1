@@ -13,18 +13,18 @@ struct profile1: View {
     var body: some View {
         NavigationView{
         ZStack{
-           Color("Color2")
-//                .ignoresSafeArea()
+           Color("Color1")
+                .ignoresSafeArea()
             VStack(spacing:40){
 //                HStack(alignment: .center,spacing: -66){
-                ZStack{
-                Rectangle()
-                    .frame(width:30, height:30)
-                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.875))
-                    .cornerRadius(10)
-                    Image(systemName: "chevron.left")
-                        .foregroundColor(Color("Color3"))
-                } .padding(.trailing,270)
+//                ZStack{
+//                Rectangle()
+//                    .frame(width:30, height:30)
+//                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.875))
+//                    .cornerRadius(10)
+//                    Image(systemName: "chevron.left")
+//                        .foregroundColor(Color("Color3"))
+//                } .padding(.trailing,270)
 //                    Text("Profile")
 //                    .font(.system(size: 15, weight:.bold, design: .default))
 //                }
@@ -159,13 +159,15 @@ struct profile1: View {
                 
     }
 }
-            navigationTitle("profile")
-                .navigationBarTitleDisplayMode(.inline)
-        .navigationBarItems(trailing: Button{
-            presentationMode.wrappedValue.dismiss()
+         
+        .navigationTitle("jujjj")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(leading:
+Button{
+            presentationMode.wrappedValue
+                .dismiss()
         }label: {
-            Image(systemName: "x.circle.fill")
-     
+            Image(systemName:"x.circle.fill").font(.title)
         })
 }
 }
