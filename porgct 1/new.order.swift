@@ -26,7 +26,7 @@ struct RoundedCorner99: Shape {
     }
 }
 
-struct ContentView10: View {
+struct order: View {
     
     @StateObject private var viewModel = ContentViewModel()
     
@@ -282,9 +282,9 @@ struct ContentView10: View {
     }
     }
     }
-struct ContentView10_Previews: PreviewProvider {
+struct order_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView10()
+        order()
     }
 }
 }
