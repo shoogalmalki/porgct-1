@@ -32,7 +32,19 @@ struct DateAndTime: View {
             .foregroundColor(.mint)
             .font(.system(size: 16, weight: .semibold, design: .serif))
             }
+            Spacer()
+          
+            Button("Done") {
+
+            }
+
+            .foregroundColor(.white)
+            .font(.footnote)
+               .frame(width: 300, height: 50)
+               .background(Color(UIColor.systemMint))
+                .cornerRadius(10)
         }
+       
         }
     }
 
