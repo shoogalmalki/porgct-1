@@ -60,15 +60,29 @@ struct home: View {
                         Spacer()
                    Spacer()
                         HStack{
+                            HStack(alignment: .bottom ,spacing:250){
                             Button(action: {}
                                  , label:{
-                                Image(systemName: "person")
+                                Image(systemName: "person.circle.fill")
                                     .foregroundColor(.white)
+                                    .font(.system(size: 23))
                         })
-                    
-                            Text("iii").font(.headline)
+                            Button(action: {}
+                                 , label:{
+                                Image(systemName: "plus.circle.fill")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 23))
+                        })
                         }
-                       
+                           
+                            Button(action: {}
+                                 , label:{
+                                Image(systemName: "bell.fill")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 23))
+                        })
+                        }
+//                        (alignment: .leading)
                         
 Spacer()
                         
