@@ -42,7 +42,7 @@ struct home: View {
     var frameworks2 = ["Drop Of Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     @State private var selectedFrameworkIndex = ""
     @State var shouldGoToWhatEverPage: Bool = false
-    @State var showModelView: Bool = false
+    @State var showModelView = true
 
     var body: some View {
         //green and gray
@@ -373,10 +373,10 @@ Spacer()
                 Image(systemName:"person").font(.title)
                 
             })
-            .sheet(isPresented:$showModelView )
+            .sheet(isPresented:$showModelView , content:
             {
                 profile1()
-            }
+            })
             
             
         }

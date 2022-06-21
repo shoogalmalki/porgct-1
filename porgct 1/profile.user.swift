@@ -160,14 +160,14 @@ struct profile1: View {
     }
 }
          
-        .navigationTitle("jujjj")
+        .navigationTitle("profile")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(leading:
 Button{
             presentationMode.wrappedValue
                 .dismiss()
         }label: {
-            Image(systemName:"x.circle.fill").font(.title)
+            Image(systemName:"x.circle.fill")
         })
 }
 }
