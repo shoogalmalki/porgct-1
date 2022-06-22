@@ -33,7 +33,8 @@ struct porgct_1App: App {
     var body: some Scene {
         WindowGroup {
 //       ContentView()
-            home()
+//            home()
+            SplashScreenView()
         }
     }
 }

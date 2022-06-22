@@ -13,13 +13,13 @@ struct Mmm: View {
   
     var body: some View {
       
-        VStack {
+       
             Toggle(isOn: $checkbox2){
                 Text("I accept the terms & conditions")
             }.toggleStyle(CheckboxToggleStyle(isReversed: true))
                 .foregroundStyle(.mint)
                 .font(.system(size: 16, weight: .semibold, design: .serif))
-    }.padding()
+//    .padding()
 
 }
 struct CheckboxToggleStyle: ToggleStyle {

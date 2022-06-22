@@ -128,14 +128,14 @@ struct NavigationUser: View {
                                         ZStack{
                                             Circle()
                                                 .frame(width:40, height: 36)
-                                                .foregroundColor(Color("Color4"))
+                                                .foregroundColor(Color.mint.opacity(0.2))
                                             Image(systemName:"phone")
                                                 .foregroundColor(Color("Color3"))
                                             .font(.system(size: 12, weight:.bold, design: .default))                        }
                                         ZStack{
                                             Circle()
                                                 .frame(width:40, height:36 )
-                                                .foregroundColor(Color("Color4"))
+                                                .foregroundColor(Color.mint.opacity(0.2))
                                             Image("Image10")
                                                 .resizable()
                                                 .frame(width: 17, height: 17)
