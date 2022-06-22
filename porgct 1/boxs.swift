@@ -24,7 +24,7 @@ struct boxs: View {
             ZStack{
 Rectangle()
                     .frame(width: 66, height: 55)
-                    .foregroundColor(.red)
+                    .foregroundColor(Color("Color3"))
                     .cornerRadius(13)
                 VStack{
             Image("image 1")
@@ -51,7 +51,6 @@ Rectangle()
                 Image("image 1")
                         .resizable()
                         .frame(width: 30, height: 30)
-                        .foregroundColor(.red)
                         Text("small")
                             .font(.caption2)
                     }
@@ -67,7 +66,7 @@ Rectangle()
             ZStack{
 Rectangle()
                     .frame(width: 66, height: 55)
-                    .foregroundColor(.red)
+                    .foregroundColor(Color("Color3"))
                     .cornerRadius(13)
                 VStack{
             Image("image 2")
@@ -94,7 +93,6 @@ Rectangle()
                 Image("image 2")
                         .resizable()
                         .frame(width: 30, height: 30)
-                        .foregroundColor(.red)
                         Text("Medium")
                             .font(.caption2)
                     }
@@ -110,13 +108,12 @@ Rectangle()
                 ZStack{
     Rectangle()
                         .frame(width: 66, height: 55)
-                        .foregroundColor(.red)
+                        .foregroundColor(Color("Color3"))
                         .cornerRadius(13)
                     VStack{
                 Image("image 3")
                         .resizable()
                         .frame(width: 30, height: 30)
-                        .foregroundColor(.black)
                         Text("large")
                             .font(.caption2)
                     }
