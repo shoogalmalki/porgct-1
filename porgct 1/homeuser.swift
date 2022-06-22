@@ -67,12 +67,7 @@ struct home: View {
                     HStack{
                         HStack(alignment: .bottom ,spacing:250){
                             
-                            Button(action: {}
-                                   , label:{
-                                Image(systemName: "person.circle.fill")
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 23))
-                            })
+                          
                             Button(action: {}
                                    , label:{
                                 Image(systemName: "plus.circle.fill")
