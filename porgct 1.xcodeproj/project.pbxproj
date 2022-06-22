@@ -21,6 +21,10 @@
 		8A9B1C64285EAA4800024954 /* homedriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C63285EAA4800024954 /* homedriver.swift */; };
 		8A9B1C66285EAD0400024954 /* navigationdriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C65285EAD0400024954 /* navigationdriver.swift */; };
 		8A9B1C68285EB18F00024954 /* NavigationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C67285EB18F00024954 /* NavigationUser.swift */; };
+		AE54AE2128633F94006FD4CB /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2028633F94006FD4CB /* SplashScreenView.swift */; };
+		AE54AE23286342FD006FD4CB /* PageModel-onbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */; };
+		AE54AE2528634356006FD4CB /* PageView-onbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2428634356006FD4CB /* PageView-onbording.swift */; };
+		AE54AE27286343CF006FD4CB /* pageView-onbording2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */; };
 		AEB4214D284D137600A942B0 /* offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB4214C284D137600A942B0 /* offer.swift */; };
 		AEB4214F284D2E1400A942B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */; };
 		AEB42152284D337400A942B0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AEB42151284D337400A942B0 /* FirebaseAuth */; };
@@ -45,6 +49,10 @@
 		8A9B1C63285EAA4800024954 /* homedriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homedriver.swift; sourceTree = "<group>"; };
 		8A9B1C65285EAD0400024954 /* navigationdriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationdriver.swift; sourceTree = "<group>"; };
 		8A9B1C67285EB18F00024954 /* NavigationUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUser.swift; sourceTree = "<group>"; };
+		AE54AE2028633F94006FD4CB /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageModel-onbording.swift"; sourceTree = "<group>"; };
+		AE54AE2428634356006FD4CB /* PageView-onbording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageView-onbording.swift"; sourceTree = "<group>"; };
+		AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "pageView-onbording2.swift"; sourceTree = "<group>"; };
 		AEB4214C284D137600A942B0 /* offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offer.swift; sourceTree = "<group>"; };
 		AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AEBD7846284794EA00202C25 /* NewRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRegistration.swift; sourceTree = "<group>"; };
@@ -94,6 +102,10 @@
 				8A831866285E4ADE00B8C702 /* profile.driver.swift */,
 				8A831868285E4D2200B8C702 /* profile.user.swift */,
 				8A9B1C63285EAA4800024954 /* homedriver.swift */,
+				AE54AE2028633F94006FD4CB /* SplashScreenView.swift */,
+				AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */,
+				AE54AE2428634356006FD4CB /* PageView-onbording.swift */,
+				AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */,
 				8A9B1C65285EAD0400024954 /* navigationdriver.swift */,
 				8A9B1C67285EB18F00024954 /* NavigationUser.swift */,
 				8A948D4A2860A0600069997F /* homeuser.swift */,
@@ -192,7 +204,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A9B1C64285EAA4800024954 /* homedriver.swift in Sources */,
+				AE54AE27286343CF006FD4CB /* pageView-onbording2.swift in Sources */,
+				AE54AE23286342FD006FD4CB /* PageModel-onbording.swift in Sources */,
+				AE54AE2528634356006FD4CB /* PageView-onbording.swift in Sources */,
 				42A70F032861F7C30093FACA /* new.order.swift in Sources */,
+				AE54AE2128633F94006FD4CB /* SplashScreenView.swift in Sources */,
 				8A948D4B2860A0600069997F /* homeuser.swift in Sources */,
 				42A70F092862025E0093FACA /* ImagePicker.swift in Sources */,
 				AEBD7847284794EA00202C25 /* NewRegistration.swift in Sources */,
