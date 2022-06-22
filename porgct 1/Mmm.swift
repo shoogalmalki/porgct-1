@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct Mmm: View {
-    @State private var checkbox1: Bool = false
+    
     @State private var checkbox2: Bool = false
+  
     var body: some View {
+      
         VStack {
-            Toggle(isOn: $checkbox1){
-                Text("Checkbox1")
-            }.toggleStyle(CheckboxToggleStyle())
             Toggle(isOn: $checkbox2){
-                Text("Checkbox2")
+                Text("I accept the terms & conditions")
             }.toggleStyle(CheckboxToggleStyle(isReversed: true))
+                .foregroundStyle(.mint)
+                .font(.system(size: 16, weight: .semibold, design: .serif))
     }.padding()
 
 }
-    struct CheckboxToggleStyle: ToggleStyle {
+struct CheckboxToggleStyle: ToggleStyle {
         var isReversed = false
         func makeBody(configuration: Configuration) -> some
         View {
@@ -42,14 +43,7 @@ struct Mmm: View {
                     configuration.label
                 }
     }
-//            ZStack {
-//               Image(systemName: "rectangle")
-//                    .foregroundColor(.gray)
-//                Image(systemName: "checkmark")
-//                    .resizable()
-//                    .frame(width: 20, height: 20)
-//                    .foregroundColor(Color(red: 0.414, green: 0.769, blue: 0.644))
-//            }
+
             }
     }
     struct Mmm_Previews: PreviewProvider {
