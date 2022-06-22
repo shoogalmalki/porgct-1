@@ -45,7 +45,7 @@ struct NewRegistration: View {
     @State private var wrongEmail: Float = 0
     @State private var wrongPassword: Float  = 0
     @State private var showingLoginScreen = false
-    
+    @State var shouldGoToWhatEverPage2: Bool = false
     var body: some View {
         NavigationView {
            ZStack {
@@ -120,14 +120,22 @@ struct NewRegistration: View {
                        .offset(y:-60 )
 //
                 HStack{
-                     Button{} label: {
+                    NavigationLink(isActive: $shouldGoToWhatEverPage2, destination: {
+                        Login()
+                    }, label: {
+
+                    })
+                     Button(action: {
+                         shouldGoToWhatEverPage2.toggle()
+                     }
+                            ,label: {
                          Text("Already have an account? Login")
                              .underline()
                                .font(.footnote)
                                                             .bold()
                                 .foregroundColor(.black)
                             .padding(.top)
-                     }
+                     })
                   }
                 NavigationLink(destination: Text("You are logged in @\(FullName)"), isActive: $showingLoginScreen) {
                     EmptyView()

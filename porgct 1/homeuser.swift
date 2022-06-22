@@ -75,12 +75,14 @@ struct home: View {
                                     .foregroundColor(.white)
                                     .font(.system(size: 23))
                             })
+                            //((كود اللينك البدايه)))
                             NavigationLink(isActive: $shouldGoToWhatEverPage1, destination: {
                                 NavigationUser()
                             }, label: {
 
                             })
                             Button(action: {
+                                //كود اللينك النهايه
                                 shouldGoToWhatEverPage1.toggle()
                             }
                                    , label:{

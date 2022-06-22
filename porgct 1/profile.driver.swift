@@ -68,8 +68,8 @@ struct profile: View {
                     VStack(alignment:.leading, spacing: 19){
                         Text("Account")
                             .font(.system(size: 15, weight:.bold, design: .default))
-                        HStack(spacing:168){
                         HStack{
+                        HStack(spacing:190){
                             
                             Button(action: {}, label: {
                     Image(systemName: "person")

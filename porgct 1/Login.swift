@@ -43,6 +43,7 @@ struct Login: View {
        @State private var wrongEmail: Float = 0
        @State private var wrongPassword: Float  = 0
        @State private var showingLoginScreen = false
+    @State var shouldGoToWhatEverPage3: Bool = false
     var body: some View {
         NavigationView {
                    ZStack {
@@ -91,7 +92,14 @@ struct Login: View {
        ////                    }
        //
        //
+                        NavigationLink(isActive: $shouldGoToWhatEverPage3, destination: {
+                            order()
+                        }, label: {
+                            
+                        })
+                        
                           Button("Login") {
+                              shouldGoToWhatEverPage3.toggle()
 
                  login(email: Email, password: password)
                                               }

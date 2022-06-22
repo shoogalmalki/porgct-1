@@ -57,7 +57,7 @@ struct homeuser: View {
                Spacer()
                     HStack{
                         NavigationLink(isActive: $shouldGoToWhatEverPage1, destination: {
-                           order()
+                            NewRegistration()
                         }, label: {
                             
                         })
