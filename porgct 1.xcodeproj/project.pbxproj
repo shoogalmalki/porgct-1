@@ -94,7 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				426BDB52284398FB008E9C5A /* porgct_1App.swift */,
+				AE54AE2028633F94006FD4CB /* SplashScreenView.swift */,
+				AE54AE2428634356006FD4CB /* PageView-onbording.swift */,
+				AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */,
 				AEBD7846284794EA00202C25 /* NewRegistration.swift */,
+				AE54AE2828634648006FD4CB /* Login.swift */,
 				AEB4214C284D137600A942B0 /* offer.swift */,
 				42A70F022861F7C30093FACA /* new.order.swift */,
 				42A70F002861F3060093FACA /* MyMap.swift */,
@@ -104,11 +108,7 @@
 				8A831866285E4ADE00B8C702 /* profile.driver.swift */,
 				8A831868285E4D2200B8C702 /* profile.user.swift */,
 				8A9B1C63285EAA4800024954 /* homedriver.swift */,
-				AE54AE2028633F94006FD4CB /* SplashScreenView.swift */,
 				AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */,
-				AE54AE2428634356006FD4CB /* PageView-onbording.swift */,
-				AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */,
-				AE54AE2828634648006FD4CB /* Login.swift */,
 				8A9B1C65285EAD0400024954 /* navigationdriver.swift */,
 				8A9B1C67285EB18F00024954 /* NavigationUser.swift */,
 				8A948D4A2860A0600069997F /* homeuser.swift */,
