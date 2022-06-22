@@ -10,7 +10,9 @@ import SwiftUI
 struct DateAndTime: View {
     
     @State var selectedDate: Date = Date()
-    
+    @State var buttonTitle =  "-Select a Time-"
+
+    @State var gender = ""
     var body: some View {
         VStack {
             DatePicker("Select a Date", selection: $selectedDate, in: Date()...,displayedComponents: .date)
@@ -19,19 +21,56 @@ struct DateAndTime: View {
     GraphicalDatePickerStyle()
                    
                 )
-            ZStack{
-            RoundedRectangle(cornerRadius: 8)
-                .stroke(Color("Color2"),lineWidth: 1)
-                .frame(width: 300, height: 40)
-            Menu("Select a Time") {
-                Text("Between 6 :00 - 12 :00")
-                Text("Between 13 :00 - 18:00")
-                Text("Between 19 : 00 - 24 :00")
-            }
-            
-            .foregroundColor(.mint)
-            .font(.system(size: 16, weight: .semibold, design: .serif))
-            }
+            Menu(buttonTitle){
+                            
+                            Button {
+                                self.buttonTitle="Between 6 :00 - 12 :00"
+                                self.gender="Between 6 :00 - 12 :00"
+                            } label: {
+                              
+                                Text("Between 6 :00 - 12 :00")
+                            }
+                            Button {
+                                self.buttonTitle="Between 13 :00 - 18:00"
+                                self.gender="Between 13 :00 - 18:00"
+                            } label: {
+                                
+                                Text("Between 13 :00 - 18:00")
+                            }
+                Button {
+                    self.buttonTitle="Between 19 : 00 - 24 :00"
+                    self.gender="Between 19 : 00 - 24 :00"
+                } label: {
+                    
+                    Text("Between 19 : 00 - 24 :00")
+                }
+
+                        }
+                         
+                        .foregroundStyle(.black)
+                        .font(.system(size: 16, weight: .semibold, design: .serif))
+                        .frame(width: 300, height: 50)
+                                        .background(.white)
+                                        .cornerRadius(10)
+                                        .overlay {
+                                        RoundedRectangle(cornerRadius:9)
+                                        .stroke(.mint, lineWidth: 2)
+                                                }
+        
+//            ZStack{
+//            RoundedRectangle(cornerRadius: 8)
+//                .stroke(Color("Color2"),lineWidth: 1)
+//                .frame(width: 300, height: 40)
+//            Menu("Select a Time") {
+//                Text("Between 6 :00 - 12 :00")
+//                Text("Between 13 :00 - 18:00")
+//                Text("Between 19 : 00 - 24 :00")
+//            }
+//
+//            .foregroundColor(.mint)
+//            .font(.system(size: 1, weight: .semibold, design: .serif))
+//            }
+            //بوتن الدن
             Spacer()
           
             Button("Done") {
@@ -39,7 +78,7 @@ struct DateAndTime: View {
             }
 
             .foregroundColor(.white)
-            .font(.footnote)
+            .font(.system(size: 16, weight: .semibold, design: .serif))
                .frame(width: 300, height: 50)
                .background(Color(UIColor.systemMint))
                 .cornerRadius(10)
