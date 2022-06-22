@@ -39,11 +39,27 @@ struct NavigationUser: View {
             ZStack {
                 
                 VStack {
-                    Text("Hello")
+                    Text("Request")
+                        .font(.title)
+                        .fontWeight(.bold)
                         .foregroundColor(.white)
+                        
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .offset()
+                        .offset(x:125,y:65)
+//                    Button(action: {}, label:{
+//                    ZStack{
+//                   Rectangle()
+//                        .frame(width: 33, height: 33)
+//                        .cornerRadius(13)
+//                        .foregroundColor(Color("Color3"))
+//                        .offset(x: -140,y: 15)
+//                        Image(systemName: "chevron.left")
+//                            .offset(x: -140,y: 15)
+//
+//                    }
+//                           })
                     Spacer()
+                  
                 }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(RoundedRectangle(cornerRadius: 8, style:   .circular).fill(Color(UIColor.systemMint)))

@@ -37,6 +37,8 @@ struct homeuser: View {
     let upcolor: Color = Color(red: Double(69)/255, green: Double(174)/255, blue: Double(172)/255)
     let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
     @State var shouldGoToWhatEverPage: Bool = false
+    @State var shouldGoToWhatEverPage1: Bool = false
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -54,23 +56,22 @@ struct homeuser: View {
                     Spacer()
                Spacer()
                     HStack{
-                        HStack(alignment: .bottom ,spacing:250){
-                        Button(action: {}
-                             , label:{
-                            Image(systemName: "person.circle.fill")
-                                .foregroundColor(.white)
-                                .font(.system(size: 23))
-                    })
-                        Button(action: {}
-                             , label:{
+                        NavigationLink(isActive: $shouldGoToWhatEverPage1, destination: {
+                           order()
+                        }, label: {
+                            
+                        })
+                        Button(action: {
+                            shouldGoToWhatEverPage1.toggle()
+
+                        }
+                               , label: {
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.white)
                                 .font(.system(size: 23))
-                    })
-                    }
-                       
+                        })
                         NavigationLink(isActive: $shouldGoToWhatEverPage, destination: {
-                            NavigationUser()
+                            navigationdriver()
                         }, label: {
                             
                         })
@@ -207,7 +208,10 @@ Spacer()
                             }
                             
                 }
-                        Button(action: {}, label: {
+                       
+                        Button(action: {
+                         
+                        }, label: {
                             Text("Makee an offer")
                                 .font(.callout)
                                 .fontWeight(.semibold)

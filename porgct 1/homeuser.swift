@@ -41,9 +41,10 @@ struct home: View {
     var frameworks = ["Pick Up Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     var frameworks2 = ["Drop Of Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     @State private var selectedFrameworkIndex = ""
-    @State var shouldGoToWhatEverPage: Bool = false
+//    @State var shouldGoToWhatEverPage: Bool = false
     @State var showModelView = false
-    
+    @State var shouldGoToWhatEverPage1: Bool = false
+
     var body: some View {
         //green and gray
         NavigationView{
@@ -65,7 +66,7 @@ struct home: View {
                     Spacer()
                     Spacer()
                     HStack{
-                        HStack(alignment: .bottom ,spacing:250){
+                        HStack{
                             
                           
                             Button(action: {}
@@ -74,20 +75,27 @@ struct home: View {
                                     .foregroundColor(.white)
                                     .font(.system(size: 23))
                             })
+                            NavigationLink(isActive: $shouldGoToWhatEverPage1, destination: {
+                                NavigationUser()
+                            }, label: {
+
+                            })
+                            Button(action: {
+                                shouldGoToWhatEverPage1.toggle()
+                            }
+                                   , label:{
+                                Image(systemName: "bell.fill")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 23))
+                            })
                         }
-                        NavigationLink(isActive: $shouldGoToWhatEverPage, destination: {
-                            navigationdriver()
-                        }, label: {
-                            
-                        })
-                        Button(action: {
-                            shouldGoToWhatEverPage.toggle()
-                        }
-                               , label:{
-                            Image(systemName: "bell.fill")
-                                .foregroundColor(.white)
-                                .font(.system(size: 23))
-                        })
+                        .padding(.leading,270)
+//                        NavigationLink(isActive: $shouldGoToWhatEverPage1, destination: {
+//                            NavigationUser()
+//                        }, label: {
+//
+//                        })
+                        
                     }
                     //                        (alignment: .leading)
                     
@@ -200,8 +208,11 @@ struct home: View {
                                             .offset(y:10)
                                         
                                     }
-                                    
-                                    Button(action: {}, label: {
+                                   
+                                    Button(action: {
+
+
+                                    }, label: {
                                         Text("Request")
                                             .font(.callout)
                                             .fontWeight(.semibold)
