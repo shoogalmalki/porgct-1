@@ -6,10 +6,28 @@
 //
 
 import SwiftUI
-
 struct Driver_account: View {
+    @State var toggleIsOn: Bool = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+
+        Toggle(
+        isOn: $toggleIsOn,
+        label: {
+            Text("Swich to driver view")
+        })
+        .toggleStyle(SwitchToggleStyle(tint: Color.mint))
+        .padding(20)
+                
+        
+            HStack {
+                Text("Status:")
+                Text(toggleIsOn ? "Driver" : "User")
+                    .font(.headline)
+            }
+        }
+
     }
 }
 
