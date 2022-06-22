@@ -33,6 +33,7 @@ Rectangle()
                     .foregroundColor(.black)
                     Text("small")
                         .font(.caption2)
+                    
                 }
             }
         })
@@ -53,6 +54,7 @@ Rectangle()
                         .frame(width: 30, height: 30)
                         Text("small")
                             .font(.caption2)
+                        
                     }
                 }
             })

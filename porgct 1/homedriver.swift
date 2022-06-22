@@ -89,16 +89,6 @@ struct homeuser: View {
 Spacer()
                     
                     ZStack{
-                        
-                        //            Capsule()
-                        //                            .stroke(Color.gray,lineWidth: 1)
-                        //                            .padding()
-                        //                            .frame(width: 300, height: 60)
-                        //
-                        //                            .foregroundColor(Color("Color1"))
-                        //                            .border(Color("Color2"),width:1.5)
-                        //                            .cornerRadius(3)
-                        
                         Image("Image4-1")
                             .resizable()
                             .foregroundColor(Color("Color2"))

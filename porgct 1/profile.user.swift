@@ -153,10 +153,7 @@ struct profile1: View {
                         
                             
                         }
-                
-                
-                
-                
+               
     }
 }
          

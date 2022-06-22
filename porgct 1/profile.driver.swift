@@ -76,8 +76,7 @@ struct profile: View {
                         .foregroundColor(Color("Color3"))
                         Text("My Orders")
                             .font(.system(size: 14, weight: .regular, design: .default))
-                                
-                                Image(systemName: "chevron.right")
+                            Image(systemName: "chevron.right")
                                            })
                         }
                       
@@ -90,7 +89,6 @@ struct profile: View {
                             .font(.system(size: 14, weight: .regular, design: .default))
                         }
                         Image(systemName: "chevron.right")
-                      
                         }
                         HStack(spacing:176){
                         HStack{

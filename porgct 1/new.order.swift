@@ -182,47 +182,47 @@ struct order: View {
 //                            .foregroundColor(upcolor)
 //                            .offset(x: 0, y: 0)
                     HStack{
-                    ZStack{
-                    RoundedRectangle (cornerRadius: 10)
-                        .foregroundColor(lightupcolor.opacity(0.5))
-                        .frame(width: 45, height: 45)
-                        .offset(x: 425, y: 50)
-                        Image ("image 1")
-                            .frame(width: 24, height: 24)
-                            .offset(x: 425, y: 45)
-                        Text ("Small")
-                                .font(.system(size: 10))
-                                .foregroundColor(upcolor)
-                                .offset(x: 425, y: 65)
-                    }
-                        ZStack{
-                        RoundedRectangle (cornerRadius: 10)
-                            .foregroundColor(lightupcolor.opacity(0.5))
-                            .frame(width: 45, height: 45)
-                            .offset(x: 465, y: 50)
-                            Image ("image 2")
-                                .frame(width: 24, height: 30)
-                                .offset(x: 465, y: 45)
-                            Text ("Medium")
-                                    .font(.system(size: 10))
-                                    .foregroundColor(upcolor)
-                                    .offset(x: 465, y: 65)
-                            
-                        }
-                        ZStack{
-                        RoundedRectangle (cornerRadius: 10)
-                            .foregroundColor(lightupcolor.opacity(0.5))
-                            .frame(width: 45, height: 45)
-                            .offset(x: 500, y: 50)
-                            Image ("image 3")
-                                .frame(width: 24, height: 24)
-                                .offset(x: 503, y: 45)
-                            Text ("Large")
-                                    .font(.system(size: 10))
-                                    .foregroundColor(upcolor)
-                                    .offset(x: 500, y: 65)
-
-                        }
+//                    ZStack{
+//                    RoundedRectangle (cornerRadius: 10)
+//                        .foregroundColor(lightupcolor.opacity(0.5))
+//                        .frame(width: 45, height: 45)
+//                        .offset(x: 425, y: 50)
+//                        Image ("image 1")
+//                            .frame(width: 24, height: 24)
+//                            .offset(x: 425, y: 45)
+//                        Text ("Small")
+//                                .font(.system(size: 10))
+//                                .foregroundColor(upcolor)
+//                                .offset(x: 425, y: 65)
+//                    }
+//                        ZStack{
+//                        RoundedRectangle (cornerRadius: 10)
+//                            .foregroundColor(lightupcolor.opacity(0.5))
+//                            .frame(width: 45, height: 45)
+//                            .offset(x: 465, y: 50)
+//                            Image ("image 2")
+//                                .frame(width: 24, height: 30)
+//                                .offset(x: 465, y: 45)
+//                            Text ("Medium")
+//                                    .font(.system(size: 10))
+//                                    .foregroundColor(upcolor)
+//                                    .offset(x: 465, y: 65)
+//
+//                        }
+//                        ZStack{
+//                        RoundedRectangle (cornerRadius: 10)
+//                            .foregroundColor(lightupcolor.opacity(0.5))
+//                            .frame(width: 45, height: 45)
+//                            .offset(x: 500, y: 50)
+//                            Image ("image 3")
+//                                .frame(width: 24, height: 24)
+//                                .offset(x: 503, y: 45)
+//                            Text ("Large")
+//                                    .font(.system(size: 10))
+//                                    .foregroundColor(upcolor)
+//                                    .offset(x: 500, y: 65)
+//
+//                        }
                     
                       
                     

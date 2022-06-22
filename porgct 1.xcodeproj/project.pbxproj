@@ -20,6 +20,7 @@
 		8A831869285E4D2200B8C702 /* profile.user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A831868285E4D2200B8C702 /* profile.user.swift */; };
 		8A948D4B2860A0600069997F /* homeuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A948D4A2860A0600069997F /* homeuser.swift */; };
 		8A98C94428636FC0007C0AF0 /* boxs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A98C94328636FC0007C0AF0 /* boxs.swift */; };
+		8A98C9462863BC93007C0AF0 /* new.order.sarah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A98C9452863BC93007C0AF0 /* new.order.sarah.swift */; };
 		8A9B1C64285EAA4800024954 /* homedriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C63285EAA4800024954 /* homedriver.swift */; };
 		8A9B1C66285EAD0400024954 /* navigationdriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C65285EAD0400024954 /* navigationdriver.swift */; };
 		8A9B1C68285EB18F00024954 /* NavigationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C67285EB18F00024954 /* NavigationUser.swift */; };
@@ -51,6 +52,7 @@
 		8A831868285E4D2200B8C702 /* profile.user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.user.swift; sourceTree = "<group>"; };
 		8A948D4A2860A0600069997F /* homeuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeuser.swift; sourceTree = "<group>"; };
 		8A98C94328636FC0007C0AF0 /* boxs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxs.swift; sourceTree = "<group>"; };
+		8A98C9452863BC93007C0AF0 /* new.order.sarah.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = new.order.sarah.swift; sourceTree = "<group>"; };
 		8A9B1C63285EAA4800024954 /* homedriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homedriver.swift; sourceTree = "<group>"; };
 		8A9B1C65285EAD0400024954 /* navigationdriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationdriver.swift; sourceTree = "<group>"; };
 		8A9B1C67285EB18F00024954 /* NavigationUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUser.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				AE54AE2828634648006FD4CB /* Login.swift */,
 				AEB4214C284D137600A942B0 /* offer.swift */,
 				42A70F022861F7C30093FACA /* new.order.swift */,
+				8A98C9452863BC93007C0AF0 /* new.order.sarah.swift */,
 				42A70F002861F3060093FACA /* MyMap.swift */,
 				42A70F04286201960093FACA /* MapFile.swift */,
 				42A70F06286202250093FACA /* DateAndTime.swift */,
@@ -221,6 +224,7 @@
 				8A948D4B2860A0600069997F /* homeuser.swift in Sources */,
 				8A98C94428636FC0007C0AF0 /* boxs.swift in Sources */,
 				42A70F092862025E0093FACA /* ImagePicker.swift in Sources */,
+				8A98C9462863BC93007C0AF0 /* new.order.sarah.swift in Sources */,
 				AEBD7847284794EA00202C25 /* NewRegistration.swift in Sources */,
 				42A70F012861F3060093FACA /* MyMap.swift in Sources */,
 				8A831869285E4D2200B8C702 /* profile.user.swift in Sources */,
