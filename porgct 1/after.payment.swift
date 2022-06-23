@@ -23,13 +23,29 @@ struct after_payment: View {
                     .foregroundColor(Color("Color1"))
                     .cornerRadius(20)
                     .offset(y:58)
-                VStack{
-                    Text("kkk")
-                    
-                    
+                VStack(spacing:200){
+                    VStack(spacing:33){
+                   Image("Image16")
+                        .resizable()
+                        .frame(width:270 , height: 190)
+                        .padding(.leading,22)
+                    Text("Your request been \nsuccessfully added")
+                            .font(.system(size: 23, weight: .semibold, design: .rounded))
+                }
+           
+                Button(action: {}
+                       , label: {
+               
+                    Text("Back to the main page")
+                        .font(.title3)
+                        .foregroundColor(Color.white)
+                        .frame(width: 300, height:35)
+                        .background(Color("Color3"))
+                            .cornerRadius(5)
+              
+                })
                 }
             }
-
         }
     }
 }
