@@ -352,7 +352,7 @@ struct new_order_sarah: View {
         
     }
 }
-
+}
 struct new_order_sarah_Previews: PreviewProvider {
     static var previews: some View {
         new_order_sarah()
