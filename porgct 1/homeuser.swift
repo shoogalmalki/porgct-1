@@ -88,6 +88,7 @@ struct homeuser: View {
                                    , label:{
                                 Image(systemName: "bell.fill")
                                     .foregroundColor(.white)
+                                    .font(.system(size: 23))
                                    
                             })
                         }
@@ -368,9 +369,10 @@ struct homeuser: View {
                                     Button{
                 showModelView.toggle()
             }label: {
-                Image(systemName:"person").font(.title)
-                    .foregroundColor(showModelView ? .green : .red)
-
+                Image(systemName:"person.circle.fill")
+                    .font(.system(size: 23))
+                    .foregroundColor(showModelView ? .green : .white)
+                    .offset(y:27)
             })
             .sheet(isPresented:$showModelView , content:
                     {
