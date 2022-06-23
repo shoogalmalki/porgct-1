@@ -12,19 +12,30 @@ struct Driver_account: View {
     var body: some View {
         VStack {
 
-        Toggle(
-        isOn: $toggleIsOn,
-        label: {
-            Text("Swich to driver view")
-        })
-        .toggleStyle(SwitchToggleStyle(tint: Color.mint))
-        .padding(20)
-                
-        
+//        Toggle(
+//        isOn: $toggleIsOn,
+//        label: {
+//            Text("Swich to driver view")
+//        })
+//        .toggleStyle(SwitchToggleStyle(tint: Color.mint))
+//        .padding(20)
+//
+//
+//            HStack {
+//                Text("Status:")
+//                Text(toggleIsOn ? "Driver" : "User")
+//                    .font(.headline)
+//            }
             HStack {
-                Text("Status:")
-                Text(toggleIsOn ? "Driver" : "User")
-                    .font(.headline)
+                Text("Swich to driver view")
+            
+            Button {
+                
+//                appState.hasOnBoarded = true
+            } label: {
+                Image(systemName: "car.circle.fill")
+                    .foregroundColor(.mint)
+            }
             }
         }
 
