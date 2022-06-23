@@ -42,7 +42,7 @@ struct porgct_1App: App {
     var body: some Scene {
         WindowGroup {
             if appState.hasOnBoarded {
-                homeuser()
+                new.order.sarah()
                     .environmentObject(appState)
         } else {
             Driver.account()

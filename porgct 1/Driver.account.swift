@@ -31,7 +31,7 @@ struct Driver_account: View {
             
             Button {
                 
-//                appState.hasOnBoarded = true
+                appState.hasOnBoarded = true
             } label: {
                 Image(systemName: "car.circle.fill")
                     .foregroundColor(.mint)
