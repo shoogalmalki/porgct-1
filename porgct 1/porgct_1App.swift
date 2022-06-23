@@ -9,6 +9,14 @@ import SwiftUI
 import Firebase
 import FirebaseCore
 
+class AppState: ObservableObject {
+    @Published var hasOnBoarded: Bool
+    
+    init(hasOnBoarded: Bool) {
+        self.hasOnBoarded = hasOnBoarded
+    }
+}
+
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -22,7 +30,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct porgct_1App: App {
-    
+    @ObservedObject var appState = AppState(hasOnBoarded: false)
+
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
   init(){
@@ -32,6 +41,14 @@ struct porgct_1App: App {
     
     var body: some Scene {
         WindowGroup {
+            if appState.hasOnBoarded {
+                homeuser()
+                    .environmentObject(appState)
+        } else {
+            Driver.account()
+                .environmentObject(appState)
+
+        }
 //       ContentView()
 //            home()
             SplashScreenView()

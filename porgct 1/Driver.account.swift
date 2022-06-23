@@ -7,8 +7,8 @@
 
 import SwiftUI
 struct Driver_account: View {
-    @State var toggleIsOn: Bool = false
-
+//    @State var toggleIsOn: Bool = false
+    @EnvironmentObject var appState: AppState
     var body: some View {
         VStack {
 

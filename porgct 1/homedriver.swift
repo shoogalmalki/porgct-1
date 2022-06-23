@@ -18,7 +18,7 @@ extension View {
 }
 
 struct RoundedCorner4: Shape {
-
+    @EnvironmentObject var appState: AppState
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
 
