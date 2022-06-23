@@ -25,6 +25,8 @@ struct after_payment: View {
                     .offset(y:58)
                 VStack{
                     Text("kkk")
+                    
+                    
                 }
             }
 
