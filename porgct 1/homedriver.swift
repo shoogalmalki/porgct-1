@@ -28,7 +28,7 @@ struct RoundedCorner4: Shape {
     
 }
 
-struct homedriver: View {
+struct homeuser: View {
     @State var topLeft: CGFloat = 10
     @State var topRight: CGFloat = 10
     @State var bottomLeft: CGFloat = 0
@@ -320,6 +320,6 @@ Spacer()
 
 struct homeuser_Previews: PreviewProvider {
     static var previews: some View {
-        homedriver()
+        home()
     }
 }

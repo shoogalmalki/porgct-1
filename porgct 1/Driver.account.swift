@@ -21,7 +21,7 @@ struct Driver_account: View {
             .padding()
                     
             if toggleIsOn {
-                homedriver()
+                home()
                 } else {
                     Driver_account()
                 }
