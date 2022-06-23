@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct Sarah_tast: View {
+    var frameworks = ["Pick Up Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
+    var frameworks2 = ["Drop Of Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
+    @State private var selectedFrameworkIndex = ""
     var body: some View {
+        //الزد ستاك هذي علشان الركتانقل الرماردي يكون فوق الركتانقل الاخضر
         ZStack{
-            //الركتانقل الاخضر الغامق///
+            //بداية الركتانقل الاخضر الغامق///
             ZStack{
                 Color("Color3")
                     .ignoresSafeArea()
@@ -31,11 +35,8 @@ struct Sarah_tast: View {
                             Image(systemName: "bell.fill")
                                 .foregroundColor(.white)
                                 .font(.system(size: 23))
-                            
                         })
                     }
-                    
-                    
                     Button(action: {
                     }
                            , label:{
@@ -46,10 +47,9 @@ struct Sarah_tast: View {
                     })
                 } .padding(.bottom,630)
             }
-            //الركتانقل الاخضر الغامق///
+            //نهاية الركتانقل الاخضر الغامق///
 
             //الركتانقل الرمادي///
-
             ZStack{
             Rectangle()
                 .frame(width: 380, height: 650)
@@ -57,17 +57,61 @@ struct Sarah_tast: View {
                 .cornerRadius(20)
                 .offset(y:58)
                 //الركتانقل الرمادي///
-
-                //الركتانقل الاخضر///
+   
+            
+    //العناصر الموجوده في الصفحه مثل اللوكيشن والبوتن وغيرها
+                VStack{
+                ZStack{
+                    Image("Image4-1")
+                        .resizable()
+                        .foregroundColor(Color("Color2"))
+                        .frame(width:35, height:42)
+                        .offset(x:-110)
+                    
+                    
+                    Picker(selection: $selectedFrameworkIndex, label: Text("")) {
+                        ForEach(0 ..< frameworks.count) {
+                            Text(self.frameworks[$0])
+                        }
+                        
+                    }
+                    
+                    
+                    .font(.title)
+                    
+                    
+                    
+                    .offset(x:-35,y:-11)
+                    Divider()
+                        .frame(width: 200)
+                    Picker(selection: $selectedFrameworkIndex, label: Text("")) {
+                        ForEach(0 ..< frameworks2.count) {
+                            Text(self.frameworks2[$0])
+                        }
+                        
+                    }
+                    
+                    .offset(x:-33,y:15)
+                    .overlay{
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color("Color2"),lineWidth: 1)
+                            .frame(width: 300, height: 60)
+                            .offset(y:-3)
+                        
+                    }
+                }
                 ZStack{
                 Rectangle()
                     .frame(width: 300, height: 100)
                     .foregroundColor(.green)
                     Text("DDD")
                 }
-                ///الركتانقل الاخضر///
+                }
+                //العناصر الموجوده في الصفحه مثل اللوكيشن والبوتن وغيرها
 
             }
+            // القوس هذا يقفل الزد ستاك حقت الركتانقل الرمادي///
+
         }
     }
 }

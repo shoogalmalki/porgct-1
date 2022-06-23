@@ -28,6 +28,7 @@
 		8A9B1C66285EAD0400024954 /* navigationdriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C65285EAD0400024954 /* navigationdriver.swift */; };
 		8A9B1C68285EB18F00024954 /* NavigationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C67285EB18F00024954 /* NavigationUser.swift */; };
 		8A9F7BB42864B88F00D390A8 /* Sarah.tast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F7BB32864B88F00D390A8 /* Sarah.tast.swift */; };
+		8A9F7BB6286509A700D390A8 /* Home.User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F7BB5286509A700D390A8 /* Home.User.swift */; };
 		AE54AE2128633F94006FD4CB /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2028633F94006FD4CB /* SplashScreenView.swift */; };
 		AE54AE23286342FD006FD4CB /* PageModel-onbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */; };
 		AE54AE2528634356006FD4CB /* PageView-onbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2428634356006FD4CB /* PageView-onbording.swift */; };
@@ -64,6 +65,7 @@
 		8A9B1C65285EAD0400024954 /* navigationdriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationdriver.swift; sourceTree = "<group>"; };
 		8A9B1C67285EB18F00024954 /* NavigationUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUser.swift; sourceTree = "<group>"; };
 		8A9F7BB32864B88F00D390A8 /* Sarah.tast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sarah.tast.swift; sourceTree = "<group>"; };
+		8A9F7BB5286509A700D390A8 /* Home.User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.User.swift; sourceTree = "<group>"; };
 		AE54AE2028633F94006FD4CB /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageModel-onbording.swift"; sourceTree = "<group>"; };
 		AE54AE2428634356006FD4CB /* PageView-onbording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageView-onbording.swift"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				8A9B1C63285EAA4800024954 /* homedriver.swift */,
 				8A9B1C65285EAD0400024954 /* navigationdriver.swift */,
 				8A948D4A2860A0600069997F /* homeuser.swift */,
+				8A9F7BB5286509A700D390A8 /* Home.User.swift */,
 				8A9B1C67285EB18F00024954 /* NavigationUser.swift */,
 				8A98C94328636FC0007C0AF0 /* boxs.swift */,
 				85FF2267286348CC00DD7047 /* Mmm.swift */,
@@ -244,6 +247,7 @@
 				42A70F012861F3060093FACA /* MyMap.swift in Sources */,
 				8A831869285E4D2200B8C702 /* profile.user.swift in Sources */,
 				8A98C94A2863DEAE007C0AF0 /* payment.swift in Sources */,
+				8A9F7BB6286509A700D390A8 /* Home.User.swift in Sources */,
 				42A70F05286201960093FACA /* MapFile.swift in Sources */,
 				8A831867285E4ADE00B8C702 /* profile.driver.swift in Sources */,
 				AE54AE2928634648006FD4CB /* Login.swift in Sources */,

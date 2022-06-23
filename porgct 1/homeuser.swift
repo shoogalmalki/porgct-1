@@ -13,10 +13,8 @@ extension View {
         clipShape( RoundedCorner9(radius: radius, corners: corners) )
             .padding(0.0)
             .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.272, green: 0.683, blue: 0.674)/*@END_MENU_TOKEN@*/)
-        
     }
 }
-
 struct RoundedCorner9: Shape {
     
     var radius: CGFloat = .infinity
@@ -26,9 +24,7 @@ struct RoundedCorner9: Shape {
         let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         return Path(path.cgPath)
     }
-    
 }
-
 //green and gray
 struct homeuser: View {
     //greem and gray

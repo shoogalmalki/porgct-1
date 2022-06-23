@@ -68,8 +68,7 @@ struct new_order_sarah: View {
                         .frame(width: 40, height: 40)
                         .foregroundColor(Color.mint)
                             Image(systemName:"shippingbox")
-                        
-                           
+                          
                         }
     
                         Image("Image12")
