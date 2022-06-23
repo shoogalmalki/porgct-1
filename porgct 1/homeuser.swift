@@ -383,8 +383,8 @@ struct homeuser: View {
     }
 }
 
-struct home_Previews: PreviewProvider {
+struct homeuser_Previews: PreviewProvider {
     static var previews: some View {
-        homedriver()
+        homeuser()
     }
 }

@@ -320,6 +320,6 @@ Spacer()
 
 struct homeuser_Previews: PreviewProvider {
     static var previews: some View {
-        home()
+        homeuser()
     }
 }
