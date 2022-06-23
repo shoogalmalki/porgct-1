@@ -88,7 +88,7 @@ struct home: View {
                                    , label:{
                                 Image(systemName: "bell.fill")
                                     .foregroundColor(.white)
-                                    .font(.system(size: 23))
+                                   
                             })
                         }
                         .padding(.leading,270)

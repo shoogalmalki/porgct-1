@@ -38,6 +38,7 @@ struct homeuser: View {
     let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
     @State var shouldGoToWhatEverPage: Bool = false
     @State var shouldGoToWhatEverPage1: Bool = false
+    @State var showModelView3 = false
 
     var body: some View {
         NavigationView {
@@ -56,6 +57,7 @@ struct homeuser: View {
                     Spacer()
                Spacer()
                     HStack{
+                        HStack{
                         NavigationLink(isActive: $shouldGoToWhatEverPage1, destination: {
                             NewRegistration()
                         }, label: {
@@ -70,11 +72,13 @@ struct homeuser: View {
                                 .foregroundColor(.white)
                                 .font(.system(size: 23))
                         })
+                        //(((كود اللينك)))
                         NavigationLink(isActive: $shouldGoToWhatEverPage, destination: {
                             navigationdriver()
                         }, label: {
                             
                         })
+                        ///
                         Button(action: {
                             shouldGoToWhatEverPage.toggle()
                         }
@@ -84,6 +88,8 @@ struct homeuser: View {
                                 .font(.system(size: 23))
                     })
                     }
+                    }
+                    .padding(.leading,270)
 //                        (alignment: .leading)
                     
 Spacer()
@@ -314,7 +320,21 @@ Spacer()
             }
                 .background(RoundedRectangle(cornerRadius: 8, style:   .circular).fill(Color(UIColor.systemMint)))
                 .ignoresSafeArea()
-                    .navigationBarHidden(true)
+//                    .navigationBarHidden(true)
+                    .navigationBarItems(leading:
+                                            Button{
+                        showModelView3.toggle()
+                    }label: {
+                        Image(systemName:"person.circle.fill")
+                            .font(.system(size: 23))
+                            .foregroundColor(showModelView3 ? .green : .white)
+                            .offset(y:27)
+                    })
+                    
+                    .sheet(isPresented:$showModelView3 , content:
+                            {
+                        profile()
+                    })
     }
 }
     }
