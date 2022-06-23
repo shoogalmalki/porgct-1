@@ -8,27 +8,45 @@
 import SwiftUI
 struct Driver_account: View {
     @State var toggleIsOn: Bool = false
-
+    
+//    @EnvironmentObject var appState: AppState
     var body: some View {
         VStack {
 
-        Toggle(
-        isOn: $toggleIsOn,
-        label: {
-            Text("Swich to driver view")
-        })
-        .toggleStyle(SwitchToggleStyle(tint: Color.mint))
-        .padding(20)
-                
-        
-            HStack {
-                Text("Status:")
-                Text(toggleIsOn ? "Driver" : "User")
-                    .font(.headline)
-            }
-        }
+            Toggle(
+            isOn: $toggleIsOn,
+            label: {
+                Text("Swich to driver view")
+            })
+            .toggleStyle(SwitchToggleStyle(tint: Color.mint))
+            .padding()
+                    
+            if toggleIsOn {
+                homedriver()
+                } else {
+                    Driver_account()
+                }
+            
+//                HStack {
+//                    Text("Status:")
+//                    Text(toggleIsOn ? "Driver" : "User")
+//                        .font(.headline)
 
+//                }
+//            HStack {
+//                Text("Swich to driver view")
+//
+//            Button {
+//
+//                appState.hasOnBoarded = true
+//            } label: {
+//                Image(systemName: "car.circle.fill")
+//                    .foregroundColor(.mint)
+//            }
+//            }
+        }
     }
+    
 }
 
 struct Driver_account_Previews: PreviewProvider {
