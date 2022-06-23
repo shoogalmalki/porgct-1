@@ -79,8 +79,8 @@ struct homeuser: View {
                             NavigationLink(isActive: $shouldGoToWhatEverPage1, destination: {
                                 NavigationUser()
                             }, label: {
-
                             })
+                            //
                             Button(action: {
                                 //كود اللينك النهايه
                                 shouldGoToWhatEverPage1.toggle()

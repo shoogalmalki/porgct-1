@@ -36,7 +36,7 @@ struct homedriver: View {
     let upcolor: Color = Color(red: Double(69)/255, green: Double(174)/255, blue: Double(172)/255)
     let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
     @State var shouldGoToWhatEverPage: Bool = false
-    @State var shouldGoToWhatEverPage1: Bool = false
+    @State var shouldGoToWhatEverPage44: Bool = false
     @State var showModelView3 = false
 
     var body: some View {
@@ -57,13 +57,13 @@ struct homedriver: View {
                Spacer()
                     HStack{
                         HStack{
-                        NavigationLink(isActive: $shouldGoToWhatEverPage1, destination: {
+                        NavigationLink(isActive: $shouldGoToWhatEverPage44, destination: {
                             NewRegistration()
                         }, label: {
                             
                         })
                         Button(action: {
-                            shouldGoToWhatEverPage1.toggle()
+                            shouldGoToWhatEverPage44.toggle()
 
                         }
                                , label: {
