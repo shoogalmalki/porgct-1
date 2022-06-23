@@ -42,6 +42,7 @@ struct after_payment: View {
                         .frame(width: 300, height:35)
                         .background(Color("Color3"))
                             .cornerRadius(5)
+                         
               
                 })
                 }

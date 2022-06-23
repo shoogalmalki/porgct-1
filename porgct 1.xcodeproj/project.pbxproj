@@ -130,9 +130,9 @@
 				8A9B1C63285EAA4800024954 /* homedriver.swift */,
 				8A9B1C65285EAD0400024954 /* navigationdriver.swift */,
 				8A948D4A2860A0600069997F /* homeuser.swift */,
-				8A9F7BB5286509A700D390A8 /* Home.User.swift */,
 				8A9B1C67285EB18F00024954 /* NavigationUser.swift */,
 				85FF2267286348CC00DD7047 /* Mmm.swift */,
+				8A9F7BB5286509A700D390A8 /* Home.User.swift */,
 				426BDB56284398FD008E9C5A /* Assets.xcassets */,
 				426BDB58284398FD008E9C5A /* Preview Content */,
 			);
