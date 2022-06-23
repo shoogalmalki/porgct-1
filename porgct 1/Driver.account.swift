@@ -21,9 +21,9 @@ struct Driver_account: View {
             .padding()
                     
             if toggleIsOn {
-                profile()
+                homedriver()
                 } else {
-                    profile1()
+                    Driver_account()
                 }
             }
 //                HStack {
