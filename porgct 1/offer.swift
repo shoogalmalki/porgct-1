@@ -152,7 +152,7 @@ for your order ?
                                 }
                                 HStack(spacing:10){
                                     NavigationLink(isActive: $Sarah3, destination: {
-                                        payment()
+                                        after_payment()
                                     }, label: {
                                         
                                     })

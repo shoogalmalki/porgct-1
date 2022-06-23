@@ -40,7 +40,8 @@ struct new_order_sarah: View {
     @State var showRectangle: Bool = false
     @State var showRectangle1: Bool = false
     @State var showRectangle2: Bool = false
-    
+    @State var shouldGoToWhatEverPage55: Bool = false
+
 //    @EnvironmentObject var appState: AppState
     
     var body: some View {
@@ -318,7 +319,14 @@ struct new_order_sarah: View {
                             }
                         })
                         .offset(y:33)
-                        Button(action: {}
+                        NavigationLink(isActive: $shouldGoToWhatEverPage55, destination: {
+                            offer()
+                        }, label: {
+                        })
+                        Button(action: {
+                            shouldGoToWhatEverPage55.toggle()
+
+                        }
                                , label: {
                             ZStack{
                             Rectangle()

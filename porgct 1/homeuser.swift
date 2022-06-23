@@ -44,6 +44,8 @@ struct homeuser: View {
 //    @State var shouldGoToWhatEverPage: Bool = false
     @State var showModelView = false
     @State var shouldGoToWhatEverPage1: Bool = false
+    @State var shouldGoToWhatEverPage7: Bool = false
+    @State var shouldGoToWhatEverPage8: Bool = false
 
     var body: some View {
         //green and gray
@@ -93,17 +95,38 @@ struct homeuser: View {
                             })
                         }
                         .padding(.leading,270)
-//                        NavigationLink(isActive: $shouldGoToWhatEverPage1, destination: {
-//                            NavigationUser()
-//                        }, label: {
-//
-//                        })
-                        
+       
                     }
-                    //                        (alignment: .leading)
-                    
+              
                     Spacer()
-                    
+                    HStack{
+                        NavigationLink(isActive: $shouldGoToWhatEverPage7, destination: {
+                            NavigationUser()
+                        }, label: {
+                        })
+                    Button(action: {
+                        shouldGoToWhatEverPage7.toggle()
+                    }
+                           , label:{
+                        Image(systemName: "bell.fill")
+                            .foregroundColor(.red)
+                            .font(.system(size: 23))
+                           
+                    })
+                        NavigationLink(isActive: $shouldGoToWhatEverPage8, destination: {
+                            new_order_sarah()
+                        }, label: {
+                        })
+                        Button(action: {
+                            shouldGoToWhatEverPage8.toggle()
+
+                        }
+                               , label:{
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.red)
+                                .font(.system(size: 23))
+                        })
+                    }
                     ZStack{
                         Image("Image4-1")
                             .resizable()
@@ -143,6 +166,7 @@ struct homeuser: View {
                             
                         }
                     }
+                    
                     ScrollView(.vertical,showsIndicators: false) {
                         VStack(spacing:20){
                             ZStack{

@@ -23,6 +23,7 @@
 		8A98C9462863BC93007C0AF0 /* new.order.sarah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A98C9452863BC93007C0AF0 /* new.order.sarah.swift */; };
 		8A98C9482863D7FC007C0AF0 /* Driver.account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A98C9472863D7FC007C0AF0 /* Driver.account.swift */; };
 		8A98C94A2863DEAE007C0AF0 /* payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A98C9492863DEAE007C0AF0 /* payment.swift */; };
+		8A98C94C28649E89007C0AF0 /* after.payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A98C94B28649E89007C0AF0 /* after.payment.swift */; };
 		8A9B1C64285EAA4800024954 /* homedriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C63285EAA4800024954 /* homedriver.swift */; };
 		8A9B1C66285EAD0400024954 /* navigationdriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C65285EAD0400024954 /* navigationdriver.swift */; };
 		8A9B1C68285EB18F00024954 /* NavigationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C67285EB18F00024954 /* NavigationUser.swift */; };
@@ -57,6 +58,7 @@
 		8A98C9452863BC93007C0AF0 /* new.order.sarah.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = new.order.sarah.swift; sourceTree = "<group>"; };
 		8A98C9472863D7FC007C0AF0 /* Driver.account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.account.swift; sourceTree = "<group>"; };
 		8A98C9492863DEAE007C0AF0 /* payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = payment.swift; sourceTree = "<group>"; };
+		8A98C94B28649E89007C0AF0 /* after.payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = after.payment.swift; sourceTree = "<group>"; };
 		8A9B1C63285EAA4800024954 /* homedriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homedriver.swift; sourceTree = "<group>"; };
 		8A9B1C65285EAD0400024954 /* navigationdriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationdriver.swift; sourceTree = "<group>"; };
 		8A9B1C67285EB18F00024954 /* NavigationUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUser.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				42A70F022861F7C30093FACA /* new.order.swift */,
 				8A98C9452863BC93007C0AF0 /* new.order.sarah.swift */,
 				8A98C9492863DEAE007C0AF0 /* payment.swift */,
+				8A98C94B28649E89007C0AF0 /* after.payment.swift */,
 				42A70F002861F3060093FACA /* MyMap.swift */,
 				42A70F04286201960093FACA /* MapFile.swift */,
 				42A70F06286202250093FACA /* DateAndTime.swift */,
@@ -231,6 +234,7 @@
 				8A98C94428636FC0007C0AF0 /* boxs.swift in Sources */,
 				42A70F092862025E0093FACA /* ImagePicker.swift in Sources */,
 				8A98C9462863BC93007C0AF0 /* new.order.sarah.swift in Sources */,
+				8A98C94C28649E89007C0AF0 /* after.payment.swift in Sources */,
 				8A98C9482863D7FC007C0AF0 /* Driver.account.swift in Sources */,
 				AEBD7847284794EA00202C25 /* NewRegistration.swift in Sources */,
 				42A70F012861F3060093FACA /* MyMap.swift in Sources */,

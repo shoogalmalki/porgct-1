@@ -10,6 +10,8 @@ import SwiftUI
 
 struct payment: View {
     let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
+    @State var shouldGoToWhatEverPage77: Bool = false
+
     var body: some View {
         ZStack{
         Rectangle()
@@ -67,6 +69,7 @@ struct payment: View {
                     .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.611))
                 
             }.padding(22)
+                
                Divider()
                 VStack{
                 Text("Order Number : 237")
@@ -170,7 +173,13 @@ struct payment: View {
                
                 }
                 }
-                Button(action: {}, label: {
+                NavigationLink(isActive: $shouldGoToWhatEverPage77, destination: {
+                    navigationdriver()
+                }, label: {
+                })
+                Button(action: {
+                    shouldGoToWhatEverPage77.toggle()
+                }, label: {
                     Text("Confirm")
                         .font(.title3)
                         .foregroundColor(Color.white)
@@ -179,7 +188,7 @@ struct payment: View {
                     .frame(width: 300, height:35)
                     .background(Color("Color3"))
                         .cornerRadius(5)
-                        .offset(y:50)
+                        
 
             }
                                

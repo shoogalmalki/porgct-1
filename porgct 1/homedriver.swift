@@ -38,6 +38,8 @@ struct homedriver: View {
     @State var shouldGoToWhatEverPage: Bool = false
     @State var shouldGoToWhatEverPage44: Bool = false
     @State var showModelView3 = false
+    @State var shouldGoToWhatEverPage8: Bool = false
+    @State var shouldGoToWhatEverPage7: Bool = false
 
     var body: some View {
         NavigationView {
@@ -87,7 +89,34 @@ struct homedriver: View {
 //                        (alignment: .leading)
                     
 Spacer()
-                    
+                    HStack{
+                        NavigationLink(isActive: $shouldGoToWhatEverPage7, destination: {
+                            NavigationUser()
+                        }, label: {
+                        })
+                    Button(action: {
+                        shouldGoToWhatEverPage7.toggle()
+                    }
+                           , label:{
+                        Image(systemName: "bell.fill")
+                            .foregroundColor(.red)
+                            .font(.system(size: 23))
+                           
+                    })
+                        NavigationLink(isActive: $shouldGoToWhatEverPage8, destination: {
+                            new_order_sarah()
+                        }, label: {
+                        })
+                        Button(action: {
+                            shouldGoToWhatEverPage8.toggle()
+
+                        }
+                               , label:{
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.red)
+                                .font(.system(size: 23))
+                        })
+                    }
                     ZStack{
                         Image("Image4-1")
                             .resizable()
