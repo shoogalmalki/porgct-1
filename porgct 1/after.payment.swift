@@ -11,18 +11,23 @@ struct after_payment: View {
     @State var shouldGoToWhatEverPage11: Bool = false
 
     var body: some View {
-        VStack{
-        Image("Image16")
-            .resizable()
-            .frame(width: 300, height: 400)
-        
-            NavigationLink(){
-                homeuser()
-                
+        ZStack{
+     ZStack{
+        Color("Color3")
+//                Color(Color.mint as! CGColor)
+            .ignoresSafeArea()
+     }
+            ZStack{
+                Rectangle()
+                    .frame(width: 380, height: 650)
+                    .foregroundColor(Color("Color1"))
+                    .cornerRadius(20)
+                    .offset(y:58)
+                VStack{
+                    Text("kkk")
+                }
             }
-                label:{
-           Text("go to home")
-        }
+
         }
     }
 }
@@ -35,7 +40,7 @@ struct after_payment_Previews: PreviewProvider {
 
 //    NavigationLink(){
 //        homeuser()
-//        
+//
 //    }
 //        label:{
 //   Text("go to home")

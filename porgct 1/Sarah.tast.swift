@@ -16,8 +16,8 @@ struct Sarah_tast: View {
         ZStack{
             //الركتانقل الاخضر الغامق///
             ZStack{
-//                Color("Color3")
-                Color(Color.mint as! CGColor)
+                Color("Color3")
+//                Color(Color.mint as! CGColor)
                     .ignoresSafeArea()
                 HStack{
                     HStack(spacing:200){
