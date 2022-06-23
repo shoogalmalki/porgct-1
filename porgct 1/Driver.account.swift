@@ -8,6 +8,7 @@
 import SwiftUI
 struct Driver_account: View {
     @State var toggleIsOn: Bool = false
+    
 //    @EnvironmentObject var appState: AppState
     var body: some View {
         VStack {
@@ -25,12 +26,12 @@ struct Driver_account: View {
                 } else {
                     Driver_account()
                 }
-            }
+            
 //                HStack {
 //                    Text("Status:")
 //                    Text(toggleIsOn ? "Driver" : "User")
 //                        .font(.headline)
-//
+
 //                }
 //            HStack {
 //                Text("Swich to driver view")
@@ -43,9 +44,9 @@ struct Driver_account: View {
 //                    .foregroundColor(.mint)
 //            }
 //            }
-//        }
-
+        }
     }
+    
 }
 
 struct Driver_account_Previews: PreviewProvider {
