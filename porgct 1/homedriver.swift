@@ -57,14 +57,9 @@ struct homedriver: View {
                Spacer()
                     HStack{
                         HStack{
-                        NavigationLink(isActive: $shouldGoToWhatEverPage44, destination: {
-                            NewRegistration()
-                        }, label: {
-                            
-                        })
+                      
                         Button(action: {
-                            shouldGoToWhatEverPage44.toggle()
-
+                          
                         }
                                , label: {
                             Image(systemName: "plus.circle.fill")
