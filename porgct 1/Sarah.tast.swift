@@ -14,9 +14,10 @@ struct Sarah_tast: View {
     var body: some View {
         //الزد ستاك هذي علشان الركتانقل الرماردي يكون فوق الركتانقل الاخضر
         ZStack{
-            //بداية الركتانقل الاخضر الغامق///
+            //الركتانقل الاخضر الغامق///
             ZStack{
-                Color("Color3")
+//                Color("Color3")
+                Color(Color.mint as! CGColor)
                     .ignoresSafeArea()
                 HStack{
                     HStack(spacing:200){
