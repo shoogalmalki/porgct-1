@@ -41,7 +41,7 @@ struct new_order_sarah: View {
     @State var showRectangle1: Bool = false
     @State var showRectangle2: Bool = false
     
-    @EnvironmentObject var appState: AppState
+//    @EnvironmentObject var appState: AppState
     
     var body: some View {
        

@@ -41,17 +41,17 @@ struct porgct_1App: App {
     
     var body: some Scene {
         WindowGroup {
-            if appState.hasOnBoarded {
-                new_order_sarah()
-                    .environmentObject(appState)
-        } else {
-            Driver_account()
-                .environmentObject(appState)
-
-        }
-//       ContentView()
-//            home()
-            SplashScreenView()
+//            if appState.hasOnBoarded {
+//                new_order_sarah()
+//                    .environmentObject(appState)
+//        } else {
+//            Driver_account()
+//                .environmentObject(appState)
+//
+//        }
+////       ContentView()
+////            home()
+//            SplashScreenView()
         }
     }
 }
