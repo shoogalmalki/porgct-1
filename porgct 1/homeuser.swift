@@ -30,7 +30,7 @@ struct RoundedCorner9: Shape {
 }
 
 //green and gray
-struct homeuser: View {
+struct homedriver: View {
     //greem and gray
     @State var topLeft: CGFloat = 10
     @State var topRight: CGFloat = 10
