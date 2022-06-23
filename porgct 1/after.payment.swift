@@ -32,3 +32,11 @@ struct after_payment_Previews: PreviewProvider {
         after_payment()
     }
 }
+
+//    NavigationLink(){
+//        homeuser()
+//        
+//    }
+//        label:{
+//   Text("go to home")
+//}
