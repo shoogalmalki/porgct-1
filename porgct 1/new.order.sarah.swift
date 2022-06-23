@@ -349,7 +349,7 @@ struct new_order_sarah: View {
             .ignoresSafeArea()
                 .navigationBarHidden(true)
                
-        }
+        
     }
 }
 

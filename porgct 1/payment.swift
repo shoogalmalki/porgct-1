@@ -173,21 +173,17 @@ struct payment: View {
                
                 }
                 }
-                NavigationLink(isActive: $shouldGoToWhatEverPage77, destination: {
-                    navigationdriver()
-                }, label: {
-                })
-                Button(action: {
-                    shouldGoToWhatEverPage77.toggle()
-                }, label: {
+                NavigationLink(){
+                    new_order_sarah()
+                } label: {
                     Text("Confirm")
                         .font(.title3)
                         .foregroundColor(Color.white)
-
-                })
-                    .frame(width: 300, height:35)
-                    .background(Color("Color3"))
-                        .cornerRadius(5)
+                        .frame(width: 300, height:35)
+                        .background(Color("Color3"))
+                            .cornerRadius(5)
+                }
+                   
                         
 
             }

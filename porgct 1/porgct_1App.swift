@@ -50,7 +50,7 @@ struct porgct_1App: App {
 //
 //        }
 ////       ContentView()
-////            home()
+            after_payment()
 //            SplashScreenView()
         }
     }

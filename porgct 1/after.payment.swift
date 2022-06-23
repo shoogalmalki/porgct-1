@@ -16,17 +16,13 @@ struct after_payment: View {
             .resizable()
             .frame(width: 300, height: 400)
         
-        NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
-            homeuser()
-        }, label: {
-        })
-        Button(action: {
-            shouldGoToWhatEverPage11.toggle()
-
-        }
-               , label:{
+            NavigationLink(){
+                homeuser()
+                
+            }
+                label:{
            Text("go to home")
-        })
+        }
         }
     }
 }
