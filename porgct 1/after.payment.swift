@@ -11,6 +11,7 @@ struct after_payment: View {
     @State var shouldGoToWhatEverPage11: Bool = false
 
     var body: some View {
+        NavigationView{
         ZStack{
      ZStack{
         Color("Color3")
@@ -32,8 +33,12 @@ struct after_payment: View {
                     Text("Your request been \nsuccessfully added")
                             .font(.system(size: 23, weight: .semibold, design: .rounded))
                 }
-           
-                Button(action: {}
+                    NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
+                        homeuser2()
+                    }, label: {
+                    })
+                Button(action: {                            shouldGoToWhatEverPage11.toggle()
+}
                        , label: {
                
                     Text("Back to the main page")
@@ -50,7 +55,7 @@ struct after_payment: View {
         }
     }
 }
-
+}
 struct after_payment_Previews: PreviewProvider {
     static var previews: some View {
         after_payment()

@@ -1,96 +1,126 @@
 //
-//  Home.User.swift
+//  homeuser2.swift
 //  porgct 1
 //
-//  Created by sarah hemood  on 24/11/1443 AH.
+//  Created by sarah hemood  on 25/11/1443 AH.
 //
-
 import SwiftUI
-
-struct Home_User: View {
+import Foundation
+//green and gray
+extension View {
+    func cornerRadius87(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner87(radius: radius, corners: corners) )
+            .padding(0.0)
+            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.272, green: 0.683, blue: 0.674)/*@END_MENU_TOKEN@*/)
+    }
+}
+struct RoundedCorner87: Shape {
+    
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+    
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
+}
+//green and gray
+struct homeuser2: View {
+    //greem and gray
+    @State var topLeft: CGFloat = 10
+    @State var topRight: CGFloat = 10
+    @State var bottomLeft: CGFloat = 0
+    @State var bottomRight: CGFloat = 0
+    let upcolor: Color = Color(red: Double(69)/255, green: Double(174)/255, blue: Double(172)/255)
+    let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
     var frameworks = ["Pick Up Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     var frameworks2 = ["Drop Of Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     @State private var selectedFrameworkIndex = ""
-    @State var shouldGoToWhatEverPage8: Bool = false
-    @State var shouldGoToWhatEverPage9: Bool = false
+//    @State var shouldGoToWhatEverPage: Bool = false
     @State var showModelView = false
+    @State var shouldGoToWhatEverPage1: Bool = false
+    @State var shouldGoToWhatEverPage22: Bool = false
+    @State var shouldGoToWhatEverPage33: Bool = false
 
     var body: some View {
+        //green and gray
         NavigationView{
-        ZStack{
-        ZStack{
-            Color("Color3")
-                .ignoresSafeArea()
             
-            HStack{
-                HStack{
-                  
-                    NavigationLink(isActive: $shouldGoToWhatEverPage9, destination: {
-                        new_order_sarah()
-                    }, label: {
-                    })
-                    Button(action: {
-                        shouldGoToWhatEverPage9.toggle()
-                    }
-                           , label:{
-                        Image(systemName: "plus.circle.fill")
-                            .foregroundColor(.white)
-                            .font(.system(size: 23))
-                    })
-                }
-                NavigationLink(isActive: $shouldGoToWhatEverPage8, destination: {
-                    navigationdriver()
-                }, label: {
-
-                })
-                Button(action: {
-                    shouldGoToWhatEverPage8.toggle()
-                }
-                       , label:{
-                    Image(systemName: "bell.fill")
-                        .foregroundColor(.white)
-                        .font(.system(size: 23))
+            ZStack {
+                Rectangle ()
+                    .cornerRadius87 (topLeft, corners: .topLeft)
+                    .cornerRadius87 (topRight, corners: .topRight)
+                    .cornerRadius87 (bottomLeft, corners:
+                            .bottomLeft)
+                    .cornerRadius87 (bottomRight, corners: .bottomRight)
+                
+                    .foregroundColor(backgroundcolor)
+                    .frame(width: .infinity, height: 850)
+                    .offset(x: 0, y: 130)
+                //                VStack{
+                VStack(spacing:33){
                     
-                })
-            }
-            .padding(.bottom,700)
-        }
-            
-            ZStack{
-            Rectangle()
-                .frame(width: 380, height: 650)
-                .foregroundColor(Color("Color1"))
-                .cornerRadius(20)
-//                .offset(y:58)
-                VStack(spacing:44){
+                    Spacer()
+                    Spacer()
                     HStack{
-                    NavigationLink(isActive: $shouldGoToWhatEverPage9, destination: {
-                        new_order_sarah()
-                    }, label: {
-                    })
+                        HStack{
+                            
+                          
+                            Button(action: {}
+                                   , label:{
+                                Image(systemName: "plus.circle.fill")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 23))
+                            })
+                            //((كود اللينك البدايه)))
+                            NavigationLink(isActive: $shouldGoToWhatEverPage1, destination: {
+                                NavigationUser()
+                            }, label: {
+                            })
+                            //
+                            Button(action: {
+                                //كود اللينك النهايه
+                                shouldGoToWhatEverPage1.toggle()
+                            }
+                                   , label:{
+                                Image(systemName: "bell.fill")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 23))
+                                   
+                            })
+                        }
+                        .padding(.leading,270)
+       
+                    }
+              
+                    Spacer()
+                    HStack(spacing:22){
+                        NavigationLink(isActive: $shouldGoToWhatEverPage22, destination: {
+                            NavigationUser()
+                        }, label: {
+                        })
                     Button(action: {
-                        shouldGoToWhatEverPage9.toggle()
+                        shouldGoToWhatEverPage22.toggle()
                     }
                            , label:{
-                        Image(systemName: "plus.circle.fill")
-                            .foregroundColor(.white)
-                            .font(.system(size: 23))
+                        Image(systemName: "bell.fill")
+                            .foregroundColor(.red)
+                            .font(.system(size: 27))
+                           
                     })
-               
-                NavigationLink(isActive: $shouldGoToWhatEverPage8, destination: {
-                    navigationdriver()
-                }, label: {
+                        NavigationLink(isActive: $shouldGoToWhatEverPage33, destination: {
+                            new_order_sarah()
+                        }, label: {
+                        })
+                        Button(action: {
+                            shouldGoToWhatEverPage33.toggle()
 
-                })
-                Button(action: {
-                    shouldGoToWhatEverPage8.toggle()
-                }
-                       , label:{
-                    Image(systemName: "bell.fill")
-                        .foregroundColor(.white)
-                        .font(.system(size: 23))
-                    
-                })
+                        }
+                               , label:{
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.red)
+                                .font(.system(size: 27))
+                        })
                     }
                     ZStack{
                         Image("Image4-1")
@@ -98,20 +128,20 @@ struct Home_User: View {
                             .foregroundColor(Color("Color2"))
                             .frame(width:35, height:42)
                             .offset(x:-110)
-
-
+                        
+                        
                         Picker(selection: $selectedFrameworkIndex, label: Text("")) {
                             ForEach(0 ..< frameworks.count) {
                                 Text(self.frameworks[$0])
                             }
-
+                            
                         }
-
-
+                        
+                        
                         .font(.title)
-
-
-
+                        
+                        
+                        
                         .offset(x:-35,y:-11)
                         Divider()
                             .frame(width: 200)
@@ -119,26 +149,27 @@ struct Home_User: View {
                             ForEach(0 ..< frameworks2.count) {
                                 Text(self.frameworks2[$0])
                             }
-
+                            
                         }
-
+                        
                         .offset(x:-33,y:15)
                         .overlay{
                             RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color("Color2"),lineWidth: 1)
                                 .frame(width: 300, height: 60)
                                 .offset(y:-3)
-
+                            
                         }
                     }
-////                    ScrollView(.vertical,showsIndicators: false) {
+                    
+                    ScrollView(.vertical,showsIndicators: false) {
                         VStack(spacing:20){
                             ZStack{
                                 Rectangle()
-                                    .frame(width: 455, height:170)
+                                    .frame(width: .infinity, height:170)
                                     .foregroundColor(.white)
                                     .cornerRadius(15)
-
+                                
                                 VStack{
                                     Image("Image1-1")
                                         .resizable()
@@ -153,7 +184,7 @@ struct Home_User: View {
                                             .fontWeight(.semibold)
                                             .offset(y:-5)
                                     }
-
+                                    
                                     Text("Starting:")
                                         .font(.footnote)
                                         .fontWeight(.regular)
@@ -169,7 +200,7 @@ struct Home_User: View {
                                             .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
                                             .offset(x:-70)
                                             .offset(y:3)
-
+                                        
                                     }
                                     Text("Arrival:")
                                         .font(.footnote)
@@ -187,9 +218,9 @@ struct Home_User: View {
                                             .font(.caption)
                                             .offset(x:-70)
                                             .offset(y:10)
-
+                                        
                                     }
-
+                                   
                                     Button(action: {
 
 
@@ -198,7 +229,7 @@ struct Home_User: View {
                                             .font(.callout)
                                             .fontWeight(.semibold)
                                             .foregroundColor(Color.white)
-
+                                        
                                     })
                                     .frame(width: 190, height:25)
                                     .background(.orange)
@@ -233,8 +264,8 @@ struct Home_User: View {
                                         .font(.footnote)
                                         .offset(y:38)
                                         .offset(x:110)
-
-
+                                    
+                                    
                                 }
                             }
                             //                }
@@ -257,7 +288,7 @@ struct Home_User: View {
                                             .fontWeight(.semibold)
                                             .offset(y:-5)
                                     }
-
+                                    
                                     Text("Starting:")
                                         .font(.footnote)
                                         .fontWeight(.bold)
@@ -273,7 +304,7 @@ struct Home_User: View {
                                             .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
                                             .offset(x:-70)
                                             .offset(y:3)
-
+                                        
                                     }
                                     Text("Arrival:")
                                         .font(.footnote)
@@ -291,15 +322,15 @@ struct Home_User: View {
                                             .font(.caption)
                                             .offset(x:-70)
                                             .offset(y:10)
-
+                                        
                                     }
-
+                                    
                                     Button(action: {}, label: {
                                         Text("Request")
                                             .font(.callout)
                                             .fontWeight(.semibold)
                                             .foregroundColor(Color.white)
-
+                                        
                                     })
                                     .frame(width: 190, height:25)
                                     .background(.orange)
@@ -334,37 +365,48 @@ struct Home_User: View {
                                         .font(.footnote)
                                         .offset(y:38)
                                         .offset(x:110)
-
-
+                                    
+                                    
                                 }
                             }
-
-
+                            
+                            
                         }
-//                        //            })
+                        //            })
                     }
+                    //                    }
+                    
+                    //green and gray
                 }
             }
-        .navigationBarItems(leading:
-                                Button{
-            showModelView.toggle()
-        }label: {
-            Image(systemName:"person.circle.fill")
-                .font(.system(size: 23))
-                .foregroundColor(showModelView ? .green : .white)
-                .offset(y:27)
-        })
-        .sheet(isPresented:$showModelView , content:
-                {
-            profile1()
-        })
+            .background(RoundedRectangle(cornerRadius: 8, style:   .circular).fill(Color(UIColor.systemMint)))
+            .ignoresSafeArea()
+//            .navigationBarHidden(true)
+            
+            
+            .navigationBarItems(leading:
+                                    Button{
+                showModelView.toggle()
+            }label: {
+                Image(systemName:"person.circle.fill")
+                    .font(.system(size: 23))
+                    .foregroundColor(showModelView ? .green : .white)
+                    .offset(y:27)
+            })
+            .sheet(isPresented:$showModelView , content:
+                    {
+                profile1()
+            })
+            
+            
         }
+        
     }
 }
-//}
 
-struct Home_User_Previews: PreviewProvider {
+
+struct homeuser2_Previews: PreviewProvider {
     static var previews: some View {
-        Home_User()
+        homeuser2()
     }
 }
