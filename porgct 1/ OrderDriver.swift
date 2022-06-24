@@ -95,7 +95,7 @@ struct OrderDriver: View {
                             .frame(width: 40, height: 40)
                             .foregroundColor(Color.gray.opacity(0.2))
                         }
-                    }                        .offset(y:33)
+                    }                        .offset(y:-100)
 
                         ZStack{
                             Image("Image4-1")
@@ -130,7 +130,7 @@ struct OrderDriver: View {
                                     .offset(y:-3)
                                 
                             }
-                        }                        .offset(y:33)
+                        }                        .offset(y:-100)
 
 
                         ZStack{
@@ -146,7 +146,7 @@ struct OrderDriver: View {
                             }.padding(.trailing,70)
                                 .padding(.bottom,40)
                         }
-                        .offset(y:33)
+                        .offset(y:-100)
 
                         ZStack{
                             Rectangle()
@@ -171,7 +171,7 @@ struct OrderDriver: View {
 
                         }
                         }
-                        .offset(y:33)
+                        .offset(y:-100)
                         Button(action: {}
                                , label: {
                           
@@ -188,7 +188,7 @@ struct OrderDriver: View {
                                     .foregroundColor(Color.white)
                             }
                         })
-                        .offset(y:33)
+                        .offset(y:-100)
                         
 //
                         
