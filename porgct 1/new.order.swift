@@ -40,6 +40,9 @@ struct order: View {
     @State var topRight: CGFloat = 10
     @State var bottomLeft: CGFloat = 0
     @State var bottomRight: CGFloat = 0
+    
+    @State private var checkbox2: Bool = false
+    
     let upcolor: Color = Color(red: Double(69)/255, green: Double(174)/255, blue: Double(172)/255)
     let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
     let lightgray: Color = Color(red: Double(220)/255, green: Double(220)/255, blue: Double(220)/255)
@@ -253,17 +256,27 @@ struct order: View {
                         }
                         
 
-                        ZStack{
-                            Image ("Rectangle")
-                                .frame(width: 24, height: 24)
-                                .offset(x: -530, y: 300)
+                        
+//                            Image ("Rectangle")
+//                                .frame(width: 24, height: 24)
+//                                .offset(x: -530, y: 300)
 
-                        Text ("I agree to terms & conditions")
-                            .font(.system(size: 13))
-                            .fontWeight(.bold)
-                            .foregroundColor(upcolor)
-                            .offset(x: -320, y: 300)
-                        RoundedRectangle (cornerRadius: 10)
+//                        Text ("I agree to terms & conditions")
+//                            .font(.system(size: 13))
+//                            .fontWeight(.bold)
+//                            .foregroundColor(upcolor)
+//
+                      
+                        
+                        ZStack{
+                            Toggle(isOn: $checkbox2){
+                                Text("I accept the terms & conditions")
+                            }.toggleStyle(CheckboxToggleStyle(isReversed: true))
+                                .foregroundStyle(.mint)
+                                .font(.system(size: 16, weight: .semibold, design: .serif))
+                                .offset(x: -320, y: 300)
+                            
+                            RoundedRectangle (cornerRadius: 10)
                                 .foregroundColor(Color(UIColor.systemMint))
                             .frame(width: 300, height: 45)
                             .offset(x: -310, y: 335)
@@ -282,6 +295,31 @@ struct order: View {
     }
     }
     }
+    struct CheckboxToggleStyle: ToggleStyle {
+            var isReversed = false
+            func makeBody(configuration: Configuration) -> some
+            View {
+                HStack {
+                    if !isReversed {
+                    configuration.label
+                    }
+                    Button {
+                        configuration.isOn.toggle()
+                    } label: {
+                        Image(systemName: configuration.isOn ? "checkmark.square" : "square")
+                        
+                        
+            }
+                    .padding(5)
+                  .accentColor(Color(UIColor.label))
+                    if isReversed {
+                        configuration.label
+                    }
+        }
+
+                }
+        }
+
 struct order_Previews: PreviewProvider {
     static var previews: some View {
         order()
