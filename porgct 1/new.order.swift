@@ -148,7 +148,7 @@ struct order: View {
                     RoundedRectangle (cornerRadius: 10)
                         .strokeBorder(.gray, lineWidth: 1)
                 .frame(width: 170, height: 110)
-                .offset(x: 0, y: -35)
+                .offset(x: -10, y: -20)
 //
                     VStack {
                     
@@ -156,7 +156,7 @@ struct order: View {
                         Button("Choose Picture") {
                             self.showSheet = true
                         }.padding()
-                            .offset(x: 0, y: -30)
+                            .offset(x: -10, y: -15)
                             .actionSheet(isPresented: $showSheet) {
                                  ActionSheet(title: Text("Select Photo"),
                                              message: Text("Choose"), buttons: [
@@ -230,23 +230,23 @@ struct order: View {
                         RoundedRectangle (cornerRadius: 10)
                             .strokeBorder(.gray, lineWidth: 1)
                     .frame(width: 300, height: 140)
-                    .offset(x: 225, y: 150)
+                    .offset(x: 300, y: 130)
                     }
                         ZStack{
                         RoundedRectangle (cornerRadius: 10)
                             .foregroundColor(lightupcolor.opacity(0.5))
                             .frame(width: 300, height: 45)
-                            .offset(x: -85, y: 255)
+                            .offset(x: -5, y: 255)
                     
                             
                             Image ("Calendar")
                                 .frame(width: 24, height: 24)
-                                .offset(x: -210, y: 255)
+                                .offset(x: -110, y: 255)
                             Text ("Schedule Your Order ")
                                 .font(.system(size: 13))
                                 .fontWeight(.bold)
                                 .foregroundColor(upcolor)
-                                    .offset(x: -120, y: 255)
+                                    .offset(x: -20, y: 255)
                             Image (">")
                                 .frame(width: 24, height: 24)
                                 .offset(x: 30, y: 255)
@@ -262,17 +262,17 @@ struct order: View {
                             .font(.system(size: 13))
                             .fontWeight(.bold)
                             .foregroundColor(upcolor)
-                            .offset(x: -420, y: 300)
+                            .offset(x: -320, y: 300)
                         RoundedRectangle (cornerRadius: 10)
                                 .foregroundColor(Color(UIColor.systemMint))
                             .frame(width: 300, height: 45)
-                            .offset(x: -390, y: 350)
+                            .offset(x: -310, y: 350)
                            
                             Text ("Place Your Order ")
-                                .font(.system(size: 13))
+                                .font(.system(size: 16))
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
-                                    .offset(x: -390, y: 350)
+                                    .offset(x: -310, y: 350)
                         
                         }
                 }
