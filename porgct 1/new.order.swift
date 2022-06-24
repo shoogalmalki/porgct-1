@@ -266,13 +266,13 @@ struct order: View {
                         RoundedRectangle (cornerRadius: 10)
                                 .foregroundColor(Color(UIColor.systemMint))
                             .frame(width: 300, height: 45)
-                            .offset(x: -310, y: 350)
+                            .offset(x: -310, y: 335)
                            
                             Text ("Place Your Order ")
                                 .font(.system(size: 16))
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
-                                    .offset(x: -310, y: 350)
+                                    .offset(x: -310, y: 335)
                         
                         }
                 }
