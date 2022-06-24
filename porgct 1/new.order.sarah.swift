@@ -372,7 +372,7 @@ struct new_order_sarah: View {
                                 }.toggleStyle(CheckboxToggleStyle(isReversed: true))
                                     .foregroundStyle(.mint)
                                     .font(.system(size: 16, weight: .semibold, design: .serif))
-                                    .offset(y:-35)
+                                    .offset(y:-40)
                                 
                                 
                             Rectangle()
