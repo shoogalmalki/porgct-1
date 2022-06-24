@@ -48,8 +48,10 @@ struct OrderDriver: View {
     @State private var showImagePicker: Bool = false
     @State private var sourceType: UIImagePickerController.SourceType
     = .camera
+
     @State private var checkbox2: Bool = false
 
+    
     @State private var image: UIImage?
 //    @EnvironmentObject var appState: AppState
     
@@ -177,9 +179,17 @@ struct OrderDriver: View {
                           
                            
                             
-
+                           
+                //    .padding()
 
                             ZStack{
+                                Toggle(isOn: $checkbox2){
+                                    Text("I accept the terms & conditions")
+                                }.toggleStyle(CheckboxToggleStyle(isReversed: true))
+                                    .foregroundStyle(.mint)
+                                    .font(.system(size: 16, weight: .semibold, design: .serif))
+                                    .offset(y:-50)
+
                             Rectangle()
                             .frame(width: 320, height: 38)
                             .foregroundColor(Color("Color3"))
@@ -188,7 +198,7 @@ struct OrderDriver: View {
                                     .foregroundColor(Color.white)
                             }
                         })
-                        .offset(y:-100)
+                        .offset(y:-70)
                         
 //
                         
@@ -209,6 +219,30 @@ struct OrderDriver: View {
 }
 
 
+struct CheckboxToggleStyle2: ToggleStyle {
+        var isReversed = false
+        func makeBody(configuration: Configuration) -> some
+        View {
+            HStack {
+                if !isReversed {
+                configuration.label
+                }
+                Button {
+                    configuration.isOn.toggle()
+                } label: {
+                    Image(systemName: configuration.isOn ? "checkmark.square" : "square")
+
+
+        }
+                .padding(5)
+              .accentColor(Color(UIColor.label))
+                if isReversed {
+                    configuration.label
+                }
+    }
+
+            }
+    }
 struct OrderDriver_Previews: PreviewProvider {
     static var previews: some View {
         OrderDriver()
