@@ -34,7 +34,7 @@ struct after_payment: View {
                             .font(.system(size: 23, weight: .semibold, design: .rounded))
                 }
                     NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
-                        homeuser2()
+                        homeuser()
                     }, label: {
                     })
                 Button(action: {                            shouldGoToWhatEverPage11.toggle()
