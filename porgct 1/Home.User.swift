@@ -187,12 +187,8 @@ struct Home_User: View {
                                             .font(.caption)
                                             .offset(x:-70)
                                             .offset(y:10)
-
                                     }
-
                                     Button(action: {
-
-
                                     }, label: {
                                         Text("Request")
                                             .font(.callout)
