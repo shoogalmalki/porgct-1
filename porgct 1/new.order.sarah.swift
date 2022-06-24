@@ -198,6 +198,8 @@ struct new_order_sarah: View {
                                         .frame(width: 30, height: 30)
                                         Text("small")
                                             .font(.caption2)
+                                            .foregroundStyle(.white)
+                                            .font(.system(size: 20, weight: .bold, design: .default))
                                         
                                     }
                                 }
@@ -241,6 +243,8 @@ struct new_order_sarah: View {
                                         .frame(width: 30, height: 30)
                                         Text("Medium")
                                             .font(.caption2)
+                                            .foregroundStyle(.white)
+                                            .font(.system(size: 15, weight: .bold, design: .default))
                                     }
                                 }
                             })
@@ -283,6 +287,8 @@ struct new_order_sarah: View {
                                             .foregroundColor(.red)
                                             Text("large")
                                                 .font(.caption2)
+                                                .foregroundStyle(.white)
+                                                .font(.system(size: 15, weight: .bold, design: .default))
                                         }
                                     }
                                 })
@@ -319,13 +325,13 @@ struct new_order_sarah: View {
                                 .foregroundColor(Color.mint.opacity(0.2))
                             
                                 .cornerRadius(12)
-                        HStack(spacing:172){
+                        HStack(spacing:120){
                         HStack{
                     Image(systemName: "calendar.badge.clock")
                                 .font(.system(size: 12, weight: .regular, design: .default))
                         .foregroundColor(Color("Color3"))
                         Text("Schedule Your Order")
-                            .font(.system(size: 11, weight: .regular, design: .default))
+                            .font(.system(size: 15, weight: .bold, design: .default))
                             .foregroundColor(Color("Color3"))
 
                         }
@@ -339,11 +345,7 @@ struct new_order_sarah: View {
                         Button(action: {}
                                , label: {
                           
-                            Toggle(isOn: $checkbox2){
-                                Text("I accept the terms & conditions")
-                            }.toggleStyle(CheckboxToggleStyle(isReversed: true))
-                                .foregroundStyle(.mint)
-                                .font(.system(size: 16, weight: .semibold, design: .serif))
+                           
                             
 
 //                            ZStack{
@@ -365,14 +367,24 @@ struct new_order_sarah: View {
 //                        }
 //                               , label: {
                             ZStack{
+                                Toggle(isOn: $checkbox2){
+                                    Text("I accept the terms & conditions")
+                                }.toggleStyle(CheckboxToggleStyle(isReversed: true))
+                                    .foregroundStyle(.mint)
+                                    .font(.system(size: 16, weight: .semibold, design: .serif))
+                                    .offset(y:-35)
+                                
+                                
                             Rectangle()
                             .frame(width: 320, height: 38)
                             .foregroundColor(Color("Color3"))
                             .cornerRadius(14)
                             Text("Place Your Order")
+                                    .foregroundStyle(.white)
+                                    .font(.system(size: 15, weight: .bold, design: .default))
                             }
                         })
-                        .offset(y:33)
+                        .offset(y:53)
                         
 //
                         
