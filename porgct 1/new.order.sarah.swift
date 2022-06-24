@@ -41,7 +41,14 @@ struct new_order_sarah: View {
     @State var showRectangle1: Bool = false
     @State var showRectangle2: Bool = false
     @State var shouldGoToWhatEverPage55: Bool = false
-
+    @StateObject private var viewModel = ContentViewModel()
+    
+    @State private var showSheet: Bool = false
+    @State private var showImagePicker: Bool = false
+    @State private var sourceType: UIImagePickerController.SourceType
+    = .camera
+    
+    @State private var image: UIImage?
 //    @EnvironmentObject var appState: AppState
     
     var body: some View {
@@ -122,12 +129,33 @@ struct new_order_sarah: View {
                                 
                             }
                         }                        .offset(y:33)
-
+                        ZStack{
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color("Color2"),lineWidth: 1)
                             .frame(width: 170, height: 115)
                             .offset(y:33)
-
+                            VStack(spacing:66) {
+                    Image(uiImage: image ?? UIImage(named: "Plus")!)
+                                .offset(y:66)
+                            Button("Choose Picture") {
+                                self.showSheet = true
+                            }
+                                .actionSheet(isPresented: $showSheet) {
+                                     ActionSheet(title: Text("Select Photo"),
+                                                 message: Text("Choose"), buttons: [
+                                                    .default(Text("Photo Library")) {
+                                                        self.showImagePicker = true
+                                                        self.sourceType = .photoLibrary
+                                                    },
+                                                    .default(Text("Camera")) {
+                                                        self.showImagePicker = true
+                                                        self.sourceType = .camera
+                                                    },
+                                                    .cancel()
+                                                    ])
+                                }
+                }
+                        }
                         VStack{
                         HStack(spacing:33){
                         if showRectangle == true {
