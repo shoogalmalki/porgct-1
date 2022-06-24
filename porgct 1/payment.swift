@@ -13,6 +13,7 @@ struct payment: View {
     @State var shouldGoToWhatEverPage77: Bool = false
 
     var body: some View {
+        NavigationView{
         ZStack{
         Rectangle()
                 .foregroundColor(backgroundcolor)
@@ -174,7 +175,7 @@ struct payment: View {
                 }
                 }
                 NavigationLink(){
-                    new_order_sarah()
+                    after_payment()
                 } label: {
                     Text("Confirm")
                         .font(.title3)
@@ -183,11 +184,9 @@ struct payment: View {
                         .background(Color("Color3"))
                             .cornerRadius(5)
                 }
-                   
-                        
-
+            
             }
-                               
+        }
 }
         
 }

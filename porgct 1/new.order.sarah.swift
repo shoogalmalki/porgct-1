@@ -6,34 +6,10 @@
 //
 
 import SwiftUI
-import Foundation
-extension View {
-    func cornerRadius53(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape( RoundedCorner53(radius: radius, corners: corners) )
-            .padding(0.0)
-            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.272, green: 0.683, blue: 0.674)/*@END_MENU_TOKEN@*/)
-        
-    }
-}
 
-struct RoundedCorner53: Shape {
-
-    var radius: CGFloat = .infinity
-    var corners: UIRectCorner = .allCorners
-
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        return Path(path.cgPath)
-    }
-}
 
 struct new_order_sarah: View {
-    @State var topLeft: CGFloat = 10
-    @State var topRight: CGFloat = 10
-    @State var bottomLeft: CGFloat = 0
-    @State var bottomRight: CGFloat = 0
-    let upcolor: Color = Color(red: Double(69)/255, green: Double(174)/255, blue: Double(172)/255)
-    let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
+
     var frameworks = ["Pick Up Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     var frameworks2 = ["Drop Of Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     @State private var selectedFrameworkIndex = ""
@@ -52,20 +28,18 @@ struct new_order_sarah: View {
 //    @EnvironmentObject var appState: AppState
     
     var body: some View {
-       
         NavigationView {
-            ZStack {
-            Rectangle ()
-                .cornerRadius53 (topLeft, corners: .topLeft)
-        .cornerRadius53 (topRight, corners: .topRight)
-        .cornerRadius53 (bottomLeft, corners:
-                .bottomLeft)
-        .cornerRadius53 (bottomRight, corners: .bottomRight)
-            
-                .foregroundColor(backgroundcolor)
-                .frame(width: 360, height: 850)
-                .offset(x: 0, y: 130)
+            ZStack{
+            ZStack{
+                Color("Color3")
+                    .ignoresSafeArea()
+            }
                 ZStack{
+                Rectangle()
+                    .frame(width: 380, height: 800)
+                    .foregroundColor(Color("Color1"))
+                    .cornerRadius(20)
+                    .offset(y:58)
                     VStack(spacing:22){
                     HStack{
                         
@@ -363,23 +337,15 @@ struct new_order_sarah: View {
                             Text("Place Your Order")
                             }
                         })
-                        .offset(y:33)
-                        
-                        
-                        
+                    }
                 }
-                    
-                 
-            }
-            }
-            .background(RoundedRectangle(cornerRadius: 8, style:   .circular).fill(Color(UIColor.systemMint)))
-            .ignoresSafeArea()
-                .navigationBarHidden(true)
                
-        
+            }
+            }
+        }
     }
-}
-}
+
+
 struct new_order_sarah_Previews: PreviewProvider {
     static var previews: some View {
         new_order_sarah()
