@@ -6,10 +6,34 @@
 //
 
 import SwiftUI
+import Foundation
+extension View {
+    func cornerRadius53(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner53(radius: radius, corners: corners) )
+            .padding(0.0)
+            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.272, green: 0.683, blue: 0.674)/*@END_MENU_TOKEN@*/)
+        
+    }
+}
 
+struct RoundedCorner53: Shape {
+
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
+}
 
 struct new_order_sarah: View {
-
+    @State var topLeft: CGFloat = 10
+    @State var topRight: CGFloat = 10
+    @State var bottomLeft: CGFloat = 0
+    @State var bottomRight: CGFloat = 0
+    let upcolor: Color = Color(red: Double(69)/255, green: Double(174)/255, blue: Double(172)/255)
+    let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
     var frameworks = ["Pick Up Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     var frameworks2 = ["Drop Of Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     @State private var selectedFrameworkIndex = ""
@@ -23,23 +47,26 @@ struct new_order_sarah: View {
     @State private var showImagePicker: Bool = false
     @State private var sourceType: UIImagePickerController.SourceType
     = .camera
-    
+    @State private var checkbox2: Bool = false
+
     @State private var image: UIImage?
 //    @EnvironmentObject var appState: AppState
     
     var body: some View {
+       
         NavigationView {
-            ZStack{
-            ZStack{
-                Color("Color3")
-                    .ignoresSafeArea()
-            }
+            ZStack {
+            Rectangle ()
+                .cornerRadius53 (topLeft, corners: .topLeft)
+        .cornerRadius53 (topRight, corners: .topRight)
+        .cornerRadius53 (bottomLeft, corners:
+                .bottomLeft)
+        .cornerRadius53 (bottomRight, corners: .bottomRight)
+            
+                .foregroundColor(backgroundcolor)
+                .frame(width: 360, height: 850)
+                .offset(x: 0, y: 130)
                 ZStack{
-                Rectangle()
-                    .frame(width: 380, height: 800)
-                    .foregroundColor(Color("Color1"))
-                    .cornerRadius(20)
-                    .offset(y:58)
                     VStack(spacing:22){
                     HStack{
                         
@@ -311,6 +338,32 @@ struct new_order_sarah: View {
                         .offset(y:33)
                         Button(action: {}
                                , label: {
+                          
+                            Toggle(isOn: $checkbox2){
+                                Text("I accept the terms & conditions")
+                            }.toggleStyle(CheckboxToggleStyle(isReversed: true))
+                                .foregroundStyle(.mint)
+                                .font(.system(size: 16, weight: .semibold, design: .serif))
+                            
+
+//                            ZStack{
+//                            Rectangle()
+//                            .frame(width: 320, height: 38)
+//                            .foregroundColor(Color("Color3"))
+//                            .cornerRadius(14)
+//                            Text("Place Your Order")
+//                            }
+//                        })
+//                        .offset(y:33)
+//                        NavigationLink(isActive: $shouldGoToWhatEverPage55, destination: {
+//                            offer()
+//                        }, label: {
+//                        })
+//                        Button(action: {
+//                            shouldGoToWhatEverPage55.toggle()
+//
+//                        }
+//                               , label: {
                             ZStack{
                             Rectangle()
                             .frame(width: 320, height: 38)
@@ -320,31 +373,46 @@ struct new_order_sarah: View {
                             }
                         })
                         .offset(y:33)
-                        NavigationLink(isActive: $shouldGoToWhatEverPage55, destination: {
-                            offer()
-                        }, label: {
-                        })
-                        Button(action: {
-                            shouldGoToWhatEverPage55.toggle()
-
-                        }
-                               , label: {
-                            ZStack{
-                            Rectangle()
-                            .frame(width: 320, height: 38)
-                            .foregroundColor(Color("Color3"))
-                            .cornerRadius(14)
-                            Text("Place Your Order")
-                            }
-                        })
-                    }
+                        
+//
+                        
                 }
+                    
+                 
+            }
+            }
+            .background(RoundedRectangle(cornerRadius: 8, style:   .circular).fill(Color(UIColor.systemMint)))
+            .ignoresSafeArea()
+                .navigationBarHidden(true)
                
-            }
-            }
+        
+    }
+}
+}
+struct CheckboxToggleStyle: ToggleStyle {
+        var isReversed = false
+        func makeBody(configuration: Configuration) -> some
+        View {
+            HStack {
+                if !isReversed {
+                configuration.label
+                }
+                Button {
+                    configuration.isOn.toggle()
+                } label: {
+                    Image(systemName: configuration.isOn ? "checkmark.square" : "square")
+                    
+                    
         }
+                .padding(5)
+              .accentColor(Color(UIColor.label))
+                if isReversed {
+                    configuration.label
+                }
     }
 
+            }
+    }
 
 struct new_order_sarah_Previews: PreviewProvider {
     static var previews: some View {
