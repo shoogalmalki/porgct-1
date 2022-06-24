@@ -74,14 +74,14 @@ struct homeuser: View {
                                     .font(.system(size: 23))
                             })
                             //((كود اللينك البدايه)))
-                            NavigationLink(isActive: $shouldGoToWhatEverPage1, destination: {
-                                NavigationUser()
-                            }, label: {
-                            })
+//                            NavigationLink(isActive: $shouldGoToWhatEverPage1, destination: {
+//                                NavigationUser()
+//                            }, label: {
+//                            })
                             //
                             Button(action: {
                                 //كود اللينك النهايه
-                                shouldGoToWhatEverPage1.toggle()
+//                                shouldGoToWhatEverPage1.toggle()
                             }
                                    , label:{
                                 Image(systemName: "bell.fill")
@@ -96,12 +96,12 @@ struct homeuser: View {
               
                     Spacer()
                     HStack{
-                        NavigationLink(isActive: $shouldGoToWhatEverPage7, destination: {
-                            NavigationUser()
-                        }, label: {
-                        })
+//                        NavigationLink(isActive: $shouldGoToWhatEverPage7, destination: {
+//                            NavigationUser()
+//                        }, label: {
+//                        })
                     Button(action: {
-                        shouldGoToWhatEverPage7.toggle()
+//                        shouldGoToWhatEverPage7.toggle()
                     }
                            , label:{
                         Image(systemName: "bell.fill")

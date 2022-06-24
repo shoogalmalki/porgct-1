@@ -20,12 +20,12 @@ struct after_payment: View {
      }
             ZStack{
                 Rectangle()
-                    .frame(width: 380, height: 650)
+                    .frame(width: 380, height: 500)
                     .foregroundColor(Color("Color1"))
                     .cornerRadius(20)
                     .offset(y:58)
-                VStack(spacing:200){
-                    VStack(spacing:33){
+                VStack(spacing:150){
+                    VStack{
                    Image("Image16")
                         .resizable()
                         .frame(width:270 , height: 190)
@@ -34,7 +34,7 @@ struct after_payment: View {
                             .font(.system(size: 23, weight: .semibold, design: .rounded))
                 }
                     NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
-                        homeuser()
+                        Home_User()
                     }, label: {
                     })
                 Button(action: {                            shouldGoToWhatEverPage11.toggle()
