@@ -43,7 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		426BDB4F284398FB008E9C5A /* porgct 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "porgct 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		426BDB4F284398FB008E9C5A /* Habhoob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habhoob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		426BDB52284398FB008E9C5A /* porgct_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = porgct_1App.swift; sourceTree = "<group>"; };
 		426BDB56284398FD008E9C5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		426BDB59284398FD008E9C5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		426BDB50284398FB008E9C5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				426BDB4F284398FB008E9C5A /* porgct 1.app */,
+				426BDB4F284398FB008E9C5A /* Habhoob.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,9 +154,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		426BDB4E284398FB008E9C5A /* porgct 1 */ = {
+		426BDB4E284398FB008E9C5A /* Habhoob */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 426BDB5D284398FD008E9C5A /* Build configuration list for PBXNativeTarget "porgct 1" */;
+			buildConfigurationList = 426BDB5D284398FD008E9C5A /* Build configuration list for PBXNativeTarget "Habhoob" */;
 			buildPhases = (
 				426BDB4B284398FB008E9C5A /* Sources */,
 				426BDB4C284398FB008E9C5A /* Frameworks */,
@@ -166,14 +166,14 @@
 			);
 			dependencies = (
 			);
-			name = "porgct 1";
+			name = Habhoob;
 			packageProductDependencies = (
 				AEB42151284D337400A942B0 /* FirebaseAuth */,
 				AEB42153284D337400A942B0 /* FirebaseFirestore */,
 				AEB42155284D337400A942B0 /* FirebaseStorage */,
 			);
 			productName = "porgct 1";
-			productReference = 426BDB4F284398FB008E9C5A /* porgct 1.app */;
+			productReference = 426BDB4F284398FB008E9C5A /* Habhoob.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -191,7 +191,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 426BDB4A284398FB008E9C5A /* Build configuration list for PBXProject "porgct 1" */;
+			buildConfigurationList = 426BDB4A284398FB008E9C5A /* Build configuration list for PBXProject "Habhoob" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -207,7 +207,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				426BDB4E284398FB008E9C5A /* porgct 1 */,
+				426BDB4E284398FB008E9C5A /* Habhoob */,
 			);
 		};
 /* End PBXProject section */
@@ -400,7 +400,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "sa.Shoog.porgct-1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Habhoob;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -430,7 +430,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "sa.Shoog.porgct-1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Habhoob;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -440,7 +440,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		426BDB4A284398FB008E9C5A /* Build configuration list for PBXProject "porgct 1" */ = {
+		426BDB4A284398FB008E9C5A /* Build configuration list for PBXProject "Habhoob" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				426BDB5B284398FD008E9C5A /* Debug */,
@@ -449,7 +449,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		426BDB5D284398FD008E9C5A /* Build configuration list for PBXNativeTarget "porgct 1" */ = {
+		426BDB5D284398FD008E9C5A /* Build configuration list for PBXNativeTarget "Habhoob" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				426BDB5E284398FD008E9C5A /* Debug */,
