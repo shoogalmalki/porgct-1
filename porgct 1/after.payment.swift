@@ -20,11 +20,11 @@ struct after_payment: View {
      }
             ZStack{
                 Rectangle()
-                    .frame(width: 380, height: 500)
+                    .frame(width: 380, height: 800)
                     .foregroundColor(Color("Color1"))
                     .cornerRadius(20)
                     .offset(y:58)
-                VStack(spacing:150){
+                VStack(spacing:100){
                     VStack{
                    Image("Image16")
                         .resizable()
