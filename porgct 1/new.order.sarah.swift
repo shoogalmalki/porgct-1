@@ -342,8 +342,8 @@ struct new_order_sarah: View {
                         }
                         }
                         .offset(y:33)
-                        Button(action: {}
-                               , label: {
+//                        Button(action: {}
+//                               , label: {
                           
                            
                             
@@ -373,17 +373,17 @@ struct new_order_sarah: View {
                                     .foregroundStyle(.mint)
                                     .font(.system(size: 16, weight: .semibold, design: .serif))
                                     .offset(y:-40)
-                                
-                                
-                            Rectangle()
-                            .frame(width: 320, height: 38)
-                            .foregroundColor(Color("Color3"))
-                            .cornerRadius(14)
-                            Text("Place Your Order")
-                                    .foregroundStyle(.white)
-                                    .font(.system(size: 15, weight: .bold, design: .default))
                             }
-                        })
+                                
+//                            Rectangle()
+//                            .frame(width: 320, height: 38)
+//                            .foregroundColor(Color("Color3"))
+//                            .cornerRadius(14)
+//                            Text("Place Your Order")
+//                                    .foregroundStyle(.white)
+//                                    .font(.system(size: 15, weight: .bold, design: .default))
+                           
+//                        })
                         .offset(y:53)
                         
 //
