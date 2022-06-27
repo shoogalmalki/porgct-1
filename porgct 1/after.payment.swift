@@ -24,7 +24,7 @@ struct after_payment: View {
                     .foregroundColor(Color("Color1"))
                     .cornerRadius(20)
                     .offset(y:58)
-                VStack(spacing:100){
+                VStack{
                     VStack{
                    Image("Image16")
                         .resizable()

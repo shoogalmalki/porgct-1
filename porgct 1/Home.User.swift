@@ -21,39 +21,6 @@ struct Home_User: View {
         ZStack{
             Color("Color3")
                 .ignoresSafeArea()
-            
-            HStack{
-                HStack{
-                  
-                    NavigationLink(isActive: $shouldGoToWhatEverPage9, destination: {
-                        new_order_sarah()
-                    }, label: {
-                    })
-                    Button(action: {
-                        shouldGoToWhatEverPage9.toggle()
-                    }
-                           , label:{
-                        Image(systemName: "plus.circle.fill")
-                            .foregroundColor(.white)
-                            .font(.system(size: 23))
-                    })
-                }
-                NavigationLink(isActive: $shouldGoToWhatEverPage8, destination: {
-                    navigationdriver()
-                }, label: {
-
-                })
-                Button(action: {
-                    shouldGoToWhatEverPage8.toggle()
-                }
-                       , label:{
-                    Image(systemName: "bell.fill")
-                        .foregroundColor(.white)
-                        .font(.system(size: 23))
-                    
-                })
-            }
-            .padding(.bottom,700)
         }
             
             ZStack{
@@ -63,35 +30,7 @@ struct Home_User: View {
                 .cornerRadius(20)
 //                .offset(y:58)
                 VStack(spacing:44){
-                    HStack{
-                    NavigationLink(isActive: $shouldGoToWhatEverPage9, destination: {
-                        new_order_sarah()
-                    }, label: {
-                    })
-                    Button(action: {
-                        shouldGoToWhatEverPage9.toggle()
-                    }
-                           , label:{
-                        Image(systemName: "plus.circle.fill")
-                            .foregroundColor(.white)
-                            .font(.system(size: 23))
-                    })
-               
-                NavigationLink(isActive: $shouldGoToWhatEverPage8, destination: {
-                    navigationdriver()
-                }, label: {
-
-                })
-                Button(action: {
-                    shouldGoToWhatEverPage8.toggle()
-                }
-                       , label:{
-                    Image(systemName: "bell.fill")
-                        .foregroundColor(.white)
-                        .font(.system(size: 23))
-                    
-                })
-                    }
+                   
                     ZStack{
                         Image("Image4-1")
                             .resizable()
@@ -233,14 +172,14 @@ struct Home_User: View {
 
                                 }
                             }
-                            //                }
+                     
                             ZStack{
                                 Rectangle()
                                     .frame(width: 325, height:170)
                                     .foregroundColor(.white)
                                     .cornerRadius(15)
                                 VStack{
-                                    Image("Image1")
+                                    Image("Image1-1")
                                         .resizable()
                                         .frame(width: 250, height:25)
                                     HStack(spacing:190){
@@ -348,8 +287,45 @@ struct Home_User: View {
             Image(systemName:"person.circle.fill")
                 .font(.system(size: 23))
                 .foregroundColor(showModelView ? .green : .white)
-                .offset(y:27)
-        })
+               
+        },trailing:
+                                HStack{
+                                    HStack{
+                                      
+                                        NavigationLink(isActive: $shouldGoToWhatEverPage9, destination: {
+                                            new_order_sarah()
+                                        }, label: {
+                                        })
+                                        Button(action: {
+                                            shouldGoToWhatEverPage9.toggle()
+                                        }
+                                               , label:{
+                                            Image(systemName: "plus.circle.fill")
+                                                .foregroundColor(.white)
+                                                .font(.system(size: 23))
+                                        })
+                                    }
+                                    NavigationLink(isActive: $shouldGoToWhatEverPage8, destination: {
+                                        navigationdriver()
+                                    }, label: {
+
+                                    })
+                                    Button(action: {
+                                        shouldGoToWhatEverPage8.toggle()
+                                    }
+                                           , label:{
+                                        Image(systemName: "bell.fill")
+                                            .foregroundColor(.white)
+                                            .font(.system(size: 23))
+                                        
+                                    })
+                                }
+        
+        
+        
+        
+        
+        )
         .sheet(isPresented:$showModelView , content:
                 {
             profile1()

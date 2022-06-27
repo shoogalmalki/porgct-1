@@ -42,7 +42,6 @@ struct offer: View {
 
     
     var body: some View {
-        NavigationView {
             ZStack {
                 Rectangle ()
                     .cornerRadius22 (topLeft, corners: .topLeft)
@@ -203,7 +202,7 @@ for your order ?
             .ignoresSafeArea()
             .navigationBarHidden(true)
             
-        }
+        
     }
     
 }

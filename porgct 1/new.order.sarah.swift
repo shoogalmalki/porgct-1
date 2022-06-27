@@ -54,7 +54,7 @@ struct new_order_sarah: View {
     
     var body: some View {
        
-        NavigationView {
+//        NavigationView {
             ZStack {
             Rectangle ()
                 .cornerRadius53 (topLeft, corners: .topLeft)
@@ -372,8 +372,18 @@ struct new_order_sarah: View {
                                 }.toggleStyle(CheckboxToggleStyle(isReversed: true))
                                     .foregroundStyle(.mint)
                                     .font(.system(size: 16, weight: .semibold, design: .serif))
-                                    .offset(y:-40)
+                                   
                             }
+                        NavigationLink(){
+                            offer()
+                        } label: {
+                            Text("Confirm")
+                                .font(.title3)
+                                .foregroundColor(Color.white)
+                                .frame(width: 300, height:35)
+                                .background(Color("Color3"))
+                                    .cornerRadius(5)
+                        }
                                 
 //                            Rectangle()
 //                            .frame(width: 320, height: 38)
@@ -398,7 +408,7 @@ struct new_order_sarah: View {
                 .navigationBarHidden(true)
                
         
-    }
+//    }
 }
 }
 struct CheckboxToggleStyle: ToggleStyle {
