@@ -48,7 +48,6 @@ struct homedriver: View {
                 Button("Dismiss Driver Mode") {
                     presentationMode.wrappedValue.dismiss()
     }
-                .offset(x:-11,y:15)
             Rectangle ()
                 .cornerRadius4 (topLeft, corners: .topLeft)
         .cornerRadius4 (topRight, corners: .topRight)

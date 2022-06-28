@@ -16,30 +16,15 @@ struct Driver_account: View {
 
             var body: some View {
                 
-                        HStack {
-                        
-                            if toggleIsOn {
                 Button("Swich to driver Mode") {
-                    isPresented.toggle()
-
-                }
-                .padding(.leading, 14.0)
-                .foregroundColor(Color.mint)
-                    .fullScreenCover(isPresented: $isPresented, content: homedriver.init)
-                    
-                        }
-                            Toggle(
-                            isOn: $toggleIsOn,
-                            label: {
-                                Text("")
-                            })
-                            .toggleStyle(SwitchToggleStyle(tint: Color.mint))
-                            .padding()
-                                    
+                                   isPresented.toggle()
+                               }
+                               .fullScreenCover(isPresented: $isPresented, content: homedriver.init)
+                               .foregroundColor(Color.mint)
                        
             }
         }
-            }
+            
 struct Driver_account_Previews: PreviewProvider {
     static var previews: some View {
         Driver_account()
