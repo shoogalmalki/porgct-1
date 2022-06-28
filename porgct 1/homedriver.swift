@@ -29,7 +29,7 @@ struct RoundedCorner4: Shape {
 }
 
 struct homedriver: View {
-    @Environment(\.presentationMode) var presentationMode
+//    @Environment(\.presentationMode) var presentationMode
     @State var topLeft: CGFloat = 10
     @State var topRight: CGFloat = 10
     @State var bottomLeft: CGFloat = 0
@@ -41,13 +41,11 @@ struct homedriver: View {
     @State var showModelView3 = false
     @State var shouldGoToWhatEverPage8: Bool = false
     @State var shouldGoToWhatEverPage7: Bool = false
-
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         NavigationView {
             ZStack {
-                Button("Dismiss Driver Mode") {
-                    presentationMode.wrappedValue.dismiss()
-    }
+              
             Rectangle ()
                 .cornerRadius4 (topLeft, corners: .topLeft)
         .cornerRadius4 (topRight, corners: .topRight)
@@ -63,7 +61,10 @@ struct homedriver: View {
                Spacer()
                     HStack{
                         HStack{
-                      
+                            Button("Dismiss") {
+                                presentationMode.wrappedValue.dismiss()
+                }
+                            .offset(y:3)
                         Button(action: {
                           
                         }
