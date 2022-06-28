@@ -10,53 +10,73 @@ import SwiftUI
 struct pageView_onbording2: View {
     
     @State private var pageIndex = 0
-        private let pages: [Page] = Page.samplePages
-        private let dotAppearance = UIPageControl.appearance()
-        
+    private let pages: [Page] = Page.samplePages
+    private let dotAppearance = UIPageControl.appearance()
+    @State var shouldGoToNextView: Bool = false
+    
     var body: some View {
-        TabView(selection: $pageIndex) {
+        NavigationView {
+            VStack {
+                TabView(selection: $pageIndex) {
                     ForEach(pages) { page in
                         VStack {
                             Spacer()
-                PageView_onbording(page: page)
+                          PageView_onbording(page: page)
+
                             Spacer()
                             if page == pages.last {
-                                Button("Get started", action: goToZero)
-//   move to homepage
-                                    .foregroundColor(.white)
-                                    .frame(width: 300, height: 50)
-                                     .background(Color(UIColor.systemMint))
-                                    .cornerRadius(10)
-                            } else {
-                                Button("next", action: incrementPage)
+                        
+                                NavigationLink(destination: {
+                                    Home_User()
+                                }, label: {
+                                    Text("Get started")
+                                        .foregroundColor(.white)
+                                        .frame(width: 300, height: 50)
+                                        .background(Color(UIColor.systemMint))
+                                        .cornerRadius(10)
+                                })
 
-                                    .foregroundColor(.white)
-                            .frame(width: 300, height: 50)
-                            .background(Color(UIColor.systemMint))
-                            .cornerRadius(10)
+                               
+                            } else {
+                                Button(
+                                    action: incrementPage,
+                                    label: {
+                                        Text("next")
+                                            .foregroundColor(.white)
+                                            .frame(width: 300, height: 50)
+                                            .background(Color(UIColor.systemMint))
+                                            .cornerRadius(10)
+
+                                    }
+                                )
+                                
                             }
                             Spacer()
                         }
                         .tag(page.tag)
                     }
+
                 }
                 .animation(.easeInOut, value: pageIndex)// 2
                 .indexViewStyle(.page(backgroundDisplayMode: .interactive))
                 .tabViewStyle(PageTabViewStyle())
-                .onAppear {
-                    dotAppearance.currentPageIndicatorTintColor = .black
-                    dotAppearance.pageIndicatorTintColor = .gray
-                }
             }
-            
-            func incrementPage() {
-                pageIndex += 1
+            .onAppear {
+                dotAppearance.currentPageIndicatorTintColor = .black
+                dotAppearance.pageIndicatorTintColor = .gray
             }
-            
-            func goToZero() {
-                pageIndex = 0
-            }
+            .navigationBarHidden(true)
         }
+    }
+    
+    func incrementPage() {
+        pageIndex += 1
+    }
+    
+    func goToZero() {
+        pageIndex = 0
+    }
+}
 
 
 
