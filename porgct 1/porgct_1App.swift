@@ -51,7 +51,12 @@ struct porgct_1App: App {
 //        }
 ////       ContentView()
 //            Home_User()
-            Home_User()
+            
+            
+            
+//            Home_User()
+            
+            pageView_onbording2()
         }
     }
 }
