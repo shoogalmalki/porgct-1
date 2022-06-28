@@ -17,13 +17,14 @@ struct Driver_account: View {
             var body: some View {
                 
                         HStack {
-                           
+                        
                             if toggleIsOn {
                 Button("Swich to driver Mode") {
                     isPresented.toggle()
 
                 }
-                
+                .padding(.leading, 14.0)
+                .foregroundColor(Color.mint)
                     .fullScreenCover(isPresented: $isPresented, content: homedriver.init)
                     
                         }
