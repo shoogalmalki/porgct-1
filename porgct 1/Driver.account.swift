@@ -12,15 +12,33 @@ struct Driver_account: View {
 //    @EnvironmentObject var appState: AppState
        
             @State private var isPresented = false
+        @State var toggleIsOn: Bool = false
 
             var body: some View {
+                
+                        HStack {
+                           
+                            if toggleIsOn {
                 Button("Swich to driver Mode") {
                     isPresented.toggle()
+
                 }
-                .fullScreenCover(isPresented: $isPresented, content: homedriver.init)
+                
+                    .fullScreenCover(isPresented: $isPresented, content: homedriver.init)
+                    
+                        }
+                            Toggle(
+                            isOn: $toggleIsOn,
+                            label: {
+                                Text("")
+                            })
+                            .toggleStyle(SwitchToggleStyle(tint: Color.mint))
+                            .padding()
+                                    
+                       
             }
         }
-
+            }
 struct Driver_account_Previews: PreviewProvider {
     static var previews: some View {
         Driver_account()
