@@ -30,7 +30,7 @@ struct Home_User: View {
                 .cornerRadius(20)
 //                .offset(y:58)
                 VStack(spacing:44){
-                   
+                   Spacer()
                     ZStack{
                         Image("Image4-1")
                             .resizable()
@@ -70,7 +70,7 @@ struct Home_User: View {
 
                         }
                     }
-////                    ScrollView(.vertical,showsIndicators: false) {
+                    ScrollView(.vertical,showsIndicators: false) {
                         VStack(spacing:20){
                             ZStack{
                                 Rectangle()
@@ -333,7 +333,7 @@ struct Home_User: View {
         }
     }
 }
-//}
+}
 
 struct Home_User_Previews: PreviewProvider {
     static var previews: some View {

@@ -29,11 +29,11 @@
 		8A9B1C68285EB18F00024954 /* NavigationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C67285EB18F00024954 /* NavigationUser.swift */; };
 		8A9F7BB42864B88F00D390A8 /* Sarah.tast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F7BB32864B88F00D390A8 /* Sarah.tast.swift */; };
 		8A9F7BB6286509A700D390A8 /* Home.User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F7BB5286509A700D390A8 /* Home.User.swift */; };
+		8AC1300C286B4A4400F47422 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1300B286B4A4400F47422 /* Login.swift */; };
 		AE54AE2128633F94006FD4CB /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2028633F94006FD4CB /* SplashScreenView.swift */; };
 		AE54AE23286342FD006FD4CB /* PageModel-onbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */; };
 		AE54AE2528634356006FD4CB /* PageView-onbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2428634356006FD4CB /* PageView-onbording.swift */; };
 		AE54AE27286343CF006FD4CB /* pageView-onbording2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */; };
-		AE54AE2928634648006FD4CB /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2828634648006FD4CB /* Login.swift */; };
 		AEB4214D284D137600A942B0 /* offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB4214C284D137600A942B0 /* offer.swift */; };
 		AEB4214F284D2E1400A942B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */; };
 		AEB42152284D337400A942B0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AEB42151284D337400A942B0 /* FirebaseAuth */; };
@@ -66,11 +66,11 @@
 		8A9B1C67285EB18F00024954 /* NavigationUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUser.swift; sourceTree = "<group>"; };
 		8A9F7BB32864B88F00D390A8 /* Sarah.tast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sarah.tast.swift; sourceTree = "<group>"; };
 		8A9F7BB5286509A700D390A8 /* Home.User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.User.swift; sourceTree = "<group>"; };
+		8AC1300B286B4A4400F47422 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		AE54AE2028633F94006FD4CB /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageModel-onbording.swift"; sourceTree = "<group>"; };
 		AE54AE2428634356006FD4CB /* PageView-onbording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageView-onbording.swift"; sourceTree = "<group>"; };
 		AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "pageView-onbording2.swift"; sourceTree = "<group>"; };
-		AE54AE2828634648006FD4CB /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		AEB4214C284D137600A942B0 /* offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offer.swift; sourceTree = "<group>"; };
 		AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AEBD7846284794EA00202C25 /* NewRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRegistration.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 				AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */,
 				AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */,
 				AEBD7846284794EA00202C25 /* NewRegistration.swift */,
-				AE54AE2828634648006FD4CB /* Login.swift */,
+				8AC1300B286B4A4400F47422 /* Login.swift */,
 				AEB4214C284D137600A942B0 /* offer.swift */,
 				857DC72728666E71003D8A23 /*  OrderDriver.swift */,
 				42A70F022861F7C30093FACA /* new.order.swift */,
@@ -230,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AC1300C286B4A4400F47422 /* Login.swift in Sources */,
 				8A9B1C64285EAA4800024954 /* homedriver.swift in Sources */,
 				AE54AE27286343CF006FD4CB /* pageView-onbording2.swift in Sources */,
 				AE54AE23286342FD006FD4CB /* PageModel-onbording.swift in Sources */,
@@ -250,7 +251,6 @@
 				42A70F05286201960093FACA /* MapFile.swift in Sources */,
 				8A831867285E4ADE00B8C702 /* profile.driver.swift in Sources */,
 				857DC72828666E71003D8A23 /*  OrderDriver.swift in Sources */,
-				AE54AE2928634648006FD4CB /* Login.swift in Sources */,
 				8A9B1C66285EAD0400024954 /* navigationdriver.swift in Sources */,
 				8A9B1C68285EB18F00024954 /* NavigationUser.swift in Sources */,
 				AEB4214D284D137600A942B0 /* offer.swift in Sources */,
