@@ -182,7 +182,7 @@ struct NavigationUser: View {
                 }
             }
             .ignoresSafeArea()
-            .navigationBarHidden(true)
+            .navigationBarHidden(false)
             
         }
     }
