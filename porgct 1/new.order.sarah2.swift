@@ -21,8 +21,20 @@ struct new_order_sarah2: View {
     //    @EnvironmentObject var appState: AppState
     
     var body: some View {
-        
-        VStack{
+        ZStack{
+            ZStack{
+                Color("Color3")
+                    .ignoresSafeArea()
+            }
+           
+                ZStack{
+                    Rectangle()
+                        .frame(width: .infinity, height: 670)
+                        .foregroundColor(Color("Color1"))
+                        .cornerRadius(20)
+                        .offset(y:48)
+            
+                    VStack{
             HStack{
                 
                 StepsOfOrder()
@@ -34,7 +46,7 @@ struct new_order_sarah2: View {
                 image1()
                 
             }
-            VStack{
+          
                 HStack(spacing:33){
                     size1()
                     
@@ -58,14 +70,12 @@ struct new_order_sarah2: View {
                 }
                 ButtonNewOrder
                 
-                
             }
-            
-            
+          
         }
     }
 }
-
+}
 struct CheckboxToggleStyle: ToggleStyle {
     var isReversed = false
     func makeBody(configuration: Configuration) -> some
