@@ -108,11 +108,11 @@ struct OrderDriver: View {
                                 
                             }
                         }
-//                        Toggle(isOn: $checkbox2){
-//                            Text("I accept the terms & conditions")
-//                        }.toggleStyle(CheckboxToggleStyle(isReversed: true))
-//                            .foregroundStyle(.mint)
-//                            .font(.system(size: 15, weight: .semibold, design: .serif))
+                        Toggle(isOn: $checkbox2){
+                            Text("I accept the terms & conditions")
+                        }.toggleStyle(CheckboxToggleStyle(isReversed: true))
+                            .foregroundStyle(.mint)
+                            .font(.system(size: 15, weight: .semibold, design: .serif))
                         NavigationLink(){
                             offer()
                         } label: {
