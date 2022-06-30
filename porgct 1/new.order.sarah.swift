@@ -37,12 +37,12 @@ struct new_order_sarah: View {
                 .ignoresSafeArea()
             ZStack{
                 Rectangle()
-                    .frame(width: 380, height: 750)
+                    .frame(width: 380, height: 720)
                     .foregroundColor(Color("Color1"))
                     .cornerRadius(20)
                     .offset(y:56)
-                VStack{
-                    VStack(spacing:22){
+//                VStack(spacing:30){
+                    VStack(spacing:15){
                         HStack{
                             //
                             ZStack{
@@ -127,8 +127,8 @@ struct new_order_sarah: View {
                                 }
                             }
                         }
-                        VStack{
-                            HStack(spacing:33){
+                        VStack(spacing:9){
+                            HStack(spacing:38){
                                 if showRectangle == true {
                                     
                                     Button.init(action: {
@@ -264,7 +264,7 @@ struct new_order_sarah: View {
                                     })
                                 }
                             }
-                            HStack{
+                            HStack(spacing:20){
                                 Text("Less than 50*50 cm")
                                     .font(.system(size: 8, weight: .regular, design: .rounded))
                                 Text("Less than 100*100 cm")
@@ -310,7 +310,7 @@ struct new_order_sarah: View {
                         }.toggleStyle(CheckboxToggleStyle(isReversed: true))
                             .foregroundStyle(.mint)
                             .font(.system(size: 15, weight: .semibold, design: .serif))
-                    }
+//                    }
                     NavigationLink(){
                         offer()
                     } label: {
