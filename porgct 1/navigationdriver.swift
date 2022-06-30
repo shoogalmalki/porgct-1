@@ -24,6 +24,7 @@ struct navigationdriver: View {
                     .cornerRadius(20)
                     .offset(y:50)
                 VStack{
+                    
                     ZStack{
                         Rectangle()
                             .frame(width: 325, height:200)

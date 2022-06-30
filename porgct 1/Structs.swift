@@ -46,7 +46,7 @@ struct image1 : View{
     var body: some View{
         RoundedRectangle(cornerRadius: 12)
             .stroke(Color("Color2"),lineWidth: 1)
-            .frame(width: 170, height: 115)
+            .frame(width: 180, height: 125)
         
         VStack {
             Image(uiImage: image ?? UIImage(named: "Plus")!)

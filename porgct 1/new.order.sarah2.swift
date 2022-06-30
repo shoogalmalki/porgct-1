@@ -53,11 +53,9 @@ struct new_order_sarah2: View {
                 }
                 HStack{
                     size2()
-                    
                 }
                 textfield()
                 ZStack{
-                    
                     Schedule()
                 }
                 ZStack{

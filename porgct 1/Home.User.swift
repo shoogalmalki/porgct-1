@@ -113,7 +113,7 @@ struct location1 : View{
     var body: some View {
         RoundedRectangle(cornerRadius: 8)
             .stroke(Color("Color2"),lineWidth: 1)
-            .frame(width: 300, height: 60)
+            .frame(width: 300, height: 70)
         
         HStack{
             Image("Image4-1")
