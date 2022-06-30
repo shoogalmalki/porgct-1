@@ -20,7 +20,6 @@
 		8A831867285E4ADE00B8C702 /* profile.driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A831866285E4ADE00B8C702 /* profile.driver.swift */; };
 		8A831869285E4D2200B8C702 /* profile.user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A831868285E4D2200B8C702 /* profile.user.swift */; };
 		8A948D4B2860A0600069997F /* homeuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A948D4A2860A0600069997F /* homeuser.swift */; };
-		8A98C9462863BC93007C0AF0 /* new.order.sarah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A98C9452863BC93007C0AF0 /* new.order.sarah.swift */; };
 		8A98C9482863D7FC007C0AF0 /* Driver.account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A98C9472863D7FC007C0AF0 /* Driver.account.swift */; };
 		8A98C94A2863DEAE007C0AF0 /* payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A98C9492863DEAE007C0AF0 /* payment.swift */; };
 		8A98C94C28649E89007C0AF0 /* after.payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A98C94B28649E89007C0AF0 /* after.payment.swift */; };
@@ -29,7 +28,7 @@
 		8A9B1C68285EB18F00024954 /* NavigationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B1C67285EB18F00024954 /* NavigationUser.swift */; };
 		8A9F7BB42864B88F00D390A8 /* Sarah.tast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F7BB32864B88F00D390A8 /* Sarah.tast.swift */; };
 		8A9F7BB6286509A700D390A8 /* Home.User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F7BB5286509A700D390A8 /* Home.User.swift */; };
-		8ABC2421286DD129002E214E /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC2420286DD129002E214E /* Structs.swift */; };
+		8ABC2423286DDEF1002E214E /* new.order.sarah2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC2422286DDEF1002E214E /* new.order.sarah2.swift */; };
 		8AC1300C286B4A4400F47422 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1300B286B4A4400F47422 /* Login.swift */; };
 		AE54AE2128633F94006FD4CB /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2028633F94006FD4CB /* SplashScreenView.swift */; };
 		AE54AE23286342FD006FD4CB /* PageModel-onbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */; };
@@ -58,7 +57,6 @@
 		8A831866285E4ADE00B8C702 /* profile.driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.driver.swift; sourceTree = "<group>"; };
 		8A831868285E4D2200B8C702 /* profile.user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.user.swift; sourceTree = "<group>"; };
 		8A948D4A2860A0600069997F /* homeuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeuser.swift; sourceTree = "<group>"; };
-		8A98C9452863BC93007C0AF0 /* new.order.sarah.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = new.order.sarah.swift; sourceTree = "<group>"; };
 		8A98C9472863D7FC007C0AF0 /* Driver.account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.account.swift; sourceTree = "<group>"; };
 		8A98C9492863DEAE007C0AF0 /* payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = payment.swift; sourceTree = "<group>"; };
 		8A98C94B28649E89007C0AF0 /* after.payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = after.payment.swift; sourceTree = "<group>"; };
@@ -67,7 +65,7 @@
 		8A9B1C67285EB18F00024954 /* NavigationUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUser.swift; sourceTree = "<group>"; };
 		8A9F7BB32864B88F00D390A8 /* Sarah.tast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sarah.tast.swift; sourceTree = "<group>"; };
 		8A9F7BB5286509A700D390A8 /* Home.User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.User.swift; sourceTree = "<group>"; };
-		8ABC2420286DD129002E214E /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		8ABC2422286DDEF1002E214E /* new.order.sarah2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = new.order.sarah2.swift; sourceTree = "<group>"; };
 		8AC1300B286B4A4400F47422 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		AE54AE2028633F94006FD4CB /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageModel-onbording.swift"; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 				8AC1300B286B4A4400F47422 /* Login.swift */,
 				AEB4214C284D137600A942B0 /* offer.swift */,
 				857DC72728666E71003D8A23 /*  OrderDriver.swift */,
-				8A98C9452863BC93007C0AF0 /* new.order.sarah.swift */,
 				8A98C9492863DEAE007C0AF0 /* payment.swift */,
 				8A98C94B28649E89007C0AF0 /* after.payment.swift */,
 				42A70F002861F3060093FACA /* MyMap.swift */,
@@ -137,7 +134,7 @@
 				8A9F7BB5286509A700D390A8 /* Home.User.swift */,
 				426BDB56284398FD008E9C5A /* Assets.xcassets */,
 				426BDB58284398FD008E9C5A /* Preview Content */,
-				8ABC2420286DD129002E214E /* Structs.swift */,
+				8ABC2422286DDEF1002E214E /* new.order.sarah2.swift */,
 			);
 			path = "porgct 1";
 			sourceTree = "<group>";
@@ -237,13 +234,11 @@
 				8A9B1C64285EAA4800024954 /* homedriver.swift in Sources */,
 				AE54AE27286343CF006FD4CB /* pageView-onbording2.swift in Sources */,
 				AE54AE23286342FD006FD4CB /* PageModel-onbording.swift in Sources */,
-				8ABC2421286DD129002E214E /* Structs.swift in Sources */,
 				AE54AE2528634356006FD4CB /* PageView-onbording.swift in Sources */,
 				42A70F032861F7C30093FACA /* new.order.swift in Sources */,
 				AE54AE2128633F94006FD4CB /* SplashScreenView.swift in Sources */,
 				8A948D4B2860A0600069997F /* homeuser.swift in Sources */,
 				42A70F092862025E0093FACA /* ImagePicker.swift in Sources */,
-				8A98C9462863BC93007C0AF0 /* new.order.sarah.swift in Sources */,
 				8A98C94C28649E89007C0AF0 /* after.payment.swift in Sources */,
 				8A98C9482863D7FC007C0AF0 /* Driver.account.swift in Sources */,
 				8A9F7BB42864B88F00D390A8 /* Sarah.tast.swift in Sources */,
@@ -252,6 +247,7 @@
 				8A831869285E4D2200B8C702 /* profile.user.swift in Sources */,
 				8A98C94A2863DEAE007C0AF0 /* payment.swift in Sources */,
 				8A9F7BB6286509A700D390A8 /* Home.User.swift in Sources */,
+				8ABC2423286DDEF1002E214E /* new.order.sarah2.swift in Sources */,
 				42A70F05286201960093FACA /* MapFile.swift in Sources */,
 				8A831867285E4ADE00B8C702 /* profile.driver.swift in Sources */,
 				857DC72828666E71003D8A23 /*  OrderDriver.swift in Sources */,

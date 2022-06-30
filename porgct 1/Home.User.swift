@@ -60,7 +60,7 @@ struct Home_User: View {
                  
                         
                         NavigationLink(isActive: $shouldGoToWhatEverPage9, destination: {
-                            new_order_sarah()
+//                            new_order_sarah()
                         }, label: {
                         })
 
