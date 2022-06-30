@@ -15,8 +15,9 @@ struct navigationdriver: View {
         ZStack {
             Color("Color3")
                 .ignoresSafeArea()
+//            navigationTitle("wwww")
+//            .navigationBarHidden(true)
             ZStack{
-                
                 Rectangle()
                     .frame(width: .infinity, height: 670)
                     .foregroundColor(Color("Color1"))
