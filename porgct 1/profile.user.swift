@@ -16,19 +16,6 @@ struct profile1: View {
            Color("Color1")
                 .ignoresSafeArea()
             VStack(spacing:40){
-//                HStack(alignment: .center,spacing: -66){
-//                ZStack{
-//                Rectangle()
-//                    .frame(width:30, height:30)
-//                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.875))
-//                    .cornerRadius(10)
-//                    Image(systemName: "chevron.left")
-//                        .foregroundColor(Color("Color3"))
-//                } .padding(.trailing,270)
-//                    Text("Profile")
-//                    .font(.system(size: 15, weight:.bold, design: .default))
-//                }
-
         HStack(spacing:100){
         HStack{
         Image("Image3-1")

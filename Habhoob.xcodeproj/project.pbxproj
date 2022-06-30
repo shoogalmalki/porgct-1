@@ -119,7 +119,6 @@
 				8AC1300B286B4A4400F47422 /* Login.swift */,
 				AEB4214C284D137600A942B0 /* offer.swift */,
 				857DC72728666E71003D8A23 /*  OrderDriver.swift */,
-				42A70F022861F7C30093FACA /* new.order.swift */,
 				8A98C9452863BC93007C0AF0 /* new.order.sarah.swift */,
 				8A98C9492863DEAE007C0AF0 /* payment.swift */,
 				8A98C94B28649E89007C0AF0 /* after.payment.swift */,
@@ -129,11 +128,11 @@
 				42A70F082862025E0093FACA /* ImagePicker.swift */,
 				8A831866285E4ADE00B8C702 /* profile.driver.swift */,
 				8A831868285E4D2200B8C702 /* profile.user.swift */,
+				8A9B1C65285EAD0400024954 /* navigationdriver.swift */,
 				8A98C9472863D7FC007C0AF0 /* Driver.account.swift */,
 				8A9B1C63285EAA4800024954 /* homedriver.swift */,
-				8A9B1C65285EAD0400024954 /* navigationdriver.swift */,
-				8A9F7BB5286509A700D390A8 /* Home.User.swift */,
 				8A9B1C67285EB18F00024954 /* NavigationUser.swift */,
+				8A9F7BB5286509A700D390A8 /* Home.User.swift */,
 				426BDB56284398FD008E9C5A /* Assets.xcassets */,
 				426BDB58284398FD008E9C5A /* Preview Content */,
 			);
@@ -145,6 +144,7 @@
 			children = (
 				426BDB59284398FD008E9C5A /* Preview Assets.xcassets */,
 				AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */,
+				42A70F022861F7C30093FACA /* new.order.swift */,
 				85FF2267286348CC00DD7047 /* Mmm.swift */,
 				8A948D4A2860A0600069997F /* homeuser.swift */,
 			);
