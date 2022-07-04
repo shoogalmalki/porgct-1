@@ -108,6 +108,7 @@ Spacer()
                             .font(.system(size: 23))
                            
                     })
+                        
                         NavigationLink(isActive: $shouldGoToWhatEverPage8, destination: {
 //                            new_order_sarah()
                         }, label: {

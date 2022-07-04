@@ -36,6 +36,8 @@ struct porgct_1App: App {
     
   init(){
  FirebaseApp.configure()
+      let database = Firestore.firestore()
+      
    }
    
     
