@@ -81,8 +81,10 @@ struct OrderDriver: View {
                             .font(.system(size: 12))
                             .padding()
                    .frame(width: 300, height: 90)
-                   .border(.gray)
-                            .background(Color("Color2"))
+                   .foregroundColor(Color.gray.opacity(0.2))
+                  .border(.gray)
+//             .background(Color("Color2"))
+                  .background(.gray.opacity(0.1))
                             .cornerRadius(3)
                         
                         ZStack{
@@ -116,7 +118,7 @@ struct OrderDriver: View {
                         NavigationLink(){
                             offer()
                         } label: {
-                            Text("Confirm")
+                            Text("Done")
                                 .font(.title3)
                                 .foregroundColor(Color.white)
                                 .frame(width: 300, height:35)

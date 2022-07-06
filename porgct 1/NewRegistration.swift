@@ -121,7 +121,7 @@ struct NewRegistration: View {
 //
                 HStack{
                     NavigationLink(isActive: $shouldGoToWhatEverPage2, destination: {
-                        Login()
+                       LoginView()
                     }, label: {
 
                     })
