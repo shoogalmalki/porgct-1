@@ -6,54 +6,27 @@
 //
 
 import SwiftUI
-import Foundation
-//green and gray
-extension View {
-    func cornerRadius22(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape( RoundedCorner22(radius: radius, corners: corners) )
-            .padding(0.0)
-            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.272, green: 0.683, blue: 0.674)/*@END_MENU_TOKEN@*/)
-        
-    }
-}
-
-struct RoundedCorner22: Shape {
-    
-    var radius: CGFloat = .infinity
-    var corners: UIRectCorner = .allCorners
-    
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        return Path(path.cgPath)
-    }
-    
-}
 
 
 struct offer: View {
     
-    @State var topLeft: CGFloat = 10
-    @State var topRight: CGFloat = 10
-    @State var bottomLeft: CGFloat = 0
-    @State var bottomRight: CGFloat = 0
-    let upcolor: Color = Color(red: Double(69)/255, green: Double(174)/255, blue: Double(172)/255)
-    let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
+   
     @State var Sarah3: Bool = false
 
     
     var body: some View {
-            ZStack {
-                Rectangle ()
-                    .cornerRadius22 (topLeft, corners: .topLeft)
-                    .cornerRadius22 (topRight, corners: .topRight)
-                    .cornerRadius22 (bottomLeft, corners:
-                            .bottomLeft)
-                    .cornerRadius22 (bottomRight, corners: .bottomRight)
-                
-                    .foregroundColor(backgroundcolor)
-                    .frame(width: 360, height: 850)
-                    .offset(x: 0, y: 130)
+        ZStack{
+            ZStack{
+                Color("Color3")
+                    .ignoresSafeArea()
+            }
+           
                 ZStack{
+                    Rectangle()
+                        .frame(width: .infinity, height: 670)
+                        .foregroundColor(Color("Color1"))
+                        .cornerRadius(20)
+                        .offset(y:48)
                     VStack(spacing:20){
                         HStack{
                             ZStack{
@@ -84,7 +57,6 @@ struct offer: View {
                             }
                             
                         }
-                        .offset(y:-170)
                         ZStack{
                             Rectangle()
                                 .frame(width: 325, height:140)
@@ -191,17 +163,14 @@ for your order ?
                                 }
                             }
                         }
-                        .offset(y:-150)
+                        
                         //                        .padding(200)
                     }
                     
                 }
                 
             }
-            .background(RoundedRectangle(cornerRadius: 8, style:   .circular).fill(Color(UIColor.systemMint)))
-            .ignoresSafeArea()
-            .navigationBarHidden(true)
-            
+    
         
     }
     
