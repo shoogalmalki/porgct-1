@@ -11,14 +11,13 @@ import SwiftUI
 struct payment: View {
     let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
     @State var shouldGoToWhatEverPage77: Bool = false
-
+    @State var showRectangle: Bool = false
     var body: some View {
-        NavigationView{
         ZStack{
-        Rectangle()
-                .foregroundColor(backgroundcolor)
-        .frame(width: 360, height: 850)
-            VStack{
+            Color("Color1")
+//
+                .ignoresSafeArea()
+            VStack(spacing:44){
                 HStack{
                     ZStack{
                     Image(systemName:"shippingbox")
@@ -26,9 +25,7 @@ struct payment: View {
                     .frame(width: 40, height: 40)
                     .foregroundColor(Color.gray.opacity(0.2))
                         Image(systemName:"shippingbox")
-
                     }
-
                     Image("Image12")
                     
                     ZStack{
@@ -48,49 +45,55 @@ struct payment: View {
                 }
                 ZStack{
  Rectangle()
-                .frame(width:330 , height: 550 )
+                .frame(width:350 , height: 450 )
                 .cornerRadius(8)
                 .foregroundColor(.white)
             
-         
-              
-            VStack{
-            HStack{
+                    VStack(spacing:22){
+                HStack{
                 Image(systemName:"stopwatch")
                     .renderingMode(.template)
                     .foregroundColor(Color("orange1"))
-                Text("IN PROGRESS")
-                    .font(.callout)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("orange1"))
-                Spacer()
+                
+                    HStack(spacing:44){
+                    Text("IN PROGRESS")
+                        .font(.callout)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("orange1"))
                 Text("Fri, June, 2022 8:00 PM")
                     .font(.footnote)
                     .fontWeight(.regular)
                     .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.611))
                 
-            }.padding(22)
-                
+            }
+            }
                Divider()
-                VStack{
+                    .frame(width: 330)
+//                VStack{
+                       
                 Text("Order Number : 237")
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(Color("Color3"))
-                    .padding(.trailing,108)
-                    .padding()
-                HStack(spacing:200){
+                    .offset(x:-55)
+                        VStack{
                 Text("Note :")
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("orange1"))
-                    Image(systemName:"square.and.pencil")                }
+          .font(.system(size: 20, weight: .semibold, design: .rounded))
+                .foregroundColor(Color("orange1"))
+                .offset(x:-130)
+
+                        HStack(spacing:55){
+//                    Image(systemName:"square.and.pencil")
                 Text("My order needs care because it is \n breakable.")
-                    .font(.footnote)
-                    .fontWeight(.medium)
-                    .padding(.trailing,55)
+                    
+             .font(.system(size: 15, weight: .semibold, design: .rounded))
+                Image(systemName:"square.and.pencil")
+//                    .padding(.trailing,55)
+                        }
                 }
                Text("Your Receipt")
                     .underline()
+                    .font(.system(size: 17, weight: .bold, design: .rounded))
                     .foregroundColor(Color("orange1"))
                 ZStack{
                     Rectangle()
@@ -99,8 +102,8 @@ struct payment: View {
                         .cornerRadius(10)
                     VStack{
                         Image("Image1-1")
-                        .resizable()
-                        .frame(width:250 , height: 30 )
+//                        .resizable()
+//                        .frame(width:250 , height: 30 )
                     HStack(spacing:170){
                     Text("Riyadh")
                         .font(.footnote)
@@ -111,36 +114,7 @@ struct payment: View {
                     }
                     }
                 }
-                Text("Summary")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color("Color3"))
-                    .padding(.trailing,200)
-                HStack(spacing:200){
-                    VStack{
-                    
-                    Text("Size of Shipment")
-                           .font(.footnote)
-                           .foregroundColor(Color("Color3"))
-                        Text("Driver Offer")
-                            .font(.footnote)
-                            .foregroundColor(Color("Color3"))
-                        Text("Insurance")
-                            .font(.footnote)
-                            .foregroundColor(Color("Color3"))
-                }
-                    VStack{
-                        Text("50")
-                            .font(.footnote)
-                            .foregroundColor(Color("Color3"))
-                        Text("100")
-                            .font(.footnote)
-                            .foregroundColor(Color("Color3"))
-                            Text("30")
-                                .font(.footnote)
-                                .foregroundColor(Color("Color3"))
-                }
-                }
+
                 HStack(spacing:150){
                     Text("Total :")
                         .fontWeight(.black)
@@ -148,7 +122,7 @@ struct payment: View {
                     Text("89.64 SR")
                         .fontWeight(.bold)
                         .foregroundColor(Color("orange1"))
-                       
+
                 }
                 HStack(spacing:33){
                     ZStack{
@@ -165,13 +139,50 @@ struct payment: View {
                         .cornerRadius(10)
                         Image("Image33")
                     }
-                    Rectangle()
-                        .foregroundColor(Color("gray1"))
-                        .frame(width: 55, height: 50)
-                        .cornerRadius(10)
+                    if showRectangle == true {
                         
+                        Button.init(action: {
+                            showRectangle.toggle()
+                            
+                        }, label: {
+                            ZStack{
+                                Rectangle()
+                                    .foregroundColor(.gray)
+                                    .frame(width: 55, height: 50)
+                                    .cornerRadius(13)
+                                
+                                    Text("Cash")
+                                        .font(.caption2)
+                                        .foregroundColor(.black)
+                                    
+                               
+                            }
+                        })
+                    }
+                    else{
+                        Button.init(action: {
+                            showRectangle.toggle()
+                            
+                        }, label: {
+                            ZStack{
+                                
+                                Rectangle()
+                                    .foregroundColor(Color("gray1"))
+                                    .frame(width: 55, height: 50)
+                                    .cornerRadius(13)
+                                
+                                    Text("Cash")
+                                        .font(.caption2)
+                                        .foregroundStyle(.black)
+                                        .font(.system(size: 20, weight: .bold, design: .default))
+                                    
+                              
+                            }
+                        })
+                    }
+//
                 }
-               
+//
                 }
                 }
                 NavigationLink(){
@@ -191,7 +202,7 @@ struct payment: View {
         
 }
   
-}
+
 
 struct payment_Previews: PreviewProvider {
     static var previews: some View {
