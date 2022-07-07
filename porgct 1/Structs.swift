@@ -278,3 +278,42 @@ var ButtonNewOrder: some View {
     }
 }
 
+struct location1 : View{
+    var frameworks = ["Pick Up Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
+    var frameworks2 = ["Drop Of Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
+    @State private var selectedFrameworkIndex = ""
+    var body: some View {
+       
+        RoundedRectangle(cornerRadius: 8)
+            .stroke(Color("Color2"),lineWidth: 1)
+            .frame(width: 325, height: 70)
+//            .foregroundColor(Color.white)
+//      .foregroundColor(.white)
+//         .background(.white.opacity(0.3))
+        
+        HStack{
+            Image("Image4-1")
+                .resizable()
+                .foregroundColor(Color("Color2"))
+                .frame(width:35, height:42)
+            
+            VStack(alignment: .leading,spacing: 1){
+                VStack(alignment: .leading, spacing: 1){
+                    Picker(selection: $selectedFrameworkIndex, label: Text("")) {
+                        ForEach(0 ..< frameworks.count) {
+                            Text(self.frameworks[$0])
+                        }
+                    }
+                    Divider()
+                        .frame(width: 200)
+                }
+                Picker(selection: $selectedFrameworkIndex, label: Text("")) {
+                    ForEach(0 ..< frameworks2.count) {
+                        Text(self.frameworks2[$0])
+                    }
+                    
+                }
+            }
+        }
+    }
+}
