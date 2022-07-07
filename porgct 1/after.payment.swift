@@ -24,14 +24,17 @@ struct after_payment: View {
                     .foregroundColor(Color("Color1"))
                     .cornerRadius(20)
                     .offset(y:58)
-                VStack{
+                VStack(alignment: .leading , spacing: 20){
                     VStack{
                    Image("Image16")
                         .resizable()
                         .frame(width:270 , height: 190)
                         .padding(.leading,22)
-                    Text("Your request been \nsuccessfully added")
-                            .font(.system(size: 23, weight: .semibold, design: .rounded))
+                    Text("""
+Your request has been 
+  submitted succefully
+""")
+                            .font(.system(size: 18, weight: .semibold, design: .serif))
                 }
                     NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
                         Home_User()
@@ -42,11 +45,11 @@ struct after_payment: View {
                        , label: {
                
                     Text("Back to the main page")
-                        .font(.title3)
+                        .font(.system(size: 18, weight: .semibold, design: .serif))
                         .foregroundColor(Color.white)
-                        .frame(width: 300, height:35)
-                        .background(Color("Color3"))
-                            .cornerRadius(5)
+                        .frame(width: 300, height: 50)
+                        .background(Color(UIColor.systemMint))
+                         .cornerRadius(10)
                          
               
                 })

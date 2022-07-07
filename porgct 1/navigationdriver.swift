@@ -39,7 +39,7 @@ struct navigationdriver: View {
                     .offset(y:50)
                 VStack{
                     Text("Rquest")
-                        .font(.system(size: 33, weight: .semibold, design: .default))
+                        .font(.system(size: 18, weight: .semibold, design: .serif))
                         .padding(.top,66)
                 ScrollView(.vertical,showsIndicators: false) {
                 VStack{

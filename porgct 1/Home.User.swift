@@ -113,8 +113,9 @@ struct location1 : View{
     var body: some View {
         RoundedRectangle(cornerRadius: 8)
             .stroke(Color("Color2"),lineWidth: 1)
-            .frame(width: 300, height: 70)
-        
+            .frame(width: 325, height: 70)
+
+//         .background(.white.opacity(0.3))
         HStack{
             Image("Image4-1")
                 .resizable()
@@ -149,7 +150,7 @@ struct section : View {
         
         ZStack{
             Rectangle()
-                .frame(width: 325, height:170)
+                .frame(width: 325, height:200)
                 .foregroundColor(.white)
                 .cornerRadius(15)
             
@@ -232,12 +233,10 @@ struct section : View {
                     }
                     Button(action: {}, label: {
                         Text("Request")
-                            .font(.callout)
-                            .fontWeight(.semibold)
                             .foregroundColor(Color.white)
-                        
+                            .font(.system(size: 18, weight: .semibold, design: .serif))
                     })
-                    .frame(width: 190, height:25)
+                    .frame(width: 300, height:35)
                     .background(.orange)
                     .cornerRadius(5)
                     

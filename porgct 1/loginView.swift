@@ -36,7 +36,8 @@ struct LoginView: View {
                 ZStack{
                     VStack{
                            Text("Login")
-                               .bold()
+                            .font(.system(size: 18, weight: .semibold, design: .serif))
+                              
 //                           .offset(x: -1, y:-70 )
 
                TextField("Email", text: $Email)
@@ -81,6 +82,7 @@ struct LoginView: View {
                  login(email: Email, password: password)
                                               }
                           .foregroundColor(.white)
+                          .font(.system(size: 18, weight: .semibold, design: .serif))
                           .frame(width: 300, height: 50)
                            .background(Color(UIColor.systemMint))
                           .cornerRadius(10)

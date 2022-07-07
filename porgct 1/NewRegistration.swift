@@ -61,7 +61,8 @@ struct NewRegistration: View {
                 .offset(x: 0, y: 130)
             VStack {
                 Text("New Registration")
-                    .bold()
+                    .font(.system(size: 18, weight: .semibold, design: .serif))
+//                    .bold()
                     .offset(x: -1, y:-70 )
                 
     TextField("Full Name", text: $FullName)
@@ -112,7 +113,7 @@ struct NewRegistration: View {
                   }
 //
                    .foregroundColor(.white)
-                   .font(.footnote)
+                   .font(.system(size: 18, weight: .semibold, design: .serif))
 
                       .frame(width: 300, height: 50)
                       .background(Color(UIColor.systemMint))
@@ -132,7 +133,7 @@ struct NewRegistration: View {
                          Text("Already have an account? Login")
                              .underline()
                                .font(.footnote)
-                                                            .bold()
+                                .bold()
                                 .foregroundColor(.black)
                             .padding(.top)
                      })

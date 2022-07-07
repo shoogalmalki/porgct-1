@@ -188,12 +188,12 @@ struct payment: View {
                 NavigationLink(){
                     after_payment()
                 } label: {
-                    Text("Confirm")
-                        .font(.title3)
+                    Text("Done")
+                        .font(.system(size: 18, weight: .semibold, design: .serif))
                         .foregroundColor(Color.white)
-                        .frame(width: 300, height:35)
-                        .background(Color("Color3"))
-                            .cornerRadius(5)
+                        .frame(width: 300, height: 50)
+                        .background(Color(UIColor.systemMint))
+                         .cornerRadius(10)
                 }
             
             }

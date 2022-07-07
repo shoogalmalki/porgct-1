@@ -40,8 +40,7 @@ struct NavigationUser: View {
                 
                 VStack {
                     Text("Request")
-                        .font(.title)
-                        .fontWeight(.bold)
+                        .font(.system(size: 25, weight: .semibold, design: .serif))
                         .foregroundColor(.white)
                         
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -146,10 +145,9 @@ struct NavigationUser: View {
                                 HStack{
                                     Button(action: {}, label: {
                                         Text("Accept")
-                                            .font(.callout)
-                                            .fontWeight(.semibold)
+                                    
                                             .foregroundColor(Color.white)
-
+                                            .font(.system(size: 18, weight: .semibold, design: .serif))
                                     })
                                     .frame(width: 135, height:26)
                                     .background(.green)
@@ -164,10 +162,9 @@ struct NavigationUser: View {
 
                                     Button(action: {}, label: {
                                         Text("Decline")
-                                            .font(.callout)
-                                            .fontWeight(.semibold)
+                                            
                                             .foregroundColor(Color.white)
-
+                                            .font(.system(size: 18, weight: .semibold, design: .serif))
                                     })
                                     .frame(width: 135, height:26)
                                     .background(.red)

@@ -240,7 +240,7 @@ struct textfield : View{
 struct Schedule :View{
     var body: some View{
         Rectangle()
-            .frame(width: 320, height: 44)
+            .frame(width: 300, height: 44)
             .foregroundColor(Color.mint.opacity(0.2))
             .cornerRadius(12)
         HStack(spacing:120){
@@ -266,12 +266,12 @@ var ButtonNewOrder: some View {
     NavigationLink(){
         offer()
     } label: {
-        Text("Confirm")
+        Text("Place Order")
             .font(.title3)
             .foregroundColor(Color.white)
-            .frame(width: 300, height:35)
-            .background(Color("Color3"))
-            .cornerRadius(5)
+            .frame(width: 300, height: 50)
+            .background(Color(UIColor.systemMint))
+             .cornerRadius(10)
     }
 }
 

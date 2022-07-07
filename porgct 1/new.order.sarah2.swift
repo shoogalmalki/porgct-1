@@ -62,8 +62,8 @@ struct new_order_sarah2: View {
                     Toggle(isOn: $checkbox2){
                         Text("I accept the terms & conditions")
                     }.toggleStyle(CheckboxToggleStyle(isReversed: true))
-                        .foregroundStyle(.mint)
-                        .font(.system(size: 16, weight: .semibold, design: .serif))
+                        .foregroundStyle(.gray)
+                        .font(.system(size: 18, weight: .semibold, design: .serif))
                     
                 }
                 ButtonNewOrder

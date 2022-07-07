@@ -48,7 +48,7 @@ struct DateAndTime: View {
                         }
                          
                         .foregroundStyle(.black)
-                        .font(.system(size: 16, weight: .semibold, design: .serif))
+                        .font(.system(size: 18, weight: .semibold, design: .serif))
                         .frame(width: 300, height: 50)
                                         .background(.white)
                                         .cornerRadius(10)
@@ -78,7 +78,7 @@ struct DateAndTime: View {
             }
 
             .foregroundColor(.white)
-            .font(.system(size: 16, weight: .semibold, design: .serif))
+            .font(.system(size: 18, weight: .semibold, design: .serif))
                .frame(width: 300, height: 50)
                .background(Color(UIColor.systemMint))
                 .cornerRadius(10)

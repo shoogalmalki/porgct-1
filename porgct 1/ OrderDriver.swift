@@ -41,16 +41,18 @@ struct OrderDriver: View {
 
                 ZStack{
                     Rectangle()
-                        .frame(width: 380, height: 650)
+                        .frame(width: 380, height: 670)
                         .foregroundColor(Color("Color1"))
                         .cornerRadius(20)
-                    VStack(spacing:22){
+                    VStack(alignment: .leading, spacing: 20){
                       
                         ////اللوكيشن
                         ZStack{
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color("Color2"),lineWidth: 1)
                             .frame(width: 300, height: 60)
+                            .background(.white.opacity(0.3))
+                            
                         
                         HStack{
                             Image("Image4-1")
@@ -67,6 +69,7 @@ struct OrderDriver: View {
                                     }
                                     Divider()
                                         .frame(width: 200)
+                                    
                                 }
                                 Picker(selection: $selectedFrameworkIndex, label: Text("")) {
                                     ForEach(0 ..< frameworks2.count) {
@@ -77,30 +80,29 @@ struct OrderDriver: View {
                             }
                         }
                         }
-                        TextField("More Details ...(Exp: Keep away from heat.) ", text: .constant(""))
-                            .font(.system(size: 12))
+                        TextField("More Details (Exp: Keep away from heat...) ", text: .constant(""))
+                            .font(.system(size: 13))
                             .padding()
                    .frame(width: 300, height: 90)
-                   .foregroundColor(Color.gray.opacity(0.2))
-                  .border(.gray)
+//                   .foregroundColor(Color.gray.opacity(0.2))
+                  .border(.gray.opacity(0.3))
 //             .background(Color("Color2"))
-                  .background(.gray.opacity(0.1))
-                            .cornerRadius(3)
+                  .background(.white.opacity(0.3))
+                  .cornerRadius(5)
                         
                         ZStack{
                             Rectangle()
-                                .frame(width: 320, height: 44)
+                                .frame(width: 300, height: 44)
                                 .foregroundColor(Color.mint.opacity(0.2))
-                            
-                                .cornerRadius(12)
-                            HStack(spacing:130){
+                                .cornerRadius(5)
+                            HStack(spacing:70){
                                 HStack{
                                     Image(systemName: "calendar.badge.clock")
                                         .font(.system(size: 12, weight: .regular, design: .default))
                                         .foregroundColor(Color("Color3"))
                                     Text("Schedule Your Order")
                                         .fontWeight(.bold)
-                                        .font(.system(size: 13, weight: .regular, design: .default))
+                                        .font(.system(size: 15, weight: .semibold, design: .serif))
                                         .foregroundColor(Color("Color3"))
                                     
                                 }
@@ -113,19 +115,20 @@ struct OrderDriver: View {
                         Toggle(isOn: $checkbox2){
                             Text("I accept the terms & conditions")
                         }.toggleStyle(CheckboxToggleStyle(isReversed: true))
-                            .foregroundStyle(.mint)
+                            .foregroundStyle(.gray)
                             .font(.system(size: 15, weight: .semibold, design: .serif))
                         NavigationLink(){
                             offer()
                         } label: {
                             Text("Done")
-                                .font(.title3)
+//                                .font(.title3)
                                 .foregroundColor(Color.white)
-                                .frame(width: 300, height:35)
-                                .background(Color("Color3"))
-                                .cornerRadius(5)
+                                .font(.system(size: 20, weight: .semibold, design: .serif))
+                                .frame(width: 300, height: 50)
+                                .background(Color(UIColor.systemMint))
+                                 .cornerRadius(10)
                         }
-                            
+                       
                     }
                    
 //                        ZStack{
