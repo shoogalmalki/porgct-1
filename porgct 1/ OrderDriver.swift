@@ -35,8 +35,7 @@ struct OrderDriver: View {
        
         NavigationView {
             ZStack {
-                Color("Color3")
-//                Color(Color.mint as! CGColor)
+                Color(.systemMint)
                     .ignoresSafeArea()
 
                 ZStack{

@@ -23,18 +23,18 @@ struct new_order_sarah2: View {
     var body: some View {
         ZStack{
             ZStack{
-                Color("Color3")
+                Color(.systemMint)
                     .ignoresSafeArea()
             }
            
                 ZStack{
                     Rectangle()
-                        .frame(width: .infinity, height: 670)
+                        .frame(width: .infinity, height: 690)
                         .foregroundColor(Color("Color1"))
                         .cornerRadius(20)
                         .offset(y:48)
             
-                    VStack{
+                    VStack(alignment: .center, spacing: 10){
             HStack{
                 
                 StepsOfOrder()
@@ -63,7 +63,7 @@ struct new_order_sarah2: View {
                         Text("I accept the terms & conditions")
                     }.toggleStyle(CheckboxToggleStyle(isReversed: true))
                         .foregroundStyle(.gray)
-                        .font(.system(size: 18, weight: .semibold, design: .serif))
+                        .font(.system(size: 15, weight: .semibold, design: .serif))
                     
                 }
                 ButtonNewOrder

@@ -17,7 +17,7 @@ struct offer: View {
     var body: some View {
         ZStack{
             ZStack{
-                Color("Color3")
+                Color(.systemMint)
                     .ignoresSafeArea()
             }
            

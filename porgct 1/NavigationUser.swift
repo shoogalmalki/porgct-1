@@ -11,7 +11,7 @@ import SwiftUI
 
 struct NavigationUser: View {
    
-    var body: some View {
+var body: some View {
         NavigationView {
             ZStack {
                 
@@ -45,20 +45,13 @@ struct NavigationUser: View {
                     Spacer(minLength: 130)
                         
                     Rectangle ()
-                        .cornerRadius54 (topLeft, corners: .topLeft)
-                        .cornerRadius54 (topRight, corners: .topRight)
-                        .cornerRadius54 (bottomLeft, corners:
-                                .bottomLeft)
-                        .cornerRadius54 (bottomRight, corners: .bottomRight)
-
-                        .foregroundColor(backgroundcolor)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                       
                 }
                 
         
         ZStack{
             ZStack{
-                Color("Color3")
+                Color(.systemMint)
                     .ignoresSafeArea()
             }
            
@@ -161,16 +154,16 @@ struct NavigationUser: View {
                                     .cornerRadius(5)
 
 
-
+                                }
                                 }
                             }
                         }
                     }
                 }
-            }
-    }
-}
-          
+        }
+        }
+        }
+        }
 struct NavigationUser_Previews: PreviewProvider {
     static var previews: some View {
         NavigationUser()

@@ -14,8 +14,8 @@ struct after_payment: View {
         NavigationView{
         ZStack{
      ZStack{
-        Color("Color3")
-//                Color(Color.mint as! CGColor)
+         Color(.systemMint)
+
             .ignoresSafeArea()
      }
             ZStack{

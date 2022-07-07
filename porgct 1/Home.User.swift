@@ -111,11 +111,14 @@ struct location1 : View{
     var frameworks2 = ["Drop Of Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     @State private var selectedFrameworkIndex = ""
     var body: some View {
+       
         RoundedRectangle(cornerRadius: 8)
             .stroke(Color("Color2"),lineWidth: 1)
             .frame(width: 325, height: 70)
-
+//            .foregroundColor(Color.white)
+//      .foregroundColor(.white)
 //         .background(.white.opacity(0.3))
+        
         HStack{
             Image("Image4-1")
                 .resizable()
@@ -207,21 +210,21 @@ struct section : View {
                                     .resizable()
                                     .frame(width: 57, height:55)
                                 
-                                ZStack{
+                                ZStack(alignment: .center){
                                     Rectangle()
-                                        .frame(width: 33, height:15)
+                                        .frame(width: 40, height:15)
                                         .cornerRadius(5)
                                     
                                         .foregroundColor(Color("Color1"))
                                     
-                                    HStack{
+                                    HStack(alignment: .center){
                                         Text("4.9")
                                             .font(.caption)
                                             .fontWeight(.medium)
                                         
                                         Image(systemName: "star.fill")
                                             .foregroundColor(Color.orange)
-                                            .frame(width:10.0 , height: 22)
+                                            .frame(width:5.0 , height: 10)
                                         
                                     }
                                 }

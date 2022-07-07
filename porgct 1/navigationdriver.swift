@@ -15,7 +15,7 @@ struct navigationdriver: View {
         
         ZStack{
             ZStack {
-                Color("Color3")
+                Color(.systemMint)
                     .ignoresSafeArea()
                 //            navigationTitle("wwww")
                 //            .navigationBarHidden(true)
@@ -67,9 +67,9 @@ struct navigationdriver_Previews: PreviewProvider {
 struct card : View{
     var body: some View{
         Rectangle()
-            .frame(width: 325, height:200)
+            .frame(width: 325, height:220)
             .foregroundColor(.white)
-            .cornerRadius(15)
+            .cornerRadius(10)
         VStack{
             Image("Image1-1")
                 .resizable()

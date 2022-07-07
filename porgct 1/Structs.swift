@@ -47,6 +47,7 @@ struct image1 : View{
         RoundedRectangle(cornerRadius: 12)
             .stroke(Color("Color2"),lineWidth: 1)
             .frame(width: 180, height: 125)
+            .background(.white.opacity(0.3))
         
         VStack {
             Image(uiImage: image ?? UIImage(named: "Plus")!)
@@ -85,8 +86,8 @@ struct size1 : View{
                 ZStack{
                     Rectangle()
                         .frame(width: 66, height: 55)
-                        .foregroundColor(Color("Color3"))
-                        .cornerRadius(13)
+                        .foregroundColor(Color("Color4"))
+                        .cornerRadius(10)
                     VStack{
                         Image("image 1")
                             .resizable()
@@ -108,8 +109,8 @@ struct size1 : View{
                     
                     Rectangle()
                         .frame(width: 66, height: 55)
-                        .foregroundColor(Color("Color4"))
-                        .cornerRadius(13)
+                        .foregroundColor(Color.mint.opacity(0.2))
+                        .cornerRadius(10)
                     VStack{
                         Image("image 1")
                             .resizable()
@@ -132,7 +133,7 @@ struct size1 : View{
                 ZStack{
                     Rectangle()
                         .frame(width: 66, height: 55)
-                        .foregroundColor(Color("Color3"))
+                        .foregroundColor(Color("Color4"))
                         .cornerRadius(13)
                     VStack{
                         Image("image 2")
@@ -153,7 +154,7 @@ struct size1 : View{
                 ZStack{
                     Rectangle()
                         .frame(width: 66, height: 55)
-                        .foregroundColor(Color("Color4"))
+                        .foregroundColor(Color.mint.opacity(0.2))
                         .cornerRadius(13)
                     VStack{
                         Image("image 2")
@@ -161,7 +162,7 @@ struct size1 : View{
                             .frame(width: 30, height: 30)
                         Text("Medium")
                             .font(.caption2)
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.mint)
                             .font(.system(size: 15, weight: .bold, design: .default))
                     }
                 }
@@ -176,7 +177,7 @@ struct size1 : View{
                 ZStack{
                     Rectangle()
                         .frame(width: 66, height: 55)
-                        .foregroundColor(Color("Color3"))
+                        .foregroundColor(Color("Color4"))
                         .cornerRadius(13)
                     VStack{
                         Image("image 3")
@@ -197,7 +198,7 @@ struct size1 : View{
                     
                     Rectangle()
                         .frame(width: 66, height: 55)
-                        .foregroundColor(Color("Color4"))
+                        .foregroundColor(Color.mint.opacity(0.2))
                         .cornerRadius(13)
                     VStack{
                         Image("image 3")
@@ -227,13 +228,15 @@ struct size2 : View{
 
 struct textfield : View{
     var body: some View{
-        TextField("More Details ...(Exp: Keep away from heat.) ", text: .constant(""))
-            .font(.system(size: 12))
+        TextField("More Details (Exp: Keep away from heat...) ", text: .constant(""))
+            .font(.system(size: 13))
             .padding()
    .frame(width: 300, height: 90)
-   .border(.gray)
-            .background(Color("Color2"))
-            .cornerRadius(3)
+
+  .border(.gray.opacity(0.3))
+
+  .background(.white.opacity(0.3))
+  .cornerRadius(5)
     }
 }
 
@@ -242,8 +245,8 @@ struct Schedule :View{
         Rectangle()
             .frame(width: 300, height: 44)
             .foregroundColor(Color.mint.opacity(0.2))
-            .cornerRadius(12)
-        HStack(spacing:120){
+            .cornerRadius(5)
+        HStack(spacing:70){
             HStack{
                 Image(systemName: "calendar.badge.clock")
                     .font(.system(size: 12, weight: .regular, design: .default))
@@ -267,7 +270,7 @@ var ButtonNewOrder: some View {
         offer()
     } label: {
         Text("Place Order")
-            .font(.title3)
+            .font(.system(size: 20, weight: .semibold, design: .serif))
             .foregroundColor(Color.white)
             .frame(width: 300, height: 50)
             .background(Color(UIColor.systemMint))
