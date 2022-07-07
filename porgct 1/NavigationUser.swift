@@ -6,34 +6,11 @@
 //
 
 import SwiftUI
-import Foundation
-extension View {
-    func cornerRadius54(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape( RoundedCorner54(radius: radius, corners: corners) )
-            .padding(0.0)
-            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.272, green: 0.683, blue: 0.674)/*@END_MENU_TOKEN@*/)
-        
-    }
-}
 
-struct RoundedCorner54: Shape {
-    
-    var radius: CGFloat = .infinity
-    var corners: UIRectCorner = .allCorners
-    
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        return Path(path.cgPath)
-    }
-}
+
+
 struct NavigationUser: View {
-    @State var topLeft: CGFloat = 10
-    @State var topRight: CGFloat = 10
-    @State var bottomLeft: CGFloat = 0
-    @State var bottomRight: CGFloat = 0
-    let upcolor: Color = Color(red: Double(69)/255, green: Double(174)/255, blue: Double(172)/255)
-    let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
-    
+   
     var body: some View {
         NavigationView {
             ZStack {
@@ -78,7 +55,20 @@ struct NavigationUser: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
                 
+        
+        ZStack{
+            ZStack{
+                Color("Color3")
+                    .ignoresSafeArea()
+            }
+           
                 ZStack{
+                    Rectangle()
+                        .frame(width: .infinity, height: 670)
+                        .foregroundColor(Color("Color1"))
+                        .cornerRadius(20)
+                        .offset(y:48)
+             
 
                     VStack(spacing:20){
 
@@ -178,12 +168,9 @@ struct NavigationUser: View {
                     }
                 }
             }
-            .ignoresSafeArea()
-            .navigationBarHidden(true)
-            
-        }
     }
 }
+          
 struct NavigationUser_Previews: PreviewProvider {
     static var previews: some View {
         NavigationUser()
