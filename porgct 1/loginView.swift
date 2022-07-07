@@ -26,7 +26,6 @@ struct LoginView: View {
                 .ignoresSafeArea()
             }
         
-         
             ZStack{
             Rectangle()
                 .frame(width: 380, height: 650)
@@ -38,7 +37,6 @@ struct LoginView: View {
                            Text("Login")
                             .font(.system(size: 18, weight: .semibold, design: .serif))
                               
-//                           .offset(x: -1, y:-70 )
 
                TextField("Email", text: $Email)
                           .padding()
