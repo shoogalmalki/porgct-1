@@ -15,7 +15,7 @@ struct profile: View {
         NavigationView{
         ZStack{
             Rectangle()
-                .frame(width: 370, height:800)
+                .frame(width: 370, height:850)
                 .foregroundColor(Color("Color1"))
                 .cornerRadius(15)
             VStack(spacing:40){

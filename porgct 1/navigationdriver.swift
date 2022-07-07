@@ -36,8 +36,7 @@ struct navigationdriver: View {
                     
                 }
                 }
-              
-            }
+                          }
         }
         }
     }
