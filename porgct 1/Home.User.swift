@@ -48,7 +48,8 @@ struct Home_User: View {
                 
                 
                 .navigationBarItems(leading:
-                Button{
+                    //((PROFILE.BUTTON))
+                      Button{
                     showModelView.toggle()
                 }label: {
                     Image(systemName:"person.circle.fill")
@@ -57,22 +58,25 @@ struct Home_User: View {
                         .padding(.top)
                 },trailing:
                                         HStack(spacing:-5){
-                 
-                        
-                        NavigationLink(isActive: $shouldGoToWhatEverPage9, destination: {
-                            new_order_sarah2()
-                        }, label: {
-                        })
-
-                        Button(action: {
-                            shouldGoToWhatEverPage9.toggle()
-                        }
-                               , label:{
-                            Image(systemName: "plus.circle.fill")
-                                .foregroundColor(.white)
-                                .font(.system(size: 23))
-                        })
-                 
+                    
+                    
+                    //((BLUS.BUTTON))
+                    NavigationLink(isActive: $shouldGoToWhatEverPage9, destination: {
+                        new_order_sarah2()
+                    }, label: {
+                    })
+                
+                    Button(action: {
+                        shouldGoToWhatEverPage9.toggle()
+                    }
+                           , label:{
+                        Image(systemName: "plus.circle.fill")
+                            .foregroundColor(.white)
+                            .font(.system(size: 23))
+                    })
+                    
+                    
+                    //((BELL.BUTTON))
                     NavigationLink(isActive: $shouldGoToWhatEverPage8, destination: {
                         navigationdriver()
                     }, label: {
@@ -90,6 +94,7 @@ struct Home_User: View {
                 }.padding(.top)
                                     
                 )
+                //((SHEET))
                 .sheet(isPresented:$showModelView , content:
                         {
                     profile1()
