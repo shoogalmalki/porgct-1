@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-
-
 struct navigationdriver: View {
     @State var shouldGoToWhatEverPage12: Bool = false
     
@@ -32,7 +30,7 @@ struct navigationdriver: View {
                 VStack{
                        
                             NavigationDriverCard()
-//
+
                        .padding(.top,77)
                     NavigationDriverCard()
                     
@@ -43,12 +41,7 @@ struct navigationdriver: View {
         }
         }
     }
-    
-    
-    
-
-
-
+ 
 struct navigationdriver_Previews: PreviewProvider {
     static var previews: some View {
         navigationdriver()
