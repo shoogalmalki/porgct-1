@@ -322,7 +322,6 @@ struct location1 : View{
 struct section : View {
     var body: some View {
         
-        
         ZStack{
             Rectangle()
                 .frame(width: 325, height:200)
