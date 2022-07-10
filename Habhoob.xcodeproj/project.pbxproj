@@ -41,6 +41,7 @@
 		AE54AE2528634356006FD4CB /* PageView-onbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2428634356006FD4CB /* PageView-onbording.swift */; };
 		AE54AE27286343CF006FD4CB /* pageView-onbording2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */; };
 		AE9F5D0228763DDB00C157B2 /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9F5D0128763DDB00C157B2 /* loginView.swift */; };
+		AE9F5D08287B1A3E00C157B2 /* Registration2user.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9F5D07287B1A3E00C157B2 /* Registration2user.swift */; };
 		AEB4214D284D137600A942B0 /* offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB4214C284D137600A942B0 /* offer.swift */; };
 		AEB4214F284D2E1400A942B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */; };
 		AEB42152284D337400A942B0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AEB42151284D337400A942B0 /* FirebaseAuth */; };
@@ -84,6 +85,7 @@
 		AE54AE2428634356006FD4CB /* PageView-onbording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageView-onbording.swift"; sourceTree = "<group>"; };
 		AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "pageView-onbording2.swift"; sourceTree = "<group>"; };
 		AE9F5D0128763DDB00C157B2 /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
+		AE9F5D07287B1A3E00C157B2 /* Registration2user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration2user.swift; sourceTree = "<group>"; };
 		AEB4214C284D137600A942B0 /* offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offer.swift; sourceTree = "<group>"; };
 		AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AEBD7846284794EA00202C25 /* NewRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRegistration.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				AEB4214C284D137600A942B0 /* offer.swift */,
 				857DC72728666E71003D8A23 /*  OrderDriver.swift */,
 				8ABC2422286DDEF1002E214E /* new.order.sarah2.swift */,
+				AE9F5D07287B1A3E00C157B2 /* Registration2user.swift */,
 				8A98C9492863DEAE007C0AF0 /* payment.swift */,
 				8A98C94B28649E89007C0AF0 /* after.payment.swift */,
 				42A70F002861F3060093FACA /* MyMap.swift */,
@@ -285,6 +288,7 @@
 				AE54AE2128633F94006FD4CB /* SplashScreenView.swift in Sources */,
 				8A948D4B2860A0600069997F /* homeuser.swift in Sources */,
 				42A70F092862025E0093FACA /* ImagePicker.swift in Sources */,
+				AE9F5D08287B1A3E00C157B2 /* Registration2user.swift in Sources */,
 				8A98C94C28649E89007C0AF0 /* after.payment.swift in Sources */,
 				8A98C9482863D7FC007C0AF0 /* Driver.account.swift in Sources */,
 				8A9F7BB42864B88F00D390A8 /* Sarah.tast.swift in Sources */,
