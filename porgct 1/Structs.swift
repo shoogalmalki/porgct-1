@@ -1523,3 +1523,106 @@ struct MyOrder2 : View{
 
     }
 }
+
+struct HomeDriver : View {
+    var body: some View{
+        ZStack{
+                       Rectangle()
+                           .frame(width: 325, height:190)
+                           .foregroundColor(.white)
+                           .cornerRadius(15)
+                               VStack{
+                             Image("Image1-1")
+                                   .resizable()
+                                   .frame(width: 250, height:25)
+                                   .offset(y:10)
+
+                               HStack(spacing:190){
+                                   Text("Taif")
+                                       .font(.callout)
+                                       .fontWeight(.semibold)
+                                       .offset(y:5)
+                                   Text("Riyadh")
+                                       .font(.footnote)
+                                       .fontWeight(.semibold)
+                                       .offset(y:6)
+                               }
+                                   HStack{
+                                       Image(systemName: "calendar.badge.clock")
+                                           .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
+                                           .offset(x:-70)
+                                           .offset(y:10)
+                                   Text("Sun, June 5(8 -11AM)")
+                                           .font(.caption)
+                                           .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
+                                           .offset(x:-70)
+                                           .offset(y:10)
+                                       
+                                   }
+                                   ZStack{
+                                   RoundedRectangle(cornerRadius: 8)
+                                       .stroke(.gray,lineWidth: 1)
+                                            .frame(width: 200, height: 65)
+                                            .offset(x:-60 , y: 10)
+                                       
+                                       
+                                       Image("Image9")
+                                           .offset(x:-4 ,y: 10)
+               
+                                       Text("Note:")
+                                           .fontWeight(.bold)
+                                           .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
+                                           .offset(x:-130, y: -10)
+                                       Text("Baby walker.")
+                                           .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
+                                           .offset(x:-110, y: 30)
+                                   }
+                                   ZStack{
+                                   Image("Image2-1")
+                                       .resizable()
+                                       .frame(width: 57, height:55)
+                                       .offset(x:120 , y: -80)
+                                       Rectangle()
+                                           .frame(width: 33, height:15)
+                                           .cornerRadius(5)
+                                           .offset(x:120)
+                                           .offset(y:-55)
+                                           .foregroundColor(.gray)
+                                       HStack{
+                                       Text("4.9")
+                                           .font(.caption)
+                                           .fontWeight(.medium)
+                                           .offset(x:135)
+                                           .offset(y:-55)
+                                           Image(systemName: "star.fill")
+                                               .foregroundColor(Color.orange)
+                                               .frame(width:10.0 , height: 22)
+                                               .offset(x:95)
+                                               .offset(y:-55)
+                                   }
+                                       Text("OMER SALEH")
+                                           .font(.footnote)
+                                           .offset(y:-30)
+                                           .offset(x:110)
+
+
+                                   }
+                                   
+                       }
+                              
+                               Button(action: {
+                                
+                               }, label: {
+                                   Text("Makee an offer")
+                                       .font(.callout)
+                                       .fontWeight(.semibold)
+                                       .foregroundColor(Color.white)
+
+                               })
+                                   .frame(width: 220, height:25)
+                                   .background(.orange)
+                                       .cornerRadius(5)
+                                       .offset(y:80)
+                   }
+    }
+}
