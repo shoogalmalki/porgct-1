@@ -28,12 +28,12 @@ struct navigationdriver: View {
                
                 ScrollView(.vertical,showsIndicators: false) {
                 VStack{
-                       
+                    ZStack{
                             NavigationDriverCard()
 
                        .padding(.top,77)
-                    NavigationDriverCard()
-                    
+                   
+                    }
                 }
                 }
                           }

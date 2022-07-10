@@ -64,7 +64,7 @@ var body: some View {
                             SecureField("Password", text: $password)
                                 
                                 .border(.red, width: CGFloat(wrongPassword))
-                        }
+                        }.padding()
                      
                         .frame(width: 300, height: 50)
                         .background(Color.white)

@@ -45,8 +45,7 @@ struct Home_User: View {
                         }
                     }
                 }
-                
-                
+               
                 .navigationBarItems(leading:
                     //((PROFILE.BUTTON))
                       Button{

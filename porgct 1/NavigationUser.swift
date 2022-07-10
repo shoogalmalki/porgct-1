@@ -27,7 +27,9 @@ var body: some View {
                 .offset(y:48)
 
                     VStack(spacing:20){
-                        NavigationUserCard()
+                        ZStack{
+                            NavigationUserCard()
+                            }
                         }
                     }
                 }
