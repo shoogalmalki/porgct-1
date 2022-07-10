@@ -18,6 +18,7 @@
 		857DC72828666E71003D8A23 /*  OrderDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857DC72728666E71003D8A23 /*  OrderDriver.swift */; };
 		85FF2268286348CC00DD7047 /* Mmm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FF2267286348CC00DD7047 /* Mmm.swift */; };
 		8A4CA4CB28763A4F00AA5631 /* MyOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CA4CA28763A4F00AA5631 /* MyOrders.swift */; };
+		8A767018287B809F001EE287 /* Taste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A767017287B809F001EE287 /* Taste.swift */; };
 		8A831867285E4ADE00B8C702 /* profile.driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A831866285E4ADE00B8C702 /* profile.driver.swift */; };
 		8A831869285E4D2200B8C702 /* profile.user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A831868285E4D2200B8C702 /* profile.user.swift */; };
 		8A948D4B2860A0600069997F /* homeuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A948D4A2860A0600069997F /* homeuser.swift */; };
@@ -63,6 +64,7 @@
 		857DC72728666E71003D8A23 /*  OrderDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " OrderDriver.swift"; sourceTree = "<group>"; };
 		85FF2267286348CC00DD7047 /* Mmm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mmm.swift; sourceTree = "<group>"; };
 		8A4CA4CA28763A4F00AA5631 /* MyOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrders.swift; sourceTree = "<group>"; };
+		8A767017287B809F001EE287 /* Taste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taste.swift; sourceTree = "<group>"; };
 		8A831866285E4ADE00B8C702 /* profile.driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.driver.swift; sourceTree = "<group>"; };
 		8A831868285E4D2200B8C702 /* profile.user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.user.swift; sourceTree = "<group>"; };
 		8A948D4A2860A0600069997F /* homeuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeuser.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				8A9B1C63285EAA4800024954 /* homedriver.swift */,
 				8A9B1C67285EB18F00024954 /* NavigationUser.swift */,
 				8A9F7BB5286509A700D390A8 /* Home.User.swift */,
+				8A767017287B809F001EE287 /* Taste.swift */,
 				426BDB56284398FD008E9C5A /* Assets.xcassets */,
 				426BDB58284398FD008E9C5A /* Preview Content */,
 				8ABC2424286DECC1002E214E /* Structs.swift */,
@@ -296,6 +299,7 @@
 				42A70F012861F3060093FACA /* MyMap.swift in Sources */,
 				AE9F5D0228763DDB00C157B2 /* loginView.swift in Sources */,
 				8A831869285E4D2200B8C702 /* profile.user.swift in Sources */,
+				8A767018287B809F001EE287 /* Taste.swift in Sources */,
 				8A98C94A2863DEAE007C0AF0 /* payment.swift in Sources */,
 				8A9F7BB6286509A700D390A8 /* Home.User.swift in Sources */,
 				8ABC2423286DDEF1002E214E /* new.order.sarah2.swift in Sources */,
