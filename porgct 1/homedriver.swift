@@ -140,9 +140,7 @@ struct homedriver: View {
                                                 .background(.orange)
                                                 .cornerRadius(5)
                                         }
-                                        
-                                        
-                                        
+                                       
                                     }
                                 }
                             }
