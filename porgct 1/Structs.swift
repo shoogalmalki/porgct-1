@@ -233,12 +233,12 @@ struct textfield : View{
         TextField("More Details (Exp: Keep away from heat...) ", text: .constant(""))
             .font(.system(size: 13))
             .padding()
-   .frame(width: 300, height: 90)
-
-  .border(.gray.opacity(0.3))
-
-  .background(.white)
-  .cornerRadius(5)
+            .frame(width: 300, height: 90)
+        
+            .border(.gray.opacity(0.3))
+        
+            .background(.white)
+            .cornerRadius(5)
     }
 }
 
@@ -276,7 +276,7 @@ var ButtonNewOrder: some View {
             .foregroundColor(Color.white)
             .frame(width: 300, height: 50)
             .background(Color(UIColor.systemMint))
-             .cornerRadius(10)
+            .cornerRadius(10)
     }
 }
 
@@ -285,13 +285,13 @@ struct location1 : View{
     var frameworks2 = ["Drop Of Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     @State private var selectedFrameworkIndex = ""
     var body: some View {
-       
+        
         RoundedRectangle(cornerRadius: 8)
             .stroke(Color("Color2"),lineWidth: 1)
             .frame(width: 325, height: 70)
-//            .foregroundColor(Color.white)
-//      .foregroundColor(.white)
-//         .background(.white.opacity(0.3))
+        //            .foregroundColor(Color.white)
+        //      .foregroundColor(.white)
+        //         .background(.white.opacity(0.3))
         
         HStack{
             Image("Image4-1")
@@ -406,14 +406,19 @@ struct section : View {
                                 .font(.footnote)
                         }
                     }
-                    Button(action: {}, label: {
-                        Text("Request")
+                    NavigationLink(){
+                        Registration2user()
+                    } label: {
+                       
+                         Text("Request")
                             .foregroundColor(Color.white)
                             .font(.system(size: 18, weight: .semibold, design: .serif))
-                    })
-                    .frame(width: 300, height:35)
-                    .background(.orange)
-                    .cornerRadius(5)
+                            .frame(width: 300, height:35)
+                            .background(.orange)
+                            .cornerRadius(5)
+                    }
+                   
+                    
                     
                 }
             }
@@ -459,7 +464,7 @@ struct NavigationUserCard :View{
                         Text("Abdulmalik Qasim ")
                             .font(.system(size: 11, weight:.bold, design: .default))
                             .offset(x:-11)
-
+                        
                     }
                 }
                 HStack{
@@ -477,14 +482,14 @@ struct NavigationUserCard :View{
                         Image("Image10")
                             .resizable()
                             .frame(width: 17, height: 17)
-
+                        
                     }
                 }
             }
             HStack{
                 Button(action: {}, label: {
                     Text("Accept")
-                
+                    
                         .foregroundColor(Color.white)
                         .font(.system(size: 18, weight: .semibold, design: .serif))
                 })
@@ -493,29 +498,29 @@ struct NavigationUserCard :View{
                 .cornerRadius(5)
                 Rectangle()
                     .frame(width:2, height:26)
-             
+                
                     .foregroundColor(.black)
                     .opacity(0.8)
                 
-
+                
                 Button(action: {}, label: {
                     Text("Decline")
-                        
+                    
                         .foregroundColor(Color.white)
                         .font(.system(size: 18, weight: .semibold, design: .serif))
                 })
                 .frame(width: 135, height:26)
                 .background(.red)
                 .cornerRadius(5)
-
-
+                
+                
             }
-            }    }
+        }    }
 }
 
 struct NavigationDriverCard : View{
     var body: some View{
-       
+        
         Rectangle()
             .frame(width: 325, height:220)
             .foregroundColor(.white)
@@ -628,132 +633,132 @@ struct UserProfile : View{
     @State var toggleIsOn: Bool = false
     var body: some View {
         VStack(spacing:40){
-    HStack(spacing:100){
-    HStack{
-    Image("Image3-1")
-        .resizable()
-        .frame(width: 50, height: 50)
-        VStack{
-    HStack{
-     Text("Nasser Ali")
-            .font(.system(size: 15, weight:.bold, design: .default))
-            .foregroundColor(Color("Color3"))
-        Image(systemName: "star.fill")
-            .foregroundColor(Color.orange)
-            .frame(width:10.0 , height: 22)
-            .font(.system(size: 12, weight: .bold, design: .default))
-        Text("4.9")
-            .font(.caption)
-            .fontWeight(.medium)
-    }
-        Text("Balance :300 SAR")
-                .font(.system(size: 13, weight:.regular, design: .default))
-
-        }
-    }
-        Image(systemName: "square.and.pencil")
-            .foregroundColor(Color("Color3"))
-            .font(.system(size: 16, weight:.bold, design: .default))
-
-    }
-   
+            HStack(spacing:100){
+                HStack{
+                    Image("Image3-1")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                    VStack{
+                        HStack{
+                            Text("Nasser Ali")
+                                .font(.system(size: 15, weight:.bold, design: .default))
+                                .foregroundColor(Color("Color3"))
+                            Image(systemName: "star.fill")
+                                .foregroundColor(Color.orange)
+                                .frame(width:10.0 , height: 22)
+                                .font(.system(size: 12, weight: .bold, design: .default))
+                            Text("4.9")
+                                .font(.caption)
+                                .fontWeight(.medium)
+                        }
+                        Text("Balance :300 SAR")
+                            .font(.system(size: 13, weight:.regular, design: .default))
+                        
+                    }
+                }
+                Image(systemName: "square.and.pencil")
+                    .foregroundColor(Color("Color3"))
+                    .font(.system(size: 16, weight:.bold, design: .default))
+                
+            }
+            
             ZStack{
-            Rectangle()
-                .frame(width: 300, height:150)
-                .foregroundColor(.white)
-                .cornerRadius(15)
+                Rectangle()
+                    .frame(width: 300, height:150)
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
                 VStack(alignment:.leading, spacing: 19){
                     Text("Account")
                         .font(.system(size: 15, weight:.bold, design: .default))
                     HStack(spacing:170){
-                    HStack{
-                Image(systemName: "person")
-                    .foregroundColor(Color("Color3"))
-                    Text("My Orders")
-                        .font(.system(size: 14, weight: .regular, design: .default))
-                    }
-                    Image(systemName: "chevron.right")
-                  
+                        HStack{
+                            Image(systemName: "person")
+                                .foregroundColor(Color("Color3"))
+                            Text("My Orders")
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                        }
+                        Image(systemName: "chevron.right")
+                        
                     }
                     HStack(spacing:175){
-                    HStack{
-                Image(systemName: "equal.square")
-                    .foregroundColor(Color("Color3"))
-                    Text("Feedback")
-                        .font(.system(size: 14, weight: .regular, design: .default))
-                    }
-                    Image(systemName: "chevron.right")
-                  
+                        HStack{
+                            Image(systemName: "equal.square")
+                                .foregroundColor(Color("Color3"))
+                            Text("Feedback")
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                        }
+                        Image(systemName: "chevron.right")
+                        
                     }
                     HStack(spacing:170){
-                    HStack{
-                Image("Image2-2")
-                    .foregroundColor(Color("Color2"))
-                    Text("Contact us")
-                        .font(.system(size: 13, weight: .regular, design: .default))
-                    }
-                    Image(systemName: "chevron.right")
-                  
+                        HStack{
+                            Image("Image2-2")
+                                .foregroundColor(Color("Color2"))
+                            Text("Contact us")
+                                .font(.system(size: 13, weight: .regular, design: .default))
+                        }
+                        Image(systemName: "chevron.right")
+                        
                     }
                 }
                 
             }
             ZStack{
-            Rectangle()
-                .frame(width: 300, height:150)
-                .foregroundColor(.white)
-                .cornerRadius(15)
+                Rectangle()
+                    .frame(width: 300, height:150)
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
                 VStack(alignment:.leading, spacing: 19){
                     Text("Other")
                         .font(.system(size: 15, weight:.bold, design: .default))
                     HStack(spacing:140){
-                    HStack{
-                Image(systemName: "power")
-                    .foregroundColor(Color("Color3"))
-                    Text("Driver Account")
-                        .font(.system(size: 14, weight: .regular, design: .default))
-                    }
-                    Image(systemName: "chevron.right")
-                            
-                  
+                        HStack{
+                            Image(systemName: "power")
+                                .foregroundColor(Color("Color3"))
+                            Text("Driver Account")
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                        }
+                        Image(systemName: "chevron.right")
+                        
+                        
                     }
                     HStack(spacing:170){
-                    HStack{
-                Image("Image4-2")
-                    .foregroundColor(Color("Color3"))
-                    Text("Language")
-                        .font(.system(size: 14, weight: .regular, design: .default))
+                        HStack{
+                            Image("Image4-2")
+                                .foregroundColor(Color("Color3"))
+                            Text("Language")
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                        }
+                        Image(systemName: "chevron.right")
+                        
                     }
-                    Image(systemName: "chevron.right")
-                  
-                    }
-                  
+                    
                 }
                 
             }
             
-                    ZStack{
-                    Rectangle()
-                        .frame(width: 300, height:100)
-                        .foregroundColor(.white)
-                        .cornerRadius(15)
-                       
-                    
-
-                            Toggle(isOn: $toggleIsOn,
-                                   label:{
-                                Text("Driver Mood")
-                                    .font(.system(size: 16, weight: .bold, design: .default))
-                            })
-                            .toggleStyle(SwitchToggleStyle(tint: Color("Color3")))
-                                
-                            .padding(50)
-                            
-                    
-                        
-                    }
-           
-}
+            ZStack{
+                Rectangle()
+                    .frame(width: 300, height:100)
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
+                
+                
+                
+                Toggle(isOn: $toggleIsOn,
+                       label:{
+                    Text("Driver Mood")
+                        .font(.system(size: 16, weight: .bold, design: .default))
+                })
+                .toggleStyle(SwitchToggleStyle(tint: Color("Color3")))
+                
+                .padding(50)
+                
+                
+                
+            }
+            
+        }
     }
 }
 
@@ -763,144 +768,144 @@ struct DriverProfile :View{
     @State var toggleIsOn: Bool = false
     var body: some View{
         VStack(spacing:40){
-
-    HStack(spacing:100){
-    HStack{
-    Image("Driver")
-        .resizable()
-        .frame(width: 50, height: 50)
-        .clipShape(Circle())
-        VStack{
-    HStack{
-     Text("Omar saleh")
-            .font(.system(size: 15, weight:.bold, design: .default))
-            .foregroundColor(Color("Color3"))
-        Image(systemName: "star.fill")
-            .foregroundColor(Color.orange)
-            .frame(width:10.0 , height: 22)
-            .font(.system(size: 12, weight: .bold, design: .default))
-        Text("4.9")
-            .font(.caption)
-            .fontWeight(.medium)
-    }
-        Text("Balance :300 SAR")
-                .font(.system(size: 13, weight:.regular, design: .default))
-
-        }
-    }
-        Image(systemName: "square.and.pencil")
-            .foregroundColor(Color("Color3"))
-            .font(.system(size: 16, weight:.bold, design: .default))
-
-    }
-   
+            
+            HStack(spacing:100){
+                HStack{
+                    Image("Driver")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .clipShape(Circle())
+                    VStack{
+                        HStack{
+                            Text("Omar saleh")
+                                .font(.system(size: 15, weight:.bold, design: .default))
+                                .foregroundColor(Color("Color3"))
+                            Image(systemName: "star.fill")
+                                .foregroundColor(Color.orange)
+                                .frame(width:10.0 , height: 22)
+                                .font(.system(size: 12, weight: .bold, design: .default))
+                            Text("4.9")
+                                .font(.caption)
+                                .fontWeight(.medium)
+                        }
+                        Text("Balance :300 SAR")
+                            .font(.system(size: 13, weight:.regular, design: .default))
+                        
+                    }
+                }
+                Image(systemName: "square.and.pencil")
+                    .foregroundColor(Color("Color3"))
+                    .font(.system(size: 16, weight:.bold, design: .default))
+                
+            }
+            
             ZStack{
-            Rectangle()
-                .frame(width: 300, height:180)
-                .foregroundColor(.white)
-                .cornerRadius(15)
+                Rectangle()
+                    .frame(width: 300, height:180)
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
                 VStack(alignment:.leading, spacing: 19){
                     Text("Account")
                         .font(.system(size: 15, weight:.bold, design: .default))
                     HStack{
-                    HStack(spacing:190){
+                        HStack(spacing:190){
+                            
+                            Button(action: {}, label: {
+                                Image(systemName: "person")
+                                    .foregroundColor(Color("Color3"))
+                                Text("My Orders")
+                                    .font(.system(size: 14, weight: .regular, design: .default))
+                                Image(systemName: "chevron.right")
+                            })
+                        }
                         
-                        Button(action: {}, label: {
-                Image(systemName: "person")
-                    .foregroundColor(Color("Color3"))
-                    Text("My Orders")
-                        .font(.system(size: 14, weight: .regular, design: .default))
-                        Image(systemName: "chevron.right")
-                                       })
-                    }
-                  
                     }
                     HStack(spacing:172){
-                    HStack{
-                Image(systemName: "equal.square")
-                    .foregroundColor(Color("Color3"))
-                    Text("Feedback")
-                        .font(.system(size: 14, weight: .regular, design: .default))
-                    }
-                    Image(systemName: "chevron.right")
+                        HStack{
+                            Image(systemName: "equal.square")
+                                .foregroundColor(Color("Color3"))
+                            Text("Feedback")
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                        }
+                        Image(systemName: "chevron.right")
                     }
                     HStack(spacing:176){
-                    HStack{
-                Image("Image1-2")
-                    .foregroundColor(Color("Color3"))
-                    Text("Coupons")
-                        .font(.system(size: 14, weight: .regular, design: .default))
-                    }
-                    Image(systemName: "chevron.right")
-                  
+                        HStack{
+                            Image("Image1-2")
+                                .foregroundColor(Color("Color3"))
+                            Text("Coupons")
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                        }
+                        Image(systemName: "chevron.right")
+                        
                     }
                     HStack(spacing:169){
-                    HStack{
-                Image("Image2-2")
-                    .foregroundColor(Color("Color2"))
-                    Text("Contact us")
-                        .font(.system(size: 13, weight: .regular, design: .default))
-                    }
-                    Image(systemName: "chevron.right")
-                  
+                        HStack{
+                            Image("Image2-2")
+                                .foregroundColor(Color("Color2"))
+                            Text("Contact us")
+                                .font(.system(size: 13, weight: .regular, design: .default))
+                        }
+                        Image(systemName: "chevron.right")
+                        
                     }
                 }
                 
             }
             ZStack{
-            Rectangle()
-                .frame(width: 300, height:150)
-                .foregroundColor(.white)
-                .cornerRadius(15)
+                Rectangle()
+                    .frame(width: 300, height:150)
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
                 VStack(alignment:.leading, spacing: 19){
                     Text("Other")
                         .font(.system(size: 15, weight:.bold, design: .default))
                     HStack(spacing:140){
-                    HStack{
-                Image(systemName: "power")
-                    .foregroundColor(Color("Color3"))
-                    Text("Driver Account")
-                        .font(.system(size: 14, weight: .regular, design: .default))
-                    }
-                    Image(systemName: "chevron.right")
-                  
+                        HStack{
+                            Image(systemName: "power")
+                                .foregroundColor(Color("Color3"))
+                            Text("Driver Account")
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                        }
+                        Image(systemName: "chevron.right")
+                        
                     }
                     HStack(spacing:170){
-                    HStack{
-                Image( "Image4-2")
-                    .foregroundColor(Color("Color2"))
-                    Text("Language")
-                        .font(.system(size: 14, weight: .regular, design: .default))
+                        HStack{
+                            Image( "Image4-2")
+                                .foregroundColor(Color("Color2"))
+                            Text("Language")
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                        }
+                        Image(systemName: "chevron.right")
+                        
                     }
-                    Image(systemName: "chevron.right")
-                  
-                    }
-                  
+                    
                 }
                 
             }
             
-                    ZStack{
-                    Rectangle()
-                        .frame(width: 300, height:100)
-                        .foregroundColor(.white)
-                        .cornerRadius(15)
-                       
-                    
-
-                            Toggle(isOn: $toggleIsOn,
-                                   label:{
-                                Text("Driver Mood")
-                                    .font(.system(size: 16, weight: .bold, design: .default))
-                            })
-                            .toggleStyle(SwitchToggleStyle(tint: Color("Color3")))
-                                
-                            .padding(50)
-                            
-                    
-                        
-                    }
-}
+            ZStack{
+                Rectangle()
+                    .frame(width: 300, height:100)
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
+                
+                
+                
+                Toggle(isOn: $toggleIsOn,
+                       label:{
+                    Text("Driver Mood")
+                        .font(.system(size: 16, weight: .bold, design: .default))
+                })
+                .toggleStyle(SwitchToggleStyle(tint: Color("Color3")))
+                
+                .padding(50)
+                
+                
+                
+            }
+        }
     }
 }
 
@@ -912,170 +917,170 @@ struct PaymentPage : View{
         VStack(spacing:44){
             HStack{
                 ZStack{
-                Image(systemName:"shippingbox")
-            RoundedRectangle (cornerRadius: 10)
-                .frame(width: 40, height: 40)
-                .foregroundColor(Color.gray.opacity(0.2))
+                    Image(systemName:"shippingbox")
+                    RoundedRectangle (cornerRadius: 10)
+                        .frame(width: 40, height: 40)
+                        .foregroundColor(Color.gray.opacity(0.2))
                     Image(systemName:"shippingbox")
                 }
                 Image("Image12")
                 
                 ZStack{
-                RoundedRectangle (cornerRadius: 10)
-                    .frame(width: 40, height: 40)
-                    .foregroundColor(Color.gray.opacity(0.2))
+                    RoundedRectangle (cornerRadius: 10)
+                        .frame(width: 40, height: 40)
+                        .foregroundColor(Color.gray.opacity(0.2))
                     Image(systemName:"person.text.rectangle")
                 }
                 Image("Image12")
                 ZStack{
-                RoundedRectangle (cornerRadius: 10)
-                    .frame(width: 40, height: 40)
-                    .foregroundColor(Color.mint)
+                    RoundedRectangle (cornerRadius: 10)
+                        .frame(width: 40, height: 40)
+                        .foregroundColor(Color.mint)
                     Image(systemName:"doc.on.doc")
-
-                }
-            }
-            ZStack{
-Rectangle()
-            .frame(width:350 , height: 450 )
-            .cornerRadius(8)
-            .foregroundColor(.white)
-        
-                VStack(spacing:22){
-            HStack{
-            Image(systemName:"stopwatch")
-                .renderingMode(.template)
-                .foregroundColor(Color("orange1"))
-            
-                HStack(spacing:44){
-                Text("IN PROGRESS")
-                    .font(.callout)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("orange1"))
-            Text("Fri, June, 2022 8:00 PM")
-                .font(.footnote)
-                .fontWeight(.regular)
-                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.611))
-            
-        }
-        }
-           Divider()
-                .frame(width: 330)
-//                VStack{
-                   
-            Text("Order Number : 237")
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundColor(Color("Color3"))
-                .offset(x:-55)
-                    VStack{
-            Text("Note :")
-      .font(.system(size: 20, weight: .semibold, design: .rounded))
-            .foregroundColor(Color("orange1"))
-            .offset(x:-130)
-
-                    HStack(spacing:55){
-//                    Image(systemName:"square.and.pencil")
-            Text("My order needs care because it is \n breakable.")
-                
-         .font(.system(size: 15, weight: .semibold, design: .rounded))
-            Image(systemName:"square.and.pencil")
-//                    .padding(.trailing,55)
-                    }
-            }
-           Text("Your Receipt")
-                .underline()
-                .font(.system(size: 17, weight: .bold, design: .rounded))
-                .foregroundColor(Color("orange1"))
-            ZStack{
-                Rectangle()
-                    .foregroundColor(Color("gray1"))
-                    .frame(width: 300, height: 65)
-                    .cornerRadius(10)
-                VStack{
-                    Image("Image1-1")
-//                        .resizable()
-//                        .frame(width:250 , height: 30 )
-                HStack(spacing:170){
-                Text("Riyadh")
-                    .font(.footnote)
-                    .fontWeight(.semibold)
-                    Text("Dammam")
-                        .font(.footnote)
-                        .fontWeight(.semibold)
-                }
-                }
-            }
-
-            HStack(spacing:150){
-                Text("Total :")
-                    .fontWeight(.black)
-                    .foregroundColor(Color("Color3"))
-                Text("89.64 SR")
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("orange1"))
-
-            }
-            HStack(spacing:33){
-                ZStack{
-                Rectangle()
-                    .foregroundColor(Color("gray1"))
-                    .frame(width: 55, height: 50)
-                    .cornerRadius(10)
-                    Image("Image22")
-                }
-                ZStack{
-                Rectangle()
-                    .foregroundColor(Color("gray1"))
-                    .frame(width: 55, height: 50)
-                    .cornerRadius(10)
-                    Image("Image33")
-                }
-                if showRectangle == true {
                     
-                    Button.init(action: {
-                        showRectangle.toggle()
-                        
-                    }, label: {
-                        ZStack{
-                            Rectangle()
-                                .foregroundColor(.gray)
-                                .frame(width: 55, height: 50)
-                                .cornerRadius(13)
-                            
-                                Text("Cash")
-                                    .font(.caption2)
-                                    .foregroundColor(.black)
-                                
-                           
-                        }
-                    })
                 }
-                else{
-                    Button.init(action: {
-                        showRectangle.toggle()
+            }
+            ZStack{
+                Rectangle()
+                    .frame(width:350 , height: 450 )
+                    .cornerRadius(8)
+                    .foregroundColor(.white)
+                
+                VStack(spacing:22){
+                    HStack{
+                        Image(systemName:"stopwatch")
+                            .renderingMode(.template)
+                            .foregroundColor(Color("orange1"))
                         
-                    }, label: {
-                        ZStack{
+                        HStack(spacing:44){
+                            Text("IN PROGRESS")
+                                .font(.callout)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color("orange1"))
+                            Text("Fri, June, 2022 8:00 PM")
+                                .font(.footnote)
+                                .fontWeight(.regular)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.611))
                             
+                        }
+                    }
+                    Divider()
+                        .frame(width: 330)
+                    //                VStack{
+                    
+                    Text("Order Number : 237")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("Color3"))
+                        .offset(x:-55)
+                    VStack{
+                        Text("Note :")
+                            .font(.system(size: 20, weight: .semibold, design: .rounded))
+                            .foregroundColor(Color("orange1"))
+                            .offset(x:-130)
+                        
+                        HStack(spacing:55){
+                            //                    Image(systemName:"square.and.pencil")
+                            Text("My order needs care because it is \n breakable.")
+                            
+                                .font(.system(size: 15, weight: .semibold, design: .rounded))
+                            Image(systemName:"square.and.pencil")
+                            //                    .padding(.trailing,55)
+                        }
+                    }
+                    Text("Your Receipt")
+                        .underline()
+                        .font(.system(size: 17, weight: .bold, design: .rounded))
+                        .foregroundColor(Color("orange1"))
+                    ZStack{
+                        Rectangle()
+                            .foregroundColor(Color("gray1"))
+                            .frame(width: 300, height: 65)
+                            .cornerRadius(10)
+                        VStack{
+                            Image("Image1-1")
+                            //                        .resizable()
+                            //                        .frame(width:250 , height: 30 )
+                            HStack(spacing:170){
+                                Text("Riyadh")
+                                    .font(.footnote)
+                                    .fontWeight(.semibold)
+                                Text("Dammam")
+                                    .font(.footnote)
+                                    .fontWeight(.semibold)
+                            }
+                        }
+                    }
+                    
+                    HStack(spacing:150){
+                        Text("Total :")
+                            .fontWeight(.black)
+                            .foregroundColor(Color("Color3"))
+                        Text("89.64 SR")
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("orange1"))
+                        
+                    }
+                    HStack(spacing:33){
+                        ZStack{
                             Rectangle()
                                 .foregroundColor(Color("gray1"))
                                 .frame(width: 55, height: 50)
-                                .cornerRadius(13)
-                            
-                                Text("Cash")
-                                    .font(.caption2)
-                                    .foregroundStyle(.black)
-                                    .font(.system(size: 20, weight: .bold, design: .default))
-                                
-                          
+                                .cornerRadius(10)
+                            Image("Image22")
                         }
-                    })
+                        ZStack{
+                            Rectangle()
+                                .foregroundColor(Color("gray1"))
+                                .frame(width: 55, height: 50)
+                                .cornerRadius(10)
+                            Image("Image33")
+                        }
+                        if showRectangle == true {
+                            
+                            Button.init(action: {
+                                showRectangle.toggle()
+                                
+                            }, label: {
+                                ZStack{
+                                    Rectangle()
+                                        .foregroundColor(.gray)
+                                        .frame(width: 55, height: 50)
+                                        .cornerRadius(13)
+                                    
+                                    Text("Cash")
+                                        .font(.caption2)
+                                        .foregroundColor(.black)
+                                    
+                                    
+                                }
+                            })
+                        }
+                        else{
+                            Button.init(action: {
+                                showRectangle.toggle()
+                                
+                            }, label: {
+                                ZStack{
+                                    
+                                    Rectangle()
+                                        .foregroundColor(Color("gray1"))
+                                        .frame(width: 55, height: 50)
+                                        .cornerRadius(13)
+                                    
+                                    Text("Cash")
+                                        .font(.caption2)
+                                        .foregroundStyle(.black)
+                                        .font(.system(size: 20, weight: .bold, design: .default))
+                                    
+                                    
+                                }
+                            })
+                        }
+                        //
+                    }
+                    //
                 }
-//
-            }
-//
-            }
             }
             NavigationLink(){
                 after_payment()
@@ -1085,9 +1090,9 @@ Rectangle()
                     .foregroundColor(Color.white)
                     .frame(width: 300, height: 50)
                     .background(Color(UIColor.systemMint))
-                     .cornerRadius(10)
+                    .cornerRadius(10)
             }
-        
+            
         }
     }
 }
@@ -1100,47 +1105,47 @@ struct OrderDriver1 :View{
     @State private var selectedFrameworkIndex = ""
     var body: some View{
         ZStack{
-        RoundedRectangle(cornerRadius: 8)
-            .stroke(Color("Color2"),lineWidth: 1)
-            .frame(width: 300, height: 60)
-            .background(.white.opacity(0.3))
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(Color("Color2"),lineWidth: 1)
+                .frame(width: 300, height: 60)
+                .background(.white.opacity(0.3))
             
-        
-        HStack{
-            Image("Image4-1")
-                .resizable()
-                .foregroundColor(Color("Color2"))
-                .frame(width:35, height:42)
             
-            VStack(alignment: .leading,spacing: 1){
-                VStack(alignment: .leading, spacing: 1){
-                    Picker(selection: $selectedFrameworkIndex, label: Text("")) {
-                        ForEach(0 ..< frameworks.count) {
-                            Text(self.frameworks[$0])
+            HStack{
+                Image("Image4-1")
+                    .resizable()
+                    .foregroundColor(Color("Color2"))
+                    .frame(width:35, height:42)
+                
+                VStack(alignment: .leading,spacing: 1){
+                    VStack(alignment: .leading, spacing: 1){
+                        Picker(selection: $selectedFrameworkIndex, label: Text("")) {
+                            ForEach(0 ..< frameworks.count) {
+                                Text(self.frameworks[$0])
+                            }
                         }
+                        Divider()
+                            .frame(width: 200)
+                        
                     }
-                    Divider()
-                        .frame(width: 200)
-                    
-                }
-                Picker(selection: $selectedFrameworkIndex, label: Text("")) {
-                    ForEach(0 ..< frameworks2.count) {
-                        Text(self.frameworks2[$0])
+                    Picker(selection: $selectedFrameworkIndex, label: Text("")) {
+                        ForEach(0 ..< frameworks2.count) {
+                            Text(self.frameworks2[$0])
+                        }
+                        
                     }
-                    
                 }
             }
-        }
         }
         TextField("More Details (Exp: Keep away from heat...) ", text: .constant(""))
             .font(.system(size: 13))
             .padding()
-   .frame(width: 300, height: 90)
-//                   .foregroundColor(Color.gray.opacity(0.2))
-  .border(.gray.opacity(0.3))
-//             .background(Color("Color2"))
-  .background(.white.opacity(0.3))
-  .cornerRadius(5)
+            .frame(width: 300, height: 90)
+        //                   .foregroundColor(Color.gray.opacity(0.2))
+            .border(.gray.opacity(0.3))
+        //             .background(Color("Color2"))
+            .background(.white.opacity(0.3))
+            .cornerRadius(5)
         
         ZStack{
             Rectangle()
@@ -1173,14 +1178,14 @@ struct OrderDriver1 :View{
             offer()
         } label: {
             Text("Done")
-//                                .font(.title3)
+            //                                .font(.title3)
                 .foregroundColor(Color.white)
                 .font(.system(size: 20, weight: .semibold, design: .serif))
                 .frame(width: 300, height: 50)
                 .background(Color(UIColor.systemMint))
-                 .cornerRadius(10)
+                .cornerRadius(10)
         }
-
+        
     }
 }
 ///Offer.Page
@@ -1296,7 +1301,7 @@ for your order ?
 
 struct MyOrders1 :View {
     @State var showRectangle: Bool = false
-
+    
     var body: some View{
         Rectangle()
             .frame(width:300 , height: 250 )
@@ -1448,7 +1453,7 @@ struct MyOrders1 :View {
 
 struct MyOrder2 : View{
     @State var showRectangle: Bool = false
-
+    
     var body: some View {
         Rectangle()
             .frame(width:300 , height: 125)
@@ -1520,109 +1525,109 @@ struct MyOrder2 : View{
                 
             }
         }
-
+        
     }
 }
 
 struct HomeDriver : View {
     var body: some View{
         ZStack{
-                       Rectangle()
-                           .frame(width: 325, height:190)
-                           .foregroundColor(.white)
-                           .cornerRadius(15)
-                               VStack{
-                             Image("Image1-1")
-                                   .resizable()
-                                   .frame(width: 250, height:25)
-                                   .offset(y:10)
-
-                               HStack(spacing:190){
-                                   Text("Taif")
-                                       .font(.callout)
-                                       .fontWeight(.semibold)
-                                       .offset(y:5)
-                                   Text("Riyadh")
-                                       .font(.footnote)
-                                       .fontWeight(.semibold)
-                                       .offset(y:6)
-                               }
-                                   HStack{
-                                       Image(systemName: "calendar.badge.clock")
-                                           .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
-                                           .offset(x:-70)
-                                           .offset(y:10)
-                                   Text("Sun, June 5(8 -11AM)")
-                                           .font(.caption)
-                                           .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
-                                           .offset(x:-70)
-                                           .offset(y:10)
-                                       
-                                   }
-                                   ZStack{
-                                   RoundedRectangle(cornerRadius: 8)
-                                       .stroke(.gray,lineWidth: 1)
-                                            .frame(width: 200, height: 65)
-                                            .offset(x:-60 , y: 10)
-                                       
-                                       
-                                       Image("Image9")
-                                           .offset(x:-4 ,y: 10)
-               
-                                       Text("Note:")
-                                           .fontWeight(.bold)
-                                           .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
-                                           .offset(x:-130, y: -10)
-                                       Text("Baby walker.")
-                                           .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
-                                           .offset(x:-110, y: 30)
-                                   }
-                                   ZStack{
-                                   Image("Image2-1")
-                                       .resizable()
-                                       .frame(width: 57, height:55)
-                                       .offset(x:120 , y: -80)
-                                       Rectangle()
-                                           .frame(width: 33, height:15)
-                                           .cornerRadius(5)
-                                           .offset(x:120)
-                                           .offset(y:-55)
-                                           .foregroundColor(.gray)
-                                       HStack{
-                                       Text("4.9")
-                                           .font(.caption)
-                                           .fontWeight(.medium)
-                                           .offset(x:135)
-                                           .offset(y:-55)
-                                           Image(systemName: "star.fill")
-                                               .foregroundColor(Color.orange)
-                                               .frame(width:10.0 , height: 22)
-                                               .offset(x:95)
-                                               .offset(y:-55)
-                                   }
-                                       Text("OMER SALEH")
-                                           .font(.footnote)
-                                           .offset(y:-30)
-                                           .offset(x:110)
-
-
-                                   }
-                                   
-                       }
-                              
-                               Button(action: {
-                                
-                               }, label: {
-                                   Text("Makee an offer")
-                                       .font(.callout)
-                                       .fontWeight(.semibold)
-                                       .foregroundColor(Color.white)
-
-                               })
-                                   .frame(width: 220, height:25)
-                                   .background(.orange)
-                                       .cornerRadius(5)
-                                       .offset(y:80)
-                   }
+            Rectangle()
+                .frame(width: 325, height:190)
+                .foregroundColor(.white)
+                .cornerRadius(15)
+            VStack{
+                Image("Image1-1")
+                    .resizable()
+                    .frame(width: 250, height:25)
+                    .offset(y:10)
+                
+                HStack(spacing:190){
+                    Text("Taif")
+                        .font(.callout)
+                        .fontWeight(.semibold)
+                        .offset(y:5)
+                    Text("Riyadh")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                        .offset(y:6)
+                }
+                HStack{
+                    Image(systemName: "calendar.badge.clock")
+                        .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
+                        .offset(x:-70)
+                        .offset(y:10)
+                    Text("Sun, June 5(8 -11AM)")
+                        .font(.caption)
+                        .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
+                        .offset(x:-70)
+                        .offset(y:10)
+                    
+                }
+                ZStack{
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(.gray,lineWidth: 1)
+                        .frame(width: 200, height: 65)
+                        .offset(x:-60 , y: 10)
+                    
+                    
+                    Image("Image9")
+                        .offset(x:-4 ,y: 10)
+                    
+                    Text("Note:")
+                        .fontWeight(.bold)
+                        .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
+                        .offset(x:-130, y: -10)
+                    Text("Baby walker.")
+                        .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
+                        .offset(x:-110, y: 30)
+                }
+                ZStack{
+                    Image("Image2-1")
+                        .resizable()
+                        .frame(width: 57, height:55)
+                        .offset(x:120 , y: -80)
+                    Rectangle()
+                        .frame(width: 33, height:15)
+                        .cornerRadius(5)
+                        .offset(x:120)
+                        .offset(y:-55)
+                        .foregroundColor(.gray)
+                    HStack{
+                        Text("4.9")
+                            .font(.caption)
+                            .fontWeight(.medium)
+                            .offset(x:135)
+                            .offset(y:-55)
+                        Image(systemName: "star.fill")
+                            .foregroundColor(Color.orange)
+                            .frame(width:10.0 , height: 22)
+                            .offset(x:95)
+                            .offset(y:-55)
+                    }
+                    Text("OMER SALEH")
+                        .font(.footnote)
+                        .offset(y:-30)
+                        .offset(x:110)
+                    
+                    
+                }
+                
+            }
+            
+            Button(action: {
+                
+            }, label: {
+                Text("Makee an offer")
+                    .font(.callout)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color.white)
+                
+            })
+            .frame(width: 220, height:25)
+            .background(.orange)
+            .cornerRadius(5)
+            .offset(y:80)
+        }
     }
 }

@@ -9,9 +9,9 @@ import SwiftUI
 
 struct after_payment: View {
     @State var shouldGoToWhatEverPage11: Bool = false
-    
+    @State var Sarah3: Bool = false
     var body: some View {
-        NavigationView{
+//        NavigationView{
             ZStack{
                 ZStack{
                     Color(.systemMint)
@@ -36,6 +36,7 @@ Your request has been
 """)
                             .font(.system(size: 18, weight: .semibold, design: .serif))
                         }
+                     
                         NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
                             Home_User()
                         }, label: {
@@ -43,22 +44,22 @@ Your request has been
                         Button(action: {                            shouldGoToWhatEverPage11.toggle()
                         }
                                , label: {
-                            
+
                             Text("Back to the main page")
                                 .font(.system(size: 18, weight: .semibold, design: .serif))
                                 .foregroundColor(Color.white)
                                 .frame(width: 300, height: 50)
                                 .background(Color(UIColor.systemMint))
                                 .cornerRadius(10)
-                            
-                            
+
+
                         })
                     }
                 }
             }
         }
     }
-}
+//}
 struct after_payment_Previews: PreviewProvider {
     static var previews: some View {
         after_payment()
