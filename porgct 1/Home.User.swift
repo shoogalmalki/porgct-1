@@ -125,7 +125,7 @@ struct Home_User: View {
                                                 Text("(The Offer Is 100SR)")
                                                     .font(.system(size:12))
                                                 NavigationLink(){
-                                                    Registration2user()
+                                                    new_order_sarah2()
                                                 } label: {
                                                     
                                                     Text("Request")
@@ -135,9 +135,6 @@ struct Home_User: View {
                                                         .background(.orange)
                                                         .cornerRadius(5)
                                                 }
-                                                
-                                                
-                                                
                                             }
                                         }
                                     }
