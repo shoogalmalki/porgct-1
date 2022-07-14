@@ -74,8 +74,6 @@ struct profile1: View {
                                 }
                                 Image(systemName: "chevron.right")
                             }
-
-
                         })
                         
 
