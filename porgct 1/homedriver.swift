@@ -95,9 +95,7 @@ struct homedriver: View {
                                                             .frame(width: 55, height: 55)
                                                     }
                                                 }
-                                                
-                                                
-                                                
+                                              
                                             }
                                             VStack{
                                                 ZStack(alignment:.bottom){
@@ -112,14 +110,15 @@ struct homedriver: View {
                                                         
                                                             .foregroundColor(Color("Color1"))
                                                         
-                                                        HStack(alignment: .center){
+                                                        HStack(spacing:2){
                                                             Text("4.9")
                                                                 .font(.caption)
                                                                 .fontWeight(.medium)
                                                             
                                                             Image(systemName: "star.fill")
-                                                                .foregroundColor(Color.orange)
-                                                                .frame(width:5.0 , height: 10)
+                                                 .foregroundColor(Color.orange)
+                                                 .font(.system(size: 12))
+//                                                               .frame(width:1 , height: 10)
                                                             
                                                         }
                                                     }

@@ -126,7 +126,7 @@ struct Home_User: View {
                                                 Text("(The Offer Is 100SR)")
                                                     .font(.system(size:12))
                                                 NavigationLink(){
-                                                    new_order_sarah2()
+                                                    NewOrder_Request()
                                                 } label: {
                                                     
                                                     Text("Request")
@@ -178,7 +178,7 @@ struct Home_User: View {
                     
                     //((BELL.BUTTON))
                     NavigationLink(isActive: $shouldGoToWhatEverPage8, destination: {
-                        navigationdriver()
+                        NavigationUser()
                     }, label: {
                         
                     })

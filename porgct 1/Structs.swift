@@ -279,7 +279,18 @@ var ButtonNewOrder: some View {
             .cornerRadius(10)
     }
 }
-
+var ButtonNewOrderR: some View {
+    NavigationLink(){
+        after_payment()
+    } label: {
+        Text("Done")
+            .font(.system(size: 20, weight: .semibold, design: .serif))
+            .foregroundColor(Color.white)
+            .frame(width: 300, height: 50)
+            .background(Color(UIColor.systemMint))
+            .cornerRadius(10)
+    }
+}
 struct location1 : View{
     var frameworks = ["Pick Up Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     var frameworks2 = ["Drop Of Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
@@ -1459,7 +1470,157 @@ struct MyOrders1 :View {
         }
     }
 }
+struct MyOrdersDrive : View {
+    @State var showRectangle9: Bool = false
 
+    var body :some View{
+        Rectangle()
+            .frame(width:300 , height: 250 )
+            .cornerRadius(8)
+            .foregroundColor(.white)
+        
+        VStack(alignment: .center){
+            
+            HStack(alignment: .top){
+                Image(systemName:"stopwatch")
+                    .foregroundColor(.orange)
+                    .font(.system(size: 12, weight:.bold, design: .default))
+                HStack(spacing:70){
+                    
+                    Text("IN PROGRESS")
+                        .font(.system(size: 10, weight: .bold, design: .default))
+                        .foregroundColor(.orange)
+                    VStack(alignment: .trailing){
+                        Button.init(action: {
+                            showRectangle9.toggle()
+                            
+                        }, label: {
+                            ZStack{
+                                
+                                Image(systemName: "chevron.up")
+                            }
+                        })
+                        
+                        Text("Fri, June, 2022 8:00 PM")
+                            .font(.system(size: 10, weight: .bold, design: .default))                    .fontWeight(.regular)
+                            .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.611))
+                    }
+                }
+            }
+            Divider()
+                .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
+                .frame(width:300)
+            Text("Order Number : 237")
+                .font(.system(size: 14, weight:.bold, design: .default))
+                .foregroundColor(Color("Color3"))
+                .offset(x:-70)
+            Divider()
+                .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
+                .opacity(0.3)
+                .frame(width:300)
+            VStack(alignment: .leading){
+                Text("SHIPPING PROGRESS")
+                    .font(.system(size: 9, weight:.regular, design: .default))
+                HStack(alignment: .top){
+                    Text("Out for Delivery")
+                        .font(.caption)
+                        .fontWeight(.bold)
+                    
+                    
+                    Text("- 3 days shipping")
+                        .font(.caption2)
+                        .foregroundColor(.gray)
+                    
+                    
+                    Divider()
+                        .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
+                    
+                        .frame(height:40)
+                        .offset(y:-20)
+                    
+                    VStack{
+                        Text("The amount ")
+                            .font(.caption2)
+                            .fontWeight(.medium)
+                            .foregroundColor(Color(hue: 1.0, saturation: 0.018, brightness: 0.664))
+                            .offset(y:-20)
+                        Text("$80.58")
+                            .font(.caption)
+                            .offset(y:-20)
+                        
+                    }
+                    
+                }
+                
+            }
+            Divider()
+                .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
+                .opacity(0.3)
+                .frame(width:300)
+                .offset(y:-17)
+            Image("Image1-1")
+                .resizable()
+                .frame(width: 260, height: 28)
+            
+            HStack(spacing:220){
+                Text("Taif")
+                    .font(.system(size: 10, weight:.bold, design: .default))
+                
+                Text("Riyadh")
+                    .font(.system(size: 10, weight:.bold, design: .default))
+                
+                
+            }
+            Divider()
+                .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
+                .opacity(0.3)
+                .frame(width:300)
+            
+            HStack{
+                Image("Image2-1")
+                    .resizable()
+                    .frame(width: 40, height: 33)
+                HStack(spacing:66){
+                    VStack(spacing:5){
+                        HStack{
+                            Image(systemName: "person")
+                                .font(.system(size: 12, weight: .bold, design: .default))
+                                .foregroundColor(Color("Color3"))
+                            Text("Your customer")
+                                .font(.system(size: 10, weight:.bold, design: .default))
+                                .foregroundColor(Color("Color3"))
+                        }
+                        Text("OMER SALEH")
+                            .font(.system(size: 11, weight:.bold, design: .default))
+                        
+                    }
+                    //                    Spacer(minLength:-99)
+                    HStack{
+                        ZStack{
+                            Circle()
+                                .frame(width: 30, height: 33)
+                                .foregroundColor(Color("Color4"))
+                            Image(systemName:"phone")
+                                .foregroundColor(Color("Color3"))
+                                .font(.system(size: 12, weight:.bold, design: .default))
+                            
+                        }
+                        ZStack{
+                            Circle()
+                                .frame(width: 30, height: 33)
+                                .foregroundColor(Color("Color4"))
+                            Image("Image10")
+                                .resizable()
+                                .frame(width: 17, height: 17)
+                            
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
 struct MyOrder2 : View{
     @State var showRectangle: Bool = false
     
@@ -1578,7 +1739,7 @@ struct MyOrder2 : View{
                                     Image(systemName: "person")
                                         .font(.system(size: 12, weight: .bold, design: .default))
                                         .foregroundColor(Color("Color3"))
-                                    Text("Your customer")
+                                    Text("Your Captain")
                                         .font(.system(size: 10, weight:.bold, design: .default))
                                         .foregroundColor(Color("Color3"))
                                 }
@@ -1690,7 +1851,236 @@ struct MyOrder2 : View{
         }
     }
 }
+struct MyOrdersD : View{
+    @State var showRectangle9: Bool = false
 
+    var body :some View{
+        if showRectangle9 == true {
+            ZStack{
+                Rectangle()
+                    .frame(width:300 , height: 250 )
+                    .cornerRadius(8)
+                    .foregroundColor(.white)
+                
+                VStack(alignment: .center){
+                    
+                    HStack(alignment: .top){
+                        Image(systemName:"stopwatch")
+                            .foregroundColor(.orange)
+                            .font(.system(size: 12, weight:.bold, design: .default))
+                        HStack(spacing:70){
+                            
+                            Text("IN PROGRESS")
+                                .font(.system(size: 10, weight: .bold, design: .default))
+                                .foregroundColor(.orange)
+                            VStack(alignment: .trailing){
+                                Button.init(action: {
+                                    showRectangle9.toggle()
+                                    
+                                }, label: {
+                                    ZStack{
+                                        
+                                        Image(systemName: "chevron.up")
+                                    }
+                                })
+                                
+                                Text("Fri, June, 2022 8:00 PM")
+                                    .font(.system(size: 10, weight: .bold, design: .default))                    .fontWeight(.regular)
+                                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.611))
+                            }
+                        }
+                    }
+                    Divider()
+                        .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
+                        .frame(width:300)
+                    Text("Order Number : 237")
+                        .font(.system(size: 14, weight:.bold, design: .default))
+                        .foregroundColor(Color("Color3"))
+                        .offset(x:-70)
+                    Divider()
+                        .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
+                        .opacity(0.3)
+                        .frame(width:300)
+                    VStack(alignment: .leading){
+                        Text("SHIPPING PROGRESS")
+                            .font(.system(size: 9, weight:.regular, design: .default))
+                        HStack(alignment: .top){
+                            Text("Out for Delivery")
+                                .font(.caption)
+                                .fontWeight(.bold)
+                                
+                            
+                            Text("- 3 days shipping")
+                                .font(.caption2)
+                                .foregroundColor(.gray)
+                                
+                            
+                            Divider()
+                                .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
+                            
+                                .frame(height:40)
+                                .offset(y:-20)
+                               
+                            VStack{
+                                Text("The amount ")
+                                    .font(.caption2)
+                                    .fontWeight(.medium)
+                                    .foregroundColor(Color(hue: 1.0, saturation: 0.018, brightness: 0.664))
+                                    .offset(y:-20)
+                                Text("$80.58")
+                                    .font(.caption)
+                                    .offset(y:-20)
+                                
+                            }
+                            
+                        }
+                        
+                    }
+                    Divider()
+                        .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
+                        .opacity(0.3)
+                        .frame(width:300)
+                        .offset(y:-17)
+                    Image("Image1-1")
+                        .resizable()
+                        .frame(width: 260, height: 28)
+                    
+                    HStack(spacing:220){
+                        Text("Taif")
+                            .font(.system(size: 10, weight:.bold, design: .default))
+                     
+                        Text("Riyadh")
+                            .font(.system(size: 10, weight:.bold, design: .default))
+                      
+                        
+                    }
+                    Divider()
+                        .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
+                        .opacity(0.3)
+                        .frame(width:300)
+                    
+                    HStack{
+                        Image("Image2-1")
+                            .resizable()
+                            .frame(width: 40, height: 33)
+                        HStack(spacing:66){
+                            VStack(spacing:5){
+                                HStack{
+                                    Image(systemName: "person")
+                                        .font(.system(size: 12, weight: .bold, design: .default))
+                                        .foregroundColor(Color("Color3"))
+                                    Text("Your Customer")
+                                        .font(.system(size: 10, weight:.bold, design: .default))
+                                        .foregroundColor(Color("Color3"))
+                                }
+                                Text("OMER SALEH")
+                                    .font(.system(size: 11, weight:.bold, design: .default))
+                                
+                            }
+                            //                    Spacer(minLength:-99)
+                            HStack{
+                                ZStack{
+                                    Circle()
+                                        .frame(width: 30, height: 33)
+                                        .foregroundColor(Color("Color4"))
+                                    Image(systemName:"phone")
+                                        .foregroundColor(Color("Color3"))
+                                    .font(.system(size: 12, weight:.bold, design: .default))
+                                    
+                                }
+                                ZStack{
+                                    Circle()
+                                        .frame(width: 30, height: 33)
+                                        .foregroundColor(Color("Color4"))
+                                    Image("Image10")
+                                        .resizable()
+                                        .frame(width: 17, height: 17)
+                                    
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else{
+            ZStack{
+                //                    showRectangle.toggle()
+                //                    ("(showRectangle.description)")
+                Rectangle()
+                    .frame(width:300 , height: 125)
+                    .cornerRadius(8)
+                    .foregroundColor(.white)
+                VStack{
+                    HStack{
+                        Image(systemName:"stopwatch")
+                            .foregroundColor(.orange)
+                            .font(.system(size: 12, weight:.bold, design: .default))
+                        HStack(spacing:70){
+                            
+                            Text("IN PROGRESS")
+                                .font(.system(size: 10, weight: .bold, design: .default))
+                                .foregroundColor(.orange)
+                            VStack(alignment: .trailing){
+                                Button.init(action: {
+                                    showRectangle9.toggle()
+                                    
+                                }, label: {
+                                        
+                                        Image(systemName: "chevron.down")
+                                    
+                                })
+                                
+                                Text("Fri, June, 2022 8:00 PM")
+                                    .font(.system(size: 10, weight: .bold, design: .default))                    .fontWeight(.regular)
+                                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.611))
+                            }
+                        }
+                    }
+                    Divider()
+                        .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
+                        .frame(width:300)
+                    Text("Order Number : 237")
+                        .font(.system(size: 18, weight:.bold, design: .default))
+                        .foregroundColor(Color("Color3"))
+                        .offset(x:-60)
+                    Divider()
+                        .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
+                        .opacity(0.3)
+                        .frame(width:300)
+                    HStack{
+                        Text("Out for Delivery")
+                            .font(.caption)
+                            .fontWeight(.bold)
+                      
+                        
+                        Text("- 3 days shipping")
+                            .font(.caption2)
+                            .foregroundColor(.gray)
+      
+                        
+                        Divider()
+                            .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
+                        
+                            .frame(height:30)
+                     
+                        VStack{
+                            Text("The amount ")
+                                .font(.caption2)
+                                .fontWeight(.medium)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.018, brightness: 0.664))
+                            Text("$80.58")
+                                .font(.caption)
+                            
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
 struct HomeDriver : View {
     var body: some View{
         ZStack{
