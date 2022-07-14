@@ -198,7 +198,7 @@ struct homedriver: View {
                 //((SHEET))
                 .sheet(isPresented:$showModelView , content:
                         {
-                    profile1()
+                    profile()
                 })
             }
         }
