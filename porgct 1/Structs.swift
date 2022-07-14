@@ -1184,7 +1184,7 @@ struct OrderDriver1 :View{
             .foregroundStyle(.gray)
             .font(.system(size: 15, weight: .semibold, design: .serif))
         NavigationLink(){
-            offer()
+            after_payment()
         } label: {
             Text("Done")
             //                                .font(.title3)
