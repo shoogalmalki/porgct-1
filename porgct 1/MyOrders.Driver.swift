@@ -15,16 +15,16 @@ struct MyOrders_Driver: View {
             Color("Color1")
                 .ignoresSafeArea()
             VStack(spacing:70){
-                HStack{
-                    Button(action: {}, label: {
-                        Image(systemName:"chevron.backward")
-                            .foregroundColor(.orange)
-                            .font(.system(size: 12, weight:.bold, design: .default))
-                        
-                    })
-                    Text("My Orders")
-                }
-                
+//                HStack{
+//                    Button(action: {}, label: {
+//                        Image(systemName:"chevron.backward")
+//                            .foregroundColor(.orange)
+//                            .font(.system(size: 12, weight:.bold, design: .default))
+//
+//                    })
+//                    Text("My Orders")
+//                }
+                ScrollView(.vertical,showsIndicators: false) {
                 VStack{
                     if showRectangle9 == true {
                         ZStack{
@@ -39,7 +39,8 @@ struct MyOrders_Driver: View {
                     }
                        
                   
-             
+                }
+                .padding(.top,55)
                 }
             }
         }
