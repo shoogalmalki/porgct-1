@@ -20,7 +20,7 @@ struct Home_User: View {
                     Color("Color3")
                         .ignoresSafeArea()
                 }
-                
+ 
                 ZStack{
                     Rectangle()
                         .frame(width: .infinity, height: 670)

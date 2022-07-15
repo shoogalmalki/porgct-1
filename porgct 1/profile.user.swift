@@ -17,7 +17,7 @@ struct profile1: View {
         ZStack{
            Color("Color1")
                 .ignoresSafeArea()
-            VStack(spacing:40){
+            VStack(spacing:70){
                 
                 HStack(spacing:100){
                     HStack{
@@ -136,6 +136,7 @@ struct profile1: View {
                                         .font(.system(size: 15, weight: .regular, design: .default))
                                 }
                                 Image(systemName: "chevron.right")
+                                
                             }
                         })
                        
@@ -154,26 +155,7 @@ struct profile1: View {
                     
                 }
                 
-                ZStack{
-                    Rectangle()
-                        .frame(width: 300, height:100)
-                        .foregroundColor(.white)
-                        .cornerRadius(15)
-                    
-                    
-                    
-                    Toggle(isOn: $toggleIsOn,
-                           label:{
-                        Text("Driver Mood")
-                            .font(.system(size: 16, weight: .bold, design: .default))
-                    })
-                    .toggleStyle(SwitchToggleStyle(tint: Color("Color3")))
-                    
-                    .padding(50)
-                    
-                    
-                    
-                }
+               
             }
 //            UserProfile()
 }
