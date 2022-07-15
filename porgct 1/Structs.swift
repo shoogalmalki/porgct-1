@@ -442,18 +442,21 @@ struct section : View {
 struct NavigationUserCard :View{
     var body: some View {
         Rectangle()
-            .frame(width: 325, height:140)
+            .frame(width: 315, height:180)
             .foregroundColor(.white)
-            .cornerRadius(15)
-        VStack(spacing:15){
+            .cornerRadius(10)
+        VStack(spacing:20){
             ZStack{
                 Rectangle()
-                    .frame(width: 310, height:20)
+                    .frame(width: 310, height:35)
                     .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.955))
                     .cornerRadius(10)
-                Text("This captain gives you an offer (100 SR) for your order number 7778887")
-                    .font(.system(size: 8.5, weight: .regular, design: .rounded))
-                    .foregroundColor(.orange)
+Text("""
+This captain gives you an offer (100 SR)
+for your order number 7778887
+""")
+                    .font(.system(size: 14, weight: .semibold, design: .rounded))
+                    .foregroundColor(.black)
             }
             HStack(spacing:30){
                 HStack{
