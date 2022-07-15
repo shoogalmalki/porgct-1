@@ -51,12 +51,12 @@ struct profile1: View {
                 
                 ZStack{
                     Rectangle()
-                        .frame(width: 300, height:180)
+                        .frame(width: 300, height:170)
                         .foregroundColor(.white)
                         .cornerRadius(15)
-                    VStack(alignment:.leading, spacing: 12){
+                    VStack(alignment:.leading, spacing: 9){
                         Text("Account")
-                            .font(.system(size: 15, weight:.bold, design: .default))
+                            .font(.system(size: 16, weight:.bold, design: .default))
                         NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
                             MyOrders()
                         }, label: {
@@ -65,46 +65,46 @@ struct profile1: View {
                         }
                                , label: {
 
-                            HStack(spacing:172){
+                            HStack(spacing:166){
                                 HStack{
                                     Image(systemName: "person")
                                         .foregroundColor(Color("Color3"))
                                     Text("My Orders")
-                                        .font(.system(size: 14, weight: .regular, design: .default))
+                                        .font(.system(size: 15, weight: .regular, design: .default))
                                 }
                                 Image(systemName: "chevron.right")
                             }
                         })
                         
 
-                            HStack(spacing:172){
+                            HStack(spacing:170){
                                 HStack{
                                     Image(systemName: "equal.square")
                                         .foregroundColor(Color("Color3"))
                                     Text("Feedback")
-                                        .font(.system(size: 14, weight: .regular, design: .default))
+                                        .font(.system(size: 15, weight: .regular, design: .default))
                                 }
                                 Image(systemName: "chevron.right")
                             }
 
 
                      
-                        HStack(spacing:176){
+                        HStack(spacing:174){
                             HStack{
                                 Image("Image1-2")
                                     .foregroundColor(Color("Color3"))
                                 Text("Coupons")
-                                    .font(.system(size: 14, weight: .regular, design: .default))
+                                    .font(.system(size: 15, weight: .regular, design: .default))
                             }
                             Image(systemName: "chevron.right")
                             
                         }
-                        HStack(spacing:169){
+                        HStack(spacing:165){
                             HStack{
                                 Image("Image2-2")
                                     .foregroundColor(Color("Color2"))
                                 Text("Contact us")
-                                    .font(.system(size: 13, weight: .regular, design: .default))
+                                    .font(.system(size: 14, weight: .regular, design: .default))
                             }
                             Image(systemName: "chevron.right")
                             
@@ -114,23 +114,32 @@ struct profile1: View {
                 }
                 ZStack{
                     Rectangle()
-                        .frame(width: 300, height:150)
+                        .frame(width: 300, height:110)
                         .foregroundColor(.white)
                         .cornerRadius(15)
-                    VStack(alignment:.leading, spacing: 19){
+                    VStack(alignment:.leading, spacing: 11){
                         Text("Other")
                             .font(.system(size: 15, weight:.bold, design: .default))
-                        HStack(spacing:140){
-                            HStack{
-                                Image(systemName: "power")
-                                    .foregroundColor(Color("Color3"))
-                                Text("Driver Account")
-                                    .font(.system(size: 14, weight: .regular, design: .default))
-                            }
-                            Image(systemName: "chevron.right")
-                            
+                        NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
+                            MyOrders()
+                        }, label: {
+                        })
+                        Button(action: {                            shouldGoToWhatEverPage11.toggle()
                         }
-                        HStack(spacing:170){
+                               , label: {
+
+                            HStack(spacing:140){
+                                HStack{
+                                    Image(systemName: "power")
+                                        .foregroundColor(Color("Color3"))
+                                    Text("Driver Account")
+                                        .font(.system(size: 15, weight: .regular, design: .default))
+                                }
+                                Image(systemName: "chevron.right")
+                            }
+                        })
+                       
+                        HStack(spacing:175){
                             HStack{
                                 Image( "Image4-2")
                                     .foregroundColor(Color("Color2"))
