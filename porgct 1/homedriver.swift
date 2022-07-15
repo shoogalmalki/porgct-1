@@ -143,8 +143,7 @@ struct homedriver: View {
                                     }
                                 }
                             }
-                            
-                     
+                         
                         }
                     }
                 }
