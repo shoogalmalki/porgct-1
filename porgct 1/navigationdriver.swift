@@ -26,7 +26,7 @@ struct navigationdriver: View {
 
            
                
-//                ScrollView(.vertical,showsIndicators: false) {
+                ScrollView(.vertical,showsIndicators: false) {
                 VStack{
                     ZStack{
                         Rectangle()
@@ -109,6 +109,7 @@ struct navigationdriver: View {
                                     }
                                     Text("OMER SALEH")
                                         .font(.footnote)
+                                       
                                 }
                                 
                             }
@@ -143,7 +144,7 @@ struct navigationdriver: View {
 
 //                       .padding(.top,77)
                    
-//                    }
+                    } .padding(.top,77)
                 }
                 }
                           }
