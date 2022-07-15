@@ -104,11 +104,37 @@ struct OrderDriver: View {
                                         .foregroundColor(Color("Color3"))
                                     
                                 }
+                                
                                 Image(systemName: "chevron.right")
                                     .font(.system(size: 9, weight: .bold, design: .default))
                                     .foregroundColor(Color("Color3"))
                                 
                             }
+                            
+                        }
+                        ZStack{
+                            Rectangle()
+                                .frame(width: 300, height: 44)
+                                .foregroundColor(Color.mint.opacity(0.2))
+                                .cornerRadius(5)
+                            HStack(spacing:70){
+                                HStack{
+                                    Image(systemName: "calendar.badge.clock")
+                                        .font(.system(size: 12, weight: .regular, design: .default))
+                                        .foregroundColor(Color("Color3"))
+                                    Text("Schedule Your Order")
+                                        .fontWeight(.bold)
+                                        .font(.system(size: 15, weight: .semibold, design: .serif))
+                                        .foregroundColor(Color("Color3"))
+                                    
+                                }
+                                
+                                Image(systemName: "chevron.right")
+                                    .font(.system(size: 9, weight: .bold, design: .default))
+                                    .foregroundColor(Color("Color3"))
+                                
+                            }
+                            
                         }
                         Toggle(isOn: $checkbox2){
                             Text("I accept the terms & conditions")
@@ -128,7 +154,7 @@ struct OrderDriver: View {
                         }
 //                        OrderDriver1()
                         
-                    }.padding(.bottom,185)
+                    }.padding(.bottom,100)
                    
 
                         
