@@ -284,7 +284,7 @@ var ButtonNewOrder: some View {
 }
 var ButtonNewOrderR: some View {
     NavigationLink(){
-        after_payment()
+        payment()
     } label: {
         Text("Done")
             .font(.system(size: 20, weight: .semibold, design: .serif))

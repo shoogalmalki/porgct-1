@@ -23,7 +23,7 @@ struct Home_User: View {
  
                 ZStack{
                     Rectangle()
-                        .frame(width: .infinity, height: 670)
+                        .frame(width: .infinity, height: 675)
                         .foregroundColor(Color("Color1"))
                         .cornerRadius(20)
                     
@@ -49,11 +49,15 @@ struct Home_User: View {
                                             Image("Image1-1")
                                                 .resizable()
                                                 .frame(width: 250, height:25)
-                                            HStack(spacing:190){
+                                            HStack(spacing:35){
                                                 Text("Taif")
                                                     .font(.callout)
                                                     .fontWeight(.semibold)
                                                 
+                                                Text("(The Offer Is 100SR)")
+                                                    .font(.system(size: 12, weight: .bold ))
+                                                    .foregroundColor(.black)
+                                                    
                                                 Text("Riyadh")
                                                     .font(.footnote)
                                                     .fontWeight(.semibold)
@@ -123,8 +127,7 @@ struct Home_User: View {
                                                             .font(.footnote)
                                                     }
                                                 }
-                                                Text("(The Offer Is 100SR)")
-                                                    .font(.system(size:12))
+                                              
                                                 NavigationLink(){
                                                     NewOrder_Request()
                                                 } label: {
