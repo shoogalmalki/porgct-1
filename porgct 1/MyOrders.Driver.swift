@@ -14,7 +14,7 @@ struct MyOrders_Driver: View {
         ZStack{
             Color("Color1")
                 .ignoresSafeArea()
-            VStack{
+            VStack(spacing:70){
                 HStack{
                     Button(action: {}, label: {
                         Image(systemName:"chevron.backward")
@@ -24,6 +24,7 @@ struct MyOrders_Driver: View {
                     })
                     Text("My Orders")
                 }
+                
                 VStack{
                     if showRectangle9 == true {
                         ZStack{
@@ -34,9 +35,9 @@ struct MyOrders_Driver: View {
                         ZStack{
                            
                             MyOrdersD()
-                        }
+                        }.padding(.bottom,400)
                     }
-                    
+                       
                   
              
                 }
