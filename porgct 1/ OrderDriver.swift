@@ -43,7 +43,7 @@ struct OrderDriver: View {
                         .frame(width: 380, height: 670)
                         .foregroundColor(Color("Color1"))
                         .cornerRadius(20)
-                    VStack(alignment: .leading, spacing: 30){
+                    VStack(alignment: .leading, spacing: 36){
                         ZStack{
                             RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color("Color2"),lineWidth: 1)
@@ -77,8 +77,8 @@ struct OrderDriver: View {
                                 }
                                 
                             }
-                        }.padding(.top,-90)
-                        TextField("More Details (Exp: Keep away from heat...) ", text: .constant(""))
+                        }
+                        TextField("(Put your price...) ", text: .constant(""))
                             .font(.system(size: 13))
                             .padding()
                             .frame(width: 300, height: 90)
@@ -87,7 +87,7 @@ struct OrderDriver: View {
                         //             .background(Color("Color2"))
                             .background(.white.opacity(0.3))
                             .cornerRadius(5)
-                            
+                           
                         ZStack{
                             Rectangle()
                                 .frame(width: 300, height: 44)
@@ -125,10 +125,10 @@ struct OrderDriver: View {
                                 .frame(width: 300, height: 50)
                                 .background(Color(UIColor.systemMint))
                                 .cornerRadius(10)
-                        }.padding(.bottom,66)
+                        }
 //                        OrderDriver1()
                         
-                    }
+                    }.padding(.bottom,185)
                    
 
                         

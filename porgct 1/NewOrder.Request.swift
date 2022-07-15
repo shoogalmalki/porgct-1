@@ -29,7 +29,7 @@ struct NewOrder_Request: View {
                         .cornerRadius(20)
                         .offset(y:48)
             
-                    VStack(alignment: .center, spacing: 10){
+                    VStack(alignment: .center, spacing: 25){
            
             ZStack{
                 location1()
@@ -59,8 +59,9 @@ struct NewOrder_Request: View {
                     
                 }
                         ButtonNewOrderR
+                            
                 
-            }
+            }.padding(.top,70)
           
         }
     }
