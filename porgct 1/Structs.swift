@@ -91,12 +91,13 @@ struct size1 : View{
                         .foregroundColor(Color("Color4"))
                         .cornerRadius(10)
                     VStack{
-                        Image("image 1")
+                        Image("Paper")
                             .resizable()
                             .frame(width: 30, height: 30)
                             .foregroundColor(.black)
                         Text("small")
                             .font(.caption2)
+                            .foregroundStyle(.black)
                         
                     }
                 }
@@ -114,12 +115,12 @@ struct size1 : View{
                         .foregroundColor(Color.mint.opacity(0.2))
                         .cornerRadius(10)
                     VStack{
-                        Image("image 1")
+                        Image("Paper")
                             .resizable()
                             .frame(width: 30, height: 30)
                         Text("small")
                             .font(.caption2)
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.black)
                             .font(.system(size: 20, weight: .bold, design: .default))
                         
                     }
@@ -138,12 +139,13 @@ struct size1 : View{
                         .foregroundColor(Color("Color4"))
                         .cornerRadius(13)
                     VStack{
-                        Image("image 2")
+                        Image("Box")
                             .resizable()
                             .frame(width: 30, height: 30)
                             .foregroundColor(.black)
                         Text("Medium")
                             .font(.caption2)
+                            .foregroundStyle(.black)
                     }
                 }
             })
@@ -159,12 +161,12 @@ struct size1 : View{
                         .foregroundColor(Color.mint.opacity(0.2))
                         .cornerRadius(13)
                     VStack{
-                        Image("image 2")
+                        Image("Box")
                             .resizable()
                             .frame(width: 30, height: 30)
                         Text("Medium")
                             .font(.caption2)
-                            .foregroundStyle(.mint)
+                            .foregroundStyle(.black)
                             .font(.system(size: 15, weight: .bold, design: .default))
                     }
                 }
@@ -182,11 +184,12 @@ struct size1 : View{
                         .foregroundColor(Color("Color4"))
                         .cornerRadius(13)
                     VStack{
-                        Image("image 3")
+                        Image("furnitures")
                             .resizable()
                             .frame(width: 30, height: 30)
                         Text("large")
                             .font(.caption2)
+                            .foregroundStyle(.black)
                     }
                 }
             })
@@ -203,13 +206,13 @@ struct size1 : View{
                         .foregroundColor(Color.mint.opacity(0.2))
                         .cornerRadius(13)
                     VStack{
-                        Image("image 3")
+                        Image("furnitures")
                             .resizable()
                             .frame(width: 30, height: 30)
                             .foregroundColor(.red)
                         Text("large")
                             .font(.caption2)
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.black)
                             .font(.system(size: 15, weight: .bold, design: .default))
                     }
                 }
