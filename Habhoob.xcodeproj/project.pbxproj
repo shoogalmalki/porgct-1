@@ -145,6 +145,7 @@
 				AEBD7846284794EA00202C25 /* NewRegistration.swift */,
 				AE9F5D0128763DDB00C157B2 /* loginView.swift */,
 				AEB4214C284D137600A942B0 /* offer.swift */,
+				8A2857242881162F00115251 /* DoNotOffer.swift */,
 				857DC72728666E71003D8A23 /*  OrderDriver.swift */,
 				8ABC2422286DDEF1002E214E /* new.order.sarah2.swift */,
 				8A2857202880D05300115251 /* NewOrder.Request.swift */,
@@ -168,7 +169,6 @@
 				426BDB56284398FD008E9C5A /* Assets.xcassets */,
 				426BDB58284398FD008E9C5A /* Preview Content */,
 				8ABC2424286DECC1002E214E /* Structs.swift */,
-				8A2857242881162F00115251 /* DoNotOffer.swift */,
 			);
 			path = "porgct 1";
 			sourceTree = "<group>";

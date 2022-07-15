@@ -61,6 +61,7 @@ struct new_order_sarah2: View {
                 ZStack{
                     Toggle(isOn: $checkbox2){
                         Text("I accept the terms & conditions")
+                            .underline()
                     }.toggleStyle(CheckboxToggleStyle(isReversed: true))
                         .foregroundStyle(.gray)
                         .font(.system(size: 15, weight: .semibold, design: .serif))
