@@ -17,18 +17,18 @@ struct profile1: View {
         ZStack{
            Color("Color1")
                 .ignoresSafeArea()
-            VStack(spacing:70){
+            VStack(spacing:60){
                 
                 HStack(spacing:100){
                     HStack{
                         Image("Driver")
                             .resizable()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 60, height: 60)
                             .clipShape(Circle())
                         VStack{
                             HStack{
                                 Text("Omar saleh")
-                                    .font(.system(size: 15, weight:.bold, design: .default))
+                                    .font(.system(size: 17, weight:.bold, design: .default))
                                     .foregroundColor(Color("Color3"))
                                 Image(systemName: "star.fill")
                                     .foregroundColor(Color.orange)
@@ -156,7 +156,7 @@ struct profile1: View {
                 }
                 
                
-            }
+            }.padding(.bottom,140)
 //            UserProfile()
 }
          

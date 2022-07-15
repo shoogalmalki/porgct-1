@@ -25,14 +25,16 @@ var body: some View {
                 .foregroundColor(Color("Color1"))
                 .cornerRadius(20)
                 .offset(y:48)
+            ScrollView(.vertical,showsIndicators: false) {
 
                     VStack(spacing:20){
                         ZStack{
                             NavigationUserCard()
                             }
-                        }
+                        }.padding(.top,77)
                     }
                 }
+    }
 }
 }
 
