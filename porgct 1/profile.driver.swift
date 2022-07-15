@@ -116,28 +116,19 @@ struct profile: View {
                 }
                 ZStack{
                     Rectangle()
-                        .frame(width: 300, height:150)
+                        .frame(width: 300, height:100)
                         .foregroundColor(.white)
                         .cornerRadius(15)
-                    VStack(alignment:.leading, spacing: 19){
+                    VStack(alignment:.leading, spacing: 15){
                         Text("Other")
                             .font(.system(size: 15, weight:.bold, design: .default))
-                        HStack(spacing:140){
-                            HStack{
-                                Image(systemName: "power")
-                                    .foregroundColor(Color("Color3"))
-                                Text("Driver Account")
-                                    .font(.system(size: 14, weight: .regular, design: .default))
-                            }
-                            Image(systemName: "chevron.right")
-                            
-                        }
+                      
                         HStack(spacing:170){
                             HStack{
                                 Image( "Image4-2")
                                     .foregroundColor(Color("Color2"))
                                 Text("Language")
-                                    .font(.system(size: 14, weight: .regular, design: .default))
+                                    .font(.system(size: 16, weight: .regular, design: .default))
                             }
                             Image(systemName: "chevron.right")
                             

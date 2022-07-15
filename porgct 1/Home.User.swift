@@ -111,9 +111,9 @@ struct Home_User: View {
                                                                         .fontWeight(.medium)
                                                                     
                                                                     Image(systemName: "star.fill")
-                                                         .foregroundColor(Color.orange)
-                                                         .font(.system(size: 12))
-//                                                               .frame(width:1 , height: 10)
+                                                                        .foregroundColor(Color.orange)
+                                                                        .font(.system(size: 12))
+                                                                    //                                                               .frame(width:1 , height: 10)
                                                                     
                                                                 }
                                                             }
