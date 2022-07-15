@@ -30,10 +30,20 @@ struct navigationdriver: View {
                 VStack{
                     ZStack{
                         Rectangle()
-                            .frame(width: 320, height:190)
+                            .frame(width: 320, height:250)
                             .foregroundColor(.white)
                             .cornerRadius(10)
                         VStack(spacing:6){
+                        ZStack{
+                            Rectangle()
+                                .frame(width: 310, height:30)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.955))
+                                .cornerRadius(10)
+                            Text(" We have new order please make your offer ")
+                            .font(.system(size: 14, weight: .semibold, design: .rounded))
+                            .foregroundColor(.black)
+                        }
+                        
                             Image("Image1-1")
                                 .resizable()
                                 .frame(width: 250, height:25)
