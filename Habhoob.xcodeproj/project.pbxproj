@@ -23,6 +23,7 @@
 		8A28572928824E9F00115251 /* MyOrderUser2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28572828824E9F00115251 /* MyOrderUser2.swift */; };
 		8A28572B28824FFA00115251 /* payment.order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28572A28824FFA00115251 /* payment.order.swift */; };
 		8A28572D2882ED1A00115251 /* after.paymentDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28572C2882ED1A00115251 /* after.paymentDriver.swift */; };
+		8A28572F28837B2400115251 /* DataAndTimeDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28572E28837B2400115251 /* DataAndTimeDriver.swift */; };
 		8A4CA4CB28763A4F00AA5631 /* MyOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CA4CA28763A4F00AA5631 /* MyOrders.swift */; };
 		8A767018287B809F001EE287 /* Taste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A767017287B809F001EE287 /* Taste.swift */; };
 		8A831867285E4ADE00B8C702 /* profile.driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A831866285E4ADE00B8C702 /* profile.driver.swift */; };
@@ -75,6 +76,7 @@
 		8A28572828824E9F00115251 /* MyOrderUser2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderUser2.swift; sourceTree = "<group>"; };
 		8A28572A28824FFA00115251 /* payment.order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = payment.order.swift; sourceTree = "<group>"; };
 		8A28572C2882ED1A00115251 /* after.paymentDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = after.paymentDriver.swift; sourceTree = "<group>"; };
+		8A28572E28837B2400115251 /* DataAndTimeDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAndTimeDriver.swift; sourceTree = "<group>"; };
 		8A4CA4CA28763A4F00AA5631 /* MyOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrders.swift; sourceTree = "<group>"; };
 		8A767017287B809F001EE287 /* Taste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taste.swift; sourceTree = "<group>"; };
 		8A831866285E4ADE00B8C702 /* profile.driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.driver.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				42A70F002861F3060093FACA /* MyMap.swift */,
 				42A70F04286201960093FACA /* MapFile.swift */,
 				42A70F06286202250093FACA /* DateAndTime.swift */,
+				8A28572E28837B2400115251 /* DataAndTimeDriver.swift */,
 				42A70F082862025E0093FACA /* ImagePicker.swift */,
 				8A831866285E4ADE00B8C702 /* profile.driver.swift */,
 				8A831868285E4D2200B8C702 /* profile.user.swift */,
@@ -331,6 +334,7 @@
 				8A831867285E4ADE00B8C702 /* profile.driver.swift in Sources */,
 				857DC72828666E71003D8A23 /*  OrderDriver.swift in Sources */,
 				8A9B1C66285EAD0400024954 /* navigationdriver.swift in Sources */,
+				8A28572F28837B2400115251 /* DataAndTimeDriver.swift in Sources */,
 				8A9B1C68285EB18F00024954 /* NavigationUser.swift in Sources */,
 				AEB4214D284D137600A942B0 /* offer.swift in Sources */,
 				8AB6183B2873294C00630F61 /* AuthViewModel.swift in Sources */,

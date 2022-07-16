@@ -1,17 +1,15 @@
 //
-//  DateAndTime.swift
-//  porgct 1
+//  DataAndTimeDriver.swift
+//  Habhoob
 //
-//  Created by shoog almalki on 22/11/1443 AH.
+//  Created by sarah hemood  on 18/12/1443 AH.
 //
 
 import SwiftUI
 
-struct DateAndTime: View {
-    
+struct DataAndTimeDriver: View {
     @State var selectedDate: Date = Date()
     @State var buttonTitle =  "-Select a Time-"
-
     @State var gender = ""
     var body: some View {
         VStack {
@@ -73,7 +71,7 @@ struct DateAndTime: View {
             //بوتن الدن
             Spacer()
 //            NavigationLink(){
-//                new_order_sarah2()
+//                OrderDriver()
 //            } label: {
 //            Button("Done") {
 //
@@ -86,12 +84,12 @@ struct DateAndTime: View {
 //                .cornerRadius(10)
 //        }
         }
-        }
+
     }
-
-
-struct DateAndTime_Previews: PreviewProvider {
-static var previews: some View {
-    DateAndTime()
 }
+
+struct DataAndTimeDriver_Previews: PreviewProvider {
+    static var previews: some View {
+        DataAndTimeDriver()
+    }
 }

@@ -55,9 +55,34 @@ struct new_order_sarah2: View {
                     size2()
                 }
                 textfield()
+                        NavigationLink(){
+                            DateAndTime()
+                        } label: {
                 ZStack{
-                    Schedule()
+                    
+                    Rectangle()
+                        .frame(width: 300, height: 44)
+                        .foregroundColor(Color.mint.opacity(0.2))
+                        .cornerRadius(5)
+                    HStack(spacing:70){
+                        HStack{
+                            Image(systemName: "calendar.badge.clock")
+                                .font(.system(size: 12, weight: .regular, design: .default))
+                                .foregroundColor(Color("Color3"))
+                            Text("Schedule Your Order")
+                                .font(.system(size: 15, weight: .bold, design: .default))
+                                .foregroundColor(Color("Color3"))
+                            
+                        }
+                        Image(systemName: "chevron.right")
+                            .font(.system(size: 9, weight: .bold, design: .default))
+                            .foregroundColor(Color("Color3"))
+                        
+                    }
+                
+//                    Schedule()
                 }
+                    }
                 ZStack{
                     Toggle(isOn: $checkbox2){
                         Text("I accept the terms & conditions")

@@ -87,20 +87,23 @@ struct OrderDriver: View {
                         //             .background(Color("Color2"))
                             .background(.white.opacity(0.3))
                             .cornerRadius(5)
-                           
+                        NavigationLink(){
+                            DataAndTimeDriver()
+                        } label: {
                         ZStack{
                             Rectangle()
                                 .frame(width: 300, height: 44)
                                 .foregroundColor(Color.mint.opacity(0.2))
                                 .cornerRadius(5)
-                            HStack(spacing:70){
+                            
+                            HStack(spacing:40){
                                 HStack{
                                     Image(systemName: "calendar.badge.clock")
-                                        .font(.system(size: 12, weight: .regular, design: .default))
+                                        .font(.system(size: 14, weight: .regular, design: .default))
                                         .foregroundColor(Color("Color3"))
-                                    Text("Schedule Your Order")
+                                    Text("Schedule Your Order (Starting)")
                                         .fontWeight(.bold)
-                                        .font(.system(size: 15, weight: .semibold, design: .serif))
+                                        .font(.system(size: 12, weight: .semibold, design: .serif))
                                         .foregroundColor(Color("Color3"))
                                     
                                 }
@@ -112,19 +115,23 @@ struct OrderDriver: View {
                             }
                             
                         }
+                        }
+                        NavigationLink(){
+                            DataAndTimeDriver()
+                        } label: {
                         ZStack{
                             Rectangle()
                                 .frame(width: 300, height: 44)
                                 .foregroundColor(Color.mint.opacity(0.2))
                                 .cornerRadius(5)
-                            HStack(spacing:70){
+                            HStack(spacing:40){
                                 HStack{
                                     Image(systemName: "calendar.badge.clock")
                                         .font(.system(size: 12, weight: .regular, design: .default))
                                         .foregroundColor(Color("Color3"))
-                                    Text("Schedule Your Order")
+                                    Text("Schedule Your Order (Arrivad)")
                                         .fontWeight(.bold)
-                                        .font(.system(size: 15, weight: .semibold, design: .serif))
+                                        .font(.system(size: 13, weight: .semibold, design: .serif))
                                         .foregroundColor(Color("Color3"))
                                     
                                 }
@@ -135,6 +142,7 @@ struct OrderDriver: View {
                                 
                             }
                             
+                        }
                         }
                         Toggle(isOn: $checkbox2){
                             Text("I accept the terms & conditions")

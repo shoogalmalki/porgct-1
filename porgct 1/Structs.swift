@@ -247,6 +247,9 @@ struct textfield : View{
 
 struct Schedule :View{
     var body: some View{
+        NavigationLink(destination: {
+            DateAndTime()
+        }, label: {
         Rectangle()
             .frame(width: 300, height: 44)
             .foregroundColor(Color.mint.opacity(0.2))
@@ -266,9 +269,10 @@ struct Schedule :View{
                 .foregroundColor(Color("Color3"))
             
         }
+        })
     }
 }
-
+                     
 
 var ButtonNewOrder: some View {
     NavigationLink(){
