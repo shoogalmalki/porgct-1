@@ -14,7 +14,7 @@ struct Home_User: View {
     @State var showModelView = false
     
     var body: some View {
-        NavigationView{
+        
             ZStack{
                 ZStack{
                     Color("Color3")
@@ -271,7 +271,7 @@ struct Home_User: View {
                     
                     //((BELL.BUTTON))
                     NavigationLink(isActive: $shouldGoToWhatEverPage8, destination: {
-                        NavigationUser()
+//                        NavigationUser()
                     }, label: {
                         
                     })
@@ -295,7 +295,7 @@ struct Home_User: View {
             }
         }
     }
-}
+
 
 struct Home_User_Previews: PreviewProvider {
     static var previews: some View {
