@@ -33,8 +33,6 @@ struct homedriver: View {
                             location1()
                             
                         }.padding()
-                        
-                        
                         ScrollView(.vertical,showsIndicators: false) {
                             
 //                            ZStack{
