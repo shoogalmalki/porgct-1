@@ -168,12 +168,12 @@ struct MyOrderUser2: View {
                         .foregroundColor(.white)
                     VStack{
                         HStack{
-                            Image(systemName:"checkmark")
+                            Image(systemName:"stopwatch")
                                 .foregroundColor(.green)
                                 .font(.system(size: 12, weight:.bold, design: .default))
                             HStack(spacing:70){
                                 
-                                Text("DELIVERED")
+                                Text("IN PROGRESS")
                                     .font(.system(size: 12, weight: .bold, design: .default))
                                     .foregroundColor(.green)
                                 VStack(alignment: .trailing){
