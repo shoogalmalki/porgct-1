@@ -20,6 +20,8 @@
 		8A2857212880D05300115251 /* NewOrder.Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2857202880D05300115251 /* NewOrder.Request.swift */; };
 		8A2857232880D77400115251 /* MyOrders.Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2857222880D77400115251 /* MyOrders.Driver.swift */; };
 		8A2857252881162F00115251 /* DoNotOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2857242881162F00115251 /* DoNotOffer.swift */; };
+		8A28572928824E9F00115251 /* MyOrderUser2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28572828824E9F00115251 /* MyOrderUser2.swift */; };
+		8A28572B28824FFA00115251 /* payment.order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28572A28824FFA00115251 /* payment.order.swift */; };
 		8A4CA4CB28763A4F00AA5631 /* MyOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CA4CA28763A4F00AA5631 /* MyOrders.swift */; };
 		8A767018287B809F001EE287 /* Taste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A767017287B809F001EE287 /* Taste.swift */; };
 		8A831867285E4ADE00B8C702 /* profile.driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A831866285E4ADE00B8C702 /* profile.driver.swift */; };
@@ -69,6 +71,8 @@
 		8A2857202880D05300115251 /* NewOrder.Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrder.Request.swift; sourceTree = "<group>"; };
 		8A2857222880D77400115251 /* MyOrders.Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrders.Driver.swift; sourceTree = "<group>"; };
 		8A2857242881162F00115251 /* DoNotOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotOffer.swift; sourceTree = "<group>"; };
+		8A28572828824E9F00115251 /* MyOrderUser2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderUser2.swift; sourceTree = "<group>"; };
+		8A28572A28824FFA00115251 /* payment.order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = payment.order.swift; sourceTree = "<group>"; };
 		8A4CA4CA28763A4F00AA5631 /* MyOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrders.swift; sourceTree = "<group>"; };
 		8A767017287B809F001EE287 /* Taste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taste.swift; sourceTree = "<group>"; };
 		8A831866285E4ADE00B8C702 /* profile.driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.driver.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				8A2857202880D05300115251 /* NewOrder.Request.swift */,
 				AE9F5D07287B1A3E00C157B2 /* Registration2user.swift */,
 				8A98C9492863DEAE007C0AF0 /* payment.swift */,
+				8A28572A28824FFA00115251 /* payment.order.swift */,
 				8A98C94B28649E89007C0AF0 /* after.payment.swift */,
 				42A70F002861F3060093FACA /* MyMap.swift */,
 				42A70F04286201960093FACA /* MapFile.swift */,
@@ -159,6 +164,7 @@
 				8A831866285E4ADE00B8C702 /* profile.driver.swift */,
 				8A831868285E4D2200B8C702 /* profile.user.swift */,
 				8A4CA4CA28763A4F00AA5631 /* MyOrders.swift */,
+				8A28572828824E9F00115251 /* MyOrderUser2.swift */,
 				8A2857222880D77400115251 /* MyOrders.Driver.swift */,
 				8A98C9472863D7FC007C0AF0 /* Driver.account.swift */,
 				8A9B1C63285EAA4800024954 /* homedriver.swift */,
@@ -293,8 +299,10 @@
 				8A9B1C64285EAA4800024954 /* homedriver.swift in Sources */,
 				AE54AE27286343CF006FD4CB /* pageView-onbording2.swift in Sources */,
 				8A2857212880D05300115251 /* NewOrder.Request.swift in Sources */,
+				8A28572928824E9F00115251 /* MyOrderUser2.swift in Sources */,
 				8AB618362873261500630F61 /* UserModel.swift in Sources */,
 				8AB61839287327AB00630F61 /* UserVM.swift in Sources */,
+				8A28572B28824FFA00115251 /* payment.order.swift in Sources */,
 				AE54AE23286342FD006FD4CB /* PageModel-onbording.swift in Sources */,
 				AE54AE2528634356006FD4CB /* PageView-onbording.swift in Sources */,
 				42A70F032861F7C30093FACA /* new.order.swift in Sources */,

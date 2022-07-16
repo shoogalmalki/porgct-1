@@ -132,48 +132,27 @@ struct MyOrders: View {
                                     .opacity(0.3)
                                     .frame(width:300)
                                 
+                               
                                 HStack{
-                                    Image("Image2-1")
-                                        .resizable()
-                                        .frame(width: 40, height: 33)
-                                    HStack(spacing:66){
-                                        VStack(spacing:5){
-                                            HStack{
-                                                Image(systemName: "person")
-                                                    .font(.system(size: 12, weight: .bold, design: .default))
-                                                    .foregroundColor(Color("Color3"))
-                                                Text("Your customer")
-                                                    .font(.system(size: 10, weight:.bold, design: .default))
-                                                    .foregroundColor(Color("Color3"))
-                                            }
-                                            Text("OMER SALEH")
-                                                .font(.system(size: 11, weight:.bold, design: .default))
-                                            
-                                        }
-                                        //                    Spacer(minLength:-99)
-                                        HStack{
-                                            ZStack{
-                                                Circle()
-                                                    .frame(width: 30, height: 33)
-                                                    .foregroundColor(Color("Color4"))
-                                                Image(systemName:"phone")
-                                                    .foregroundColor(Color("Color3"))
-                                                .font(.system(size: 12, weight:.bold, design: .default))
-                                                
-                                            }
-                                            ZStack{
-                                                Circle()
-                                                    .frame(width: 30, height: 33)
-                                                    .foregroundColor(Color("Color4"))
-                                                Image("Image10")
-                                                    .resizable()
-                                                    .frame(width: 17, height: 17)
-                                                
-                                            }
-                                            
-                                        }
-                                    }
+                                Text("complete the payment")
+                                        .font(.system(size:12))
+                                NavigationLink(){
+                                    payment_order()
+                                } label: {
+                                    
+                                    Text("Request")
+                                        .foregroundColor(Color.white)
+                                        .font(.system(size: 10, weight: .semibold, design: .serif))
+                                        .frame(width: 50, height:30)
+                                        .background(.orange)
+                                        .cornerRadius(5)
+                                
                                 }
+                                
+                                }
+                                
+                                
+                                
                             }
                         }
                     }
