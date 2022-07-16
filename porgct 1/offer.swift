@@ -23,7 +23,7 @@ struct offer: View {
            
                 ZStack{
                     Rectangle()
-                        .frame(width: .infinity, height: 670)
+                        .frame(width: .infinity, height: 690)
                         .foregroundColor(Color("Color1"))
                         .cornerRadius(20)
                         .offset(y:48)
