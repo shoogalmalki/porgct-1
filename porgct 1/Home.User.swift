@@ -255,7 +255,7 @@ struct Home_User: View {
                     
                     //((BLUS.BUTTON))
                     NavigationLink(isActive: $shouldGoToWhatEverPage9, destination: {
-                        new_order_sarah2()
+                        NewRegistration()
                     }, label: {
                     })
                     

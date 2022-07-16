@@ -142,7 +142,7 @@ struct OrderDriver: View {
                             .foregroundStyle(.gray)
                             .font(.system(size: 15, weight: .semibold, design: .serif))
                         NavigationLink(){
-                            after_payment()
+                            after_paymentDriver()
                         } label: {
                             Text("Done")
                             //                                .font(.title3)

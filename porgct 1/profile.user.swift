@@ -119,7 +119,7 @@ struct profile1: View {
                             Text("Other")
                                 .font(.system(size: 15, weight:.bold, design: .default))
                             NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
-                                MyOrders()
+                                Driver_account()
                             }, label: {
                             })
                             Button(action: {                            shouldGoToWhatEverPage11.toggle()

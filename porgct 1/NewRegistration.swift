@@ -10,32 +10,11 @@ import Foundation
 import Firebase
 import FirebaseAuth
 
-extension View {
-    func cornerRadius10(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape( RoundedCorner10(radius: radius, corners: corners) )
-            .padding(0.0)
-            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.272, green: 0.683, blue: 0.674)/*@END_MENU_TOKEN@*/)
-    }
-}
-struct RoundedCorner10: Shape {
 
-    var radius: CGFloat = .infinity
-    var corners: UIRectCorner = .allCorners
-
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        return Path(path.cgPath)
-    }
-}
 
 struct NewRegistration: View {
     
-    @State var topLeft: CGFloat = 10
-    @State var topRight: CGFloat = 10
-    @State var bottomLeft: CGFloat = 0
-    @State var bottomRight: CGFloat = 0
-    let upcolor: Color = Color(red: Double(69)/255, green: Double(174)/255, blue: Double(172)/255)
-    let backgroundcolor: Color = Color(red: Double(247)/255, green: Double(248)/255, blue: Double(248)/255)
+    
     
     @State private var FullName = ""
     @State private var Email = ""
@@ -47,18 +26,19 @@ struct NewRegistration: View {
     @State private var showingLoginScreen = false
     @State var shouldGoToWhatEverPage2: Bool = false
     var body: some View {
-        NavigationView {
-           ZStack {
-            Rectangle ()
-                .cornerRadius10 (topLeft, corners: .topLeft)
-        .cornerRadius10 (topRight, corners: .topRight)
-        .cornerRadius10 (bottomLeft, corners:
-                .bottomLeft)
-        .cornerRadius10 (bottomRight, corners: .bottomRight)
-            
-                .foregroundColor(backgroundcolor)
-                .frame(width: 360, height: 850)
-                .offset(x: 0, y: 130)
+      
+            ZStack{
+                ZStack{
+                    Color(.systemMint)
+                        .ignoresSafeArea()
+                }
+               
+                    ZStack{
+                        Rectangle()
+                            .frame(width: .infinity, height: 670)
+                            .foregroundColor(Color("Color1"))
+                            .cornerRadius(20)
+                            .offset(y:48)
             VStack {
                 Text("New Registration")
                     .font(.system(size: 18, weight: .semibold, design: .serif))
@@ -144,12 +124,11 @@ struct NewRegistration: View {
            }
           
         }
-     .background(RoundedRectangle(cornerRadius: 8, style:   .circular).fill(Color(UIColor.systemMint)))
-           .ignoresSafeArea()
-          .navigationBarHidden(true)
-        
-    }
-    }
+    
+            }
+        }
+    
+    
     //   func register(){
     //        Auth.auth().createUser(withEmail: Email, password: password) { result, error in
     //           if error ! = nill  {

@@ -85,10 +85,11 @@ struct LoginView: View {
                            .background(Color(UIColor.systemMint))
                           .cornerRadius(10)
                        .offset(y:25 )
-
-
+                        
                     }
+                    
                           }
+                
                        }
                 }
                 }
