@@ -231,8 +231,7 @@ struct Home_User: View {
 //                                        .frame(width: 135, height:26)
 //                                        .background(.red)
 //                                        .cornerRadius(5)
-//                                        
-//                                        
+//
 //                                    }
 //                                }
 //                            }
