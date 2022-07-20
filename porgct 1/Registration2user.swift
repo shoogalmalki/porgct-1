@@ -19,7 +19,8 @@ struct Registration2user: View {
         @State private var wrongPassword: Float  = 0
         @State private var showingLoginScreen = false
         @State var shouldGoToWhatEverPage2: Bool = false
-        
+    @State var shouldGoToWhatEverPage11: Bool = false
+
 var body: some View {
             NavigationView {
                 ScrollView {
@@ -85,9 +86,14 @@ var body: some View {
                                 
                             }
                         }
-                        
+                        NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
+                            Home_User()
+                        }, label: {
+                        })
+                    
                         Button {
                             handleAction()
+                            shouldGoToWhatEverPage11.toggle()
                         } label: {
                             HStack {
                                 Spacer()
@@ -106,7 +112,7 @@ var body: some View {
                     .padding()
 
                 }
-                .navigationTitle("New Registration")
+                .navigationTitle("")
                 .background(Color(.init(gray: 0, alpha: 0.05))
 //                    .foregroundColor(Color("Color1"))
                                 .ignoresSafeArea())

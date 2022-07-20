@@ -26,7 +26,7 @@ struct Home_User: View {
                         .frame(width: .infinity, height: 675)
                         .foregroundColor(Color("Color1"))
                         .cornerRadius(20)
-                    
+                      
                     VStack(spacing:22){
                         ZStack{
                             location1()
