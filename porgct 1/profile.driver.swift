@@ -7,6 +7,7 @@
 
 
 import SwiftUI
+import FirebaseAuth
 
 struct profile: View {
     @State var toggleIsOn: Bool = false
@@ -21,7 +22,7 @@ struct profile: View {
                 .foregroundColor(Color("Color1"))
                 .cornerRadius(15)
             
-            VStack(spacing:40){
+            VStack(spacing:20){
                 
                 HStack(spacing:100){
                     HStack{
@@ -158,6 +159,15 @@ struct profile: View {
                     
                     
                 }
+                Button("Sign out") {
+                try? Auth.auth().signOut()
+                   presentationMode.wrappedValue.dismiss()
+                }
+                .foregroundColor(.white)
+                .font(.system(size: 18, weight: .semibold, design: .serif))
+                .frame(width: 300, height: 50)
+                 .background(Color(UIColor.systemMint))
+                .cornerRadius(10)
             }
 //            DriverProfile()
 }
