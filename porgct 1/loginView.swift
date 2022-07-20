@@ -167,7 +167,9 @@ struct LoginView: View {
 //            .fullScreenCover(isPresented: $presentClient, content: { ClientView() })
 //            .fullScreenCover(isPresented: $presentProvider, content: { ProviderView() })
             .navigationTitle("Login")
-           
+                        
+            .navigationBarTitleDisplayMode(.inline)
+            
         }
      .navigationViewStyle(StackNavigationViewStyle())
         
