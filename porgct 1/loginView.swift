@@ -106,7 +106,7 @@ struct LoginView: View {
     }
     
     var body: some View {
-        NavigationView{
+//        NavigationView{
             ZStack{
                 ZStack{
                 Color(.systemMint)
@@ -117,10 +117,12 @@ struct LoginView: View {
                     .frame(width: 380, height: 690)
                     .foregroundColor(Color("Color1"))
                     .cornerRadius(20)
-                 
+                    .offset(y:44)
                     ZStack{
                         VStack(alignment: .center, spacing: 50) {
                 VStack {
+                   Text("Login")
+                        .font(.system(size: 20, weight:.medium, design: .rounded))
         TextField(
                         "User name (email address)",
                         text: $username)
@@ -154,7 +156,7 @@ struct LoginView: View {
                 HStack{
                     Text("You don't have account ?")
                     NavigationLink{
-                        RegisterView()
+                        Registration2user()
                     } label: {
                         Text("Register")
                     }
@@ -166,9 +168,9 @@ struct LoginView: View {
             }
 //            .fullScreenCover(isPresented: $presentClient, content: { ClientView() })
 //            .fullScreenCover(isPresented: $presentProvider, content: { ProviderView() })
-            .navigationTitle("Login")
-                        
-            .navigationBarTitleDisplayMode(.inline)
+//            .navigationTitle("Login")
+//
+//            .navigationBarTitleDisplayMode(.inline)
             
         }
      .navigationViewStyle(StackNavigationViewStyle())
@@ -176,7 +178,7 @@ struct LoginView: View {
         }
     }
 //    end Z
-    }
+//    }
 }
 }
 struct LoginView_Previews: PreviewProvider {

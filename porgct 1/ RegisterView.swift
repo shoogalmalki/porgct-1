@@ -21,6 +21,7 @@ struct RegisterView: View {
     @State private var showingAlert: Bool = false
     @State private var alertTitle: String = ""
     @State private var showingLoginScreen = false
+    @State var shouldGoToWhatEverPage11: Bool = false
 
   @State private var FullName = ""
 //    @State private var Email = ""
@@ -84,7 +85,7 @@ struct RegisterView: View {
     }
 //  التصميم
     var body: some View {
-        NavigationView {
+//        NavigationView {
             ScrollView {
             
                 VStack(spacing: 10) {
@@ -142,6 +143,11 @@ struct RegisterView: View {
 
                       }
                     }
+                    
+                    NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
+                                           new_order_sarah2()
+                                       }, label: {
+                                       })
                     Button {
                         handleAction()
                         registerAction(user: username, pass: password)
@@ -173,7 +179,7 @@ struct RegisterView: View {
         .alert(alertTitle, isPresented: $showingAlert) {
             Button("OK", role: .cancel) { }
         }
-        }
+//        }
     }
         private func handleAction() {
             if isLoginMode {

@@ -22,7 +22,7 @@ struct Registration2user: View {
     @State var shouldGoToWhatEverPage11: Bool = false
 
 var body: some View {
-            NavigationView {
+//            NavigationView {
                 ScrollView {
                     VStack(spacing: 10) {
                         Picker(selection: $isLoginMode, label: Text("Picker here")) {
@@ -87,7 +87,7 @@ var body: some View {
                             }
                         }
                         NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
-                            Home_User()
+                            new_order_sarah2()
                         }, label: {
                         })
                     
@@ -116,7 +116,7 @@ var body: some View {
                 .background(Color(.init(gray: 0, alpha: 0.05))
 //                    .foregroundColor(Color("Color1"))
                                 .ignoresSafeArea())
-            }
+//            }
         }
 
         private func handleAction() {

@@ -254,7 +254,7 @@ struct Home_User: View {
                     
                     //((BLUS.BUTTON))
                     NavigationLink(isActive: $shouldGoToWhatEverPage9, destination: {
-                        NewRegistration()
+                        LoginView()
                     }, label: {
                     })
                     
