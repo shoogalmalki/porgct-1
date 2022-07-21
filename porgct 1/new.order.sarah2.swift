@@ -6,13 +6,21 @@
 //
 
 import SwiftUI
+import KRProgressHUD
 
 
-struct new_order_sarah2: View {
+struct new_order_sarah2: View, DateAndTimeSelected {
     
+    func dateTimeSelected(date: String, time: String) {
+        self.dateAndTime = "\(date) - \(time)"
+    }
     @State var shouldGoToWhatEverPage55: Bool = false
     @StateObject private var viewModel = ContentViewModel()
-    
+    @State var dateAndTime = ""
+    @State var gotoDateTime = false
+    @State private var showImagePicker: Bool = false
+    @State private var errorString = ""
+    @State private var showingAlert = false
     
     @State private var sourceType: UIImagePickerController.SourceType
     = .camera
@@ -21,6 +29,9 @@ struct new_order_sarah2: View {
     //    @EnvironmentObject var appState: AppState
     
     var body: some View {
+//        NavigationView{
+//
+//        }
         ZStack{
             ZStack{
                 Color(.systemMint)
@@ -55,8 +66,11 @@ struct new_order_sarah2: View {
                     size2()
                 }
                 textfield()
+                        
                         NavigationLink(){
-                            DateAndTime()
+//                            DateAndTime()
+                            DateAndTime(delegate: self)
+                            
                         } label: {
                 ZStack{
                     
@@ -69,7 +83,7 @@ struct new_order_sarah2: View {
                             Image(systemName: "calendar.badge.clock")
                                 .font(.system(size: 12, weight: .regular, design: .default))
                                 .foregroundColor(Color("Color3"))
-                            Text("Schedule Your Order")
+                            Text( dateAndTime == "" ? "Schedule Your Order" : dateAndTime)
                                 .font(.system(size: 15, weight: .bold, design: .default))
                                 .foregroundColor(Color("Color3"))
                             
@@ -92,7 +106,52 @@ struct new_order_sarah2: View {
                         .font(.system(size: 15, weight: .semibold, design: .serif))
                     
                 }
-                ButtonNewOrder
+                        ButtonNewOrder.onTapGesture {
+                            
+//                            if image.size.height == 0.0{
+//                                errorString = "Please Select Image"
+//                                showingAlert = true
+//                            } else if pickupCity == ""{
+//                                errorString = "Please select pickup and dropdown location"
+//                                showingAlert = true
+//                            } else if dateAndTime == ""{
+//                                errorString = "Please select date and time"
+//                                showingAlert = true
+//                            } else if size == .empty{
+//                                errorString = "Please select size"
+//                                showingAlert = true
+//                            } else if !checkbox2{
+//                                errorString = "Before making order, you have to agree at terms and conditions"
+//                                showingAlert = true
+//                            } else if desc == ""{
+//                                errorString = "Please write some notes"
+//                                showingAlert = true
+//                            } else if pickupCity == dropDownLocation{
+//                                errorString = "Please select pickup and dropdown location"
+//                                showingAlert = true
+//
+//                            }
+//                            else{
+                                KRProgressHUD.show(withMessage: "Please Wait...")
+                                AuthViewModel().placeOrderByCustomer(userId: (UserDefaults.standard.string(forKey: LOGIN_UID) ?? "") ?? "", pickUp: "", dropOff: "", storagePhotoUrl: "", typeOfShipment: "", notes: "", dateTime: "", timeSlot: "") { userId,error in
+                                    KRProgressHUD.dismiss()
+                                    if error == nil{
+                                        print("userId===",userId ?? "Nothing")
+                                    }else{
+                                        print("error===",error?.localizedDescription ??  "Error Occured")
+                                        errorString = error?.localizedDescription ?? "Error Occured"
+                                        showingAlert = true
+                                    }
+                                }
+//                            }
+                            
+                            
+                            
+                            
+                        }.alert(errorString, isPresented: $showingAlert) {
+                            Button("OK", role: .cancel) { }
+                        }
+                        
                 
             }
           
@@ -124,7 +183,6 @@ struct CheckboxToggleStyle: ToggleStyle {
         
     }
 }
-
 
 struct new_order_sarah2_Previews: PreviewProvider {
     static var previews: some View {

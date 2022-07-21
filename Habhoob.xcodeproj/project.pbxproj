@@ -56,6 +56,10 @@
 		AEB42154284D337400A942B0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AEB42153284D337400A942B0 /* FirebaseFirestore */; };
 		AEB42156284D337400A942B0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AEB42155284D337400A942B0 /* FirebaseStorage */; };
 		AEBD7847284794EA00202C25 /* NewRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD7846284794EA00202C25 /* NewRegistration.swift */; };
+		E6A4575528886C2C009F4D95 /* CodableFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = E6A4575428886C2C009F4D95 /* CodableFirebase */; };
+		E6A45757288873C3009F4D95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A45756288873C3009F4D95 /* Constants.swift */; };
+		E6A45759288884D4009F4D95 /* PlaceOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A45758288884D4009F4D95 /* PlaceOrderModel.swift */; };
+		E6A8515A2888559300DAD895 /* KRProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = E6A851592888559300DAD895 /* KRProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +109,8 @@
 		AEB4214C284D137600A942B0 /* offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offer.swift; sourceTree = "<group>"; };
 		AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AEBD7846284794EA00202C25 /* NewRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRegistration.swift; sourceTree = "<group>"; };
+		E6A45756288873C3009F4D95 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E6A45758288884D4009F4D95 /* PlaceOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +118,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6A4575528886C2C009F4D95 /* CodableFirebase in Frameworks */,
 				AEB42152284D337400A942B0 /* FirebaseAuth in Frameworks */,
 				AEB42154284D337400A942B0 /* FirebaseFirestore in Frameworks */,
 				8AB6183E2873376200630F61 /* FirebaseDatabase in Frameworks */,
+				E6A8515A2888559300DAD895 /* KRProgressHUD in Frameworks */,
 				AEB42156284D337400A942B0 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,16 +159,17 @@
 				AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */,
 				AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */,
 				AEBD7846284794EA00202C25 /* NewRegistration.swift */,
+				AE9F5D07287B1A3E00C157B2 /* Registration2user.swift */,
 				AE9F5D0128763DDB00C157B2 /* loginView.swift */,
 				AEB4214C284D137600A942B0 /* offer.swift */,
 				8A2857242881162F00115251 /* DoNotOffer.swift */,
 				857DC72728666E71003D8A23 /*  OrderDriver.swift */,
 				8ABC2422286DDEF1002E214E /* new.order.sarah2.swift */,
 				8A2857202880D05300115251 /* NewOrder.Request.swift */,
-				AE9F5D07287B1A3E00C157B2 /* Registration2user.swift */,
 				8A98C9492863DEAE007C0AF0 /* payment.swift */,
 				8A28572A28824FFA00115251 /* payment.order.swift */,
 				8A98C94B28649E89007C0AF0 /* after.payment.swift */,
+				E6A45756288873C3009F4D95 /* Constants.swift */,
 				8A28572C2882ED1A00115251 /* after.paymentDriver.swift */,
 				42A70F002861F3060093FACA /* MyMap.swift */,
 				42A70F04286201960093FACA /* MapFile.swift */,
@@ -201,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				8AB618352873261500630F61 /* UserModel.swift */,
+				E6A45758288884D4009F4D95 /* PlaceOrderModel.swift */,
 				AE0E5EC82875106A00C99F02 /* RequestM.swift */,
 			);
 			path = Models;
@@ -243,6 +253,8 @@
 				AEB42153284D337400A942B0 /* FirebaseFirestore */,
 				AEB42155284D337400A942B0 /* FirebaseStorage */,
 				8AB6183D2873376200630F61 /* FirebaseDatabase */,
+				E6A851592888559300DAD895 /* KRProgressHUD */,
+				E6A4575428886C2C009F4D95 /* CodableFirebase */,
 			);
 			productName = "porgct 1";
 			productReference = 426BDB4F284398FB008E9C5A /* Habhoob.app */;
@@ -274,6 +286,8 @@
 			mainGroup = 426BDB46284398FB008E9C5A;
 			packageReferences = (
 				AEB42150284D337400A942B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E6A851582888559300DAD895 /* XCRemoteSwiftPackageReference "KRProgressHUD" */,
+				E6A4575328886C2B009F4D95 /* XCRemoteSwiftPackageReference "CodableFirebase" */,
 			);
 			productRefGroup = 426BDB50284398FB008E9C5A /* Products */;
 			projectDirPath = "";
@@ -310,7 +324,9 @@
 				8AB61839287327AB00630F61 /* UserVM.swift in Sources */,
 				8A28572B28824FFA00115251 /* payment.order.swift in Sources */,
 				AE54AE23286342FD006FD4CB /* PageModel-onbording.swift in Sources */,
+				E6A45757288873C3009F4D95 /* Constants.swift in Sources */,
 				AE54AE2528634356006FD4CB /* PageView-onbording.swift in Sources */,
+				E6A45759288884D4009F4D95 /* PlaceOrderModel.swift in Sources */,
 				42A70F032861F7C30093FACA /* new.order.swift in Sources */,
 				8A2857232880D77400115251 /* MyOrders.Driver.swift in Sources */,
 				AE54AE2128633F94006FD4CB /* SplashScreenView.swift in Sources */,
@@ -556,6 +572,22 @@
 				version = 9.1.0;
 			};
 		};
+		E6A4575328886C2B009F4D95 /* XCRemoteSwiftPackageReference "CodableFirebase" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alickbass/CodableFirebase.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.2;
+			};
+		};
+		E6A851582888559300DAD895 /* XCRemoteSwiftPackageReference "KRProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krimpedance/KRProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -578,6 +610,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AEB42150284D337400A942B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		E6A4575428886C2C009F4D95 /* CodableFirebase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6A4575328886C2B009F4D95 /* XCRemoteSwiftPackageReference "CodableFirebase" */;
+			productName = CodableFirebase;
+		};
+		E6A851592888559300DAD895 /* KRProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6A851582888559300DAD895 /* XCRemoteSwiftPackageReference "KRProgressHUD" */;
+			productName = KRProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

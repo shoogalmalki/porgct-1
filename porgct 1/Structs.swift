@@ -38,7 +38,7 @@ struct StepsOfOrder : View{
 }
 
 struct image1 : View{
-    @State private var image: UIImage?
+    @State private var image =  UIImage()
     @State private var sourceType: UIImagePickerController.SourceType
     = .camera
     @State private var showSheet: Bool = false
@@ -50,10 +50,12 @@ struct image1 : View{
             .background(.white)
         
         VStack {
-            Image(uiImage: image ?? UIImage(named: "Plus")!)
-            Button("Choose Picture")
-            
-            {
+            Image(uiImage: image == UIImage() ? UIImage(named: "Plus")! : image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 50, height: 50, alignment: .center)
+                .aspectRatio(contentMode: .fill)
+            Button("Choose Picture") {
                 self.showSheet = true
             }
             .actionSheet(isPresented: $showSheet) {
@@ -69,6 +71,9 @@ struct image1 : View{
                                 },
                                 .cancel()
                             ])
+            }.sheet(isPresented: $showImagePicker){
+                ImagePicker(sourceType: self.sourceType, selectedImage: self.$image)
+                
             }
         }
     }
@@ -79,16 +84,17 @@ struct size1 : View{
     @State var showRectangle1: Bool = false
     @State var showRectangle2: Bool = false
     var body: some View{
-        if showRectangle == true {
+//        if showRectangle == true {
             
             Button.init(action: {
-                showRectangle.toggle()
-                
+                showRectangle = true
+                showRectangle1 = false
+                showRectangle2 = false
             }, label: {
                 ZStack{
                     Rectangle()
                         .frame(width: 66, height: 55)
-                        .foregroundColor(Color("Color4"))
+                        .foregroundColor(showRectangle ? Color("Color4") : Color.mint.opacity(0.2))
                         .cornerRadius(10)
                     VStack{
                         Image("Paper")
@@ -102,41 +108,42 @@ struct size1 : View{
                     }
                 }
             })
-        }
-        else{
-            Button.init(action: {
-                showRectangle.toggle()
-                
-            }, label: {
-                ZStack{
-                    
-                    Rectangle()
-                        .frame(width: 66, height: 55)
-                        .foregroundColor(Color.mint.opacity(0.2))
-                        .cornerRadius(10)
-                    VStack{
-                        Image("Paper")
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                        Text("small")
-                            .font(.caption2)
-                            .foregroundStyle(.black)
-                            .font(.system(size: 20, weight: .bold, design: .default))
-                        
-                    }
-                }
-            })
-        }
-        if showRectangle1 == true {
+    /*}
+     else{
+         Button.init(action: {
+             showRectangle = true
+             showRectangle1 = false
+             showRectangle2 = false
+         }, label: {
+             ZStack{
+                 Rectangle()
+                     .frame(width: 66, height: 55)
+                     .foregroundColor(Color.mint.opacity(0.2))
+                     .cornerRadius(13)
+                 VStack{
+                     Image("Paper")
+                         .resizable()
+                         .frame(width: 30, height: 30)
+                     Text("Small")
+                         .font(.caption2)
+                         .foregroundStyle(.black)
+                         .font(.system(size: 15, weight: .bold, design: .default))
+                 }
+             }
+         })
+     }*/
+//        if showRectangle1 == true {
             
             Button.init(action: {
-                showRectangle1.toggle()
+                showRectangle = false
+                showRectangle1 = true
+                showRectangle2 = false
                 
             }, label: {
                 ZStack{
                     Rectangle()
                         .frame(width: 66, height: 55)
-                        .foregroundColor(Color("Color4"))
+                        .foregroundColor(showRectangle1 ? Color("Color4") : Color.mint.opacity(0.2))
                         .cornerRadius(13)
                     VStack{
                         Image("Box")
@@ -149,7 +156,7 @@ struct size1 : View{
                     }
                 }
             })
-        }
+       /* }
         else{
             Button.init(action: {
                 showRectangle1.toggle()
@@ -172,16 +179,17 @@ struct size1 : View{
                 }
             })
         }
-        if showRectangle2 == true {
+        if showRectangle2 == true {*/
             
             Button.init(action: {
-                showRectangle2.toggle()
-                
+                showRectangle = false
+                showRectangle1 = false
+                showRectangle2 = true
             }, label: {
                 ZStack{
                     Rectangle()
                         .frame(width: 66, height: 55)
-                        .foregroundColor(Color("Color4"))
+                        .foregroundColor(showRectangle2 ? Color("Color4") : Color.mint.opacity(0.2))
                         .cornerRadius(13)
                     VStack{
                         Image("furnitures")
@@ -193,7 +201,7 @@ struct size1 : View{
                     }
                 }
             })
-        }
+      /*  }
         else{
             Button.init(action: {
                 showRectangle2.toggle()
@@ -217,7 +225,7 @@ struct size1 : View{
                     }
                 }
             })
-        }
+        }*/
     }
 }
 struct size2 : View{
@@ -298,10 +306,24 @@ var ButtonNewOrderR: some View {
             .cornerRadius(10)
     }
 }
+protocol LocationSelected{
+    func locationSelected(pickupCity: String, dropCity: String)
+}
 struct location1 : View{
+    public var delegate: LocationSelected?
+    
+    
+    @State private var pickupIndex: Int = 0
+    @State private var dropDownIndex: Int = 0
+    
+    
     var frameworks = ["Pick Up Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
     var frameworks2 = ["Drop Of Location", "Riyadh", "Jeddah", "Dammam", "Tift"]
+    
+    @State private var selectedCity = 0
     @State private var selectedFrameworkIndex = ""
+    @State private var dropLocation = ""
+   
     var body: some View {
         
         RoundedRectangle(cornerRadius: 8)
@@ -318,21 +340,36 @@ struct location1 : View{
                 .frame(width:35, height:42)
             
             VStack(alignment: .leading,spacing: 1){
+                
                 VStack(alignment: .leading, spacing: 1){
-                    Picker(selection: $selectedFrameworkIndex, label: Text("")) {
-                        ForEach(0 ..< frameworks.count) {
-                            Text(self.frameworks[$0])
+                    
+                    Picker(selection: $pickupIndex, label: Text("You selected: \(frameworks[pickupIndex])")) {
+                        ForEach(frameworks.indices, id: \.self) { unitIndex in Text(frameworks[unitIndex])
+                            
                         }
                     }
+                    .pickerStyle(MenuPickerStyle())
+                    .onChange(of: pickupIndex, perform: { newValue in
+                        
+                    })
+                    
+                    
                     Divider()
                         .frame(width: 200)
                 }
-                Picker(selection: $selectedFrameworkIndex, label: Text("")) {
-                    ForEach(0 ..< frameworks2.count) {
-                        Text(self.frameworks2[$0])
+                Picker(selection: $dropDownIndex, label: Text("You selected: \(frameworks[pickupIndex])")) {
+                    ForEach(frameworks.indices, id: \.self) { unitIndex in Text(frameworks2[unitIndex])
+                        
+                    }
+                }
+                .pickerStyle(MenuPickerStyle())
+                .onChange(of: dropDownIndex, perform: { newValue in
+                    
+                    if let delegate = delegate {
+                        delegate.locationSelected(pickupCity: frameworks[pickupIndex], dropCity: frameworks[dropDownIndex])
                     }
                     
-                }
+                })
             }
         }
     }

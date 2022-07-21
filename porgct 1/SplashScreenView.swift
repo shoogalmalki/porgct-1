@@ -12,12 +12,16 @@ struct SplashScreenView: View {
     @State var isActive : Bool = false
     @State private var size = 0.8
     @State private var opacity = 0.5
-    
+    @State var shouldGoToWhatEverPage3: Bool = false
     // Customise your SplashScreen here
     var body: some View {
         if isActive {
 //            ContentView()
-            pageView_onbording2()
+            if (UserDefaults.standard.string(forKey: LOGIN_UID) ?? "") == ""{
+                pageView_onbording2()
+            }else{
+                Home_User()
+            }
         } else {
             ZStack{
                Rectangle()

@@ -9,8 +9,12 @@ import SwiftUI
 
 struct DateAndTime: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    public var delegate: DateAndTimeSelected?
     @State var selectedDate: Date = Date()
     @State var buttonTitle =  "-Select a Time-"
+    @State var errorString = ""
+    @State var showAlert = false
 
     @State var gender = ""
     var body: some View {
@@ -72,6 +76,28 @@ struct DateAndTime: View {
 //            }
             //بوتن الدن
             Spacer()
+            Button("Done") {
+                if buttonTitle == "-Select a Time-"{
+                    errorString = "Please select time"
+                    showAlert = true
+                }
+                else{
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+                    let strDate = dateFormatter.string(from: selectedDate)
+                    delegate?.dateTimeSelected(date: strDate, time: buttonTitle)
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+                
+            }
+            .font(.system(size: 20, weight: .semibold, design: .serif))
+            .foregroundColor(Color.white)
+            .frame(width: 300, height: 50)
+            .background(Color(UIColor.systemMint))
+            .cornerRadius(10)
+            .alert(errorString, isPresented: $showAlert, actions: {
+                Button("OK", role: .cancel) { }
+            })
 //            NavigationLink(){
 //                new_order_sarah2()
 //            } label: {
@@ -94,4 +120,7 @@ struct DateAndTime_Previews: PreviewProvider {
 static var previews: some View {
     DateAndTime()
 }
+}
+protocol DateAndTimeSelected{
+    func dateTimeSelected(date: String, time: String)
 }

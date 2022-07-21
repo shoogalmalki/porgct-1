@@ -9,13 +9,13 @@ import SwiftUI
 import Foundation
 import Firebase
 import FirebaseAuth
+import KRProgressHUD
 
 
 
 struct NewRegistration: View {
-    
-    
-    
+    @State var showAlert = false
+    @State var errorString = ""
     @State private var FullName = ""
     @State private var Email = ""
     @State private var PhoneNumber = ""
@@ -88,8 +88,21 @@ struct NewRegistration: View {
 //                         register(email: Email, password: password)
 //                                   createUser(email: Email, password: password)
 //
-                      register(email: Email, password: password)
+                       KRProgressHUD.show(withMessage: "Please Wait...")
+                       AuthViewModel().createCustomerRegister(fullname:FullName,phoneNumber:PhoneNumber, roleType: .user ,email: Email, password: password){userId,error in
+                           KRProgressHUD.dismiss()
+                           if error == nil{
+                               print("userId===",userId ?? "Nothing")
+                           }else{
+                               print("error===",error?.localizedDescription ??  "Error Occured")
+                               errorString = error?.localizedDescription ?? "Error Occured"
+                               showAlert = true
+                           }
+                       }
+                      
 //
+                  }.alert(isPresented: self.$showAlert) {
+                      Alert(title: Text(errorString))
                   }
 //
                    .foregroundColor(.white)
@@ -136,17 +149,7 @@ struct NewRegistration: View {
     //    }
     //   }
     //    }
-    func register(email: String,password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { res, error in
-            if error == nil {
-                print("Succeeded")
-                showingLoginScreen.toggle()
-            } else {
-                
-                print(error?.localizedDescription)
-            }
-        }
-    }
+    
 }
 
 
@@ -156,5 +159,19 @@ struct NewRegistration: View {
 struct NewRegistration_Previews: PreviewProvider {
     static var previews: some View {
         NewRegistration()
+    }
+}
+
+struct AlertView: View {
+    @State private var showAlert = true;
+    @Binding var msg: String
+    
+    var body: some View {
+        Button(action: { self.showAlert = true }) {
+            Text("Show alert")
+        }.alert(
+            isPresented: $showAlert,
+            content: { Alert(title: Text(msg)) }
+        )
     }
 }

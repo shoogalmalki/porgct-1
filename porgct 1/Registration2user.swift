@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import KRProgressHUD
+
 
 struct Registration2user: View {
-   
+    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @State var showAlert = false
+    @State var errorString = ""
+    @State private var isUserType = true
         @State var isLoginMode = false
         @State private var FullName = ""
         @State private var Email = ""
@@ -22,15 +28,30 @@ struct Registration2user: View {
         
 var body: some View {
             NavigationView {
+                ZStack{
+                    ZStack{
+                        Color(.systemMint)
+                            .ignoresSafeArea()
+                    }
+                    ZStack{
+                        Rectangle()
+                            .frame(width: .infinity, height: UIScreen.main
+                                .bounds.size.height - 75)
+                                .foregroundColor(Color("Color1"))
+                                .cornerRadius(20)
+                                .padding(.init(top: 50, leading: 0, bottom: 0, trailing: 0))
                 ScrollView {
                     VStack(spacing: 10) {
-                        Picker(selection: $isLoginMode, label: Text("Picker here")) {
+                        Text("New Registration")
+                             .font(.system(size: 18, weight: .semibold, design: .serif))
+                        Picker(selection: $isUserType, label: Text("Picker here")) {
                             Text("Client Account")
                                 .tag(true)
                             Text("Driver Account")
                                 .tag(false)
                         }.pickerStyle(SegmentedPickerStyle())
                             .background(.mint)
+                            .frame(width: 300, height: 40)
 
     //                    if !isLoginMode {
                             Button {
@@ -70,7 +91,7 @@ var body: some View {
                         .background(Color.white)
                         .cornerRadius(10)
 
-                        if !isLoginMode {
+                        if !isUserType {
                             Text("Kindly provide your driving license")
                             .font(.system(size: 18, weight: .semibold, design: .serif))
                             ZStack{
@@ -91,7 +112,7 @@ var body: some View {
                         } label: {
                             HStack {
                                 Spacer()
-                                Text(isLoginMode ? "Create Client Account" : "Create Driver Account")
+                                Text(isUserType ? "Create Client Account" : "Create Driver Account")
                                     .foregroundColor(.white)
                                     .font(.system(size: 18, weight: .semibold, design: .serif))
 
@@ -102,22 +123,77 @@ var body: some View {
                             }
 
                         }
+                        .padding(.bottom,50)
                     }
-                    .padding()
+                    .padding(.top, 20)
 
-                }
-                .navigationTitle("New Registration")
-                .background(Color(.init(gray: 0, alpha: 0.05))
-//                    .foregroundColor(Color("Color1"))
-                                .ignoresSafeArea())
+                }.frame(width: .infinity, height: UIScreen.main
+                    .bounds.size.height - 150)
             }
-        }
+            }
+//                .navigationTitle("New Registration")
+//                .background(.systemMint)
+////                    .foregroundColor(Color("Color1"))
+//                                .ignoresSafeArea())
+            }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
+            .edgesIgnoringSafeArea(.bottom)
+    //        .navigationBarItems(leading: btnBack)
+//            .navigationTitle("New Registration")
+//
+//                    .edgesIgnoringSafeArea(.bottom)
+                    .navigationBarItems(leading:
+                        Button(action: {
+//                            self.presentationMode.wrappedValue.dismiss()
+                            self.mode.wrappedValue.dismiss()
+                        }) {
+                            HStack {
+                                Image(systemName: "arrow.left")
+                                    .imageScale(.large)
+                                    .frame(width: 25, height: 25, alignment: .center)
+                //                    .aspectRatio(contentMode: .fit)
+                                    .foregroundColor(.white)
+                            }
+                    })
+}
 
         private func handleAction() {
             if isLoginMode {
                 print("Should log into Firebase with existing credentials")
             } else {
                 print("Register a new account inside of Firebase Auth and then store image in Storage somehow....")
+                print("Email===",Email)
+                if isUserType{
+                    KRProgressHUD.show(withMessage: "Please Wait...")
+                    AuthViewModel().createCustomerRegister(fullname:FullName,phoneNumber:PhoneNumber, roleType: .user ,email: Email, password: password){userId,error in
+                        KRProgressHUD.dismiss()
+                        if error == nil{
+                            print("userId===",userId ?? "Nothing")
+                            self.presentationMode.wrappedValue.dismiss()
+                        }else{
+                            self.presentationMode.wrappedValue.dismiss()
+                            print("error===",error?.localizedDescription ??  "Error Occured")
+                            self.errorString = error?.localizedDescription ?? "Error Occured"
+                            self.showAlert = true
+                        }
+                    }
+                }
+                else{
+                    KRProgressHUD.show(withMessage: "Please Wait...")
+                    AuthViewModel().createDriverRegister(fullname:FullName,phoneNumber:PhoneNumber, roleType: .driver ,email: Email,password: password, profileImageUrl:"",driverLicenceImageUrl:"", insuranceImageUrl:""){userId,error in
+                        KRProgressHUD.dismiss()
+                        if error == nil{
+                            print("userId===",userId ?? "Nothing")
+                            self.presentationMode.wrappedValue.dismiss()
+                        }else{
+                            self.presentationMode.wrappedValue.dismiss()
+                            print("error===",error?.localizedDescription ??  "Error Occured")
+                            errorString = error?.localizedDescription ?? "Error Occured"
+                            showAlert = true
+                        }
+                    }
+                }
             }
         }
     }

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct User{
+/*struct User{
 
     let id : String
     let fullName : String
@@ -55,3 +55,62 @@ struct User{
                                   User.profileImageUrl:"https://firebasestorage.googleapis.com:443/v0/b/twitterswiftui-a8508.appspot.com/o/CFC1EA29-B453-48FC-956E-7D2E0831BE6D?alt=media&token=49a4015f-25b1-4b49-8f78-b88883066c73"])
    
 }
+*/
+
+struct User:Codable{
+    enum CodingKeys: String, CodingKey {
+        case userId = "userID"
+        case fullName = "fullName"
+//        case password = "password"
+        case email = "email"
+        case phoneNumber = "phone"
+//        case profileImageUrl = "profileImageUrl"
+//        case driverLicenceImageUrl = "driverLicenceImageUrl"
+//        case insuranceImageUrl = "insuranceImageUrl"
+        case roleType = "type"
+    }
+    var userId:String = ""
+    var fullName:String = ""
+    var password:String = ""
+    var email:String = ""
+    var profileImageUrl:String = ""
+    var driverLicenceImageUrl:String = ""
+    var insuranceImageUrl:String = ""
+    var roleType:String = "customer"
+    var phoneNumber:String = ""
+
+    init() {
+        
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        userId = try container.decodeIfPresent(String.self, forKey: .userId) ?? ""
+        fullName = try container.decodeIfPresent(String.self, forKey: .email) ?? ""
+//        password = try container.decodeIfPresent(String.self, forKey: .password) ?? ""
+        email = try container.decodeIfPresent(String.self, forKey: .email) ?? ""
+//        profileImageUrl = try container.decodeIfPresent(String.self, forKey: .profileImageUrl) ?? ""
+//        driverLicenceImageUrl = try container.decodeIfPresent(String.self, forKey: .driverLicenceImageUrl) ?? ""
+//        insuranceImageUrl = try container.decodeIfPresent(String.self, forKey: .insuranceImageUrl) ?? ""
+        roleType = try container.decodeIfPresent(String.self, forKey: .roleType) ?? "customer"
+        phoneNumber = try container.decodeIfPresent(String.self, forKey: .phoneNumber) ?? ""
+    }
+}
+/*class DictionaryEncoder {
+    private let jsonEncoder = JSONEncoder()
+
+    /// Encodes given Encodable value into an array or dictionary
+    func encode<T>(_ value: T) throws -> Any where T: Encodable {
+        let jsonData = try jsonEncoder.encode(value)
+        return try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
+    }
+}
+class DictionaryDecoder {
+    private let jsonDecoder = JSONDecoder()
+
+    /// Decodes given Decodable type from given array or dictionary
+    func decode<T>(_ type: T.Type, from json: Any) throws -> T where T: Decodable {
+        let jsonData = try JSONSerialization.data(withJSONObject: json, options: [])
+        return try jsonDecoder.decode(type, from: jsonData)
+    }
+}*/
