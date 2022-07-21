@@ -25,6 +25,8 @@ struct NewRegistration: View {
     @State private var wrongPassword: Float  = 0
     @State private var showingLoginScreen = false
     @State var shouldGoToWhatEverPage2: Bool = false
+    @State var shouldGoToWhatEverPage11: Bool = false
+
     var body: some View {
       
             ZStack{
@@ -78,7 +80,10 @@ struct NewRegistration: View {
                     .offset( y:-70 )
                 
                 
-
+                NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
+                                       new_order_sarah2()
+                                   }, label: {
+                                   })
 
                    Button("Registration") {
 //                       authenticateUser(username: FullName, password: password , Email: Email)

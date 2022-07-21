@@ -25,7 +25,8 @@ struct Registration2user: View {
         @State private var wrongPassword: Float  = 0
         @State private var showingLoginScreen = false
         @State var shouldGoToWhatEverPage2: Bool = false
-        
+    @State var shouldGoToWhatEverPage11: Bool = false
+
 var body: some View {
             NavigationView {
                 ZStack{
@@ -106,9 +107,14 @@ var body: some View {
                                 
                             }
                         }
-                        
+                        NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
+                            new_order_sarah2()
+                        }, label: {
+                        })
+                    
                         Button {
                             handleAction()
+                            shouldGoToWhatEverPage11.toggle()
                         } label: {
                             HStack {
                                 Spacer()

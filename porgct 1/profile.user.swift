@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct profile1: View {
     @State var toggleIsOn: Bool = false
@@ -153,9 +154,18 @@ struct profile1: View {
                         
                     }
                     
-                    
-                }.padding(.bottom,140)
+                    Button("Sign out") {
+                    try? Auth.auth().signOut()
+                       presentationMode.wrappedValue.dismiss()
+                    }
+                    .foregroundColor(.white)
+                    .font(.system(size: 18, weight: .semibold, design: .serif))
+                    .frame(width: 300, height: 50)
+                     .background(Color(UIColor.systemMint))
+                    .cornerRadius(10)
+                }.padding(.bottom,80)
                 //            UserProfile()
+                
             }
             
             .navigationTitle("profile")
@@ -167,7 +177,9 @@ struct profile1: View {
             }label: {
                 Image(systemName:"x.circle.fill")
             })
+                             
         }
+        
     }
 }
 struct profile1_Previews: PreviewProvider {

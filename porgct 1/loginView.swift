@@ -6,10 +6,9 @@
 //
 
 import SwiftUI
-import Foundation
-import Firebase
 import FirebaseAuth
 import KRProgressHUD
+import FirebaseFirestore
 
 struct LoginView: View {
     
@@ -39,9 +38,46 @@ struct LoginView: View {
 //                    .frame(width: 35, height: 35)
 //                    Text("Go back")
                 }
+                
+                
+            }else{
+                //rare case
+                showAlert("Could not find user type, let the user select the type before going to the app")
             }
         }
         
+//        db.collection("users").whereField("uid", isEqualTo: uid).limit(to: 1).getDocuments() { (querySnapshot, err) in
+//            if let err = err {
+//                showAlert("Error getting documents: \(err)")
+//            } else if let query = querySnapshot, let document = query.documents.first {
+//
+//                let data = document.data()
+//                if let type = data["type"] as? Int {
+//                    UserDefaults.standard.set(type, forKey: "currentUserType")
+//                    if type == 1 {
+//                        //go to client views
+//                        presentClient = true
+//                    }else if type == 2 {
+//                        //go to client views
+//                        presentProvider = true
+//                    }else{
+//                        showAlert("User type is not supported")
+//                    }
+//                }else{
+//                    showAlert("Could not find user type, let the user select the type before going to the app")
+//                }
+//            }else{
+//                showAlert("Something went wrong, please try agin.")
+//            }
+//        }
+        
+    }
+    
+    func showAlert(_ title: String){
+        alertTitle = title
+        showingAlert = true
+    }
+    
     var body: some View {
         NavigationView {
         ZStack{
