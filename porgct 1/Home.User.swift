@@ -12,7 +12,8 @@ struct Home_User: View {
     @State var shouldGoToWhatEverPage8: Bool = false
     @State var shouldGoToWhatEverPage9: Bool = false
     @State var showModelView = false
-    
+    let screenWidth = UIScreen.main.bounds.width
+
     var body: some View {
         
             ZStack{
@@ -40,7 +41,7 @@ struct Home_User: View {
                                     
                                     ZStack{
                                         Rectangle()
-                                            .frame(width: 325, height:200)
+                                            .frame(width: screenWidth - 32, height:200)
                                             .foregroundColor(.white)
                                             .cornerRadius(15)
                                         

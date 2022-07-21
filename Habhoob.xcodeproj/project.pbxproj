@@ -45,6 +45,7 @@
 		8ABC2425286DECC1002E214E /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC2424286DECC1002E214E /* Structs.swift */; };
 		AE0E5EC92875106A00C99F02 /* RequestM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E5EC82875106A00C99F02 /* RequestM.swift */; };
 		AE1C2BE928888C40000C08F3 /*  RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1C2BE828888C40000C08F3 /*  RegisterView.swift */; };
+		AE1C2BED2889C6F6000C08F3 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = AE1C2BEC2889C6F6000C08F3 /* FirebaseMessaging */; };
 		AE54AE2128633F94006FD4CB /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2028633F94006FD4CB /* SplashScreenView.swift */; };
 		AE54AE23286342FD006FD4CB /* PageModel-onbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */; };
 		AE54AE2528634356006FD4CB /* PageView-onbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2428634356006FD4CB /* PageView-onbording.swift */; };
@@ -98,6 +99,8 @@
 		8ABC2424286DECC1002E214E /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		AE0E5EC82875106A00C99F02 /* RequestM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestM.swift; sourceTree = "<group>"; };
 		AE1C2BE828888C40000C08F3 /*  RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " RegisterView.swift"; sourceTree = "<group>"; };
+		AE1C2BEA2889BD2C000C08F3 /* Habhoob.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Habhoob.entitlements; sourceTree = "<group>"; };
+		AE1C2BEB2889C30D000C08F3 /* Habhoob-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Habhoob-Info.plist"; sourceTree = "<group>"; };
 		AE54AE2028633F94006FD4CB /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageModel-onbording.swift"; sourceTree = "<group>"; };
 		AE54AE2428634356006FD4CB /* PageView-onbording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageView-onbording.swift"; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 			files = (
 				AEB42152284D337400A942B0 /* FirebaseAuth in Frameworks */,
 				AEB42154284D337400A942B0 /* FirebaseFirestore in Frameworks */,
+				AE1C2BED2889C6F6000C08F3 /* FirebaseMessaging in Frameworks */,
 				8AB6183E2873376200630F61 /* FirebaseDatabase in Frameworks */,
 				AEB42156284D337400A942B0 /* FirebaseStorage in Frameworks */,
 			);
@@ -127,6 +131,8 @@
 		426BDB46284398FB008E9C5A = {
 			isa = PBXGroup;
 			children = (
+				AE1C2BEB2889C30D000C08F3 /* Habhoob-Info.plist */,
+				AE1C2BEA2889BD2C000C08F3 /* Habhoob.entitlements */,
 				426BDB51284398FB008E9C5A /* porgct 1 */,
 				426BDB50284398FB008E9C5A /* Products */,
 				8AB6183C2873376200630F61 /* Frameworks */,
@@ -246,6 +252,7 @@
 				AEB42153284D337400A942B0 /* FirebaseFirestore */,
 				AEB42155284D337400A942B0 /* FirebaseStorage */,
 				8AB6183D2873376200630F61 /* FirebaseDatabase */,
+				AE1C2BEC2889C6F6000C08F3 /* FirebaseMessaging */,
 			);
 			productName = "porgct 1";
 			productReference = 426BDB4F284398FB008E9C5A /* Habhoob.app */;
@@ -473,12 +480,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Habhoob.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"porgct 1/Preview Content\"";
-				DEVELOPMENT_TEAM = Y4VNMJZ7AL;
+				DEVELOPMENT_TEAM = CJZ9C782TZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Habhoob-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = mmm;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = kkk;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -503,12 +514,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Habhoob.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"porgct 1/Preview Content\"";
-				DEVELOPMENT_TEAM = Y4VNMJZ7AL;
+				DEVELOPMENT_TEAM = CJZ9C782TZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Habhoob-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = mmm;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = kkk;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -567,6 +582,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AEB42150284D337400A942B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
+		};
+		AE1C2BEC2889C6F6000C08F3 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEB42150284D337400A942B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 		AEB42151284D337400A942B0 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;

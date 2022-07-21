@@ -15,7 +15,7 @@ struct User{
     let profileImageUrl : String
 
     init(dictionary:[String:Any]){
-        self.id = dictionary[User.id]  as! String
+        self.id = dictionary[User.id] as? String ?? UUID().uuidString
         self.fullName = dictionary[User.fullName]  as? String ?? "N/A"
         self.password = dictionary[User.password]  as? String ?? "N/A"
         self.email = dictionary[User.email]  as? String ?? "N/A"
