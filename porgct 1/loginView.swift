@@ -25,26 +25,26 @@ struct LoginView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
-        var btnBack : some View { Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-            }) {
-                HStack {
-                Image("back") // set image here
-                    .scaledToFit()
-                    .imageScale(.small)
-                    .frame(width: 25, height: 25, alignment: .center)
-//                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.white)
-//                    .frame(width: 35, height: 35)
-//                    Text("Go back")
-                }
-                
-                
-            }else{
-                //rare case
-                showAlert("Could not find user type, let the user select the type before going to the app")
-            }
-        }
+//        var btnBack : some View { Button(action: {
+//            self.presentationMode.wrappedValue.dismiss()
+//            }) {
+//                HStack {
+//                Image("back") // set image here
+//                    .scaledToFit()
+//                    .imageScale(.small)
+//                    .frame(width: 25, height: 25, alignment: .center)
+////                    .aspectRatio(contentMode: .fit)
+//                    .foregroundColor(.white)
+////                    .frame(width: 35, height: 35)
+////                    Text("Go back")
+//                }
+//                
+//                
+//            }else{
+//                //rare case
+////                showAlert("Could not find user type, let the user select the type before going to the app")
+//            }
+//        }
         
 //        db.collection("users").whereField("uid", isEqualTo: uid).limit(to: 1).getDocuments() { (querySnapshot, err) in
 //            if let err = err {
@@ -71,12 +71,12 @@ struct LoginView: View {
 //            }
 //        }
         
-    }
+//    }
     
-    func showAlert(_ title: String){
-        alertTitle = title
-        showingAlert = true
-    }
+//    func showAlert(_ title: String){
+//        alertTitle = title
+//        showingAlert = true
+//    }
     
     var body: some View {
         NavigationView {
@@ -203,21 +203,10 @@ struct LoginView: View {
                                 .foregroundColor(.white)
                         }
                 })
-        }
-    
+    }
+  
 }
-    
-func login(email: String,password: String) {
-               Auth.auth().signIn(withEmail: email, password: password) { res, error in
-                   if error == nil {
-                       print("Succeeded")
-                       
-                   } else {
-                       
-                       print(error?.localizedDescription)
-                   }
-               }
-           }
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {

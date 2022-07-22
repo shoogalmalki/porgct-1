@@ -16,6 +16,7 @@ final class AuthViewModel:ObservableObject{
     @Published var isLoading : Bool = false
     let tableUsers = "users"
     let tableRequests = "requests"
+    let driverTrips = "driverTrips"
    
     // 4
     private let store = Firestore.firestore()
@@ -176,7 +177,30 @@ final class AuthViewModel:ObservableObject{
             }
         }
     }
-    func placeOrderByCustomer(userId:String,pickUp:String,dropOff:String,storagePhotoUrl:String,typeOfShipment:String,notes:String,dateTime:String,timeSlot:String,completion: @escaping ((_ userId:String?,_ error:Error?) -> ())){
+    /*
+    func getDriversTrip(completion : @escaping(_ trips: [DriverTrips])->Void){
+        var trips = [DriverTrips]()
+        KRProgressHUD.show(withMessage: "Please wait...")
+        let driverTrips = store.collection("driverTrips")
+        driverTrips.getDocuments { doc, error in
+            guard let doc = doc else {return}
+            for document in doc.documents{
+                let data = (document.data())
+                let dateAndTime = "\(data["dateAndTime"] ?? "")"
+                let recordKey = document.documentID
+                let driverID = "\(data["driverID"] ?? "")"
+                let driverName = "\(data["driverName"] ?? "")"
+                let drop = "\(data["drop"] ?? "")"
+                let pickup = "\(data["pickup"] ?? "")"
+                let requestFrom = "\(data["requestFrom"] ?? "")"
+                let item = DriverTrips(id: UUID(), dateAndTime: dateAndTime, driverID: driverID, driverName: driverName, drop: drop, pickup: pickup, requestFrom: requestFrom, recoerdKey: recordKey)
+                trips.append(item)
+            }
+            completion(trips)
+            KRProgressHUD.dismiss()
+        }
+    }*/
+    func placeNewTripByCustomer(userId:String,pickUp:String,dropOff:String,storagePhotoUrl:String,typeOfShipment:String,notes:String,dateTime:String,timeSlot:String,completion: @escaping ((_ userId:String?,_ error:Error?) -> ())){
         var placeOrderModel:PlaceOrderModel = PlaceOrderModel()
         placeOrderModel.placeOrderDateTime = dateTime
         placeOrderModel.placeOrderTimeSlot = timeSlot

@@ -177,7 +177,12 @@ struct Home_User: View {
     //                    })
                         NavigationLink(isActive: $shouldGoToWhatEverPage9, destination: {
     //                        Registration2user()
-                            LoginView()
+                            if (UserDefaults.standard.string(forKey: LOGIN_UID) ?? "") == ""{
+                                LoginView()
+                            }else{
+                                new_order_sarah2()
+                            }
+                            
                         }, label: {
 
                         })
@@ -220,7 +225,7 @@ struct Home_User: View {
             .navigationBarTitle("Home", displayMode: .inline)
             .navigationBarHidden(true)
             .onAppear {
-    //                    getDriverTrips()
+//                        getDriverTrips()
             }
         }
             
