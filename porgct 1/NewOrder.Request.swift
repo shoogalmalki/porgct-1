@@ -31,9 +31,7 @@ struct NewOrder_Request: View {
             
                     VStack(alignment: .center, spacing: 10){
            
-            ZStack{
-                location1()
-            }
+            
             ZStack{
                 image1()
                 

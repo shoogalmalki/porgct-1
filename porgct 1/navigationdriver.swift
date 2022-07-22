@@ -24,8 +24,6 @@ struct navigationdriver: View {
                     .cornerRadius(20)
                     .offset(y:48)
 
-           
-               
                 ScrollView(.vertical,showsIndicators: false) {
                 VStack{
 //                    ZStack{
