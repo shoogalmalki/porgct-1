@@ -29,3 +29,32 @@ enum RoleType:Int, CustomStringConvertible {
       }
     }
 }
+
+enum TripStatusType:Int, CustomStringConvertible {
+    case placeTrip = 0
+    case customerAccepted = 1
+    case driverAccepted = 2
+    case tripOnGoing = 3
+    case paymentCompleteByCustomer = 4
+    case tripCompleted = 5
+    case tripCompleteByDispute = 6
+    case tripCancelledByCustomer = 7
+    case tripCancelledByDriver = 8
+    case tripCance
+    
+    public var description: String {
+      get {
+        switch self {
+            case .placeTrip:
+                return "tripStart"
+            case .customerAccepted:
+                return "customerAccepted"
+            case .driverAccepted:
+                return "driverAccepted"
+            case .paymentCompleteByCustomer:
+                return "paymentComplete"
+        case .
+        }
+      }
+    }
+}

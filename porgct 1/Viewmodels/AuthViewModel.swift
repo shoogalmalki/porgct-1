@@ -10,13 +10,14 @@ import Foundation
 import Firebase
 import CodableFirebase
 
+
 final class AuthViewModel:ObservableObject{
     @Published var isAouthenticatting = false
     @Published var user : User?
     @Published var isLoading : Bool = false
     let tableUsers = "users"
     let tableRequests = "requests"
-    let driverTrips = "driverTrips"
+    let tableTrips = "trips"
    
     // 4
     private let store = Firestore.firestore()

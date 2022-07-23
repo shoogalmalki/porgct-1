@@ -36,7 +36,7 @@ struct new_order_sarah2: View, DateAndTimeSelected,LocationSelected {
     
     var body: some View {
         NavigationView{
-//test
+
         ZStack{
             ZStack{
                 Color(.systemMint)
@@ -184,8 +184,8 @@ struct new_order_sarah2: View, DateAndTimeSelected,LocationSelected {
     }
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
-        .edgesIgnoringSafeArea(.all)
+//        .navigationBarHidden(false)
+        .edgesIgnoringSafeArea(.top)
         .navigationBarItems(leading:
             Button(action: {
 //                            self.presentationMode.wrappedValue.dismiss()
