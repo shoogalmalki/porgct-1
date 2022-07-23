@@ -35,14 +35,34 @@ struct Registration2user: View, ImageSelected {
     @State private var showingLoginScreen = false
     @State var shouldGoToWhatEverPage2: Bool = false
     @State var shouldGoToWhatEverPage11: Bool = false
-   
+    @State var shouldGoToDriverHome:Bool  = false
 
 var body: some View {
             NavigationView {
+                
                 ZStack{
                     ZStack{
                         Color(.systemMint)
                             .ignoresSafeArea()
+                    }
+                    ZStack{
+                        HStack{
+                            VStack {
+                                Button(action: {
+                                    self.presentationMode.wrappedValue.dismiss()
+                                }) {
+                                    HStack{
+                                        Image(systemName: "arrow.left")
+                                            .imageScale(.large)
+                                            .frame(width: 50, height: 50, alignment: .center)
+                        //                    .aspectRatio(contentMode: .fit)
+                                            .foregroundColor(.white)
+                                    }
+                                }
+                                Spacer()
+                            }.padding(.init(top: 50, leading: 10, bottom: 0, trailing: 0))
+                            Spacer()
+                        }
                     }
                     ZStack{
                         Rectangle()
@@ -121,10 +141,15 @@ var body: some View {
                             new_order_sarah2()
                         }, label: {
                         })
+                        NavigationLink(isActive: $shouldGoToDriverHome, destination: {
+                            homedriver()
+                        }, label: {
+                        })
                     
                         Button {
-//                            handleAction()
-                            shouldGoToWhatEverPage11 = true
+                            handleAction()
+//                            shouldGoToDriverHome  = true
+//                            shouldGoToWhatEverPage11 = true
                         } label: {
                             HStack {
                                 Spacer()
@@ -249,7 +274,7 @@ var body: some View {
                                     KRProgressHUD.dismiss()
                                     if error == nil{
                                         print("userId===",userId ?? "Nothing")
-                                        self.shouldGoToWhatEverPage11.toggle()
+                                        self.shouldGoToDriverHome.toggle()
 //                                        self.presentationMode.wrappedValue.dismiss()
                                     }else{
                                         self.presentationMode.wrappedValue.dismiss()

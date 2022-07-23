@@ -59,9 +59,9 @@ struct offer: View {
                                 }
                                 
                             }.padding(.top,100)
-                            ScrollView
-                            {
-                                ForEach(self.driversOfferList.indices, id: \.self) { index in
+//                            ScrollView
+//                            {
+//                                ForEach(self.driversOfferList.indices, id: \.self) { index in
 //                                   self.$driversOfferList[index].offerAmount
                                     ZStack{
                                     
@@ -76,7 +76,10 @@ struct offer: View {
                                                     .frame(width: 310, height:30)
                                                     .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.955))
                                                     .cornerRadius(10)
-                                                Text("This captain gives you an offer (\(self.driversOfferList[index].offerAmount) SR) for your order ?")
+                                            Text("""
+                                    This captain gives you an offer (100 SR)
+                                    for your order?
+                                    """)
                                                 .font(.system(size: 14, weight: .semibold, design: .rounded))
                                                 .foregroundColor(.black)
                                             }
@@ -100,7 +103,7 @@ struct offer: View {
                                                                 .font(.caption)
                                                                 .fontWeight(.medium)
                                                         }
-                                                        Text("\(self.driversOfferList[index].fullName)")
+                                                        Text("Omer Saleh")
                                                             .font(.system(size: 11, weight:.bold, design: .default))
                                                             .offset(x:-10)
                                                         
@@ -165,10 +168,10 @@ struct offer: View {
                                             }
                                         }
                                     }
-                                }
-                                
-                                
-                            }
+//                                }
+//
+//
+//                            }
                             
                             //                        .padding(200)
                         }.padding(.bottom,320)

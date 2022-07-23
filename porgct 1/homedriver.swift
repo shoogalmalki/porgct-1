@@ -156,7 +156,7 @@ struct homedriver: View {
 //                                    .font(.system(size: 14, weight: .semibold, design: .rounded))
 //                                    .foregroundColor(.black)
 //                                }
-//                                
+//
 //                                    Image("Image1-1")
 //                                        .resizable()
 //                                        .frame(width: 250, height:25)
@@ -168,7 +168,7 @@ struct homedriver: View {
 //                                            .font(.footnote)
 //                                            .fontWeight(.semibold)
 //                                    }
-//                                    
+//
 //                                    HStack(spacing:33){
 //                                        VStack(alignment: .leading){
 //                                            HStack{
@@ -177,27 +177,27 @@ struct homedriver: View {
 //                                                    .font(.system(size: 12))
 //                                                Text("Sun, June 5(8 -11AM)")
 //                                                    .font(.system(size: 11))
-//                                                
+//
 //                                                    .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
 //                                            }
-//                                            
+//
 //                                            ZStack{
 //                                                RoundedRectangle(cornerRadius: 8)
 //                                                    .stroke(.gray,lineWidth: 1)
 //                                                    .frame(width: 160, height: 65)
-//                                                
+//
 //                                                HStack(spacing:15){
-//                                                    
+//
 //                                                    VStack(spacing:15){
 //                                                        Text("Note:")
 //                                                            .font(.system(size: 15, weight: .bold, design: .rounded))
 //                                                            .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
-//                                                        
+//
 //                                                        Text("Baby walker.")
 //                                                            .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
 //                                                            .font(.system(size:14))
 //
-//                                                        
+//
 //                                                    }
 //                                                    Image("Image9")
 //                                                        .resizable()
@@ -210,31 +210,31 @@ struct homedriver: View {
 //                                                Image("Image2-1")
 //                                                    .resizable()
 //                                                    .frame(width: 57, height:55)
-//                                                
+//
 //                                                ZStack{
 //                                                    Rectangle()
 //                                                        .frame(width: 40, height:15)
 //                                                        .cornerRadius(5)
 //                                                        .foregroundColor(Color("Color1"))
-//                                                    
+//
 //                                                    HStack(spacing:4){
 //                                                        Text("4.9")
 //                                                            .font(.caption)
 //                                                            .fontWeight(.medium)
-//                                                        
+//
 //                                                        Image(systemName: "star.fill")
 //                                                            .foregroundColor(Color.orange)
 //                                                            .frame(width:10.0 , height: 22)
 //                                                            .font(.system(size: 12))
 //                                                    }
 //                                                }
-//                                                
+//
 //                                            }
 //                                            Text("OMER SALEH")
 //                                                .font(.footnote)
-//                                               
+//
 //                                        }
-//                                        
+//
 //                                    }
 //                                    HStack{
 //                                        Button(action: {}, label: {
@@ -242,31 +242,31 @@ struct homedriver: View {
 //                                                .font(.callout)
 //                                                .fontWeight(.semibold)
 //                                                .foregroundColor(Color.white)
-//                                            
+//
 //                                        })
 //                                        .frame(width: 140, height:30)
 //                                        .background(.green)
 //                                        .cornerRadius(5)
-//                                        
-//                                        
+//
+//
 //                                        Button(action: {}, label: {
 //                                            Text("Decline")
 //                                                .font(.callout)
 //                                                .fontWeight(.semibold)
 //                                                .foregroundColor(Color.white)
-//                                            
+//
 //                                        })
 //                                        .frame(width: 140, height:30)
 //                                        .background(.red)
 //                                        .cornerRadius(5)
-//                                        
+//
 //                                    }
 //                                }
 //
 //        //                            NavigationDriverCard()
 //
 //        //                       .padding(.top,77)
-//                           
+//
 //                            }
 //                            ZStack{
 //                                Rectangle()
@@ -274,7 +274,7 @@ struct homedriver: View {
 //                                    .foregroundColor(.white)
 //                                    .cornerRadius(10)
 //                                VStack(spacing:6){
-//                                
+//
 //                                    ZStack{
 //                                        Rectangle()
 //                                            .frame(width: 310, height:30)
@@ -284,7 +284,7 @@ struct homedriver: View {
 //                                        .font(.system(size: 14, weight: .semibold, design: .rounded))
 //                                        .foregroundColor(.black)
 //                                    }
-//                                    
+//
 //                                    Image("Image1-1")
 //                                        .resizable()
 //                                        .frame(width: 250, height:25)
@@ -296,7 +296,7 @@ struct homedriver: View {
 //                                            .font(.footnote)
 //                                            .fontWeight(.semibold)
 //                                    }
-//                                    
+//
 //                                    HStack(spacing:33){
 //                                        VStack(alignment: .leading){
 //                                            HStack{
@@ -305,27 +305,27 @@ struct homedriver: View {
 //                                                    .font(.system(size: 12))
 //                                                Text("Sun, June 5(8 -11AM)")
 //                                                    .font(.system(size: 11))
-//                                                
+//
 //                                                    .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
 //                                            }
-//                                            
+//
 //                                            ZStack{
 //                                                RoundedRectangle(cornerRadius: 8)
 //                                                    .stroke(.gray,lineWidth: 1)
 //                                                    .frame(width: 160, height: 65)
-//                                                
+//
 //                                                HStack(spacing:15){
-//                                                    
+//
 //                                                    VStack(spacing:15){
 //                                                        Text("Note:")
 //                                                            .font(.system(size: 15, weight: .bold, design: .rounded))
 //                                                            .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
-//                                                        
+//
 //                                                        Text("Baby walker.")
 //                                                            .foregroundColor(Color(hue: 0.492, saturation: 0.851, brightness: 0.64))
 //                                                            .font(.system(size:14))
 //
-//                                                        
+//
 //                                                    }
 //                                                    Image("Image9")
 //                                                        .resizable()
@@ -338,31 +338,31 @@ struct homedriver: View {
 //                                                Image("Image2-1")
 //                                                    .resizable()
 //                                                    .frame(width: 57, height:55)
-//                                                
+//
 //                                                ZStack{
 //                                                    Rectangle()
 //                                                        .frame(width: 40, height:15)
 //                                                        .cornerRadius(5)
 //                                                        .foregroundColor(Color("Color1"))
-//                                                    
+//
 //                                                    HStack(spacing:4){
 //                                                        Text("4.9")
 //                                                            .font(.caption)
 //                                                            .fontWeight(.medium)
-//                                                        
+//
 //                                                        Image(systemName: "star.fill")
 //                                                            .foregroundColor(Color.orange)
 //                                                            .frame(width:10.0 , height: 22)
 //                                                            .font(.system(size: 12))
 //                                                    }
 //                                                }
-//                                                
+//
 //                                            }
 //                                            Text("OMER SALEH")
 //                                                .font(.footnote)
-//                                               
+//
 //                                        }
-//                                        
+//
 //                                    }
 //                                    HStack{
 //                                        Button(action: {}, label: {
@@ -370,31 +370,31 @@ struct homedriver: View {
 //                                                .font(.callout)
 //                                                .fontWeight(.semibold)
 //                                                .foregroundColor(Color.white)
-//                                            
+//
 //                                        })
 //                                        .frame(width: 140, height:30)
 //                                        .background(.green)
 //                                        .cornerRadius(5)
-//                                        
-//                                        
+//
+//
 //                                        Button(action: {}, label: {
 //                                            Text("Decline")
 //                                                .font(.callout)
 //                                                .fontWeight(.semibold)
 //                                                .foregroundColor(Color.white)
-//                                            
+//
 //                                        })
 //                                        .frame(width: 140, height:30)
 //                                        .background(.red)
 //                                        .cornerRadius(5)
-//                                        
+//
 //                                    }
 //                                }
 //
 //        //                            NavigationDriverCard()
 //
 //        //                       .padding(.top,77)
-//                           
+//
 //                            }
                          
                         }
@@ -455,6 +455,24 @@ struct homedriver: View {
                 })
             }
         }
+        ///Start here
+
+        .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
+            .edgesIgnoringSafeArea(.bottom)
+            .navigationBarItems(leading:
+                Button(action: {
+    //                            self.presentationMode.wrappedValue.dismiss()
+//                    self.mode.wrappedValue.dismiss()
+                }) {
+                    HStack {
+                        Image(systemName: "arrow.left")
+                            .imageScale(.large)
+                            .frame(width: 25, height: 25, alignment: .center)
+        //                    .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.white)
+                    }
+            })
         
     }
 }

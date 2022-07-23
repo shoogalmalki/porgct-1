@@ -38,8 +38,8 @@ struct LoginView: View {
 ////                    .frame(width: 35, height: 35)
 ////                    Text("Go back")
 //                }
-//                
-//                
+//
+//
 //            }else{
 //                //rare case
 ////                showAlert("Could not find user type, let the user select the type before going to the app")
@@ -86,14 +86,36 @@ struct LoginView: View {
             Color(.systemMint)
                 .ignoresSafeArea()
             }
-        
             ZStack{
+                HStack{
+                    VStack {
+                        Button(action: {
+//                            self.presentationMode.wrappedValue.dismiss()
+                            shouldGoToWhatEverPage3.toggle()
+                        }) {
+                            HStack{
+                                Image(systemName: "arrow.left")
+                                    .imageScale(.large)
+                                    .frame(width: 25, height: 25, alignment: .center)
+                //                    .aspectRatio(contentMode: .fit)
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        Spacer()
+                    }.padding(.init(top: 50, leading: 10, bottom: 0, trailing: 0))
+                    Spacer()
+                }
+            }
+        
+            
+            ZStack{
+                
                 Rectangle()
                     .frame(width: .infinity, height: UIScreen.main
-                        .bounds.size.height - 75)
+                        .bounds.size.height - 150)
                         .foregroundColor(Color("Color1"))
                         .cornerRadius(20)
-                        .padding(.init(top: 50, leading: 0, bottom: 0, trailing: 0))
+                        .padding(.init(top: 150, leading: 0, bottom: 0, trailing: 0))
 //                HStack(alignment: .top, spacing: 10){
                 VStack(spacing:10){
                            Text("Login")
@@ -137,6 +159,8 @@ struct LoginView: View {
                         })
                         
                           Button("Login") {
+//                              shouldGoToWhatEverPage3.toggle()
+                             
                               KRProgressHUD.show(withMessage: "Please Wait...")
                               AuthViewModel().loginUser(email: Email, password: password){userModel,error in
                                   KRProgressHUD.dismiss()
@@ -180,18 +204,19 @@ struct LoginView: View {
                           }
                         Spacer()
                         
-                    }.padding(.top, 90)
+                    }.padding(.top, 180)
 
                     
                           }
                 
 //                       }
-                }
+                }.edgesIgnoringSafeArea(.all)
         }
         .navigationBarBackButtonHidden(true)
 //        .navigationBarItems(leading: btnBack)
-                .edgesIgnoringSafeArea(.bottom)
-                .navigationBarItems(leading:
+        .navigationBarHidden(true)
+                .edgesIgnoringSafeArea(.all)
+                /*.navigationBarItems(leading:
                     Button(action: {
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
@@ -202,7 +227,7 @@ struct LoginView: View {
             //                    .aspectRatio(contentMode: .fit)
                                 .foregroundColor(.white)
                         }
-                })
+                })*/
     }
   
 }
