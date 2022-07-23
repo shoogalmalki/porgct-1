@@ -114,7 +114,7 @@ final class AuthViewModel:ObservableObject{
             }
         }
     }
-    func createDriverRegister(fullname:String,phoneNumber:String,roleType:RoleType = .none,email: String,password: String,profileImageUrl:String,driverLicenceImageUrl:String,insuranceImageUrl:String,completion: @escaping ((_ userId:String?,_ error:Error?) -> ())) {
+    func createDriverRegister(fullname:String,phoneNumber:String,roleType:RoleType = .none, driverMode:DriverModeType = .on,email: String,password: String,profileImageUrl:String,driverLicenceImageUrl:String,insuranceImageUrl:String,completion: @escaping ((_ userId:String?,_ error:Error?) -> ())) {
         print("password===",password)
         Auth.auth().createUser(withEmail: email, password: password) { res, error in
             if error == nil {
@@ -130,6 +130,8 @@ final class AuthViewModel:ObservableObject{
                 userModel.driverLicenceImageUrl = driverLicenceImageUrl
                 userModel.insuranceImageUrl = insuranceImageUrl
                 userModel.profileImageUrl = profileImageUrl
+                userModel.driverModeType = driverMode.description
+                
                 UserDefaults.standard.set( res?.user.uid , forKey:LOGIN_UID )
                 UserDefaults.standard.set( email , forKey:LOGIN_EMAIL)
                 UserDefaults.standard.set( roleType.description , forKey:LOGIN_USER_TYPE)
@@ -201,21 +203,22 @@ final class AuthViewModel:ObservableObject{
             KRProgressHUD.dismiss()
         }
     }*/
-    func placeNewTripByCustomer(userId:String,pickUp:String,dropOff:String,storagePhotoUrl:String,typeOfShipment:String,notes:String,dateTime:String,timeSlot:String,completion: @escaping ((_ userId:String?,_ error:Error?) -> ())){
+    func placeNewTripByCustomer(userId:String,pickUp:String,dropOff:String,tripStatus:TripStatusType = .none,storagePhotoUrl:String,typeOfShipment:ShipmentItemSize,notes:String,dateTime:String,timeSlot:String,completion: @escaping ((_ userId:String?,_ error:Error?) -> ())){
         var placeOrderModel:PlaceOrderModel = PlaceOrderModel()
         placeOrderModel.placeOrderDateTime = dateTime
         placeOrderModel.placeOrderTimeSlot = timeSlot
         placeOrderModel.dropoffCity = dropOff
         placeOrderModel.pickupCity = pickUp
         placeOrderModel.userId = userId
-        placeOrderModel.shipmentSize = typeOfShipment
-        placeOrderModel.imageURL = storagePhotoUrl
+        placeOrderModel.shipmentSize = typeOfShipment.description
+        placeOrderModel.shipmentImageURL = storagePhotoUrl
         placeOrderModel.desc = notes
-        placeOrderModel.orderBookedStatus = "0"
+        placeOrderModel.tripStatus = tripStatus.description
+        
         do {
             let dict:[String:Any] = try FirebaseEncoder().encode(placeOrderModel) as! [String : Any]
             var ref: DocumentReference? = nil
-            ref = self.store.collection(self.tableRequests).addDocument(data: dict ) { err in
+            ref = self.store.collection(self.tableTrips).addDocument(data: dict ) { err in
                 if let err = err {
                     print("Error adding document: \(err)")
                     completion(nil,err)

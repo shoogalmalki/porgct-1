@@ -44,7 +44,6 @@
 		8ABC2423286DDEF1002E214E /* new.order.sarah2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC2422286DDEF1002E214E /* new.order.sarah2.swift */; };
 		8ABC2425286DECC1002E214E /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC2424286DECC1002E214E /* Structs.swift */; };
 		AE0E5EC92875106A00C99F02 /* RequestM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E5EC82875106A00C99F02 /* RequestM.swift */; };
-		AE1C2BE928888C40000C08F3 /*  RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1C2BE828888C40000C08F3 /*  RegisterView.swift */; };
 		AE1C2BED2889C6F6000C08F3 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = AE1C2BEC2889C6F6000C08F3 /* FirebaseMessaging */; };
 		AE54AE2128633F94006FD4CB /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2028633F94006FD4CB /* SplashScreenView.swift */; };
 		AE54AE23286342FD006FD4CB /* PageModel-onbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */; };
@@ -102,7 +101,6 @@
 		8ABC2422286DDEF1002E214E /* new.order.sarah2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = new.order.sarah2.swift; sourceTree = "<group>"; };
 		8ABC2424286DECC1002E214E /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		AE0E5EC82875106A00C99F02 /* RequestM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestM.swift; sourceTree = "<group>"; };
-		AE1C2BE828888C40000C08F3 /*  RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " RegisterView.swift"; sourceTree = "<group>"; };
 		AE1C2BEA2889BD2C000C08F3 /* Habhoob.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Habhoob.entitlements; sourceTree = "<group>"; };
 		AE1C2BEB2889C30D000C08F3 /* Habhoob-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Habhoob-Info.plist"; sourceTree = "<group>"; };
 		AE54AE2028633F94006FD4CB /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 				AEBD7846284794EA00202C25 /* NewRegistration.swift */,
 				AE9F5D07287B1A3E00C157B2 /* Registration2user.swift */,
 				AE9F5D0128763DDB00C157B2 /* loginView.swift */,
-				AE1C2BE828888C40000C08F3 /*  RegisterView.swift */,
 				AEB4214C284D137600A942B0 /* offer.swift */,
 				8A2857242881162F00115251 /* DoNotOffer.swift */,
 				857DC72728666E71003D8A23 /*  OrderDriver.swift */,
@@ -330,7 +327,6 @@
 				AE54AE27286343CF006FD4CB /* pageView-onbording2.swift in Sources */,
 				8A2857212880D05300115251 /* NewOrder.Request.swift in Sources */,
 				8A28572928824E9F00115251 /* MyOrderUser2.swift in Sources */,
-				AE1C2BE928888C40000C08F3 /*  RegisterView.swift in Sources */,
 				8AB618362873261500630F61 /* UserModel.swift in Sources */,
 				8AB61839287327AB00630F61 /* UserVM.swift in Sources */,
 				8A28572B28824FFA00115251 /* payment.order.swift in Sources */,

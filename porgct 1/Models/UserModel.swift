@@ -64,10 +64,12 @@ struct User:Codable{
 //        case password = "password"
         case email = "email"
         case phoneNumber = "phone"
-//        case profileImageUrl = "profileImageUrl"
-//        case driverLicenceImageUrl = "driverLicenceImageUrl"
-//        case insuranceImageUrl = "insuranceImageUrl"
+        case profileImageUrl = "profileImageUrl"
+        case driverLicenceImageUrl = "driverLicenceImageUrl"
+        case insuranceImageUrl = "insuranceImageUrl"
         case roleType = "type"
+        case offerAmount = "offerAmount"
+        case driverModeType = "driverMode"
     }
     var userId:String = ""
     var fullName:String = ""
@@ -76,8 +78,12 @@ struct User:Codable{
     var profileImageUrl:String = ""
     var driverLicenceImageUrl:String = ""
     var insuranceImageUrl:String = ""
-    var roleType:String = "customer"
+    var roleType:String = ""
     var phoneNumber:String = ""
+    var driverModeType:String = ""
+    var offerAmount:String = "10"
+    
+   
 
     init() {
         
@@ -86,13 +92,20 @@ struct User:Codable{
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         userId = try container.decodeIfPresent(String.self, forKey: .userId) ?? ""
+        roleType = try container.decodeIfPresent(String.self, forKey: .roleType) ?? "customer"
         fullName = try container.decodeIfPresent(String.self, forKey: .email) ?? ""
 //        password = try container.decodeIfPresent(String.self, forKey: .password) ?? ""
         email = try container.decodeIfPresent(String.self, forKey: .email) ?? ""
-//        profileImageUrl = try container.decodeIfPresent(String.self, forKey: .profileImageUrl) ?? ""
-//        driverLicenceImageUrl = try container.decodeIfPresent(String.self, forKey: .driverLicenceImageUrl) ?? ""
-//        insuranceImageUrl = try container.decodeIfPresent(String.self, forKey: .insuranceImageUrl) ?? ""
-        roleType = try container.decodeIfPresent(String.self, forKey: .roleType) ?? "customer"
+        if roleType.uppercased() == "DRIVER"
+        {
+            driverLicenceImageUrl = try container.decodeIfPresent(String.self, forKey: .driverLicenceImageUrl) ?? ""
+            insuranceImageUrl = try container.decodeIfPresent(String.self, forKey: .insuranceImageUrl) ?? ""
+            offerAmount = try container.decodeIfPresent(String.self, forKey: .offerAmount) ?? ""
+            driverModeType = try container.decodeIfPresent(String.self, forKey: .driverModeType) ?? ""
+        }
+        profileImageUrl = try container.decodeIfPresent(String.self, forKey: .profileImageUrl) ?? ""
+        
+       
         phoneNumber = try container.decodeIfPresent(String.self, forKey: .phoneNumber) ?? ""
     }
 }

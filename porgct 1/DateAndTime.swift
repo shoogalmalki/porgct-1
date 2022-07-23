@@ -101,15 +101,6 @@ struct DateAndTime: View {
 //            NavigationLink(){
 //                new_order_sarah2()
 //            } label: {
-            Button("Done") {
-
-            }
-
-            .foregroundColor(.white)
-            .font(.system(size: 18, weight: .semibold, design: .serif))
-               .frame(width: 300, height: 50)
-               .background(Color(UIColor.systemMint))
-                .cornerRadius(10)
 //        }
         }
         }

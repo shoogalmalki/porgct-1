@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+
 struct StepsOfOrder : View{
     var body: some View{
         ZStack{
@@ -37,7 +38,13 @@ struct StepsOfOrder : View{
     }
 }
 
+protocol ImageSelected{
+    func imageDriverCarLicence(img: UIImage)
+    func imageDriverCarInsurance(img: UIImage)
+}
 struct image1 : View{
+    var imageType : ImageType
+    public var delegate: ImageSelected?
     @State private var image =  UIImage()
     @State private var sourceType: UIImagePickerController.SourceType
     = .camera
@@ -76,13 +83,30 @@ struct image1 : View{
                 
             }
         }
+        .onChange(of: image) { _ in
+            print(imageType)
+            if imageType == .driverCarLicenceImage{
+                delegate?.imageDriverCarLicence(img: image)
+            }
+            else{
+                delegate?.imageDriverCarInsurance(img: image)
+            }
+            
+        }
     }
 }
 
+
+protocol ShipmentItemSizeSelected{
+    func shipmentItemSizeSelected(size: ShipmentItemSize)
+}
+
 struct size1 : View{
+    public var delegate: ShipmentItemSizeSelected?
     @State var showRectangle: Bool = false
     @State var showRectangle1: Bool = false
     @State var showRectangle2: Bool = false
+    
     var body: some View{
 //        if showRectangle == true {
             
@@ -90,6 +114,7 @@ struct size1 : View{
                 showRectangle = true
                 showRectangle1 = false
                 showRectangle2 = false
+                delegate?.shipmentItemSizeSelected(size: .small)
             }, label: {
                 ZStack{
                     Rectangle()
@@ -138,7 +163,7 @@ struct size1 : View{
                 showRectangle = false
                 showRectangle1 = true
                 showRectangle2 = false
-                
+                delegate?.shipmentItemSizeSelected(size: .medium)
             }, label: {
                 ZStack{
                     Rectangle()
@@ -185,6 +210,7 @@ struct size1 : View{
                 showRectangle = false
                 showRectangle1 = false
                 showRectangle2 = true
+                delegate?.shipmentItemSizeSelected(size: .large)
             }, label: {
                 ZStack{
                     Rectangle()
@@ -238,8 +264,12 @@ struct size2 : View{
             .font(.system(size: 8, weight: .regular, design: .rounded))
     }
 }
-
-struct textfield : View{
+protocol NotesSelected{
+    func notesSelected(description: String)
+}
+struct textfield : View {
+    public var delegate: NotesSelected?
+    
     var body: some View{
         TextField("More Details (Exp: Keep away from heat...) ", text: .constant(""))
             .font(.system(size: 13))
@@ -283,16 +313,17 @@ struct Schedule :View{
                      
 
 var ButtonNewOrder: some View {
-    NavigationLink(){
-        offer()
-    } label: {
-        Text("Place Order")
-            .font(.system(size: 20, weight: .semibold, design: .serif))
-            .foregroundColor(Color.white)
-            .frame(width: 300, height: 50)
-            .background(Color(UIColor.systemMint))
-            .cornerRadius(10)
-    }
+    Text("Place Order")
+        .font(.system(size: 20, weight: .semibold, design: .serif))
+        .foregroundColor(Color.white)
+        .frame(width: 300, height: 50)
+        .background(Color(UIColor.systemMint))
+        .cornerRadius(10)
+//    NavigationLink(){
+////        offer()
+//    } label: {
+//
+//    }
 }
 var ButtonNewOrderR: some View {
     NavigationLink(){

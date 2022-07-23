@@ -27,18 +27,20 @@ struct PlaceOrderModel:Codable {
 //        case acceptedDriverId = "acceptedDriverId"
 //    }
     var userId:String = ""
+    var acceptedDriverId:String = ""
     var pickupCity:String = ""
     var dropoffCity:String = ""
     var placeOrderDateTime:String = ""
     var placeOrderTimeSlot:String = ""
-    var orderBookedStatus:String = ""
-    var clientName:String = ""
-    var imageURL:String = ""
-    var offeredBy:String = "customer"
-    var offers:String = ""
-    var desc:String = ""
+    var tripStatus:String = ""
+    var shipmentImageURL:String = ""
+    var offerAmount:String = ""
     var shipmentSize:String = ""
-    var acceptedDriverId:String = ""
+    var driverName = ""
+    var driverPhoneNumber = ""
+    var customerName = ""
+    var customerPhoneNumber = ""
+    var desc:String = ""
     
 
     init() {

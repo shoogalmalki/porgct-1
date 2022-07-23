@@ -9,23 +9,33 @@ import SwiftUI
 import KRProgressHUD
 
 
-struct Registration2user: View {
+struct Registration2user: View, ImageSelected {
+    
+    func imageDriverCarLicence(img: UIImage) {
+        driverCarLicenceImage = img
+    }
+    func imageDriverCarInsurance(img: UIImage) {
+        driverCarinsuranceImage = img
+    }
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @State private var driverCarinsuranceImage = UIImage()
+    @State private var driverCarLicenceImage = UIImage()
     @State var showAlert = false
     @State var errorString = ""
     @State private var isUserType = true
-        @State var isLoginMode = false
-        @State private var FullName = ""
-        @State private var Email = ""
-        @State private var PhoneNumber = ""
-        @State private var password = ""
-        @State private var wrongFullName: Float = 0
-        @State private var wrongEmail: Float = 0
-        @State private var wrongPassword: Float  = 0
-        @State private var showingLoginScreen = false
-        @State var shouldGoToWhatEverPage2: Bool = false
+    @State var isLoginMode = false
+    @State private var FullName = ""
+    @State private var Email = ""
+    @State private var PhoneNumber = ""
+    @State private var password = ""
+    @State private var wrongFullName: Float = 0
+    @State private var wrongEmail: Float = 0
+    @State private var wrongPassword: Float  = 0
+    @State private var showingLoginScreen = false
+    @State var shouldGoToWhatEverPage2: Bool = false
     @State var shouldGoToWhatEverPage11: Bool = false
+   
 
 var body: some View {
             NavigationView {
@@ -96,14 +106,14 @@ var body: some View {
                             Text("Kindly provide your driving license")
                             .font(.system(size: 18, weight: .semibold, design: .serif))
                             ZStack{
-                                image1()
+                                image1(imageType: .driverCarLicenceImage, delegate: self)
                                 
                             }
                             
                             Text("Kindly provide your car insurance")
                                 .font(.system(size: 18, weight: .semibold, design: .serif))
                             ZStack{
-                                image1()
+                                image1(imageType: .driverCarInsuranceImage, delegate: self)
                                 
                             }
                         }
@@ -113,8 +123,8 @@ var body: some View {
                         })
                     
                         Button {
-                            handleAction()
-                            shouldGoToWhatEverPage11.toggle()
+//                            handleAction()
+                            shouldGoToWhatEverPage11 = true
                         } label: {
                             HStack {
                                 Spacer()
@@ -171,38 +181,97 @@ var body: some View {
                 print("Register a new account inside of Firebase Auth and then store image in Storage somehow....")
                 print("Email===",Email)
                 if isUserType{
-                    KRProgressHUD.show(withMessage: "Please Wait...")
-                    AuthViewModel().createCustomerRegister(fullname:FullName,phoneNumber:PhoneNumber, roleType: .user ,email: Email, password: password){userId,error in
-                        KRProgressHUD.dismiss()
-                        if error == nil{
-                            print("userId===",userId ?? "Nothing")
-                            self.presentationMode.wrappedValue.dismiss()
-                        }else{
-                            self.presentationMode.wrappedValue.dismiss()
-                            print("error===",error?.localizedDescription ??  "Error Occured")
-                            self.errorString = error?.localizedDescription ?? "Error Occured"
-                            self.showAlert = true
+                        if FullName.isEmpty{
+                            errorString = "Please enter your name"
+                            showAlert = true
+                        } else if PhoneNumber.isEmpty{
+                            errorString = "Please enter your phone"
+                            showAlert = true
+                        } else if !validateEmail(enteredEmail: Email){
+                            errorString = "Please enter a valid email"
+                            showAlert = true
+                        } else if password.isEmpty{
+                            errorString = "Please enter password"
+                            showAlert = true
+                        } else if password.count < 6 {
+                            errorString = "Password must by 6 character long"
+                            showAlert = true
                         }
-                    }
+                        else{
+                            KRProgressHUD.show(withMessage: "Please Wait...")
+                            AuthViewModel().createCustomerRegister(fullname:FullName,phoneNumber:PhoneNumber, roleType: .user ,email: Email, password: password){userId,error in
+                                KRProgressHUD.dismiss()
+                                if error == nil{
+                                    print("userId===",userId ?? "Nothing")
+                                    self.shouldGoToWhatEverPage11.toggle()
+//                                    self.presentationMode.wrappedValue.dismiss()
+                                }else{
+                                    self.presentationMode.wrappedValue.dismiss()
+                                    print("error===",error?.localizedDescription ??  "Error Occured")
+                                    self.errorString = error?.localizedDescription ?? "Error Occured"
+                                    self.showAlert = true
+                                }
+                            }
+                        }
                 }
                 else{
-                    KRProgressHUD.show(withMessage: "Please Wait...")
-                    AuthViewModel().createDriverRegister(fullname:FullName,phoneNumber:PhoneNumber, roleType: .driver ,email: Email,password: password, profileImageUrl:"",driverLicenceImageUrl:"", insuranceImageUrl:""){userId,error in
-                        KRProgressHUD.dismiss()
-                        if error == nil{
-                            print("userId===",userId ?? "Nothing")
-                            self.presentationMode.wrappedValue.dismiss()
-                        }else{
-                            self.presentationMode.wrappedValue.dismiss()
-                            print("error===",error?.localizedDescription ??  "Error Occured")
-                            errorString = error?.localizedDescription ?? "Error Occured"
-                            showAlert = true
+                    if FullName.isEmpty{
+                        errorString = "Please enter your name"
+                        showAlert = true
+                    } else if PhoneNumber.isEmpty{
+                        errorString = "Please enter your phone"
+                        showAlert = true
+                    } else if !validateEmail(enteredEmail: Email){
+                        errorString = "Please enter a valid email"
+                        showAlert = true
+                    } else if password.isEmpty{
+                        errorString = "Please enter password"
+                        showAlert = true
+                    } else if password.count < 6 {
+                        errorString = "Password must by 6 character long"
+                        showAlert = true
+                    }
+                    else if driverCarLicenceImage.size.height == 0.0 {
+                        errorString = "Please select Driving License"
+                        showAlert = true
+                    } else if driverCarinsuranceImage.size.height == 0.0 {
+                        errorString = "Please select insurance image"
+                        showAlert = true
+                    }else{
+                        KRProgressHUD.show(withMessage: "Please Wait...")
+                        var driverCarLicenceImageUrl = ""
+                        var driverCarinsuranceImageUrl = ""
+                        driverCarLicenceImage.uploadMedia { url in
+                            driverCarLicenceImageUrl = url ?? ""
+                            driverCarinsuranceImage.uploadMedia { url in
+                                driverCarinsuranceImageUrl = url ?? ""
+                                AuthViewModel().createDriverRegister(fullname:FullName,phoneNumber:PhoneNumber, roleType: .driver, driverMode: .on ,email: Email,password: password, profileImageUrl:"",driverLicenceImageUrl:driverCarLicenceImageUrl, insuranceImageUrl:driverCarinsuranceImageUrl){userId,error in
+                                    KRProgressHUD.dismiss()
+                                    if error == nil{
+                                        print("userId===",userId ?? "Nothing")
+                                        self.shouldGoToWhatEverPage11.toggle()
+//                                        self.presentationMode.wrappedValue.dismiss()
+                                    }else{
+                                        self.presentationMode.wrappedValue.dismiss()
+                                        print("error===",error?.localizedDescription ??  "Error Occured")
+                                        errorString = error?.localizedDescription ?? "Error Occured"
+                                        showAlert = true
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
         }
-    }
+        func validateEmail(enteredEmail:String) -> Bool {
+            
+            let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+            let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
+            return emailPredicate.evaluate(with: enteredEmail)
+            
+        }
+}
 
 
 struct Registration2user_Previews: PreviewProvider {

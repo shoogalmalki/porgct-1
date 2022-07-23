@@ -33,7 +33,7 @@ struct NewOrder_Request: View {
            
             
             ZStack{
-                image1()
+//                image1()
                 
             }
           

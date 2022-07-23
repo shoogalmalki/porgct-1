@@ -30,21 +30,65 @@ enum RoleType:Int, CustomStringConvertible {
     }
 }
 
-enum TripStatusType:Int, CustomStringConvertible {
-    case placeTrip = 0
-    case customerAccepted = 1
-    case driverAccepted = 2
-    case tripOnGoing = 3
-    case paymentCompleteByCustomer = 4
-    case tripCompleted = 5
-    case tripCompleteByDispute = 6
-    case tripCancelledByCustomer = 7
-    case tripCancelledByDriver = 8
-    case tripCance
+enum DriverModeType:Int, CustomStringConvertible {
+    case on = 0
+    case off
     
     public var description: String {
       get {
         switch self {
+            case .on:
+                return "on"
+            case .off:
+                return "off"
+        }
+      }
+    }
+}
+enum ImageType{
+    case driverCarLicenceImage
+    case driverCarInsuranceImage
+    case driverPhoto
+    case customerPhoto
+}
+enum ShipmentItemSize:Int, CustomStringConvertible {
+    case empty = 0
+    case small
+    case medium
+    case large
+    
+    public var description: String {
+      get {
+        switch self {
+            case .empty:
+                return ""
+            case .small:
+                return "small"
+            case .medium:
+                return "medium"
+            case .large:
+                return "large"
+        }
+      }
+    }
+}
+
+enum TripStatusType:Int, CustomStringConvertible {
+    case none = 0
+    case placeTrip
+    case customerAccepted
+    case driverAccepted
+    case tripOnGoing
+    case paymentCompleteByCustomer
+    case tripCompleted
+    case tripCancelledByCustomer
+    case tripCancelledByDriver
+    
+    public var description: String {
+      get {
+        switch self {
+            case .none:
+                return "none"
             case .placeTrip:
                 return "tripStart"
             case .customerAccepted:
@@ -53,7 +97,14 @@ enum TripStatusType:Int, CustomStringConvertible {
                 return "driverAccepted"
             case .paymentCompleteByCustomer:
                 return "paymentComplete"
-        case .
+            case .tripOnGoing:
+                return "tripOnGoing"
+            case .tripCompleted:
+                return "tripCompleted"
+            case .tripCancelledByCustomer:
+                return "tripCancelledByCustomer"
+            case .tripCancelledByDriver:
+                return "tripCancelledByDriver"
         }
       }
     }
