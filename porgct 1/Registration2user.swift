@@ -36,7 +36,7 @@ struct Registration2user: View, ImageSelected {
     @State private var showingLoginScreen = false
     @State var shouldGoToWhatEverPage2: Bool = false
     @State var shouldGoToWhatEverPage11: Bool = false
-   
+    @State var shouldGoToDriverHome:Bool  = false
 
     var body: some View {
 //            NavigationView {
@@ -253,7 +253,7 @@ struct Registration2user: View, ImageSelected {
                                     KRProgressHUD.dismiss()
                                     if error == nil{
                                         print("userId===",userId ?? "Nothing")
-                                        self.shouldGoToWhatEverPage11.toggle()
+                                        self.shouldGoToDriverHome.toggle()
 //                                        self.presentationMode.wrappedValue.dismiss()
                                     }else{
                                         self.presentationMode.wrappedValue.dismiss()

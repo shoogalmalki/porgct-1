@@ -244,8 +244,8 @@ struct new_order_sarah2: View, DateAndTimeSelected,LocationSelected,ShipmentItem
             }
         }
         .navigationBarBackButtonHidden(true)
-//        .navigationBarHidden(false)
-        .edgesIgnoringSafeArea(.top)
+        .navigationBarHidden(true)
+        .edgesIgnoringSafeArea(.bottom)
         .navigationBarItems(leading:
             Button(action: {
 //                            self.presentationMode.wrappedValue.dismiss()
