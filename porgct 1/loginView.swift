@@ -88,29 +88,6 @@ struct LoginView: View {
                 .ignoresSafeArea()
             }
             ZStack{
-                HStack{
-                    VStack {
-                        Button(action: {
-//                            self.presentationMode.wrappedValue.dismiss()
-                            shouldGoToWhatEverPage3.toggle()
-                        }) {
-                            HStack{
-                                Image(systemName: "arrow.left")
-                                    .imageScale(.large)
-                                    .frame(width: 25, height: 25, alignment: .center)
-                //                    .aspectRatio(contentMode: .fit)
-                                    .foregroundColor(.white)
-                            }
-                        }
-                        Spacer()
-                    }.padding(.init(top: 50, leading: 10, bottom: 0, trailing: 0))
-                    Spacer()
-                }
-            }
-        
-            
-            ZStack{
-                
                 Rectangle()
                     .frame(width: .infinity, height: UIScreen.main
                         .bounds.size.height - verticalPaddingForForm)
@@ -207,7 +184,7 @@ struct LoginView: View {
                     }.padding(.top, verticalPaddingForForm + 30)
 
                     
-            }.edgesIgnoringSafeArea(.all)
+            }
                 
 //                       }
                 }
@@ -216,20 +193,19 @@ struct LoginView: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(false)
 //        .navigationBarItems(leading: btnBack)
-        .navigationBarHidden(true)
-                .edgesIgnoringSafeArea(.all)
-                /*.navigationBarItems(leading:
-                    Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        HStack {
-                            Image(systemName: "arrow.left")
-                                .imageScale(.large)
-                                .frame(width: 25, height: 25, alignment: .center)
-            //                    .aspectRatio(contentMode: .fit)
-                                .foregroundColor(.white)
-                        }
-                })*/
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarItems(leading:
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                HStack {
+                    Image(systemName: "arrow.left")
+                        .imageScale(.large)
+                        .frame(width: 25, height: 25, alignment: .center)
+    //                    .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.white)
+                }
+        })
     }
   
 }

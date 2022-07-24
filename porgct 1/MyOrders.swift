@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MyOrders: View {
+    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State var showRectangle: Bool = false
     @State var showRectangle2: Bool = false
     var body: some View {
@@ -261,7 +263,22 @@ struct MyOrders: View {
             }
 //        .navigationTitle("MyOrders")
 //        .navigationBarTitleDisplayMode(.inline)
-        }
+        }.navigationBarBackButtonHidden(true)
+            .navigationBarHidden(false)
+            .edgesIgnoringSafeArea(.bottom)
+            .navigationBarItems(leading:
+                Button(action: {
+    //                            self.presentationMode.wrappedValue.dismiss()
+                    self.mode.wrappedValue.dismiss()
+                }) {
+                    HStack {
+                        Image(systemName: "arrow.left")
+                            .imageScale(.large)
+                            .frame(width: 25, height: 25, alignment: .center)
+        //                    .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.white)
+                    }
+            })
     }
 }
 struct MyOrders_Previews: PreviewProvider {

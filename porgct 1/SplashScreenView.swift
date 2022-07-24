@@ -66,7 +66,7 @@ struct SplashScreenView: View {
                 }
     //            }.navigationBarHidden(true)
             }
-        }
+        }.navigationBarHidden(true)
     }
 }
 struct SplashScreenView_Previews: PreviewProvider {

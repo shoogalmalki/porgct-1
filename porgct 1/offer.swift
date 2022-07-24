@@ -10,12 +10,14 @@ import SwiftUI
 
 struct offer: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State var Sarah3: Bool = false
     @State var driversOfferList:[User] = []
     
     var body: some View {
-        NavigationView
-        {
+//        NavigationView
+//        {
             ZStack{
                     ZStack{
                         Color(.systemMint)
@@ -58,7 +60,7 @@ struct offer: View {
                                         .foregroundColor(Color.gray.opacity(0.2))
                                 }
                                 
-                            }.padding(.top,100)
+                            }
 //                            ScrollView
 //                            {
 //                                ForEach(self.driversOfferList.indices, id: \.self) { index in
@@ -136,7 +138,7 @@ struct offer: View {
                                                     
                                                 })
                                                 Button(action: {
-                                                    
+                                                    Sarah3 = true
                                                 }, label: {
                                                     Text("Accept")
                                                         .font(.callout)
@@ -168,22 +170,35 @@ struct offer: View {
                                             }
                                         }
                                     }
+                                    Spacer()
 //                                }
 //
 //
 //                            }
                             
                             //                        .padding(200)
-                        }.padding(.bottom,320)
+                        }.padding(.top,100)
                         
                     }
                     
                 }
-        }
+//        }
         .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
+        .navigationBarHidden(false)
         .edgesIgnoringSafeArea(.bottom)
-        
+        .navigationBarItems(leading:
+            Button(action: {
+//                            self.presentationMode.wrappedValue.dismiss()
+                self.mode.wrappedValue.dismiss()
+            }) {
+                HStack {
+                    Image(systemName: "arrow.left")
+                        .imageScale(.large)
+                        .frame(width: 25, height: 25, alignment: .center)
+    //                    .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.white)
+                }
+        })
     }
     
 }

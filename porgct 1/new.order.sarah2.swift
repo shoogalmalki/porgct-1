@@ -10,6 +10,7 @@ import KRProgressHUD
 
 
 struct new_order_sarah2: View, DateAndTimeSelected,LocationSelected,ShipmentItemSizeSelected {
+    
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     func shipmentItemSizeSelected(size: ShipmentItemSize){
@@ -22,6 +23,7 @@ struct new_order_sarah2: View, DateAndTimeSelected,LocationSelected,ShipmentItem
         self.pickupCity = pickupCity
         self.dropoffCity = dropCity
     }
+    let verticalPaddingForForm = 100.0
     @State private var shipmentImage =  UIImage()
     @State var shipmentSize :  ShipmentItemSize = .empty
     @State var pickupCity = ""
@@ -42,8 +44,8 @@ struct new_order_sarah2: View, DateAndTimeSelected,LocationSelected,ShipmentItem
     
     var body: some View {
         
-        NavigationView
-        {
+//        NavigationView
+//        {
 
             ZStack
             {
@@ -57,13 +59,13 @@ struct new_order_sarah2: View, DateAndTimeSelected,LocationSelected,ShipmentItem
                         Rectangle()
                             .frame(width: UIScreen.main
                                 .bounds.size.width, height: UIScreen.main
-                            .bounds.size.height - 75)
+                            .bounds.size.height - verticalPaddingForForm)
                             .foregroundColor(Color("Color1"))
                             .cornerRadius(20)
-                            .padding(.init(top: 50, leading: 0, bottom: 0, trailing: 0))
+                            .padding(.init(top: verticalPaddingForForm, leading: 0, bottom: 0, trailing: 0))
         //                    GeometryReader { geometryWithSafeArea in
         //                                    GeometryReader { geometry in
-                        ScrollView
+                        ScrollView(showsIndicators: false)
                         {
                             VStack(alignment: .center, spacing: 25)
                             {
@@ -222,7 +224,7 @@ struct new_order_sarah2: View, DateAndTimeSelected,LocationSelected,ShipmentItem
                                 }
                                 
                         
-                        }.padding(.top, 20)
+                        }.padding(.top, 50)
                             }.frame(width: .infinity, height: UIScreen.main
                                 .bounds.size.height - 150)
                             
@@ -242,9 +244,9 @@ struct new_order_sarah2: View, DateAndTimeSelected,LocationSelected,ShipmentItem
                 
                 }
             }
-        }
+//        }
         .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
+        .navigationBarHidden(false)
         .edgesIgnoringSafeArea(.bottom)
         .navigationBarItems(leading:
             Button(action: {

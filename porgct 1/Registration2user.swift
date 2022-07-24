@@ -48,11 +48,12 @@ struct Registration2user: View, ImageSelected {
                 }
                 ZStack{
                     Rectangle()
-                        .frame(width: .infinity, height: UIScreen.main
+                        .frame(width:  UIScreen.main
+                            .bounds.size.width, height: UIScreen.main
                             .bounds.size.height - verticalPaddingForForm)
                             .foregroundColor(Color("Color1"))
                             .cornerRadius(20)
-                            .padding(.init(top: verticalPaddingForForm - 50, leading: 0, bottom: 0, trailing: 0))
+                            .padding(.init(top: verticalPaddingForForm, leading: 0, bottom: 0, trailing: 0))
                     ScrollView {
                         VStack(spacing: 10) {
                             Text("New Registration")
@@ -141,11 +142,11 @@ struct Registration2user: View, ImageSelected {
                                 }
                             }
                         }
-                        .padding(.top, verticalPaddingForForm + 30)
+                        .padding(.top, verticalPaddingForForm )
 
                     }.frame(width: UIScreen.main.bounds.size
                         .width, height: UIScreen.main.bounds.size
-                        .height - 100)
+                        .height)
                     .offset(y:50)
 //                    .edgesIgnoringSafeArea(.top)
                 }
@@ -157,7 +158,7 @@ struct Registration2user: View, ImageSelected {
 //                                .ignoresSafeArea())
 //            }
             .navigationBarBackButtonHidden(true)
-            .navigationBarHidden(true)
+            .navigationBarHidden(false)
             .edgesIgnoringSafeArea(.bottom)
     //        .navigationBarItems(leading: btnBack)
 //            .navigationTitle("New Registration")
