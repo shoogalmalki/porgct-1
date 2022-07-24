@@ -15,7 +15,7 @@ struct pageView_onbording2: View {
     @State var shouldGoToNextView: Bool = false
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             VStack {
                 TabView(selection: $pageIndex) {
                     ForEach(pages) { page in
@@ -65,8 +65,9 @@ struct pageView_onbording2: View {
                 dotAppearance.currentPageIndicatorTintColor = .black
                 dotAppearance.pageIndicatorTintColor = .gray
             }
+            .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
-        }
+//        }
     }
     
     func incrementPage() {

@@ -12,6 +12,7 @@ import FirebaseFirestore
 
 struct LoginView: View {
     
+    let verticalPaddingForForm = 120.0
     @State var showAlert = false
     @State var errorString = ""
     @State private var Email = ""
@@ -79,7 +80,7 @@ struct LoginView: View {
 //    }
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
         ZStack{
             
             ZStack{
@@ -90,10 +91,10 @@ struct LoginView: View {
             ZStack{
                 Rectangle()
                     .frame(width: .infinity, height: UIScreen.main
-                        .bounds.size.height - 75)
+                        .bounds.size.height - verticalPaddingForForm)
                         .foregroundColor(Color("Color1"))
                         .cornerRadius(20)
-                        .padding(.init(top: 50, leading: 0, bottom: 0, trailing: 0))
+                        .padding(.init(top: verticalPaddingForForm, leading: 0, bottom: 0, trailing: 0))
 //                HStack(alignment: .top, spacing: 10){
                 VStack(spacing:10){
                            Text("Login")
@@ -137,6 +138,8 @@ struct LoginView: View {
                         })
                         
                           Button("Login") {
+                              shouldGoToWhatEverPage3.toggle()
+                              /*
                               KRProgressHUD.show(withMessage: "Please Wait...")
                               AuthViewModel().loginUser(email: Email, password: password){userModel,error in
                                   KRProgressHUD.dismiss()
@@ -149,8 +152,7 @@ struct LoginView: View {
                                       errorString = error?.localizedDescription ?? "Error Occured"
                                       showAlert = true
                                   }
-                              }
-//                 login(email: Email, password: password)
+                              }*/
                           }
                           .foregroundColor(.white)
                           .font(.system(size: 18, weight: .semibold, design: .serif))
@@ -180,15 +182,17 @@ struct LoginView: View {
                           }
                         Spacer()
                         
-                    }.padding(.top, 90)
+                    }.padding(.top, verticalPaddingForForm + 30)
 
                     
-                          }
+            }.edgesIgnoringSafeArea(.all)
                 
 //                       }
                 }
-        }
+        .navigationBarTitle("", displayMode: .inline)
+//        }
         .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(false)
 //        .navigationBarItems(leading: btnBack)
                 .edgesIgnoringSafeArea(.bottom)
                 .navigationBarItems(leading:

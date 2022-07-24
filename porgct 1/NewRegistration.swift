@@ -80,7 +80,7 @@ struct NewRegistration: View {
                     .offset( y:-70 )
                 
                 
-                NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
+                    NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
                                        new_order_sarah2()
                                    }, label: {
                                    })

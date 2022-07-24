@@ -17,6 +17,7 @@ struct Registration2user: View, ImageSelected {
     func imageDriverCarInsurance(img: UIImage) {
         driverCarinsuranceImage = img
     }
+    let verticalPaddingForForm = 120.0
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State private var driverCarinsuranceImage = UIImage()
@@ -37,121 +38,124 @@ struct Registration2user: View, ImageSelected {
     @State var shouldGoToWhatEverPage11: Bool = false
    
 
-var body: some View {
-            NavigationView {
+    var body: some View {
+//            NavigationView {
+            ZStack
+            {
                 ZStack{
-                    ZStack{
-                        Color(.systemMint)
-                            .ignoresSafeArea()
-                    }
-                    ZStack{
-                        Rectangle()
-                            .frame(width: .infinity, height: UIScreen.main
-                                .bounds.size.height - 75)
-                                .foregroundColor(Color("Color1"))
-                                .cornerRadius(20)
-                                .padding(.init(top: 50, leading: 0, bottom: 0, trailing: 0))
-                ScrollView {
-                    VStack(spacing: 10) {
-                        Text("New Registration")
-                             .font(.system(size: 18, weight: .semibold, design: .serif))
-                        Picker(selection: $isUserType, label: Text("Picker here")) {
-                            Text("Client Account")
-                                .tag(true)
-                            Text("Driver Account")
-                                .tag(false)
-                        }.pickerStyle(SegmentedPickerStyle())
-                            .background(.mint)
-                            .frame(width: 300, height: 40)
+                    Color(.systemMint)
+                        .ignoresSafeArea()
+                }
+                ZStack{
+                    Rectangle()
+                        .frame(width: .infinity, height: UIScreen.main
+                            .bounds.size.height - verticalPaddingForForm)
+                            .foregroundColor(Color("Color1"))
+                            .cornerRadius(20)
+                            .padding(.init(top: verticalPaddingForForm - 50, leading: 0, bottom: 0, trailing: 0))
+                    ScrollView {
+                        VStack(spacing: 10) {
+                            Text("New Registration")
+                                 .font(.system(size: 18, weight: .semibold, design: .serif))
+                            Picker(selection: $isUserType, label: Text("Picker here")) {
+                                Text("Client Account")
+                                    .tag(true)
+                                Text("Driver Account")
+                                    .tag(false)
+                            }.pickerStyle(SegmentedPickerStyle())
+                                .background(.mint)
+                                .frame(width: 300, height: 40)
 
-    //                    if !isLoginMode {
-                            Button {
+        //                    if !isLoginMode {
+                                Button {
 
-                            } label: {
-                                Image(systemName: "person.fill")
-                                    .foregroundColor(.mint)
-                                    .font(.system(size: 64))
-                                    .padding()
-                            }
-    //                    }
-                   
-                           
+                                } label: {
+                                    Image(systemName: "person.fill")
+                                        .foregroundColor(.mint)
+                                        .font(.system(size: 64))
+                                        .padding()
+                                }
+        //                    }
+                       
+                               
 
-                        Group {
-                            TextField("Full Name", text: $FullName)
-                                           
-                         .border(.red, width: CGFloat(wrongFullName))
-                                           
-                                        
-                         TextField("Phone Number", text: $PhoneNumber)
+                            Group {
+                                TextField("Full Name", text: $FullName)
+                                               
+                             .border(.red, width: CGFloat(wrongFullName))
+                                               
                                             
-                                           
+                             TextField("Phone Number", text: $PhoneNumber)
+                                                
+                                               
+                                                
+                            TextField("Email", text: $Email)
                                             
-                        TextField("Email", text: $Email)
-                                        
-                                .border(.red, width: CGFloat(wrongEmail))
-                                .keyboardType(.emailAddress)
-                                .autocapitalization(.none)
-                           
-                            SecureField("Password", text: $password)
-                                
-                                .border(.red, width: CGFloat(wrongPassword))
-                        }.padding()
-                     
-                        .frame(width: 300, height: 50)
-                        .background(Color.white)
-                        .cornerRadius(10)
+                                    .border(.red, width: CGFloat(wrongEmail))
+                                    .keyboardType(.emailAddress)
+                                    .autocapitalization(.none)
+                               
+                                SecureField("Password", text: $password)
+                                    
+                                    .border(.red, width: CGFloat(wrongPassword))
+                            }.padding()
+                         
+                            .frame(width: 300, height: 50)
+                            .background(Color.white)
+                            .cornerRadius(10)
 
-                        if !isUserType {
-                            Text("Kindly provide your driving license")
-                            .font(.system(size: 18, weight: .semibold, design: .serif))
-                            ZStack{
-                                image1(imageType: .driverCarLicenceImage, delegate: self)
-                                
-                            }
-                            
-                            Text("Kindly provide your car insurance")
+                            if !isUserType {
+                                Text("Kindly provide your driving license")
                                 .font(.system(size: 18, weight: .semibold, design: .serif))
-                            ZStack{
-                                image1(imageType: .driverCarInsuranceImage, delegate: self)
+                                ZStack{
+                                    image1(imageType: .driverCarLicenceImage, delegate: self)
+                                    
+                                }
                                 
-                            }
-                        }
-                        NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
-                            new_order_sarah2()
-                        }, label: {
-                        })
-                    
-                        Button {
-//                            handleAction()
-                            shouldGoToWhatEverPage11 = true
-                        } label: {
-                            HStack {
-                                Spacer()
-                                Text(isUserType ? "Create Client Account" : "Create Driver Account")
-                                    .foregroundColor(.white)
+                                Text("Kindly provide your car insurance")
                                     .font(.system(size: 18, weight: .semibold, design: .serif))
-
-                                       .frame(width: 300, height: 50)
-                                       .background(Color(UIColor.systemMint))
-                                        .cornerRadius(10)
-                                Spacer()
+                                ZStack{
+                                    image1(imageType: .driverCarInsuranceImage, delegate: self)
+                                    
+                                }
                             }
+                            NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
+                                new_order_sarah2()
+                            }, label: {
+                            })
+                        
+                            Button {
+    //                            handleAction()
+                                shouldGoToWhatEverPage11 = true
+                            } label: {
+                                HStack {
+                                    Spacer()
+                                    Text(isUserType ? "Create Client Account" : "Create Driver Account")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 18, weight: .semibold, design: .serif))
 
+                                           .frame(width: 300, height: 50)
+                                           .background(Color(UIColor.systemMint))
+                                            .cornerRadius(10)
+                                    Spacer()
+                                }
+                            }
                         }
-                        .padding(.bottom,50)
-                    }
-                    .padding(.top, 20)
+                        .padding(.top, verticalPaddingForForm + 30)
 
-                }.frame(width: .infinity, height: UIScreen.main
-                    .bounds.size.height - 150)
+                    }.frame(width: UIScreen.main.bounds.size
+                        .width, height: UIScreen.main.bounds.size
+                        .height - 100)
+                    .offset(y:50)
+//                    .edgesIgnoringSafeArea(.top)
+                }
             }
-            }
+            .edgesIgnoringSafeArea(.top)
 //                .navigationTitle("New Registration")
 //                .background(.systemMint)
 ////                    .foregroundColor(Color("Color1"))
 //                                .ignoresSafeArea())
-            }
+//            }
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.bottom)

@@ -15,8 +15,8 @@ struct Home_User: View {
     let screenWidth = UIScreen.main.bounds.width
 
     var body: some View {
-        ZStack{
-            NavigationView {
+//        ZStack{
+//            NavigationView {
                 ZStack{
                     ZStack{
                         Color("Color3")
@@ -159,7 +159,7 @@ struct Home_User: View {
                     }
                     .navigationBarItems(leading:
                                             //((PROFILE.BUTTON))
-                                        Button{
+                    Button{
                         showModelView.toggle()
                     }label: {
                         Image(systemName:"person.circle.fill")
@@ -221,13 +221,13 @@ struct Home_User: View {
                         profile1()
                     })
                 }
-            }
-            .navigationBarTitle("Home", displayMode: .inline)
-            .navigationBarHidden(true)
-            .onAppear {
+                .navigationBarTitle("", displayMode: .inline)
+                .navigationBarHidden(false)
+                .onAppear {
 //                        getDriverTrips()
-            }
-        }
+                }
+//            }
+//        }
             
         }
     }
