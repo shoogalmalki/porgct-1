@@ -9,7 +9,7 @@ import SwiftUI
 import KRProgressHUD
 
 
-struct new_order_sarah2: View, DateAndTimeSelected,LocationSelected,ShipmentItemSizeSelected {
+struct CustomerPlaceOrder: View, DateAndTimeSelected,LocationSelected,ShipmentItemSizeSelected {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
@@ -171,77 +171,32 @@ struct new_order_sarah2: View, DateAndTimeSelected,LocationSelected,ShipmentItem
                             
                                 }
                                 NavigationLink(isActive: $shouldGoToOfferPage){
-                                    offer()
+                                    CustomerGetOffers()
                                 } label: {
 
                                 }
                                 ButtonNewOrder.onTapGesture {
-                                    shouldGoToOfferPage = true
-                                    /*
-                                    if shipmentImage.size.height == 0.0{
-                                        errorString = "Please Select Image"
-                                        showingAlert = true
-                                    } else if pickupCity == ""{
-                                        errorString = "Please select pickup and dropdown location"
-                                        showingAlert = true
-                                    } else if dateAndTime == ""{
-                                        errorString = "Please select date and time"
-                                        showingAlert = true
-                                    } else if shipmentSize == .empty{
-                                        errorString = "Please select size"
-                                        showingAlert = true
-                                    } else if !checkbox2{
-                                        errorString = "Before making order, you have to agree at terms and conditions"
-                                        showingAlert = true
-                                    } else if descText == ""{
-                                        errorString = "Please write some notes"
-                                        showingAlert = true
-                                    } else if pickupCity == dropoffCity{
-                                        errorString = "Please select pickup and dropdown location"
-                                        showingAlert = true
-
+                                    switch appEnvironmentType{
+                                    case .development:
+                                        shouldGoToOfferPage = true
+                                        break
+                                    case .staging:
+                                        handleAction()
+                                        break
+                                    case .production:
+                                        break
                                     }
-                                    else{
-                                        KRProgressHUD.show(withMessage: "Please Wait...")
-                                        var shipmentImageURL = ""
-                                        shipmentImage.uploadMedia { url in
-                                            shipmentImageURL = url ?? ""
-                                            AuthViewModel().placeNewTripByCustomer(userId: (UserDefaults.standard.string(forKey: LOGIN_UID) ?? "") ?? "", pickUp: pickupCity, dropOff: dropoffCity, storagePhotoUrl: shipmentImageURL, typeOfShipment: shipmentSize, notes: descText, dateTime: dateAndTime, timeSlot: "") { userId,error in
-                                                KRProgressHUD.dismiss()
-                                                if error == nil{
-                                                    print("userId===",userId ?? "Nothing")
-                                                    shouldGoToOfferPage = true
-                                                }else{
-                                                    print("error===",error?.localizedDescription ??  "Error Occured")
-                                                    errorString = error?.localizedDescription ?? "Error Occured"
-                                                    showingAlert = true
-                                                }
-                                            }
-                                        }
-                                    }*/
+                                    
                                 }.alert(errorString, isPresented: $showingAlert) {
                                     Button("OK", role: .cancel) { }
                                 }
-                                
-                        
-                        }.padding(.top, 50)
-                            }.frame(width: .infinity, height: UIScreen.main
-                                .bounds.size.height - 150)
-                            
-        //                    Blur(style:  .systemThinMaterialLight)
-        //                                    .mask(
-        //                                        VStack(spacing: 0) {
-        //                                            Rectangle()
-        //                                                .frame(width: 0, height: 0)
-        //                                                .padding(.top, 0)
-        //                                            Spacer()
-        //                                        }
-        //                                    )
-        //                                    .allowsHitTesting(false)
-        //                                    }.edgesIgnoringSafeArea(.all)
-        //
-        //                    }
-                
+                        }
+                    }.frame(width: UIScreen.main
+                                .bounds.size.width, height: UIScreen.main
+                                .bounds.size.height * 0.80)
+                            .padding(.init(top: verticalPaddingForForm, leading: 0, bottom: 0, trailing: 0))
+//                            .offset(y:50)
+//                            .padding(.top, 100)
                 }
             }
 //        }
@@ -261,6 +216,50 @@ struct new_order_sarah2: View, DateAndTimeSelected,LocationSelected,ShipmentItem
                         .foregroundColor(.white)
                 }
         })
+    }
+    private func handleAction()
+    {
+        if shipmentImage.size.height == 0.0{
+            errorString = "Please Select Image"
+            showingAlert = true
+        } else if pickupCity == ""{
+            errorString = "Please select pickup and dropdown location"
+            showingAlert = true
+        } else if dateAndTime == ""{
+            errorString = "Please select date and time"
+            showingAlert = true
+        } else if shipmentSize == .empty{
+            errorString = "Please select size"
+            showingAlert = true
+        } else if !checkbox2{
+            errorString = "Before making order, you have to agree at terms and conditions"
+            showingAlert = true
+        } else if descText == ""{
+            errorString = "Please write some notes"
+            showingAlert = true
+        } else if pickupCity == dropoffCity{
+            errorString = "Please select pickup and dropdown location"
+            showingAlert = true
+
+        }
+        else{
+            KRProgressHUD.show(withMessage: "Please Wait...")
+            var shipmentImageURL = ""
+            shipmentImage.uploadMedia { url in
+                shipmentImageURL = url ?? ""
+                AuthViewModel().placeNewTripByCustomer(userId: (UserDefaults.standard.string(forKey: LOGIN_UID) ?? "") ?? "", pickUp: pickupCity, dropOff: dropoffCity, storagePhotoUrl: shipmentImageURL, typeOfShipment: shipmentSize, notes: descText, dateTime: dateAndTime, timeSlot: "") { userId,error in
+                    KRProgressHUD.dismiss()
+                    if error == nil{
+                        print("userId===",userId ?? "Nothing")
+                        shouldGoToOfferPage = true
+                    }else{
+                        print("error===",error?.localizedDescription ??  "Error Occured")
+                        errorString = error?.localizedDescription ?? "Error Occured"
+                        showingAlert = true
+                    }
+                }
+            }
+        }
     }
     
 }
@@ -289,8 +288,8 @@ struct CheckboxToggleStyle: ToggleStyle {
     }
 }
 
-struct new_order_sarah2_Previews: PreviewProvider {
+struct CustomerPlaceOrder_Previews: PreviewProvider {
     static var previews: some View {
-        new_order_sarah2()
+        CustomerPlaceOrder()
     }
 }

@@ -11,6 +11,14 @@ let LOGIN_UID = "LOGIN_UID"
 let LOGIN_EMAIL = "LOGIN_EMAIL"
 let LOGIN_USER_TYPE = "LOGIN_USER_TYPE"
 
+enum EnvironmentType:Int {
+    case development = 0
+    case staging
+    case production
+}
+
+let appEnvironmentType:EnvironmentType = .development
+
 enum RoleType:Int, CustomStringConvertible {
     case none = 0
     case driver

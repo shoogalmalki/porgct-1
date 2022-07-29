@@ -127,7 +127,7 @@ struct homedriver: View {
                                             }
                                         }
                                         NavigationLink(){
-                                            Registration2user()
+                                            Registration()
                                         } label: {
 
                                             Text("Make an Offer")

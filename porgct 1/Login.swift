@@ -10,7 +10,7 @@ import FirebaseAuth
 import KRProgressHUD
 import FirebaseFirestore
 
-struct LoginView: View {
+struct Login: View {
     
     let verticalPaddingForForm = 120.0
     @State var showAlert = false
@@ -131,38 +131,36 @@ struct LoginView: View {
        
     
                         NavigationLink(isActive: $shouldGoToWhatEverPage3, destination: {
-                            new_order_sarah2()
+                            CustomerPlaceOrder()
                         }, label: {
                             
                         })
                         
                           Button("Login") {
-                              shouldGoToWhatEverPage3.toggle()
-                              /*
-                              KRProgressHUD.show(withMessage: "Please Wait...")
-                              AuthViewModel().loginUser(email: Email, password: password){userModel,error in
-                                  KRProgressHUD.dismiss()
-                                  if error == nil{
-                                      print("userId===",userModel?.userId ?? "Nothing")
-                                      print("userName===",userModel?.fullName ?? "Nothing")
-                                      shouldGoToWhatEverPage3.toggle()
-                                  }else{
-                                      print("error===",error?.localizedDescription ??  "Error Occured")
-                                      errorString = error?.localizedDescription ?? "Error Occured"
-                                      showAlert = true
-                                  }
-                              }*/
+                              switch appEnvironmentType{
+                              case .development:
+                                  shouldGoToWhatEverPage3.toggle()
+                                  break
+                              case .staging:
+                                  handleAction()
+                                  break
+                              case .production:
+                                  break
+                              }
                           }
                           .foregroundColor(.white)
                           .font(.system(size: 18, weight: .semibold, design: .serif))
                           .frame(width: 300, height: 50)
                            .background(Color(UIColor.systemMint))
                           .cornerRadius(10)
-                       .padding(20)
+                          .padding(20)
+                          .alert(errorString, isPresented: $showAlert) {
+                              Button("OK", role: .cancel) { }
+                          }
                         
                         HStack{
                             NavigationLink(isActive: $shouldGoToWhatEverPage2, destination: {
-                               Registration2user()
+                                Registration()
                             }, label: {
 
                             })
@@ -207,12 +205,50 @@ struct LoginView: View {
                 }
         })
     }
+    private func handleAction() {
+        
+        if Email.isEmpty{
+            errorString = "Please enter your email"
+            showAlert = true
+        } else if !validateEmail(enteredEmail: Email){
+            errorString = "Please enter a valid email"
+            showAlert = true
+        } else if password.isEmpty{
+            errorString = "Please enter password"
+            showAlert = true
+        } else if password.count < 6 {
+            errorString = "Password must by 6 character long"
+            showAlert = true
+        }
+        else{
+            KRProgressHUD.show(withMessage: "Please Wait...")
+            AuthViewModel().loginUser(email: Email, password: password){userModel,error in
+                KRProgressHUD.dismiss()
+                if error == nil{
+                    print("userId===",userModel?.userId ?? "Nothing")
+                    print("userName===",userModel?.fullName ?? "Nothing")
+                    shouldGoToWhatEverPage3.toggle()
+                }else{
+                    print("error===",error?.localizedDescription ??  "Error Occured")
+                    errorString = error?.localizedDescription ?? "Error Occured"
+                    showAlert = true
+                }
+            }
+        }
+    }
+    func validateEmail(enteredEmail:String) -> Bool {
+        
+        let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
+        return emailPredicate.evaluate(with: enteredEmail)
+        
+    }
   
 }
 
 
-struct LoginView_Previews: PreviewProvider {
+struct Login_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        Login()
     }
 }

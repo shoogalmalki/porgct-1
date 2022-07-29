@@ -9,7 +9,7 @@ import SwiftUI
 import KRProgressHUD
 
 
-struct Registration2user: View, ImageSelected {
+struct Registration: View, ImageSelected {
     
     func imageDriverCarLicence(img: UIImage) {
         driverCarLicenceImage = img
@@ -17,14 +17,14 @@ struct Registration2user: View, ImageSelected {
     func imageDriverCarInsurance(img: UIImage) {
         driverCarinsuranceImage = img
     }
-    let verticalPaddingForForm = 120.0
+    let verticalPaddingForForm = 100.0
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State private var driverCarinsuranceImage = UIImage()
     @State private var driverCarLicenceImage = UIImage()
     @State var showAlert = false
     @State var errorString = ""
-    @State private var isUserType = true
+    @State private var isUserType = false
     @State var isLoginMode = false
     @State private var FullName = ""
     @State private var Email = ""
@@ -54,7 +54,7 @@ struct Registration2user: View, ImageSelected {
                             .foregroundColor(Color("Color1"))
                             .cornerRadius(20)
                             .padding(.init(top: verticalPaddingForForm, leading: 0, bottom: 0, trailing: 0))
-                    ScrollView {
+                    ScrollView(.vertical,showsIndicators: false) {
                         VStack(spacing: 10) {
                             Text("New Registration")
                                  .font(.system(size: 18, weight: .semibold, design: .serif))
@@ -121,13 +121,22 @@ struct Registration2user: View, ImageSelected {
                                 }
                             }
                             NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
-                                new_order_sarah2()
+                                CustomerPlaceOrder()
                             }, label: {
                             })
                         
                             Button {
-    //                            handleAction()
-                                shouldGoToWhatEverPage11 = true
+                                switch appEnvironmentType{
+                                case .development:
+                                    shouldGoToWhatEverPage11 = true
+                                    break
+                                case .staging:
+                                    handleAction()
+                                    break
+                                case .production:
+                                    break
+                                }
+                               
                             } label: {
                                 HStack {
                                     Spacer()
@@ -141,17 +150,18 @@ struct Registration2user: View, ImageSelected {
                                     Spacer()
                                 }
                             }
+                            .alert(errorString, isPresented: $showAlert) {
+                                Button("OK", role: .cancel) { }
+                            }
                         }
-                        .padding(.top, verticalPaddingForForm )
-
                     }.frame(width: UIScreen.main.bounds.size
                         .width, height: UIScreen.main.bounds.size
-                        .height)
-                    .offset(y:50)
+                        .height * 0.80)
+                    .padding(.init(top: verticalPaddingForForm , leading: 0, bottom: 0, trailing: 0))
 //                    .edgesIgnoringSafeArea(.top)
                 }
             }
-            .edgesIgnoringSafeArea(.top)
+//            .edgesIgnoringSafeArea(.top)
 //                .navigationTitle("New Registration")
 //                .background(.systemMint)
 ////                    .foregroundColor(Color("Color1"))
@@ -279,8 +289,8 @@ struct Registration2user: View, ImageSelected {
 }
 
 
-struct Registration2user_Previews: PreviewProvider {
+struct Registration_Previews: PreviewProvider {
     static var previews: some View {
-        Registration2user()
+        Registration()
     }
 }

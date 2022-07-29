@@ -7,14 +7,29 @@
 
 import SwiftUI
 
-struct payment_order: View {
+struct CustomerPayment: View {
+    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State var showRectangle: Bool = false
+    let verticalPaddingForForm = 100.0
+    @State var Sarah3:Bool = false
+    
     var body: some View {
         ZStack{
-            Color("Color1")
-//
-                .ignoresSafeArea()
-            
+            ZStack
+            {
+                Color(.systemMint)
+                    .ignoresSafeArea()
+            }
+            ZStack
+            {
+                Rectangle()
+                    .frame(width: UIScreen.main
+                        .bounds.size.width, height: UIScreen.main
+                    .bounds.size.height - verticalPaddingForForm)
+                    .foregroundColor(Color("Color1"))
+                    .cornerRadius(20)
+                    .padding(.init(top: verticalPaddingForForm, leading: 0, bottom: 0, trailing: 0))
             VStack(spacing:44){
                 HStack{
                     ZStack{
@@ -183,25 +198,71 @@ struct payment_order: View {
                         //
                     }
                 }
-                NavigationLink(){
-                    MyOrderUser2()
-                } label: {
+                Button(action: {
+                    switch appEnvironmentType{
+                    case .development:
+                        Sarah3 = true
+                        break
+                    case .staging:
+                        handleAction()
+                        break
+                    case .production:
+                        break
+                    }
+                    
+                }, label: {
                     Text("Done")
                         .font(.system(size: 18, weight: .semibold, design: .serif))
                         .foregroundColor(Color.white)
                         .frame(width: 300, height: 50)
                         .background(Color(UIColor.systemMint))
                         .cornerRadius(10)
-                }
+                    
+                })
+                NavigationLink(isActive: $Sarah3, destination: {
+                    CustomerPaymentComplete()
+                }, label: {
+                    
+                })
                 
+                
+                }
             }
-            
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(false)
+        .edgesIgnoringSafeArea(.bottom)
+        .navigationBarItems(leading:
+            Button(action: {
+                self.mode.wrappedValue.dismiss()
+            }) {
+                HStack {
+                    Image(systemName: "arrow.left")
+                        .imageScale(.large)
+                        .frame(width: 25, height: 25, alignment: .center)
+                        .foregroundColor(.white)
+                }
+        })
+    }
+    private func handleAction() {
+//        KRProgressHUD.show(withMessage: "Please Wait...")
+//        AuthViewModel().loginUser(email: Email, password: password){userModel,error in
+//            KRProgressHUD.dismiss()
+//            if error == nil{
+//                print("userId===",userModel?.userId ?? "Nothing")
+//                print("userName===",userModel?.fullName ?? "Nothing")
+//                shouldGoToWhatEverPage3.toggle()
+//            }else{
+//                print("error===",error?.localizedDescription ??  "Error Occured")
+//                errorString = error?.localizedDescription ?? "Error Occured"
+//                showAlert = true
+//            }
+//        }
     }
 }
 
-struct payment_order_Previews: PreviewProvider {
+struct CustomerPayment_order_Previews: PreviewProvider {
     static var previews: some View {
-        payment_order()
+        CustomerPayment()
     }
 }

@@ -396,7 +396,7 @@ struct homeuser: View {
             })
             .sheet(isPresented:$showModelView , content:
                     {
-                profile1()
+                CustomerProfile()
             })
             
             

@@ -27,7 +27,7 @@ struct pageView_onbording2: View {
                             if page == pages.last {
                         
                                 NavigationLink(destination: {
-                                    Home_User().navigationBarBackButtonHidden(true)
+                                    CustomerHome().navigationBarBackButtonHidden(true)
                                 }, label: {
                                     Text("Get started")
                                         .foregroundColor(.white)

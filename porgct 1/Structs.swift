@@ -327,7 +327,7 @@ var ButtonNewOrder: some View {
 }
 var ButtonNewOrderR: some View {
     NavigationLink(){
-        Home_User()
+        CustomerHome()
     } label: {
         Text("Done")
             .font(.system(size: 20, weight: .semibold, design: .serif))
@@ -492,7 +492,7 @@ struct section : View {
                         }
                     }
                     NavigationLink(){
-                        Registration2user()
+                        Registration()
                     } label: {
                        
                          Text("Request")
@@ -898,7 +898,7 @@ struct DriverProfile :View{
                     Text("Account")
                         .font(.system(size: 15, weight:.bold, design: .default))
                     NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
-                        MyOrders()
+                        CustomerMyOrders()
                     }, label: {
                     })
                     Button(action: {                            shouldGoToWhatEverPage11.toggle()
@@ -1181,7 +1181,7 @@ struct PaymentPage : View{
                 }
             }
             NavigationLink(){
-                after_payment()
+                CustomerPaymentComplete()
             } label: {
                 Text("Done")
                     .font(.system(size: 18, weight: .semibold, design: .serif))
@@ -1273,7 +1273,7 @@ struct OrderDriver1 :View{
             .foregroundStyle(.gray)
             .font(.system(size: 15, weight: .semibold, design: .serif))
         NavigationLink(){
-            after_payment()
+            CustomerPaymentComplete()
         } label: {
             Text("Done")
             //                                .font(.title3)
@@ -1355,7 +1355,7 @@ for your order ?
             }
             HStack(spacing:10){
                 NavigationLink(isActive: $Sarah3, destination: {
-                    after_payment()
+                    CustomerPaymentComplete()
                 }, label: {
                     
                 })
@@ -1701,7 +1701,7 @@ struct MyOrdersDrive : View {
 }
 //struct MyOrder2 : View{
 //    @State var showRectangle: Bool = false
-//    
+//
 //    var body: some View {
 //        if showRectangle == true {
 //            ZStack{
@@ -1709,29 +1709,29 @@ struct MyOrdersDrive : View {
 //                    .frame(width:300 , height: 250 )
 //                    .cornerRadius(8)
 //                    .foregroundColor(.white)
-//                
+//
 //                VStack(alignment: .center){
-//                    
+//
 //                    HStack(alignment: .top){
 //                        Image(systemName:"stopwatch")
 //                            .foregroundColor(.orange)
 //                            .font(.system(size: 12, weight:.bold, design: .default))
 //                        HStack(spacing:70){
-//                            
+//
 //                            Text("IN PROGRESS")
 //                                .font(.system(size: 10, weight: .bold, design: .default))
 //                                .foregroundColor(.orange)
 //                            VStack(alignment: .trailing){
 //                                Button.init(action: {
 //                                    showRectangle.toggle()
-//                                    
+//
 //                                }, label: {
 //                                    ZStack{
-//                                        
+//
 //                                        Image(systemName: "chevron.up")
 //                                    }
 //                                })
-//                                
+//
 //                                Text("Fri, June, 2022 8:00 PM")
 //                                    .font(.system(size: 10, weight: .bold, design: .default))                    .fontWeight(.regular)
 //                                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.611))
@@ -1756,19 +1756,19 @@ struct MyOrdersDrive : View {
 //                            Text("Out for Delivery")
 //                                .font(.caption)
 //                                .fontWeight(.bold)
-//                                
-//                            
+//
+//
 //                            Text("- 3 days shipping")
 //                                .font(.caption2)
 //                                .foregroundColor(.gray)
-//                                
-//                            
+//
+//
 //                            Divider()
 //                                .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
-//                            
+//
 //                                .frame(height:40)
 //                                .offset(y:-20)
-//                               
+//
 //                            VStack{
 //                                Text("The amount ")
 //                                    .font(.caption2)
@@ -1778,11 +1778,11 @@ struct MyOrdersDrive : View {
 //                                Text("$80.58")
 //                                    .font(.caption)
 //                                    .offset(y:-20)
-//                                
+//
 //                            }
-//                            
+//
 //                        }
-//                        
+//
 //                    }
 //                    Divider()
 //                        .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
@@ -1792,21 +1792,21 @@ struct MyOrdersDrive : View {
 //                    Image("Image1-1")
 //                        .resizable()
 //                        .frame(width: 260, height: 28)
-//                    
+//
 //                    HStack(spacing:220){
 //                        Text("Taif")
 //                            .font(.system(size: 10, weight:.bold, design: .default))
-//                     
+//
 //                        Text("Riyadh")
 //                            .font(.system(size: 10, weight:.bold, design: .default))
-//                      
-//                        
+//
+//
 //                    }
 //                    Divider()
 //                        .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
 //                        .opacity(0.3)
 //                        .frame(width:300)
-//                    
+//
 //                    HStack{
 //                        Image("Image2-1")
 //                            .resizable()
@@ -1823,7 +1823,7 @@ struct MyOrdersDrive : View {
 //                                }
 //                                Text("OMER SALEH")
 //                                    .font(.system(size: 11, weight:.bold, design: .default))
-//                                
+//
 //                            }
 //                            //                    Spacer(minLength:-99)
 //                            HStack{
@@ -1834,7 +1834,7 @@ struct MyOrdersDrive : View {
 //                                    Image(systemName:"phone")
 //                                        .foregroundColor(Color("Color3"))
 //                                    .font(.system(size: 12, weight:.bold, design: .default))
-//                                    
+//
 //                                }
 //                                ZStack{
 //                                    Circle()
@@ -1843,9 +1843,9 @@ struct MyOrdersDrive : View {
 //                                    Image("Image10")
 //                                        .resizable()
 //                                        .frame(width: 17, height: 17)
-//                                    
+//
 //                                }
-//                                
+//
 //                            }
 //                        }
 //                    }
@@ -1866,20 +1866,20 @@ struct MyOrdersDrive : View {
 //                            .foregroundColor(.orange)
 //                            .font(.system(size: 12, weight:.bold, design: .default))
 //                        HStack(spacing:70){
-//                            
+//
 //                            Text("IN PROGRESS")
 //                                .font(.system(size: 10, weight: .bold, design: .default))
 //                                .foregroundColor(.orange)
 //                            VStack(alignment: .trailing){
 //                                Button.init(action: {
 //                                    showRectangle.toggle()
-//                                    
+//
 //                                }, label: {
-//                                        
+//
 //                                        Image(systemName: "chevron.down")
-//                                    
+//
 //                                })
-//                                
+//
 //                                Text("Fri, June, 2022 8:00 PM")
 //                                    .font(.system(size: 10, weight: .bold, design: .default))                    .fontWeight(.regular)
 //                                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.611))
@@ -1901,18 +1901,18 @@ struct MyOrdersDrive : View {
 //                        Text("Out for Delivery")
 //                            .font(.caption)
 //                            .fontWeight(.bold)
-//                      
-//                        
+//
+//
 //                        Text("- 3 days shipping")
 //                            .font(.caption2)
 //                            .foregroundColor(.gray)
-//      
-//                        
+//
+//
 //                        Divider()
 //                            .background(Color(hue: 0.961, saturation: 0.0, brightness: 1.0))
-//                        
+//
 //                            .frame(height:30)
-//                     
+//
 //                        VStack{
 //                            Text("The amount ")
 //                                .font(.caption2)
@@ -1920,9 +1920,9 @@ struct MyOrdersDrive : View {
 //                                .foregroundColor(Color(hue: 1.0, saturation: 0.018, brightness: 0.664))
 //                            Text("$80.58")
 //                                .font(.caption)
-//                            
+//
 //                        }
-//                        
+//
 //                    }
 //                }
 //            }

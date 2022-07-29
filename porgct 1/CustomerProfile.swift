@@ -8,9 +8,10 @@
 import SwiftUI
 import FirebaseAuth
 
-struct profile1: View {
+struct CustomerProfile: View {
     @State var toggleIsOn: Bool = false
-    @State var shouldGoToWhatEverPage11: Bool = false
+    @State var shouldGoToMyOrders: Bool = false
+    @State var shouldGoToDriverAccount:Bool = false
     
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
@@ -58,11 +59,11 @@ struct profile1: View {
                         VStack(alignment:.leading, spacing: 9){
                             Text("Account")
                                 .font(.system(size: 16, weight:.bold, design: .default))
-                            NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
-                                MyOrders()
+                            NavigationLink(isActive: $shouldGoToMyOrders, destination: {
+                                CustomerMyOrders()
                             }, label: {
                             })
-                            Button(action: {                            shouldGoToWhatEverPage11.toggle()
+                            Button(action: {                            shouldGoToMyOrders.toggle()
                             }
                                    , label: {
                                 
@@ -119,11 +120,12 @@ struct profile1: View {
                         VStack(alignment:.leading, spacing: 11){
                             Text("Other")
                                 .font(.system(size: 15, weight:.bold, design: .default))
-                            NavigationLink(isActive: $shouldGoToWhatEverPage11, destination: {
+                            
+                            NavigationLink(isActive: $shouldGoToDriverAccount, destination: {
                                 Driver_account()
                             }, label: {
                             })
-                            Button(action: {                            shouldGoToWhatEverPage11.toggle()
+                            Button(action: {                            shouldGoToDriverAccount.toggle()
                             }
                                    , label: {
                                 
@@ -182,8 +184,8 @@ struct profile1: View {
         
     }
 }
-struct profile1_Previews: PreviewProvider {
+struct CustomerProfile_Previews: PreviewProvider {
     static var previews: some View {
-        profile1()
+        CustomerProfile()
     }
 }

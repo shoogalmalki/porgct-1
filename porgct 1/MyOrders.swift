@@ -7,23 +7,35 @@
 
 import SwiftUI
 
-struct MyOrders: View {
+struct CustomerMyOrders: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State var showRectangle: Bool = false
     @State var showRectangle2: Bool = false
+    let verticalPaddingForForm = 100.0
     var body: some View {
 //        NavigationView{
         ZStack{
-            Color("Color1")
-                .ignoresSafeArea()
-            VStack{
+            ZStack
+            {
+                Color(.systemMint)
+                    .ignoresSafeArea()
+            }
+            ZStack
+            {
+                Rectangle()
+                    .frame(width: UIScreen.main
+                        .bounds.size.width, height: UIScreen.main
+                    .bounds.size.height - verticalPaddingForForm)
+                    .foregroundColor(Color("Color1"))
+                    .cornerRadius(20)
+                    .padding(.init(top: verticalPaddingForForm, leading: 0, bottom: 0, trailing: 0))
 //                HStack{
 //                    Button(action: {}, label: {
 //                        Image(systemName:"chevron.backward")
 //                            .foregroundColor(.orange)
 //                            .font(.system(size: 12, weight:.bold, design: .default))
-//                        
+//
 //                    })
 //                    Text("My Orders")
 //                }
@@ -258,31 +270,35 @@ struct MyOrders: View {
                     
                 }
                 
-                }
+                }.frame(width: UIScreen.main.bounds.size
+                    .width, height: UIScreen.main.bounds.size
+                    .height * 0.80)
+                .padding(.init(top: verticalPaddingForForm , leading: 0, bottom: 0, trailing: 0))
 //                }
             }
 //        .navigationTitle("MyOrders")
 //        .navigationBarTitleDisplayMode(.inline)
-        }.navigationBarBackButtonHidden(true)
-            .navigationBarHidden(false)
-            .edgesIgnoringSafeArea(.bottom)
-            .navigationBarItems(leading:
-                Button(action: {
-    //                            self.presentationMode.wrappedValue.dismiss()
-                    self.mode.wrappedValue.dismiss()
-                }) {
-                    HStack {
-                        Image(systemName: "arrow.left")
-                            .imageScale(.large)
-                            .frame(width: 25, height: 25, alignment: .center)
-        //                    .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.white)
-                    }
-            })
+        }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(false)
+        .edgesIgnoringSafeArea(.bottom)
+        .navigationBarItems(leading:
+            Button(action: {
+//                            self.presentationMode.wrappedValue.dismiss()
+                self.mode.wrappedValue.dismiss()
+            }) {
+                HStack {
+                    Image(systemName: "arrow.left")
+                        .imageScale(.large)
+                        .frame(width: 25, height: 25, alignment: .center)
+    //                    .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.white)
+                }
+        })
     }
 }
-struct MyOrders_Previews: PreviewProvider {
+struct CustomerMyOrders_Previews: PreviewProvider {
     static var previews: some View {
-        MyOrders()
+        CustomerMyOrders()
     }
 }

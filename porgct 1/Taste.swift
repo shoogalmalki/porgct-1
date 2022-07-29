@@ -122,7 +122,7 @@ struct Taste: View {
                                         Text("(The Offer Is 100SR)")
                                             .font(.system(size:12))
                                         NavigationLink(){
-                                            Registration2user()
+                                            Registration()
                                         } label: {
                                             
                                             Text("Request")

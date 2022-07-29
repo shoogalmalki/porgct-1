@@ -21,7 +21,7 @@ struct SplashScreenView: View {
                 if (UserDefaults.standard.string(forKey: LOGIN_UID) ?? "") == ""{
                     pageView_onbording2()
                 }else{
-                    Home_User()
+                    CustomerHome()
                 }
             } else {
     //            NavigationView {

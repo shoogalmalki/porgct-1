@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Home_User: View {
+struct CustomerHome: View {
     
     @State var shouldGoToWhatEverPage8: Bool = false
     @State var shouldGoToWhatEverPage9: Bool = false
@@ -177,10 +177,11 @@ struct Home_User: View {
     //                    })
                         NavigationLink(isActive: $shouldGoToWhatEverPage9, destination: {
     //                        Registration2user()
+                            
                             if (UserDefaults.standard.string(forKey: LOGIN_UID) ?? "") == ""{
-                                LoginView()
+                                Login()
                             }else{
-                                new_order_sarah2()
+                                CustomerPlaceOrder()
                             }
                             
                         }, label: {
@@ -188,6 +189,7 @@ struct Home_User: View {
                         })
                         
                         Button(action: {
+                            print("Loggin ID=====",UserDefaults.standard.string(forKey: LOGIN_UID) ?? "")
                             shouldGoToWhatEverPage9.toggle()
                         }
                                , label:{
@@ -218,7 +220,7 @@ struct Home_User: View {
                     //((SHEET))
                     .sheet(isPresented:$showModelView , content:
                             {
-                        profile1()
+                        CustomerProfile()
                     })
                 }
                 .navigationBarTitle("", displayMode: .inline)
@@ -233,9 +235,9 @@ struct Home_User: View {
     }
 
 
-struct Home_User_Previews: PreviewProvider {
+struct CustomerHome_Previews: PreviewProvider {
     static var previews: some View {
-        Home_User()
+        CustomerHome()
     }
 }
 

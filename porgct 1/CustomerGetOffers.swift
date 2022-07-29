@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import KRProgressHUD
 
-
-struct offer: View {
+struct CustomerGetOffers: View {
     
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State var Sarah3: Bool = false
     @State var driversOfferList:[User] = []
+    let verticalPaddingForForm = 100.0
     
     var body: some View {
 //        NavigationView
@@ -26,11 +27,12 @@ struct offer: View {
                
                     ZStack{
                         Rectangle()
-                            .frame(width: .infinity, height: UIScreen.main
-                                .bounds.size.height - 75)
-                                .foregroundColor(Color("Color1"))
-                                .cornerRadius(20)
-                                .padding(.init(top: 50, leading: 0, bottom: 0, trailing: 0))
+                            .frame(width: UIScreen.main
+                                .bounds.size.width, height: UIScreen.main
+                            .bounds.size.height - verticalPaddingForForm)
+                            .foregroundColor(Color("Color1"))
+                            .cornerRadius(20)
+                            .padding(.init(top: verticalPaddingForForm , leading: 0, bottom: 0, trailing: 0))
                         VStack(spacing:20){
                             HStack{
                                 ZStack{
@@ -133,12 +135,22 @@ struct offer: View {
                                             }
                                             HStack(spacing:10){
                                                 NavigationLink(isActive: $Sarah3, destination: {
-                                                    payment()
+                                                    CustomerPayment()
                                                 }, label: {
                                                     
                                                 })
                                                 Button(action: {
-                                                    Sarah3 = true
+                                                    switch appEnvironmentType{
+                                                    case .development:
+                                                        Sarah3 = true
+                                                        break
+                                                    case .staging:
+                                                        handleAction()
+                                                        break
+                                                    case .production:
+                                                        break
+                                                    }
+                                                    
                                                 }, label: {
                                                     Text("Accept")
                                                         .font(.callout)
@@ -177,7 +189,7 @@ struct offer: View {
 //                            }
                             
                             //                        .padding(200)
-                        }.padding(.top,100)
+                        }.padding(.top,verticalPaddingForForm)
                         
                     }
                     
@@ -200,13 +212,28 @@ struct offer: View {
                 }
         })
     }
+    private func handleAction() {
+//        KRProgressHUD.show(withMessage: "Please Wait...")
+//        AuthViewModel().loginUser(email: Email, password: password){userModel,error in
+//            KRProgressHUD.dismiss()
+//            if error == nil{
+//                print("userId===",userModel?.userId ?? "Nothing")
+//                print("userName===",userModel?.fullName ?? "Nothing")
+//                shouldGoToWhatEverPage3.toggle()
+//            }else{
+//                print("error===",error?.localizedDescription ??  "Error Occured")
+//                errorString = error?.localizedDescription ?? "Error Occured"
+//                showAlert = true
+//            }
+//        }
+    }
     
 }
 
 
 
-struct offer_Previews: PreviewProvider {
+struct CustomerGetOffers_Previews: PreviewProvider {
     static var previews: some View {
-        offer()
+        CustomerGetOffers()
     }
 }
