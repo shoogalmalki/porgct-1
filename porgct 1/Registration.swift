@@ -134,6 +134,7 @@ struct Registration: View, ImageSelected {
                                     handleAction()
                                     break
                                 case .production:
+                                    handleAction()
                                     break
                                 }
                                
@@ -156,7 +157,7 @@ struct Registration: View, ImageSelected {
                         }
                     }.frame(width: UIScreen.main.bounds.size
                         .width, height: UIScreen.main.bounds.size
-                        .height * 0.80)
+                        .height * 0.78)
                     .padding(.init(top: verticalPaddingForForm , leading: 0, bottom: 0, trailing: 0))
 //                    .edgesIgnoringSafeArea(.top)
                 }

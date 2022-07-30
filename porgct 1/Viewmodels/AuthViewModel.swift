@@ -88,6 +88,7 @@ final class AuthViewModel:ObservableObject{
                 userModel.roleType = roleType.description
                 UserDefaults.standard.set( res?.user.uid , forKey:LOGIN_UID )
                 UserDefaults.standard.set( email , forKey:LOGIN_EMAIL)
+                UserDefaults.standard.set( fullname , forKey:LOGIN_USER_NAME)
                 UserDefaults.standard.set( roleType.description , forKey:LOGIN_USER_TYPE)
                 do {
                     let dict:[String:Any] = try FirebaseEncoder().encode(userModel) as! [String : Any]
@@ -131,7 +132,7 @@ final class AuthViewModel:ObservableObject{
                 userModel.insuranceImageUrl = insuranceImageUrl
                 userModel.profileImageUrl = profileImageUrl
                 userModel.driverModeType = driverMode.description
-                
+                UserDefaults.standard.set( fullname , forKey:LOGIN_USER_NAME)
                 UserDefaults.standard.set( res?.user.uid , forKey:LOGIN_UID )
                 UserDefaults.standard.set( email , forKey:LOGIN_EMAIL)
                 UserDefaults.standard.set( roleType.description , forKey:LOGIN_USER_TYPE)
@@ -171,6 +172,7 @@ final class AuthViewModel:ObservableObject{
                     UserDefaults.standard.set( result?.user.uid , forKey:LOGIN_UID )
                     UserDefaults.standard.set( userModel?.email , forKey:LOGIN_EMAIL)
                     UserDefaults.standard.set( userModel?.roleType , forKey:LOGIN_USER_TYPE)
+                    UserDefaults.standard.set( userModel?.fullName , forKey:LOGIN_USER_NAME)
                     completion(userModel,error)
                 }
                 self.isAouthenticatting.toggle()
@@ -237,10 +239,20 @@ final class AuthViewModel:ObservableObject{
     }
     
     
-    func handleSignout (){
-        try? Auth.auth().signOut()
-        self.isAouthenticatting.toggle()
-        self.user=nil
+    func handleSignout(){
+            do {
+                try Auth.auth().signOut()
+                self.isAouthenticatting.toggle()
+                self.user=nil
+                UserDefaults.standard.set( "" , forKey:LOGIN_UID )
+                UserDefaults.standard.set( "" , forKey:LOGIN_EMAIL)
+                UserDefaults.standard.set( "" , forKey:LOGIN_USER_TYPE)
+                UserDefaults.standard.set( "" , forKey:LOGIN_USER_NAME)
+            } catch let error {
+                // handle error here
+                print("Error trying to sign out of Firebase: \(error.localizedDescription)")
+            }
+        
     }
     
     

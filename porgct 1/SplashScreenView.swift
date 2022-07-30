@@ -21,6 +21,21 @@ struct SplashScreenView: View {
                 if (UserDefaults.standard.string(forKey: LOGIN_UID) ?? "") == ""{
                     pageView_onbording2()
                 }else{
+//                    var localDriverList:[User] = []
+//                    for number in 1...5 {
+//                        var userModel:User = User()
+//                        userModel.fullName = "Akshay - " + "\($0)"
+//                        userModel.offerAmount = "10"
+//                        localDriverList.append(userModel)
+////                        print("Number is \(number)")
+//                    }
+//                    ForEach((1...5), id: \.self) {
+//                        var userModel:User = User()
+//                        userModel.fullName = "Akshay - " + "\($0)"
+//                        userModel.offerAmount = "10"
+//                        localDriverList.append(userModel)
+//                    }
+                    
                     CustomerHome()
                 }
             } else {

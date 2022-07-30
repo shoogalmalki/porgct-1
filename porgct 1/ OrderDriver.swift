@@ -18,7 +18,7 @@ struct OrderDriver: View {
     @State var showRectangle1: Bool = false
     @State var showRectangle2: Bool = false
     @State var shouldGoToWhatEverPage55: Bool = false
-    @StateObject private var viewModel = ContentViewModel()
+//    @StateObject private var viewModel = ContentViewModel()
     
     @State private var showSheet: Bool = false
     @State private var showImagePicker: Bool = false

@@ -13,9 +13,20 @@ struct CustomerGetOffers: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State var Sarah3: Bool = false
-    @State var driversOfferList:[User] = []
-    let verticalPaddingForForm = 100.0
-    
+//    @State var driversOfferList:[User] = []
+    let commonTopPadding = 100.0
+    let driversOfferList:[Item] = [
+//        .init(userId: "1", fullName: "Akshay1"),
+//        .init(userId: "2",fullName: "Akshay2"),
+//        .init(userId: "3",fullName: "Akshay3"),
+//        .init(userId: "4",fullName: "Akshay4"),
+//        .init(userId: "5",fullName: "Akshay5")
+        .init(fullName: "Omer Salah"),
+        .init(fullName: "Lama Ajibren"),
+        .init(fullName: "Sarah Hemood"),
+        .init(fullName: "Lama Mohammad"),
+        .init(fullName: "Sarah Alsauidi")
+    ]
     var body: some View {
 //        NavigationView
 //        {
@@ -25,14 +36,8 @@ struct CustomerGetOffers: View {
                             .ignoresSafeArea()
                     }
                
-                    ZStack{
-                        Rectangle()
-                            .frame(width: UIScreen.main
-                                .bounds.size.width, height: UIScreen.main
-                            .bounds.size.height - verticalPaddingForForm)
-                            .foregroundColor(Color("Color1"))
-                            .cornerRadius(20)
-                            .padding(.init(top: verticalPaddingForForm , leading: 0, bottom: 0, trailing: 0))
+                    GeometryReader { geometry in
+//
                         VStack(spacing:20){
                             HStack{
                                 ZStack{
@@ -63,43 +68,46 @@ struct CustomerGetOffers: View {
                                 }
                                 
                             }
-//                            ScrollView
-//                            {
-//                                ForEach(self.driversOfferList.indices, id: \.self) { index in
-//                                   self.$driversOfferList[index].offerAmount
+                            ScrollView(.vertical,showsIndicators: false)
+                            {
+                                ForEach(self.driversOfferList.indices, id: \.self) { index in
+//                                    self.$driversOfferList[index].offerAmount
                                     ZStack{
                                     
                                         Rectangle()
-                                            .frame(width: 325, height:140)
+                                            .frame(width: geometry.size.width * 0.84, height:170)
                                             .foregroundColor(.white)
                                             .cornerRadius(15)
                                         
                                         VStack(spacing:15){
-                                            ZStack{
-                                                Rectangle()
-                                                    .frame(width: 310, height:30)
-                                                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.955))
-                                                    .cornerRadius(10)
-                                            Text("""
-                                    This captain gives you an offer (100 SR)
-                                    for your order?
-                                    """)
+//                                            VStack{
+//                                                Rectangle()
+//                                                    .frame(width: geometry.size.width * 0.92, height:30)
+//                                                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.90))
+//                                                    .cornerRadius(10)
+//                                                    .padding(.init(top: -10, leading: 0, bottom: 0, trailing: 0))
+                                            Text("This captain gives you an offer (100 SR) for your order?")
                                                 .font(.system(size: 14, weight: .semibold, design: .rounded))
                                                 .foregroundColor(.black)
-                                            }
-                                            HStack(spacing:30){
+                                                .lineLimit(2)
+                                                .frame(width:geometry.size.width * 0.78)
+//                                            }
+                                            
+                                            HStack(spacing:10){
                                                 HStack{
                                                     Image("Driver")
                                                         .resizable()
                                                         .frame(width: 50, height: 50)
                                                         .clipShape(Circle())
-                                                    VStack{
+                                                    VStack(alignment: .leading){
                                                         HStack{
                                                             Image("Image11")
                                                             Text("Your captain")
-                                                                .font(.system(size: 10, weight:.bold, design: .default))
+                                                                .font(.system(size: 9, weight:.bold, design: .default))
                                                                 .foregroundColor(Color("Color3"))
+                                                                .frame(width: 60, height:20)
                                                             Image(systemName: "star.fill")
+                                                            
                                                                 .foregroundColor(Color.orange)
                                                                 .frame(width:10.0 , height: 22)
                                                                 .font(.system(size: 12, weight: .bold, design: .default))
@@ -107,9 +115,8 @@ struct CustomerGetOffers: View {
                                                                 .font(.caption)
                                                                 .fontWeight(.medium)
                                                         }
-                                                        Text("Omer Saleh")
+                                                        Text(self.driversOfferList[index].fullName)
                                                             .font(.system(size: 11, weight:.bold, design: .default))
-                                                            .offset(x:-10)
                                                         
                                                     }
                                                 }
@@ -132,7 +139,8 @@ struct CustomerGetOffers: View {
                                                         
                                                     }
                                                 }
-                                            }
+                                                
+                                            }.frame(width: geometry.size.width * 0.80)
                                             HStack(spacing:10){
                                                 NavigationLink(isActive: $Sarah3, destination: {
                                                     CustomerPayment()
@@ -148,6 +156,7 @@ struct CustomerGetOffers: View {
                                                         handleAction()
                                                         break
                                                     case .production:
+                                                        handleAction()
                                                         break
                                                     }
                                                     
@@ -158,7 +167,7 @@ struct CustomerGetOffers: View {
                                                         .foregroundColor(Color.white)
                                                     
                                                 })
-                                                .frame(width: 140, height:26)
+                                                .frame(width: geometry.size.width / 3, height:26)
                                                 .background(.green)
                                                 .cornerRadius(5)
                                                 Rectangle()
@@ -176,28 +185,39 @@ struct CustomerGetOffers: View {
                                                         .foregroundColor(Color.white)
                                                     
                                                 })
-                                                .frame(width: 140, height:26)
+                                                .frame(width: geometry.size.width / 3, height:26)
                                                 .background(.red)
                                                 .cornerRadius(5)
                                             }
+
                                         }
                                     }
+                                    .padding(.top, 10)
                                     Spacer()
-//                                }
-//
-//
-//                            }
+                                }
+
+
+                            }
                             
                             //                        .padding(200)
-                        }.padding(.top,verticalPaddingForForm)
+                        }
                         
-                    }
+                        .frame(maxWidth: UIScreen.main
+                            .bounds.size.width , maxHeight: geometry.size.height * 0.90)
+                        .padding(.top,20)
+                        
+                    }.background(Color("Color1")
+                        .cornerRadius(20))
+//                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(maxWidth: UIScreen.main
+                        .bounds.size.width , maxHeight: .infinity)
+                    .padding(.top,commonTopPadding)
                     
-                }
-//        }
+        }
+        .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(false)
-        .edgesIgnoringSafeArea(.bottom)
+//        .edgesIgnoringSafeArea(.bottom)
         .navigationBarItems(leading:
             Button(action: {
 //                            self.presentationMode.wrappedValue.dismiss()

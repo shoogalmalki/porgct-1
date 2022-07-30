@@ -5,14 +5,14 @@
 //  Created by shoog almalki on 22/11/1443 AH.
 //
 
-import MapKit
+//import MapKit
 import SwiftUI
 import Foundation
 extension View {
     func cornerRadius99(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape( RoundedCorner99(radius: radius, corners: corners) )
             .padding(0.0)
-            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.272, green: 0.683, blue: 0.674)/*@END_MENU_TOKEN@*/)
+            .background()
     }
 }
 struct RoundedCorner99: Shape {

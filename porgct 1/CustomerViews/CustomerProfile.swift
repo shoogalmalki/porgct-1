@@ -12,6 +12,7 @@ struct CustomerProfile: View {
     @State var toggleIsOn: Bool = false
     @State var shouldGoToMyOrders: Bool = false
     @State var shouldGoToDriverAccount:Bool = false
+    @State var isShowAlert:Bool = false
     
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
@@ -23,13 +24,19 @@ struct CustomerProfile: View {
           
                     HStack(spacing:100){
                         HStack{
-                            Image("Driver")
-                                .resizable()
-                                .frame(width: 60, height: 60)
+//                            Image(systemName: "person.fill")
+//                                .foregroundColor(.mint)
+//                                .font(.system(size: 64))
+//                                .padding()
+                            Image(systemName: "person.fill")
+                                .foregroundColor(.mint)
+                                .font(.system(size: 64))
+//                                .resizable()
+                                .frame(width: 40, height: 40)
                                 .clipShape(Circle())
                             VStack{
                                 HStack{
-                                    Text("Omar saleh")
+                                    Text(UserDefaults.standard.object(forKey: LOGIN_USER_NAME) as? String ?? "")
                                         .font(.system(size: 17, weight:.bold, design: .default))
                                         .foregroundColor(Color("Color3"))
                                     Image(systemName: "star.fill")
@@ -53,7 +60,7 @@ struct CustomerProfile: View {
                     
                     ZStack{
                         Rectangle()
-                            .frame(width: 300, height:170)
+                            .frame(width: 300, height:220)
                             .foregroundColor(.white)
                             .cornerRadius(15)
                         VStack(alignment:.leading, spacing: 9){
@@ -73,6 +80,7 @@ struct CustomerProfile: View {
                                             .foregroundColor(Color("Color3"))
                                         Text("My Orders")
                                             .font(.system(size: 15, weight: .regular, design: .default))
+                                            .frame(width: .infinity, height: 35)
                                     }
                                     Image(systemName: "chevron.right")
                                 }
@@ -85,6 +93,7 @@ struct CustomerProfile: View {
                                         .foregroundColor(Color("Color3"))
                                     Text("Feedback")
                                         .font(.system(size: 15, weight: .regular, design: .default))
+                                        .frame(width: .infinity, height: 35)
                                 }
                                 Image(systemName: "chevron.right")
                             }
@@ -95,6 +104,7 @@ struct CustomerProfile: View {
                                         .foregroundColor(Color("Color3"))
                                     Text("Coupons")
                                         .font(.system(size: 15, weight: .regular, design: .default))
+                                        .frame(width: .infinity, height: 35)
                                 }
                                 Image(systemName: "chevron.right")
                                 
@@ -105,6 +115,7 @@ struct CustomerProfile: View {
                                         .foregroundColor(Color("Color2"))
                                     Text("Contact us")
                                         .font(.system(size: 14, weight: .regular, design: .default))
+                                        .frame(width: .infinity, height: 35)
                                 }
                                 Image(systemName: "chevron.right")
                                 
@@ -114,7 +125,7 @@ struct CustomerProfile: View {
                     }
                     ZStack{
                         Rectangle()
-                            .frame(width: 300, height:110)
+                            .frame(width: 300, height:135)
                             .foregroundColor(.white)
                             .cornerRadius(15)
                         VStack(alignment:.leading, spacing: 11){
@@ -135,6 +146,7 @@ struct CustomerProfile: View {
                                             .foregroundColor(Color("Color3"))
                                         Text("Driver Account")
                                             .font(.system(size: 15, weight: .regular, design: .default))
+                                            .frame(width: .infinity, height: 35)
                                     }
                                     Image(systemName: "chevron.right")
                                     
@@ -147,6 +159,7 @@ struct CustomerProfile: View {
                                         .foregroundColor(Color("Color2"))
                                     Text("Language")
                                         .font(.system(size: 14, weight: .regular, design: .default))
+                                        .frame(width: .infinity, height: 35)
                                 }
                                 Image(systemName: "chevron.right")
                                 
@@ -157,22 +170,30 @@ struct CustomerProfile: View {
                     }
                     
                     Button("Sign out") {
-                    try? Auth.auth().signOut()
-                       presentationMode.wrappedValue.dismiss()
+                        isShowAlert = true
                     }
                     .foregroundColor(.white)
                     .font(.system(size: 18, weight: .semibold, design: .serif))
                     .frame(width: 300, height: 50)
                      .background(Color(UIColor.systemMint))
                     .cornerRadius(10)
-                }.padding(.bottom,80)
+                    .alert("Are you sure , you want to logout?", isPresented: $isShowAlert) {
+                        Button("Yes", role: .cancel) {
+                            AuthViewModel().handleSignout()
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                        Button("No", role: .destructive) {
+                            
+                        }
+                    }
+                }.padding(.top,10)
                 //            UserProfile()
                 
             }
             
             .navigationTitle("profile")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(leading:
+            .navigationBarItems(trailing:
                                     Button{
                 presentationMode.wrappedValue
                     .dismiss()

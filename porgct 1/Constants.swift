@@ -10,6 +10,7 @@ import Foundation
 let LOGIN_UID = "LOGIN_UID"
 let LOGIN_EMAIL = "LOGIN_EMAIL"
 let LOGIN_USER_TYPE = "LOGIN_USER_TYPE"
+let LOGIN_USER_NAME = "LOGIN_USER_NAME"
 
 enum EnvironmentType:Int {
     case development = 0

@@ -57,7 +57,7 @@ import Foundation
 }
 */
 
-struct User:Codable{
+struct User:Codable,Identifiable & Hashable {
     enum CodingKeys: String, CodingKey {
         case userId = "userID"
         case fullName = "fullName"
@@ -71,6 +71,7 @@ struct User:Codable{
         case offerAmount = "offerAmount"
         case driverModeType = "driverMode"
     }
+    var id: String { userId }
     var userId:String = ""
     var fullName:String = ""
     var password:String = ""
@@ -85,7 +86,7 @@ struct User:Codable{
     
    
 
-    init() {
+    init(userId:String = "1", fullName:String = "") {
         
     }
     
@@ -93,7 +94,7 @@ struct User:Codable{
         let container = try decoder.container(keyedBy: CodingKeys.self)
         userId = try container.decodeIfPresent(String.self, forKey: .userId) ?? ""
         roleType = try container.decodeIfPresent(String.self, forKey: .roleType) ?? "customer"
-        fullName = try container.decodeIfPresent(String.self, forKey: .email) ?? ""
+        fullName = try container.decodeIfPresent(String.self, forKey: .fullName) ?? ""
 //        password = try container.decodeIfPresent(String.self, forKey: .password) ?? ""
         email = try container.decodeIfPresent(String.self, forKey: .email) ?? ""
         if roleType.uppercased() == "DRIVER"

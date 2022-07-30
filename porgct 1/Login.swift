@@ -85,7 +85,7 @@ struct Login: View {
             
             ZStack{
             Color(.systemMint)
-                .ignoresSafeArea()
+//                .ignoresSafeArea()
             }
             ZStack{
                 Rectangle()
@@ -145,6 +145,7 @@ struct Login: View {
                                   handleAction()
                                   break
                               case .production:
+                                  handleAction()
                                   break
                               }
                           }

@@ -14,8 +14,8 @@
             filePath = "porgct 1/Viewmodels/AuthViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "createCustomerRegister(fullname:phoneNumber:roleType:email:password:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "porgct 1/Viewmodels/AuthViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "createCustomerRegister(fullname:phoneNumber:roleType:email:password:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "porgct 1/Viewmodels/AuthViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "createCustomerRegister(fullname:phoneNumber:roleType:email:password:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "porgct 1/Viewmodels/AuthViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "createCustomerRegister(fullname:phoneNumber:roleType:email:password:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -270,9 +270,9 @@
             filePath = "porgct 1/Viewmodels/AuthViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
-            landmarkName = "placeOrderByCustomer(userId:pickUp:dropOff:storagePhotoUrl:typeOfShipment:notes:dateTime:timeSlot:completion:)"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "placeNewTripByCustomer(userId:pickUp:dropOff:tripStatus:storagePhotoUrl:typeOfShipment:notes:dateTime:timeSlot:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -286,9 +286,9 @@
             filePath = "porgct 1/Viewmodels/AuthViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
-            landmarkName = "placeOrderByCustomer(userId:pickUp:dropOff:storagePhotoUrl:typeOfShipment:notes:dateTime:timeSlot:completion:)"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "placeNewTripByCustomer(userId:pickUp:dropOff:tripStatus:storagePhotoUrl:typeOfShipment:notes:dateTime:timeSlot:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

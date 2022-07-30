@@ -23,14 +23,14 @@ struct CustomerPlaceOrder: View, DateAndTimeSelected,LocationSelected,ShipmentIt
         self.pickupCity = pickupCity
         self.dropoffCity = dropCity
     }
-    let verticalPaddingForForm = 100.0
+    let commonTopPadding = 100.0
     @State private var shipmentImage =  UIImage()
     @State var shipmentSize :  ShipmentItemSize = .empty
     @State var pickupCity = ""
     @State var dropoffCity = ""
     @State var shouldGoToWhatEverPage55: Bool = false
     @State var shouldGoToOfferPage: Bool = false
-    @StateObject private var viewModel = ContentViewModel()
+//    @StateObject private var viewModel = ContentViewModel()
     @State var dateAndTime = ""
     @State var gotoDateTime = false
     @State private var showImagePicker: Bool = false
@@ -54,20 +54,11 @@ struct CustomerPlaceOrder: View, DateAndTimeSelected,LocationSelected,ShipmentIt
                         Color(.systemMint)
                             .ignoresSafeArea()
                     }
-                    ZStack
-                    {
-                        Rectangle()
-                            .frame(width: UIScreen.main
-                                .bounds.size.width, height: UIScreen.main
-                            .bounds.size.height - verticalPaddingForForm)
-                            .foregroundColor(Color("Color1"))
-                            .cornerRadius(20)
-                            .padding(.init(top: verticalPaddingForForm, leading: 0, bottom: 0, trailing: 0))
-        //                    GeometryReader { geometryWithSafeArea in
-        //                                    GeometryReader { geometry in
+                    GeometryReader { geometry in
+                        
                         ScrollView(showsIndicators: false)
                         {
-                            VStack(alignment: .center, spacing: 25)
+                            VStack(alignment: .center, spacing: 20)
                             {
                                 HStack
                                 {
@@ -75,6 +66,10 @@ struct CustomerPlaceOrder: View, DateAndTimeSelected,LocationSelected,ShipmentIt
                                 }
                                 ZStack
                                 {
+                                    Rectangle()
+                                        .frame(width: geometry.size.width * 0.80, height:70)
+                                        .foregroundColor(.white)
+                                        .cornerRadius(15)
                                     location1(delegate: self)
                                 }
                                 ZStack
@@ -184,25 +179,30 @@ struct CustomerPlaceOrder: View, DateAndTimeSelected,LocationSelected,ShipmentIt
                                         handleAction()
                                         break
                                     case .production:
+                                        handleAction()
                                         break
                                     }
                                     
                                 }.alert(errorString, isPresented: $showingAlert) {
                                     Button("OK", role: .cancel) { }
                                 }
-                        }
-                    }.frame(width: UIScreen.main
-                                .bounds.size.width, height: UIScreen.main
-                                .bounds.size.height * 0.80)
-                            .padding(.init(top: verticalPaddingForForm, leading: 0, bottom: 0, trailing: 0))
+                            }.padding(.top, 20)
+                        }.frame(width: geometry.size.width, height: geometry.size.height * 0.93)
+//                            .padding(.init(top: verticalPaddingForForm, leading: 0, bottom: 0, trailing: 0))
 //                            .offset(y:50)
 //                            .padding(.top, 100)
-                }
+                    }.background(Color("Color1")
+                        .cornerRadius(20))
+//                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(maxWidth: UIScreen.main
+                        .bounds.size.width , maxHeight: .infinity)
+                    .padding(.top,commonTopPadding)
             }
+            .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
 //        }
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(false)
-        .edgesIgnoringSafeArea(.bottom)
+//        .edgesIgnoringSafeArea(.bottom)
         .navigationBarItems(leading:
             Button(action: {
 //                            self.presentationMode.wrappedValue.dismiss()

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewOrder_Request: View {
     @State var shouldGoToWhatEverPage55: Bool = false
-    @StateObject private var viewModel = ContentViewModel()
+//    @StateObject private var viewModel = ContentViewModel()
     
     
     @State private var sourceType: UIImagePickerController.SourceType
