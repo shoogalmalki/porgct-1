@@ -25,30 +25,38 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     
 //      FirebaseApp.configure()
-
-      FirebaseApp.configure()
+      if let app = FirebaseApp.app()
+      {
+          print("Firebase app configure")
+          
+      }else{
+          print("Firebase is not configure")
+      }
+      
+//      FirebaseApp.configure()
 //      let database = Firestore.firestore()
 //
-//              Messaging.messaging().delegate = self
-//
-//              if #available(iOS 10.0, *) {
-//                // For iOS 10 display notification (sent via APNS)
-//                UNUserNotificationCenter.current().delegate = self
-//
-//                let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-//                UNUserNotificationCenter.current().requestAuthorization(
-//                  options: authOptions,
-//                  completionHandler: {_, _ in })
-//              } else {
-//                let settings: UIUserNotificationSettings =
-//                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-//                application.registerUserNotificationSettings(settings)
-//              }
-//
-//              application.registerForRemoteNotifications()
+              Messaging.messaging().delegate = self
+
+              if #available(iOS 10.0, *) {
+                // For iOS 10 display notification (sent via APNS)
+                UNUserNotificationCenter.current().delegate = self
+
+                let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+                UNUserNotificationCenter.current().requestAuthorization(
+                  options: authOptions,
+                  completionHandler: {_, _ in })
+              } else {
+                let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+                application.registerUserNotificationSettings(settings)
+              }
+
+              application.registerForRemoteNotifications()
 
     return true
   }
+    
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                          fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
 
@@ -61,6 +69,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
           completionHandler(UIBackgroundFetchResult.newData)
         }
 }
+
 extension AppDelegate: MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
 
@@ -117,7 +126,8 @@ struct porgct_1App: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     init(){
-       
+        print("Firebase is configure init======")
+        FirebaseApp.configure()
        
     }
     

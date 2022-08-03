@@ -31,20 +31,16 @@
 		8A9F7BB42864B88F00D390A8 /* Sarah.tast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F7BB32864B88F00D390A8 /* Sarah.tast.swift */; };
 		8AB618362873261500630F61 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB618352873261500630F61 /* UserModel.swift */; };
 		8AB6183B2873294C00630F61 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6183A2873294C00630F61 /* AuthViewModel.swift */; };
-		8AB6183E2873376200630F61 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8AB6183D2873376200630F61 /* FirebaseDatabase */; };
 		8ABC2425286DECC1002E214E /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC2424286DECC1002E214E /* Structs.swift */; };
 		AE0E5EC92875106A00C99F02 /* RequestM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E5EC82875106A00C99F02 /* RequestM.swift */; };
-		AE1C2BED2889C6F6000C08F3 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = AE1C2BEC2889C6F6000C08F3 /* FirebaseMessaging */; };
 		AE54AE2128633F94006FD4CB /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2028633F94006FD4CB /* SplashScreenView.swift */; };
 		AE54AE23286342FD006FD4CB /* PageModel-onbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */; };
 		AE54AE2528634356006FD4CB /* PageView-onbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE2428634356006FD4CB /* PageView-onbording.swift */; };
 		AE54AE27286343CF006FD4CB /* pageView-onbording2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */; };
+		AE6ACE52289AE35500BD3247 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE6ACE51289AE35500BD3247 /* GoogleService-Info.plist */; };
 		AE9F5D0228763DDB00C157B2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9F5D0128763DDB00C157B2 /* Login.swift */; };
 		AE9F5D08287B1A3E00C157B2 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9F5D07287B1A3E00C157B2 /* Registration.swift */; };
-		AEB4214F284D2E1400A942B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */; };
-		AEB42152284D337400A942B0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AEB42151284D337400A942B0 /* FirebaseAuth */; };
-		AEB42154284D337400A942B0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AEB42153284D337400A942B0 /* FirebaseFirestore */; };
-		AEB42156284D337400A942B0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AEB42155284D337400A942B0 /* FirebaseStorage */; };
+		E50CAF212C51E7FD3EC8EFA6 /* Pods_Habhoob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653F63B267859F527C4FBF32 /* Pods_Habhoob.framework */; };
 		E6A4575528886C2C009F4D95 /* CodableFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = E6A4575428886C2C009F4D95 /* CodableFirebase */; };
 		E6A45757288873C3009F4D95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A45756288873C3009F4D95 /* Constants.swift */; };
 		E6A45759288884D4009F4D95 /* PlaceOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A45758288884D4009F4D95 /* PlaceOrderModel.swift */; };
@@ -59,12 +55,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1833308E1846586D08DE9735 /* Pods-Habhoob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habhoob.release.xcconfig"; path = "Target Support Files/Pods-Habhoob/Pods-Habhoob.release.xcconfig"; sourceTree = "<group>"; };
 		426BDB4F284398FB008E9C5A /* Habhoob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habhoob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		426BDB52284398FB008E9C5A /* porgct_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = porgct_1App.swift; sourceTree = "<group>"; };
 		426BDB56284398FD008E9C5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		426BDB59284398FD008E9C5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		42A70F06286202250093FACA /* DateAndTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTime.swift; sourceTree = "<group>"; };
 		42A70F082862025E0093FACA /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		653F63B267859F527C4FBF32 /* Pods_Habhoob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habhoob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74AF774C1DA69CCC5FA9DAE9 /* Pods-Habhoob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habhoob.debug.xcconfig"; path = "Target Support Files/Pods-Habhoob/Pods-Habhoob.debug.xcconfig"; sourceTree = "<group>"; };
 		857DC72728666E71003D8A23 /*  OrderDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " OrderDriver.swift"; sourceTree = "<group>"; };
 		85FF2267286348CC00DD7047 /* Mmm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mmm.swift; sourceTree = "<group>"; };
 		8A2857202880D05300115251 /* NewOrder.Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrder.Request.swift; sourceTree = "<group>"; };
@@ -92,9 +91,9 @@
 		AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageModel-onbording.swift"; sourceTree = "<group>"; };
 		AE54AE2428634356006FD4CB /* PageView-onbording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageView-onbording.swift"; sourceTree = "<group>"; };
 		AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "pageView-onbording2.swift"; sourceTree = "<group>"; };
+		AE6ACE51289AE35500BD3247 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AE9F5D0128763DDB00C157B2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		AE9F5D07287B1A3E00C157B2 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
-		AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E6A45756288873C3009F4D95 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E6A45758288884D4009F4D95 /* PlaceOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderModel.swift; sourceTree = "<group>"; };
 		E6DAD45F28944C510063448D /* CustomerPlaceOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerPlaceOrder.swift; sourceTree = "<group>"; };
@@ -112,12 +111,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6A4575528886C2C009F4D95 /* CodableFirebase in Frameworks */,
-				AEB42152284D337400A942B0 /* FirebaseAuth in Frameworks */,
-				AEB42154284D337400A942B0 /* FirebaseFirestore in Frameworks */,
-				AE1C2BED2889C6F6000C08F3 /* FirebaseMessaging in Frameworks */,
-				8AB6183E2873376200630F61 /* FirebaseDatabase in Frameworks */,
 				E6A8515A2888559300DAD895 /* KRProgressHUD in Frameworks */,
-				AEB42156284D337400A942B0 /* FirebaseStorage in Frameworks */,
+				E50CAF212C51E7FD3EC8EFA6 /* Pods_Habhoob.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +127,7 @@
 				426BDB51284398FB008E9C5A /* porgct 1 */,
 				426BDB50284398FB008E9C5A /* Products */,
 				8AB6183C2873376200630F61 /* Frameworks */,
+				E902CB6520CE879A189291A3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +148,7 @@
 				426BDB52284398FB008E9C5A /* porgct_1App.swift */,
 				8A9F7BB32864B88F00D390A8 /* Sarah.tast.swift */,
 				AE54AE2028633F94006FD4CB /* SplashScreenView.swift */,
+				AE6ACE51289AE35500BD3247 /* GoogleService-Info.plist */,
 				AE54AE2428634356006FD4CB /* PageView-onbording.swift */,
 				AE54AE26286343CF006FD4CB /* pageView-onbording2.swift */,
 				AE54AE22286342FD006FD4CB /* PageModel-onbording.swift */,
@@ -185,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				426BDB59284398FD008E9C5A /* Preview Assets.xcassets */,
-				AEB4214E284D2E1400A942B0 /* GoogleService-Info.plist */,
 				85FF2267286348CC00DD7047 /* Mmm.swift */,
 				8A948D4A2860A0600069997F /* homeuser.swift */,
 			);
@@ -213,6 +209,7 @@
 		8AB6183C2873376200630F61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				653F63B267859F527C4FBF32 /* Pods_Habhoob.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -231,6 +228,15 @@
 			path = CustomerViews;
 			sourceTree = "<group>";
 		};
+		E902CB6520CE879A189291A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74AF774C1DA69CCC5FA9DAE9 /* Pods-Habhoob.debug.xcconfig */,
+				1833308E1846586D08DE9735 /* Pods-Habhoob.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,9 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 426BDB5D284398FD008E9C5A /* Build configuration list for PBXNativeTarget "Habhoob" */;
 			buildPhases = (
+				1BC397C138A1604304174999 /* [CP] Check Pods Manifest.lock */,
 				426BDB4B284398FB008E9C5A /* Sources */,
 				426BDB4C284398FB008E9C5A /* Frameworks */,
 				426BDB4D284398FB008E9C5A /* Resources */,
+				8F4F284174BE798FE21D68F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,13 +256,8 @@
 			);
 			name = Habhoob;
 			packageProductDependencies = (
-				AEB42151284D337400A942B0 /* FirebaseAuth */,
-				AEB42153284D337400A942B0 /* FirebaseFirestore */,
-				AEB42155284D337400A942B0 /* FirebaseStorage */,
-				8AB6183D2873376200630F61 /* FirebaseDatabase */,
 				E6A851592888559300DAD895 /* KRProgressHUD */,
 				E6A4575428886C2C009F4D95 /* CodableFirebase */,
-				AE1C2BEC2889C6F6000C08F3 /* FirebaseMessaging */,
 			);
 			productName = "porgct 1";
 			productReference = 426BDB4F284398FB008E9C5A /* Habhoob.app */;
@@ -285,7 +288,6 @@
 			);
 			mainGroup = 426BDB46284398FB008E9C5A;
 			packageReferences = (
-				AEB42150284D337400A942B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				E6A851582888559300DAD895 /* XCRemoteSwiftPackageReference "KRProgressHUD" */,
 				E6A4575328886C2B009F4D95 /* XCRemoteSwiftPackageReference "CodableFirebase" */,
 			);
@@ -305,11 +307,53 @@
 			files = (
 				426BDB5A284398FD008E9C5A /* Preview Assets.xcassets in Resources */,
 				426BDB57284398FD008E9C5A /* Assets.xcassets in Resources */,
-				AEB4214F284D2E1400A942B0 /* GoogleService-Info.plist in Resources */,
+				AE6ACE52289AE35500BD3247 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BC397C138A1604304174999 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Habhoob-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F4F284174BE798FE21D68F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Habhoob/Pods-Habhoob-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Habhoob/Pods-Habhoob-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Habhoob/Pods-Habhoob-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		426BDB4B284398FB008E9C5A /* Sources */ = {
@@ -477,62 +521,24 @@
 		};
 		426BDB5E284398FD008E9C5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Habhoob.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_ASSET_PATHS = "\"porgct 1/Preview Content\"";
-				DEVELOPMENT_TEAM = CJZ9C782TZ;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Habhoob-Info.plist";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = mmm;
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = kkk;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sa.Shoog.porgct-1";
-				PRODUCT_NAME = Habhoob;
-				PROVISIONING_PROFILE_SPECIFIER = Habhoob_dev;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		426BDB5F284398FD008E9C5A /* Release */ = {
-			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74AF774C1DA69CCC5FA9DAE9 /* Pods-Habhoob.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Habhoob.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"porgct 1/Preview Content\"";
 				DEVELOPMENT_TEAM = CJZ9C782TZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Habhoob-Info.plist";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = mmm;
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = kkk;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -543,7 +549,41 @@
 				PROVISIONING_PROFILE_SPECIFIER = Habhoob_Prodution;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		426BDB5F284398FD008E9C5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1833308E1846586D08DE9735 /* Pods-Habhoob.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Habhoob.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 10;
+				DEVELOPMENT_ASSET_PATHS = "\"porgct 1/Preview Content\"";
+				DEVELOPMENT_TEAM = CJZ9C782TZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Habhoob-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sa.Shoog.porgct-1";
+				PRODUCT_NAME = Habhoob;
+				PROVISIONING_PROFILE_SPECIFIER = Habhoob_Prodution;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -571,14 +611,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AEB42150284D337400A942B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = exactVersion;
-				version = 9.1.0;
-			};
-		};
 		E6A4575328886C2B009F4D95 /* XCRemoteSwiftPackageReference "CodableFirebase" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alickbass/CodableFirebase.git";
@@ -598,31 +630,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8AB6183D2873376200630F61 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AEB42150284D337400A942B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		AE1C2BEC2889C6F6000C08F3 /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AEB42150284D337400A942B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
-		};
-		AEB42151284D337400A942B0 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AEB42150284D337400A942B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		AEB42153284D337400A942B0 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AEB42150284D337400A942B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		AEB42155284D337400A942B0 /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AEB42150284D337400A942B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
 		E6A4575428886C2C009F4D95 /* CodableFirebase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E6A4575328886C2B009F4D95 /* XCRemoteSwiftPackageReference "CodableFirebase" */;

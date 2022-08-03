@@ -18,7 +18,7 @@ enum EnvironmentType:Int {
     case production
 }
 
-let appEnvironmentType:EnvironmentType = .development
+let appEnvironmentType:EnvironmentType = .production
 
 enum RoleType:Int, CustomStringConvertible {
     case none = 0

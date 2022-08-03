@@ -1,0 +1,6 @@
+framework module Pods_Habhoob {
+  umbrella header "Pods-Habhoob-umbrella.h"
+
+  export *
+  module * { export * }
+}
